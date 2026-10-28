@@ -11,3 +11,4 @@ Static site (English + বাংলা), live at https://foreman-handbook.netlif
 - **যেকোনো পরিবর্তনের পর** চালান: `python3 scripts/update.py` — এটা নিজে থেকে ভার্সন নম্বর বাড়ায়, অফলাইন কপির তালিকা (`sw.js`), `sitemap.xml` ও WhatsApp/Facebook শেয়ার-প্রিভিউ ঠিক করে। তারপর commit ও push।
 - Netlify লিংক (সাইটের ঠিকানা) বদলালে `scripts/update.py`-এর শুরুতে `SITE` বদলে স্ক্রিপ্টটা একবার চালান।
 - নিচের ডেভেলপার তথ্য প্রতিটা পাতার `<p class="dev">` লাইনে।
+- বিষয়ের পাতার ছবি: `assets/figs.js`। নতুন পাতায় ছবি দিতে সেখানে পাতার পথ (যেমন `"rotary/gearboxes"`) নামে একটা ফাংশন যোগ করুন এবং সেই পাতার (ইংরেজি ও `bn/`) `search.js`-এর আগে `figs.js` স্ক্রিপ্ট লাইনটা দিন।
