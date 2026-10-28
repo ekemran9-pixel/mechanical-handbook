@@ -245,7 +245,49 @@
       return svg('<path class="dm" d="M40 20V140H310"/><path class="curve draw" pathLength="1" d="M' + t.map(p => r1(X(p[0])) + " " + r1(Y(p[1]))).join("L") + '"/><path class="d" d="M' + r1(X(v.p)) + " 140V" + r1(Y(Tp)) + "H40" + '"/><circle class="dot" cx="' + r1(X(v.p)) + '" cy="' + r1(Y(Tp)) + '" r="5"/>' +
         T(r1(X(v.p)), 156, fmt(v.p, 1) + " bar", "ts") + T(44, r1(Y(Tp)) - 6, fmt(Tp, 1) + " °C", "ta", "start"));
     },
+    shim(v, c) {
+      const fr = -(v.off + v.ang / 100 * v.d1), bk = -(v.off + v.ang / 100 * v.d2), sc = 160 / Math.max(v.d2, 1), x1 = 135 + v.d1 * sc, x2 = 135 + v.d2 * sc;
+      const dy = clamp(v.off * 150, -24, 24), da = clamp(v.ang * 100, -8, 8);
+      const arrow = (x, m) => { const up = m > 0, y0 = 150, y1 = up ? 128 : 150; return Math.abs(m) < 0.005 ? T(x, 162, "0", "ts") : '<path class="arrow" d="M' + r1(x) + " " + (up ? 156 : 126) + "V" + (up ? 128 : 154) + "M" + r1(x - 5) + " " + (up ? 134 : 148) + "L" + r1(x) + " " + (up ? 128 : 154) + "L" + r1(x + 5) + " " + (up ? 134 : 148) + '"/>' + T(x, 168, (up ? "+" : "−") + fmt(Math.abs(m), 2), "ta"); };
+      return svg('<path class="fsoft" d="M10 118H310v6H10z"/><rect x="14" y="50" width="96" height="60" rx="6" class="fs"/>' + T(62, 84, c.L("fixed", "স্থির"), "ts") + '<rect x="112" y="66" width="10" height="28" class="f"/><path class="d" d="M10 80H310"/>' +
+        '<g class="sw" transform="translate(0 ' + r1(-dy) + ") rotate(" + r1(-da) + ' 125 80)"><rect x="124" y="66" width="10" height="28" class="f"/><rect x="134" y="52" width="170" height="56" rx="6" class="fs"/>' + T(219, 84, c.L("movable", "চলমান"), "ts") + '<rect x="' + r1(x1 - 8) + '" y="108" width="16" height="8" class="fa"/><rect x="' + r1(x2 - 16) + '" y="108" width="16" height="8" class="fa"/></g>' +
+        arrow(x1, fr) + arrow(x2 - 8, bk) + T(160, 22, c.L("arrow up = add shims, down = remove", "উপরে তীর = শিম দিন, নিচে = সরান"), "ts"), 172);
+    },
+    l10(v, c) {
+      const h = Math.pow(v.C / v.P, v.p) * 1e6 / (60 * v.n), X = x => 16 + 288 * clamp((Math.log10(x) - 3) / 3, 0, 1), to = X(h), from = c.prev("l10", to);
+      const z = [[1e3, 2e4, "bad"], [2e4, 4e4, "warn"], [4e4, 1e6, "ok"]];
+      return svg(z.map(q => '<rect class="z' + q[2] + '" x="' + r1(X(q[0])) + '" y="70" width="' + r1(X(q[1]) - X(q[0])) + '" height="24"/>').join("") + [1e3, 1e4, 2e4, 4e4, 1e5, 1e6].map(x => T(X(x), 64, x >= 1e6 ? "1M" : x / 1000 + "k", "ts")).join("") +
+        '<g class="ptr" style="--from:' + r1(from - to) + 'px"><path d="M' + r1(to) + ' 96l-7 -11h14z" class="ndl"/><path d="M' + r1(to) + ' 96V66" class="needleline"/>' + T(clamp(to, 70, 250), 38, fmt(h, 0) + c.L(" h", " ঘণ্টা"), "big") + "</g>" +
+        T(160, 118, fmt(h / 8760, 1) + c.L(" years running 24/7", " বছর (২৪/৭ চললে)"), "ta") + T(160, 140, c.L("hours, log scale", "ঘণ্টা, লগ স্কেল"), "ts"));
+    },
+    tank(v, c) {
+      const id = uid(), R = v.D / 2;
+      if (v.o === "v") {
+        const k = Math.min(130 / v.L, 120 / v.D), w = v.D * k, hgt = v.L * k, x0 = 90 - w / 2, y0 = 150 - hgt, lh = clamp(v.h / v.L, 0, 1) * hgt;
+        return svg('<rect x="' + r1(x0) + '" y="' + r1(y0) + '" width="' + r1(w) + '" height="' + r1(hgt) + '" rx="4" class="f"/><rect class="water fill" x="' + r1(x0 + 1) + '" y="' + r1(150 - lh) + '" width="' + r1(w - 2) + '" height="' + r1(Math.max(lh - 1, 0)) + '"/>' + dim(x0 + w + 12, 150, x0 + w + 12, 150 - lh) + T(x0 + w + 18, 150 - lh / 2 + 4, fmt(v.h, 2) + " m", "tx", "start") + tankText(v, c));
+      }
+      const h = clamp(v.h, 0, v.D), ly = 140 - 110 * h / v.D;
+      return svg('<defs><clipPath id="' + id + '"><circle cx="90" cy="85" r="54"/></clipPath></defs><circle cx="90" cy="85" r="55" class="f"/><g clip-path="url(#' + id + ')"><rect class="water fill" x="30" y="' + r1(ly) + '" width="120" height="' + r1(141 - ly) + '"/></g>' + dim(160, 140, 160, ly) + T(166, (140 + ly) / 2 + 4, fmt(h, 2) + " m", "tx", "start") + tankText(v, c));
+    },
+    expand(v, c) {
+      const dl = v.a * 1e-6 * v.L * 1000 * (v.t2 - v.t1), g = clamp(Math.abs(dl) * 1.2, 4, 60) * Math.sign(dl || 1);
+      return svg('<path class="fl" d="M14 56h14v58H14z"/><path class="dm" d="M14 60l14 10M14 76l14 10M14 92l14 10"/>' + pipe("M28 85H230", 18) + '<g class="stretch" style="--sx:' + ((202 + g) / 202).toFixed(3) + '">' + pipe("M28 85H230", 18, "y") + '<rect class="fa" x="226" y="72" width="6" height="26"/></g>' +
+        [80, 150].map(x => '<path class="fs" d="M' + x + " 108l-8 12h16z" + '"/>').join("") + '<path class="d" d="M230 60V130"/>' + T(230 + g / 2, 56, "+" + fmt(dl, 1) + " mm", "ta") + T(28, 150, c.L("anchor", "অ্যাঙ্কর"), "ts", "start") + T(160, 162, fmt(v.L, 0) + " m · " + fmt(v.t1, 0) + " → " + fmt(v.t2, 0) + " °C", "ts"), 172);
+    },
+    pcd(v, c) {
+      const n = Math.round(v.n); if (n < 2 || n > 72) return svg(T(160, 85, "2–72", "ta"));
+      const cx = 100, cy = 98, R = 60, hr = clamp(Math.PI * R / n * .45, 2.5, 9), P = i => { const a = rad(v.a0 + i * 360 / n); return [cx + R * Math.sin(a), cy - R * Math.cos(a)]; };
+      let s = '<circle cx="' + cx + '" cy="' + cy + '" r="' + (R + hr + 10) + '" class="fs"/><circle cx="' + cx + '" cy="' + cy + '" r="' + R + '" class="cl"/><path class="d" d="M' + cx + " " + (cy - R - 22) + "V" + (cy + R + 22) + "M" + (cx - R - 22) + " " + cy + "H" + (cx + R + 22) + '"/>';
+      for (let i = 0; i < n; i++) { const p = P(i); s += '<circle cx="' + r1(p[0]) + '" cy="' + r1(p[1]) + '" r="' + r1(hr) + '" class="' + (i ? "f" : "fa") + '"/>' + (n <= 16 ? T(cx + (R + hr + 20) * Math.sin(rad(v.a0 + i * 360 / n)), cy - (R + hr + 20) * Math.cos(rad(v.a0 + i * 360 / n)) + 4, i + 1, "ts") : ""); }
+      const a = P(0), b = P(1);
+      return svg(s + '<path class="arrow" d="M' + a.map(r1).join(" ") + "L" + b.map(r1).join(" ") + '"/>' + T(250, 70, "PCD " + fmt(v.pcd, 1), "tx") + T(250, 96, fmt(v.pcd * Math.sin(Math.PI / n), 1) + " mm", "big") + T(250, 116, c.L("hole to hole", "দুই ছিদ্রের মাঝে"), "ts"), 196);
+    },
   };
+  function tankText(v, c) {
+    const R = v.D / 2, full = Math.PI * R * R * v.L; let V;
+    if (v.o === "v") V = Math.PI * R * R * clamp(v.h, 0, v.L); else { const h = clamp(v.h, 0, v.D); V = (R * R * Math.acos((R - h) / R) - (R - h) * Math.sqrt(2 * R * h - h * h)) * v.L; }
+    return T(250, 72, fmt(V / full * 100, 0) + "%", "big") + T(250, 96, fmt(V, 2) + " m³", "ta") + T(250, 118, c.L("of ", "মোট ") + fmt(full, 2) + " m³", "ts");
+  }
   function slingDraw(a, legs, tension, c) {
     const hx = 160, yb = 120, ok = a >= 45 ? "ok" : a >= 30 ? "warn" : "bad";
     let hs = 80, h = hs * Math.tan(rad(clamp(a, 1, 89.9))); if (h > 96) { h = 96; hs = h / Math.tan(rad(a)); }

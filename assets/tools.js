@@ -1,6 +1,6 @@
 // Field calculators. Each tool: fields (inputs) and calc(values) returning HTML.
 (function () {
-  const SELF = (document.currentScript && document.currentScript.src) || "", UI_VER = "8";
+  const SELF = (document.currentScript && document.currentScript.src) || "", UI_VER = "9";
   const f = (x, dp = 2) => (isFinite(x) ? Number(x).toLocaleString(undefined, { maximumFractionDigits: dp, minimumFractionDigits: 0 }) : "–");
   const pill = (c, t) => '<span class="pill ' + c + '">' + t + "</span>";
   const muted = t => '<br><span style="color:var(--muted)">' + t + "</span>";
@@ -23,6 +23,11 @@
     calc(v) {
       return ["a", "b", "c", "d"].map((k, i) => "Foot " + (i + 1) + ": " + f(v[k]) + " mm " + (v[k] > 0.05 ? pill("bad", "Correct") : pill("ok", "OK"))).join("<br>") + muted("Limit 0.05 mm. Fix the worst foot first, then recheck all four.");
     } },
+  { id: "shim", cat: "Rotary", title: "Shim correction", desc: "Vertical moves at the movable machine's feet from offset and angularity at the coupling. + offset = movable machine high; + angle = shaft rises away from the coupling.",
+    fields: [N("off", "Vertical offset at coupling (mm)", 0.2, 0.01), N("ang", "Vertical angularity (mm/100 mm)", 0.05, 0.01), N("d1", "Coupling to front feet (mm)", 300), N("d2", "Coupling to back feet (mm)", 900)],
+    calc(v) { const fr = -(v.off + v.ang / 100 * v.d1), bk = -(v.off + v.ang / 100 * v.d2);
+      const say = m => Math.abs(m) < 0.005 ? "no change" : (m > 0 ? "add <b>" : "remove <b>") + f(Math.abs(m), 2) + " mm</b> shims";
+      return "Front feet: " + say(fr) + "<br>Back feet: " + say(bk) + muted("Fix soft foot first. Move, re-measure, then set the horizontal."); } },
   { id: "thermal", cat: "Rotary", title: "Thermal growth", desc: "Vertical growth of a centreline from cold to running temperature, for cold alignment offsets.",
     fields: [N("l", "Base to shaft centre (mm)", 450), N("t", "Temperature rise (°C)", 60), S("m", "Material", [["11.7", "Carbon steel (11.7)"], ["10.5", "Cast iron (10.5)"], ["17.3", "Stainless 304 (17.3)"], ["23", "Aluminium (23)"]])],
     calc(v) { const g = v.m * v.l / 1000 * v.t / 1000; return "Growth <b>" + f(g, 3) + " mm</b>" + muted("Set this machine " + f(g, 2) + " mm lower than the other when cold, less the other machine's own growth."); } },
@@ -82,6 +87,10 @@
   { id: "grease", cat: "Rotary", title: "Grease quantity", desc: "Relubrication quantity for side-greased bearings: G = 0.005 × D × B.",
     fields: [N("D", "Bearing OD (mm)", 110), N("B", "Width (mm)", 27), N("shot", "Grams per gun stroke", 1.2, 0.1)],
     calc(v) { const g = 0.005 * v.D * v.B; return "Quantity <b>" + f(g, 1) + " g</b><br>About <b>" + f(g / v.shot, 0) + " strokes</b>" + muted("Weigh 10 strokes of your gun to find grams per stroke."); } },
+  { id: "l10", cat: "Rotary", title: "Bearing life (L10)", desc: "Basic rating life: 90% of identical bearings reach this life. L10 = (C/P)^p million revolutions.",
+    fields: [N("C", "Dynamic load rating C (kN)", 52), N("P", "Equivalent load P (kN)", 5, 0.1), N("n", "Speed (rpm)", 1480), S("p", "Type", [["3", "Ball bearing (p = 3)"], ["3.333", "Roller bearing (p = 10/3)"]])],
+    calc(v) { const mrev = Math.pow(v.C / v.P, v.p), h = mrev * 1e6 / (60 * v.n);
+      return "L10 <b>" + f(mrev, 0) + "</b> million rev<br>Life <b>" + f(h, 0) + " h</b> (" + f(h / 8760, 1) + " years at 24/7) " + (h >= 40000 ? pill("ok", "Long") : h >= 20000 ? pill("warn", "Typical") : pill("bad", "Short")) + muted("C is in the maker's catalogue. Poor lubrication or contamination cuts real life far below L10."); } },
   { id: "motortq", cat: "Rotary", title: "Torque from power", desc: "Shaft torque from motor power and speed. Also motor synchronous speed.",
     fields: [N("p", "Power (kW)", 75), N("n", "Speed (rpm)", 1480), S("hz", "Supply", [["50", "50 Hz"], ["60", "60 Hz"]]), N("poles", "Poles", 4)],
     calc(v) { const T = 9549 * v.p / v.n; const ns = 120 * v.hz / v.poles; return "Torque <b>" + f(T, 0) + " N·m</b> (" + f(T * 0.7376, 0) + " ft·lb)<br>Synchronous speed " + f(ns, 0) + " rpm, slip " + f((ns - v.n) / ns * 100, 1) + "%"; } },
@@ -119,6 +128,11 @@
       const step = [0]; for (let s = 1; s < q; s++) { let best = -1, bd = -1; for (let c = 0; c < q; c++) if (!step.includes(c)) { const dmin = Math.min(...step.map(x => Math.min(Math.abs(x - c), q - Math.abs(x - c)))); if (dmin > bd) { bd = dmin; best = c; } } step.push(best); }
       for (const s of step) { [0, 2, 1, 3].forEach(k => { const b = s + k * q + 1; if (!used.has(b)) { used.add(b); order.push(b); } }); }
       return "Order: <b>" + order.join(" – ") + "</b>" + muted("Number bolts clockwise. Same pattern for each torque pass, then circular passes at 100%."); } },
+  { id: "pcd", cat: "Bolting", title: "Bolt hole layout (PCD)", desc: "Hole positions on a pitch circle, for marking out flanges and base plates. Angles clockwise from 12 o'clock.",
+    fields: [N("n", "Number of holes", 8, 1), N("pcd", "Pitch circle diameter (mm)", 241.3, 0.1), N("a0", "First hole angle (°)", 22.5, 0.5)],
+    calc(v) { const n = Math.round(v.n); if (n < 2 || n > 72) return "Use 2 to 72 holes."; const r = v.pcd / 2;
+      const rows = Array.from({ length: Math.min(n, 24) }, (_, i) => { const a = v.a0 + i * 360 / n; return (i + 1) + ": " + f(a, 1) + "° → X " + f(r * Math.sin(rad(a)), 1) + ", Y " + f(r * Math.cos(rad(a)), 1); });
+      return "Hole to hole (chord) <b>" + f(v.pcd * Math.sin(Math.PI / n), 2) + " mm</b><br>" + rows.join("<br>") + muted("Flange holes straddle the centre lines: first hole at 180/n = " + f(180 / n, 2) + "°."); } },
   /* ---------- Rigging ---------- */
   { id: "sling", cat: "Rigging", title: "Sling leg tension", desc: "Equal legs, angle from horizontal. Three/four-leg slings: assume two legs carry the load.",
     fields: [N("w", "Load incl. rigging (t)", 5, 0.1), N("a", "Sling angle from horizontal (°)", 60), S("legs", "Legs carrying load", [["1", "1 (vertical)"], ["2", "2"]], "2")],
@@ -173,6 +187,10 @@
   { id: "contents", cat: "Piping", title: "Pipe volume & water", desc: "Volume and water weight for filling or hydrotesting a line.",
     fields: [N("id", "Inside diameter (mm)", 154.1, 0.1), N("l", "Length (m)", 120)],
     calc(v) { const lpm = Math.PI * Math.pow(v.id / 1000, 2) / 4 * 1000; const tot = lpm * v.l; return "Per metre " + f(lpm, 2) + " L<br>Total <b>" + f(tot, 0) + " L</b> (" + f(tot / 1000, 2) + " m³, " + f(tot / 1000, 2) + " t of water)"; } },
+  { id: "expand", cat: "Piping", title: "Thermal expansion", desc: "How much a pipe run grows from install to operating temperature: ΔL = α × L × ΔT.",
+    fields: [N("L", "Pipe length (m)", 50), N("t1", "Install temperature (°C)", 25), N("t2", "Operating temperature (°C)", 180), S("a", "Material", [["11.7", "Carbon steel (11.7)"], ["17.3", "Stainless 304/316 (17.3)"], ["16.5", "Copper (16.5)"], ["23", "Aluminium (23)"]])],
+    calc(v) { const dl = v.a * 1e-6 * v.L * 1000 * (v.t2 - v.t1);
+      return "Growth <b>" + f(dl, 1) + " mm</b><br>Per 10 m: " + f(dl / v.L * 10, 1) + " mm" + muted("Guides and anchors must let this movement happen, or a loop / expansion joint must take it."); } },
   /* ---------- Welding ---------- */
   { id: "heatin", cat: "Welding", title: "Heat input", desc: "Arc energy and ISO heat input from volts, amps and travel speed.",
     fields: [N("v", "Volts", 24), N("a", "Amps", 140), N("len", "Weld length (mm)", 150), N("t", "Time (s)", 60), S("k", "Process (ISO k)", [["0.8", "SMAW / GMAW / FCAW (0.8)"], ["0.6", "GTAW (0.6)"], ["1.0", "SAW (1.0)"]])],
@@ -193,6 +211,12 @@
   { id: "cyl", cat: "General", title: "Hydraulic cylinder", desc: "Push and pull force, and speed from pump flow.",
     fields: [N("bore", "Bore (mm)", 100), N("rod", "Rod (mm)", 56), N("p", "Pressure (bar)", 160), N("q", "Pump flow (L/min)", 40)],
     calc(v) { const A = Math.PI * v.bore ** 2 / 4 / 100, Ar = A - Math.PI * v.rod ** 2 / 4 / 100; return "Push <b>" + f(v.p * A / 100, 1) + " kN</b>, pull <b>" + f(v.p * Ar / 100, 1) + " kN</b><br>Extend " + f(v.q / (A * 0.1), 2) + " m/min, retract " + f(v.q / (Ar * 0.1), 2) + " m/min"; } },
+  { id: "tank", cat: "General", title: "Tank volume", desc: "Liquid in a vertical or horizontal cylindrical tank from the level (dip).",
+    fields: [S("o", "Tank", [["v", "Vertical cylinder"], ["h", "Horizontal cylinder"]]), N("D", "Diameter (m)", 2.5, 0.1), N("L", "Height or length (m)", 4, 0.1), N("h", "Liquid level (m)", 1.2, 0.05), N("sg", "Specific gravity", 1, 0.01)],
+    calc(v) { const R = v.D / 2, full = Math.PI * R * R * v.L; let V;
+      if (v.o === "v") V = Math.PI * R * R * Math.min(Math.max(v.h, 0), v.L);
+      else { const h = Math.min(Math.max(v.h, 0), v.D); V = (R * R * Math.acos((R - h) / R) - (R - h) * Math.sqrt(2 * R * h - h * h)) * v.L; }
+      return "Liquid <b>" + f(V, 2) + " m³</b> (" + f(V * 1000, 0) + " L), " + f(V / full * 100, 0) + "% full<br>Capacity " + f(full, 2) + " m³<br>Liquid mass ≈ <b>" + f(V * v.sg, 2) + " t</b>"; } },
   { id: "units", cat: "General", title: "Unit converter", desc: "The conversions that come up every shift.",
     fields: [N("v", "Value", 10, "any"), S("t", "Convert", [["bar-psi", "bar → psi"], ["psi-bar", "psi → bar"], ["nm-ftlb", "N·m → ft·lb"], ["ftlb-nm", "ft·lb → N·m"], ["mm-in", "mm → in"], ["in-mm", "in → mm"], ["c-f", "°C → °F"], ["f-c", "°F → °C"], ["kw-hp", "kW → hp"], ["hp-kw", "hp → kW"], ["m3h-gpm", "m³/h → US gpm"], ["gpm-m3h", "US gpm → m³/h"], ["kg-lb", "kg → lb"], ["lb-kg", "lb → kg"], ["mpa-ksi", "MPa → ksi"], ["ksi-mpa", "ksi → MPa"], ["kn-t", "kN → tonne-force"], ["ins-mms", "in/s pk → mm/s RMS"], ["mms-ins", "mm/s RMS → in/s pk"]])],
     calc(v) { const x = v.v; const m = { "bar-psi": [x * 14.5038, "psi"], "psi-bar": [x / 14.5038, "bar"], "nm-ftlb": [x * 0.73756, "ft·lb"], "ftlb-nm": [x * 1.35582, "N·m"], "mm-in": [x / 25.4, "in"], "in-mm": [x * 25.4, "mm"], "c-f": [x * 1.8 + 32, "°F"], "f-c": [(x - 32) / 1.8, "°C"], "kw-hp": [x * 1.34102, "hp"], "hp-kw": [x * 0.7457, "kW"], "m3h-gpm": [x * 4.40287, "US gpm"], "gpm-m3h": [x * 0.22712, "m³/h"], "kg-lb": [x * 2.20462, "lb"], "lb-kg": [x * 0.453592, "kg"], "mpa-ksi": [x * 0.145038, "ksi"], "ksi-mpa": [x * 6.89476, "MPa"], "kn-t": [x / 9.80665, "t"], "ins-mms": [x * 25.4 / Math.SQRT2, "mm/s RMS"], "mms-ins": [x * Math.SQRT2 / 25.4, "in/s pk"] }[v.t];

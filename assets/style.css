@@ -456,3 +456,5 @@ pre.report{white-space:pre-wrap;font-family:var(--mono);font-size:.8rem;backgrou
   #printsheet .psign span{flex:1;border-top:1px solid #000;padding-top:4px;font-size:10pt}
   #printsheet .pnote{font-size:9pt;color:#444;margin-top:18px}
 }
+.tviz .stretch{transform-origin:28px 85px;animation:stretch 2.6s ease-in-out infinite alternate}
+@keyframes stretch{from{transform:scaleX(1)}to{transform:scaleX(var(--sx))}}
