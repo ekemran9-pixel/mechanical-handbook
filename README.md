@@ -1,4 +1,4 @@
-# Mechanical Foreman Handbook · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক
+# Mechanical Handbook · মেকানিক্যাল হ্যান্ডবুক
 
 Static site (English + বাংলা), live at https://foreman-handbook.netlify.app
 
