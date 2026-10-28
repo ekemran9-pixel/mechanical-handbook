@@ -16,7 +16,11 @@ self.addEventListener("fetch", e => {
   // pages: network first so updates show at once; cache when offline
   if (req.mode === "navigate") {
     e.respondWith(fetch(req).then(r => { const copy = r.clone(); caches.open(CACHE).then(c => c.put(req, copy)); return r; })
-      .catch(() => caches.match(req, { ignoreSearch: true }).then(r => r || caches.match("/index.html"))));
+      .catch(() => {
+        // Netlify serves /tools for /tools.html and /bn/ for /bn/index.html
+        const p = url.pathname, alt = p.endsWith("/") ? p + "index.html" : p.endsWith(".html") ? p : p + ".html";
+        return caches.match(req, { ignoreSearch: true }).then(r => r || caches.match(alt)).then(r => r || caches.match("/index.html"));
+      }));
     return;
   }
   // assets: cache first, refresh in the background
