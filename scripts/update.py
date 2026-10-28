@@ -3,7 +3,7 @@
 - bumps the ?v= number on CSS/JS links so browsers fetch the new files
 - rebuilds sw.js (offline copy of every page), sitemap.xml and robots.txt
 - refreshes the share-preview tags (WhatsApp/Facebook) in every page head
-Set SITE to the site's address when the Netlify link changes.
+Set SITE to the site's address if it changes (for example a custom domain).
 """
 import pathlib, re, html, datetime
 

@@ -19,7 +19,7 @@ self.addEventListener("fetch", e => {
   if (req.mode === "navigate") {
     e.respondWith(fetch(req).then(r => { const copy = r.clone(); caches.open(CACHE).then(c => c.put(req, copy)); return r; })
       .catch(() => {
-        // Netlify serves /tools for /tools.html and /bn/ for /bn/index.html
+        // some hosts serve /tools for /tools.html and /bn/ for /bn/index.html
         const p = url.pathname, alt = p.endsWith("/") ? p + "index.html" : p.endsWith(".html") ? p : p + ".html";
         return caches.match(req, { ignoreSearch: true }).then(r => r || caches.match(alt)).then(r => r || caches.match(BASE + "index.html"));
       }));
