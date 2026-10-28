@@ -299,7 +299,7 @@
           if (fl.type === "select") return "<label" + full + ">" + fl.label + '<select id="' + id + '">' + fl.options.map(op => '<option value="' + op[0] + '"' + (String(op[0]) === String(val ?? fl.options[0][0]) ? " selected" : "") + ">" + op[1] + "</option>").join("") + "</select></label>";
           return "<label" + full + ">" + fl.label + '<input id="' + id + '" type="' + fl.type + '"' + (fl.step ? ' step="' + fl.step + '"' : "") + (fl.type === "number" ? ' inputmode="decimal"' : "") + ' value="' + String(val).replace(/"/g, "&quot;") + '"></label>';
         }).join("") + '</div><div class="res"><div class="rhead">' + L("Result", "ফলাফল") + '</div><div class="out" id="' + t.id + '-out" aria-live="polite"></div></div>' +
-        '<div class="tact"><button type="button" class="tbtn" data-act="copy" data-id="' + t.id + '">' + L("Copy result", "ফলাফল কপি") + '</button><button type="button" class="tbtn" data-act="reset" data-id="' + t.id + '">' + L("Reset", "রিসেট") + "</button></div></div>").join("") + "</div></section>").join("") +
+        '<div class="tact"><button type="button" class="tbtn" data-act="copy" data-id="' + t.id + '">' + L("Copy result", "ফলাফল কপি") + '</button><button type="button" class="tbtn" data-act="reset" data-id="' + t.id + '">' + L("Reset", "রিসেট") + '</button><button type="button" class="tbtn" data-act="share" data-id="' + t.id + '">' + L("Share link", "লিংক শেয়ার") + '</button><button type="button" class="tbtn" data-act="print" data-id="' + t.id + '">' + L("Print / PDF", "প্রিন্ট / PDF") + "</button></div></div>").join("") + "</div></section>").join("") +
       '<p class="tempty" id="tempty" hidden>' + L("No calculator matches. Try another word.", "কিছু পাওয়া যায়নি। অন্য শব্দে খুঁজুন।") + "</p>";
 
     const runs = {};
@@ -320,7 +320,23 @@
       run();
     });
 
-    // card buttons: save, copy, reset
+    const flashBtn = (b, msg) => { const o0 = b.textContent; b.textContent = msg; b.classList.add("ok"); setTimeout(() => { b.textContent = o0; b.classList.remove("ok"); }, 1500); };
+    // one-page report: title, date, inputs, diagram and result, then the browser's print / save-as-PDF
+    const printCard = t => {
+      const card = document.getElementById(t.id), fig = document.getElementById(t.id + "-viz");
+      const rows = t.fields.map(fl => { const el = document.getElementById(t.id + "-" + fl.id); return "<tr><th>" + fl.label + "</th><td>" + (el.tagName === "SELECT" ? el.options[el.selectedIndex].text : el.value) + "</td></tr>"; }).join("");
+      const when = new Date().toLocaleString(lang === "bn" ? "bn-BD" : "en-GB", { dateStyle: "medium", timeStyle: "short" });
+      let sheet = document.getElementById("printsheet");
+      if (!sheet) { sheet = document.createElement("div"); sheet.id = "printsheet"; document.body.appendChild(sheet); }
+      sheet.innerHTML = '<div class="ph"><b>' + L("Mechanical Handbook", "মেকানিক্যাল হ্যান্ডবুক") + "</b><span>" + when + "</span></div><h1>" + t.title + "</h1><p>" + t.desc + "</p>" +
+        (fig ? '<div class="tviz pfig">' + fig.innerHTML + "</div>" : "") + "<h2>" + L("Inputs", "ইনপুট") + '</h2><table class="pt">' + rows + "</table><h2>" + L("Result", "ফলাফল") + '</h2><div class="pout">' + document.getElementById(t.id + "-out").innerHTML + "</div>" +
+        '<div class="psign"><span>' + L("Checked by", "যাচাই করেছেন") + "</span><span>" + L("Signature / date", "স্বাক্ষর / তারিখ") + '</span></div><p class="pnote">' + L("Results are guides. The code, maker's manual and site procedure take priority.", "ফলাফল নির্দেশিকা মাত্র; কোড, নির্মাতার ম্যানুয়াল ও সাইটের নিয়ম চূড়ান্ত।") + " · " + location.host + "</p>";
+      document.body.classList.add("printing");
+      const done = () => { document.body.classList.remove("printing"); removeEventListener("afterprint", done); };
+      addEventListener("afterprint", done);
+      setTimeout(() => window.print(), 50);
+    };
+    // card buttons: save, copy, reset, share, print
     wrap.addEventListener("click", e => {
       const st = e.target.closest(".star");
       if (st) { const id = st.dataset.id; fav.has(id) ? fav.delete(id) : fav.add(id); st.setAttribute("aria-pressed", String(fav.has(id))); store.set("fh-fav", [...fav]); document.getElementById("favN").textContent = num(fav.size); if (cat === "★") apply(); return; }
@@ -329,10 +345,20 @@
       if (b.dataset.act === "reset") {
         t.fields.forEach(fl => { const el = document.getElementById(t.id + "-" + fl.id); el.value = fl.type === "select" ? (fl.value ?? fl.options[0][0]) : fl.value; delete saved[t.id + "-" + fl.id]; });
         runs[t.id](); store.set("fh-tools", saved);
+      } else if (b.dataset.act === "share") {
+        const qs = new URLSearchParams({ c: t.id });
+        t.fields.forEach(fl => qs.set(fl.id, document.getElementById(t.id + "-" + fl.id).value));
+        const url = location.origin + location.pathname + "?" + qs.toString();
+        const ok = () => flashBtn(b, L("Link copied ✓", "লিংক কপি হয়েছে ✓"));
+        if (navigator.share && matchMedia("(pointer:coarse)").matches) navigator.share({ title: t.title, url }).catch(() => {});
+        else if (navigator.clipboard) navigator.clipboard.writeText(url).then(ok, () => prompt(L("Copy this link", "লিংকটি কপি করুন"), url));
+        else prompt(L("Copy this link", "লিংকটি কপি করুন"), url);
+      } else if (b.dataset.act === "print") {
+        printCard(t);
       } else {
         const out = document.getElementById(t.id + "-out");
         const txt = t.title + "\n" + t.fields.map(fl => { const el = document.getElementById(t.id + "-" + fl.id); return fl.label + ": " + (el.tagName === "SELECT" ? el.options[el.selectedIndex].text : el.value); }).join("\n") + "\n—\n" + out.innerText;
-        const done = () => { const o0 = b.textContent; b.textContent = L("Copied ✓", "কপি হয়েছে ✓"); b.classList.add("ok"); setTimeout(() => { b.textContent = o0; b.classList.remove("ok"); }, 1400); };
+        const done = () => flashBtn(b, L("Copied ✓", "কপি হয়েছে ✓"));
         if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, () => {}); else { const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); done(); } catch (er) {} ta.remove(); }
       }
     });
@@ -360,6 +386,13 @@
       const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -40px 0px" });
       document.querySelectorAll(".tool").forEach(el => { el.classList.add("rv"); io.observe(el); });
     }
-    if (location.hash) { const el = document.getElementById(location.hash.slice(1)); if (el) { el.classList.add("in", "flash"); el.scrollIntoView(); } }
+    // opened from a shared link: ?c=<calculator>&<field>=<value>…
+    const qp = new URLSearchParams(location.search), sharedId = qp.get("c"), shared = tools.find(x => x.id === sharedId);
+    if (shared) {
+      shared.fields.forEach(fl => { if (qp.has(fl.id)) document.getElementById(shared.id + "-" + fl.id).value = qp.get(fl.id); });
+      runs[shared.id]();
+      const el = document.getElementById(shared.id); el.classList.add("in", "flash");
+      requestAnimationFrame(() => el.scrollIntoView({ block: "start" }));
+    } else if (location.hash) { const el = document.getElementById(location.hash.slice(1)); if (el) { el.classList.add("in", "flash"); el.scrollIntoView(); } }
   } };
 })();

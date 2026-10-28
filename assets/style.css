@@ -436,3 +436,23 @@ pre.report{white-space:pre-wrap;font-family:var(--mono);font-size:.8rem;backgrou
 .foot .dev b{font-weight:600}
 .foot .dev a{text-decoration:none;color:var(--steel);border-bottom:1px solid transparent}
 .foot .dev a:hover{border-bottom-color:currentColor}
+.tact{flex-wrap:wrap}
+.tbtn{flex:1 1 calc(50% - 8px)}
+#printsheet{display:none}
+@media print{
+  @page{margin:14mm}
+  body.printing>*:not(#printsheet){display:none!important}
+  body.printing #printsheet{display:block;color:#000;font-size:12pt}
+  #printsheet .ph{display:flex;justify-content:space-between;border-bottom:2px solid #000;padding-bottom:6px;font-family:var(--mono)}
+  #printsheet h1{font-size:22pt;margin:14px 0 4px}
+  #printsheet h2{font-size:13pt;margin:16px 0 6px}
+  #printsheet .pfig{border:1px solid #999;border-radius:6px;max-width:520px;margin:12px 0}
+  #printsheet .pfig svg{width:100%;height:auto}
+  #printsheet .pt{border-collapse:collapse;width:100%}
+  #printsheet .pt th,#printsheet .pt td{border:1px solid #999;padding:5px 8px;text-align:left}
+  #printsheet .pt th{width:55%;font-weight:500;background:#f2f2f2}
+  #printsheet .pout{border:2px solid #000;padding:10px 12px;font-family:var(--mono);line-height:1.7}
+  #printsheet .psign{display:flex;gap:40px;margin-top:40px}
+  #printsheet .psign span{flex:1;border-top:1px solid #000;padding-top:4px;font-size:10pt}
+  #printsheet .pnote{font-size:9pt;color:#444;margin-top:18px}
+}
