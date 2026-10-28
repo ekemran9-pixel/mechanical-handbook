@@ -258,28 +258,51 @@
   const ICON = ['<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="2.5"/><path d="M12 4v3M12 17v3M4 12h3M17 12h3"/>', '<circle cx="10" cy="13" r="6"/><path d="M16 13h6M10 7V3h6"/>', '<path d="M8 3h8l3 5-3 5H8L5 8z"/><path d="M12 13v8"/>', '<path d="M12 3v5M5 21l7-13 7 13M3 21h18"/>', '<path d="M3 17h6l6-10h6"/>', '<path d="M5 19L17 7M15 5l4 4M19 15l2 1M17 18l1 2"/>', '<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h5"/>'];
   const ico = i => '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICON[i] || ICON[6]) + "</svg>";
 
+  const CC = ["#2f7fd0", "#0f9d8a", "#8a5cd6", "#d9822b", "#c2453a", "#d6a100", "#5f7d8c"];
+  const HERO = '<svg viewBox="0 0 240 170" aria-hidden="true"><g class="hspin"><circle cx="78" cy="78" r="44" class="hg"/>' +
+    Array.from({ length: 10 }, (_, i) => '<rect x="72" y="22" width="12" height="16" rx="2" class="hg" transform="rotate(' + i * 36 + ' 78 78)"/>').join("") +
+    '<circle cx="78" cy="78" r="14" class="hh"/></g><circle cx="176" cy="66" r="44" class="hgauge"/><path class="harc" d="M145 97A44 44 0 1 1 207 97"/><g class="hneedle"><path d="M173 66L176 30L179 66z" class="hn"/></g><circle cx="176" cy="66" r="5" class="hh"/>' +
+    '<path class="hpipe" d="M10 150H120l20-24H232"/><path class="hflow" d="M10 150H120l20-24H232"/></svg>';
+
   window.FHTools = { render(tools, o) {
     const lang = o.lang, L = (en, bn) => (lang === "bn" ? bn : en);
+    const num = n => (lang === "bn" ? n.toLocaleString("bn-BD") : n);
     const cats = [...new Set(tools.map(t => t.cat))];
     const wrap = document.getElementById("toolsWrap"), nav = document.getElementById("toolnav");
-    document.getElementById("toolCount").textContent = o.count;
     const store = { get(k) { try { return JSON.parse(localStorage.getItem(k) || "null"); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} } };
-    const saved = store.get("fh-tools") || {};
-    const num = n => (lang === "bn" ? n.toLocaleString("bn-BD") : n);
-    nav.innerHTML = '<input type="search" id="tfind" placeholder="' + L("Find a calculator…", "ক্যালকুলেটর খুঁজুন…") + '" aria-label="' + L("Find a calculator", "ক্যালকুলেটর খুঁজুন") + '"><div class="tchips">' +
-      '<button type="button" class="tchip" data-c="" aria-pressed="true">' + L("All", "সব") + " <i>" + num(tools.length) + "</i></button>" +
-      cats.map((c, i) => '<button type="button" class="tchip" data-c="' + c + '" aria-pressed="false">' + ico(i) + c + " <i>" + num(tools.filter(t => t.cat === c).length) + "</i></button>").join("") + "</div>";
+    const saved = store.get("fh-tools") || {}, fav = new Set(store.get("fh-fav") || []);
+    const nviz = tools.filter(t => VIZ[t.id]).length;
+    document.getElementById("toolCount").textContent = o.count;
 
-    wrap.innerHTML = cats.map((c, ci) => '<section class="tgroup" id="cat-' + c.toLowerCase() + '" data-c="' + c + '"><h2><span class="gico">' + ico(ci) + "</span>" + c + '</h2><div class="tools">' +
-      tools.filter(t => t.cat === c).map(t => '<div class="card tool' + (VIZ[t.id] ? " hasviz" : "") + '" id="' + t.id + '"><div class="cat">' + t.cat + "</div><h2>" + t.title + "</h2><p>" + t.desc + "</p>" +
+    // hero: illustration + quick stats beside the page title
+    const head = nav.closest(".sechead");
+    if (head) {
+      head.classList.add("calchero");
+      head.insertAdjacentHTML("afterbegin", '<div class="herofig">' + HERO + "</div>");
+      head.querySelector(".lede").insertAdjacentHTML("afterend", '<div class="hstats"><span><b>' + num(tools.length) + "</b>" + L("calculators", "ক্যালকুলেটর") + "</span><span><b>" + num(nviz) + "</b>" + L("live diagrams", "লাইভ ছবি") + "</span><span><b>" + num(cats.length) + "</b>" + L("categories", "বিভাগ") + "</span><span><b>EN</b>" + L("+ বাংলা", "+ English") + "</span></div>");
+      nav.remove(); head.after(nav);
+    }
+    nav.classList.add("tbar");
+    const tabs = document.querySelector(".tabs"), setTop = () => { nav.style.top = (tabs ? tabs.offsetHeight : 0) + "px"; };
+    setTop(); addEventListener("resize", setTop);
+    nav.innerHTML = '<div class="wrapin"><label class="tfind"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M15.5 15.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input type="search" id="tfind" placeholder="' + L("Find a calculator: torque, sling, NPSH…", "খুঁজুন: টর্ক, স্লিং, NPSH…") + '" aria-label="' + L("Find a calculator", "ক্যালকুলেটর খুঁজুন") + '"></label><div class="tchips">' +
+      '<button type="button" class="tchip" data-c="" aria-pressed="true">' + L("All", "সব") + " <i>" + num(tools.length) + "</i></button>" +
+      '<button type="button" class="tchip favchip" data-c="★" aria-pressed="false">★ ' + L("Saved", "সেভ করা") + ' <i id="favN">' + num(fav.size) + "</i></button>" +
+      cats.map((c, i) => '<button type="button" class="tchip" data-c="' + c + '" aria-pressed="false" style="--cc:' + CC[i % 7] + '">' + ico(i) + c + " <i>" + num(tools.filter(t => t.cat === c).length) + "</i></button>").join("") + '</div><div class="tshown" id="tshown"></div></div>';
+
+    wrap.innerHTML = cats.map((c, ci) => '<section class="tgroup" id="cat-' + c.toLowerCase() + '" data-c="' + c + '" style="--cc:' + CC[ci % 7] + '"><h2><span class="gico">' + ico(ci) + "</span>" + c + "<small>" + num(tools.filter(t => t.cat === c).length) + '</small></h2><div class="tools">' +
+      tools.filter(t => t.cat === c).map(t => '<div class="card tool' + (VIZ[t.id] ? " hasviz" : "") + '" id="' + t.id + '" style="--cc:' + CC[ci % 7] + '"><div class="thead"><span class="tico">' + ico(ci) + '</span><div class="cat">' + t.cat + '</div><button type="button" class="star" data-id="' + t.id + '" aria-pressed="' + fav.has(t.id) + '" title="' + L("Save to your list", "আপনার তালিকায় সেভ করুন") + '">★</button></div><h2>' + t.title + "</h2><p>" + t.desc + "</p>" +
         (VIZ[t.id] ? '<figure class="tviz" id="' + t.id + '-viz"></figure>' : "") + '<div class="fields">' +
         t.fields.map((fl, i) => {
           const id = t.id + "-" + fl.id; const val = saved[id] != null ? saved[id] : fl.value;
           const full = (t.fields.length % 2 === 1 && i === t.fields.length - 1) || fl.type === "text" ? ' class="full"' : "";
           if (fl.type === "select") return "<label" + full + ">" + fl.label + '<select id="' + id + '">' + fl.options.map(op => '<option value="' + op[0] + '"' + (String(op[0]) === String(val ?? fl.options[0][0]) ? " selected" : "") + ">" + op[1] + "</option>").join("") + "</select></label>";
-          return "<label" + full + ">" + fl.label + '<input id="' + id + '" type="' + fl.type + '"' + (fl.step ? ' step="' + fl.step + '"' : "") + ' value="' + String(val).replace(/"/g, "&quot;") + '"></label>';
-        }).join("") + '</div><div class="out" id="' + t.id + '-out" aria-live="polite"></div></div>').join("") + "</div></section>").join("");
+          return "<label" + full + ">" + fl.label + '<input id="' + id + '" type="' + fl.type + '"' + (fl.step ? ' step="' + fl.step + '"' : "") + (fl.type === "number" ? ' inputmode="decimal"' : "") + ' value="' + String(val).replace(/"/g, "&quot;") + '"></label>';
+        }).join("") + '</div><div class="res"><div class="rhead">' + L("Result", "ফলাফল") + '</div><div class="out" id="' + t.id + '-out" aria-live="polite"></div></div>' +
+        '<div class="tact"><button type="button" class="tbtn" data-act="copy" data-id="' + t.id + '">' + L("Copy result", "ফলাফল কপি") + '</button><button type="button" class="tbtn" data-act="reset" data-id="' + t.id + '">' + L("Reset", "রিসেট") + "</button></div></div>").join("") + "</div></section>").join("") +
+      '<p class="tempty" id="tempty" hidden>' + L("No calculator matches. Try another word.", "কিছু পাওয়া যায়নি। অন্য শব্দে খুঁজুন।") + "</p>";
 
+    const runs = {};
     tools.forEach(t => {
       const fig = document.getElementById(t.id + "-viz"), outEl = document.getElementById(t.id + "-out");
       const ctx = { L, prev(k, val) { const p = fig.dataset[k]; fig.dataset[k] = val; return p == null ? val : +p; } };
@@ -292,20 +315,42 @@
         outEl.innerHTML = out;
         if (fig) { try { fig.innerHTML = VIZ[t.id](v, ctx); } catch (e) { fig.innerHTML = ""; } }
       };
+      runs[t.id] = run;
       t.fields.forEach(fl => document.getElementById(t.id + "-" + fl.id).addEventListener("input", () => { run(); store.set("fh-tools", saved); }));
       run();
     });
 
-    // filter by category chip and by text
-    const find = document.getElementById("tfind");
+    // card buttons: save, copy, reset
+    wrap.addEventListener("click", e => {
+      const st = e.target.closest(".star");
+      if (st) { const id = st.dataset.id; fav.has(id) ? fav.delete(id) : fav.add(id); st.setAttribute("aria-pressed", String(fav.has(id))); store.set("fh-fav", [...fav]); document.getElementById("favN").textContent = num(fav.size); if (cat === "★") apply(); return; }
+      const b = e.target.closest(".tbtn"); if (!b) return;
+      const t = tools.find(x => x.id === b.dataset.id);
+      if (b.dataset.act === "reset") {
+        t.fields.forEach(fl => { const el = document.getElementById(t.id + "-" + fl.id); el.value = fl.type === "select" ? (fl.value ?? fl.options[0][0]) : fl.value; delete saved[t.id + "-" + fl.id]; });
+        runs[t.id](); store.set("fh-tools", saved);
+      } else {
+        const out = document.getElementById(t.id + "-out");
+        const txt = t.title + "\n" + t.fields.map(fl => { const el = document.getElementById(t.id + "-" + fl.id); return fl.label + ": " + (el.tagName === "SELECT" ? el.options[el.selectedIndex].text : el.value); }).join("\n") + "\n—\n" + out.innerText;
+        const done = () => { const o0 = b.textContent; b.textContent = L("Copied ✓", "কপি হয়েছে ✓"); b.classList.add("ok"); setTimeout(() => { b.textContent = o0; b.classList.remove("ok"); }, 1400); };
+        if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, () => {}); else { const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); done(); } catch (er) {} ta.remove(); }
+      }
+    });
+
+    // filter by category chip, saved list, and text
+    const find = document.getElementById("tfind"), shown = document.getElementById("tshown");
     let cat = "";
     const apply = () => {
-      const q = find.value.trim().toLowerCase();
+      const q = find.value.trim().toLowerCase(); let n = 0;
       document.querySelectorAll(".tgroup").forEach(g => {
         let any = false;
-        g.querySelectorAll(".tool").forEach(card => { const show = (!cat || g.dataset.c === cat) && (!q || card.textContent.toLowerCase().includes(q)); card.hidden = !show; any = any || show; });
+        g.querySelectorAll(".tool").forEach(card => { const show = (!cat || (cat === "★" ? fav.has(card.id) : g.dataset.c === cat)) && (!q || card.textContent.toLowerCase().includes(q)); card.hidden = !show; if (show) { any = true; n++; card.classList.add("in"); } });
         g.hidden = !any;
       });
+      document.getElementById("tempty").hidden = n > 0;
+      if (cat === "★" && !fav.size) { document.getElementById("tempty").hidden = false; document.getElementById("tempty").textContent = L("Tap ★ on any calculator to save it here.", "যেকোনো ক্যালকুলেটরের ★ চাপলে এখানে সেভ থাকবে।"); }
+      else document.getElementById("tempty").textContent = L("No calculator matches. Try another word.", "কিছু পাওয়া যায়নি। অন্য শব্দে খুঁজুন।");
+      shown.textContent = n === tools.length ? "" : L("Showing " + n + " of " + tools.length, num(tools.length) + "টির মধ্যে " + num(n) + "টি দেখানো হচ্ছে");
     };
     nav.addEventListener("click", e => { const b = e.target.closest(".tchip"); if (!b) return; cat = b.dataset.c; nav.querySelectorAll(".tchip").forEach(x => x.setAttribute("aria-pressed", String(x === b))); apply(); });
     find.addEventListener("input", apply);

@@ -1,5 +1,6 @@
 // Field calculators. Each tool: fields (inputs) and calc(values) returning HTML.
 (function () {
+  const SELF = (document.currentScript && document.currentScript.src) || "", UI_VER = "4";
   const f = (x, dp = 2) => (isFinite(x) ? Number(x).toLocaleString(undefined, { maximumFractionDigits: dp, minimumFractionDigits: 0 }) : "–");
   const pill = (c, t) => '<span class="pill ' + c + '">' + t + "</span>";
   const muted = t => '<br><span style="color:var(--muted)">' + t + "</span>";
@@ -203,5 +204,8 @@
       return "Saturation ≈ <b>" + f(T, 1) + " °C</b>" + muted("Linear interpolation between table points."); } },
   ];
 
-  FHTools.render(tools, { lang: "en", count: tools.length + " calculators", err: "Check the inputs." });
+  // An old cached page may not load tools-ui.js; fetch it next to this file before rendering.
+  const go = () => FHTools.render(tools, { lang: "en", count: tools.length + " calculators", err: "Check the inputs." });
+  if (window.FHTools) go();
+  else { const sc = document.createElement("script"); sc.src = SELF.replace(/[^/]*$/, "tools-ui.js?v=" + UI_VER); sc.onload = go; document.head.appendChild(sc); }
 })();
