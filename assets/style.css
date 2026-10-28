@@ -432,3 +432,7 @@ pre.report{white-space:pre-wrap;font-family:var(--mono);font-size:.8rem;backgrou
   .tfind input{padding:8px 0}
   .tshown:empty{display:none}
 }
+.foot .dev{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);color:var(--ink)}
+.foot .dev b{font-weight:600}
+.foot .dev a{text-decoration:none;color:var(--steel);border-bottom:1px solid transparent}
+.foot .dev a:hover{border-bottom-color:currentColor}
