@@ -12,3 +12,8 @@ Static site (English + বাংলা), live at https://ekemran9-pixel.github.i
 - Netlify লিংক (সাইটের ঠিকানা) বদলালে `scripts/update.py`-এর শুরুতে `SITE` বদলে স্ক্রিপ্টটা একবার চালান।
 - নিচের ডেভেলপার তথ্য প্রতিটা পাতার `<p class="dev">` লাইনে।
 - বিষয়ের পাতার ছবি: `assets/figs.js`। নতুন পাতায় ছবি দিতে সেখানে পাতার পথ (যেমন `"rotary/gearboxes"`) নামে একটা ফাংশন যোগ করুন এবং সেই পাতার (ইংরেজি ও `bn/`) `search.js`-এর আগে `figs.js` স্ক্রিপ্ট লাইনটা দিন।
+
+## সব সাইটের লিংক
+
+সব সাইটের লিংক ও আপডেটের ইতিহাস এই Google Sheet-এ রাখা হয়: https://docs.google.com/spreadsheets/d/1Cou0UVFgeoXPAcPovWf_OsRJtxt80I92h2XGK97Ra0w/edit
+প্রতিবার সাইট আপডেট হলে "আপডেটের ইতিহাস" ট্যাবে উপরে একটা নতুন সারি যোগ করুন, আর লিংক বদলালে "সাইট ও লিংক" ট্যাব ঠিক করুন।
