@@ -22,6 +22,13 @@ for js in ("assets/tools.js", "assets/tools-bn.js"):
     f = ROOT / js
     f.write_text(re.sub(r'UI_VER = "\d+"', 'UI_VER = "%d"' % ver, f.read_text()))
 
+# 404.html is served for missing pages at any depth, so its links must be absolute;
+# prefix them with the site's folder (/foreman-handbook on GitHub Pages, nothing on a custom domain)
+from urllib.parse import urlparse
+base = urlparse(SITE).path.rstrip("/")
+nf = ROOT / "404.html"
+nf.write_text(re.sub(r'(href|src)="(?:%s)?/(?!/)' % re.escape(base) if base else r'(href|src)="/(?!/)', r'\1="%s/' % base, nf.read_text()))
+
 # 2. head tags: app manifest, icons and share preview
 for p in pages:
     s = p.read_text()

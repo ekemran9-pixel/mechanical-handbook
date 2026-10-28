@@ -68,6 +68,8 @@ BAR_CSS = """<style>
 .hbbar a:hover{text-decoration:underline}
 .hbbar span{opacity:.7}
 .hbmoved a{display:block}
+.hbbar .oth{opacity:1}.hbbar .oth a{margin-left:6px}
+@media(max-width:640px){.hbbar .oth{display:none}}
 </style>
 """
 
@@ -79,7 +81,7 @@ def build(name, conf):
     # handbook bar above the guide's own header
     others = " · ".join('<a href="../%s/">%s</a>' % (k, t) for k, t in OTHERS if k != name)
     bar = ('<div class="hbbar"><a href="%sindex.html">← মেকানিক্যাল হ্যান্ডবুক</a><span>›</span><b>%s</b>'
-           '<span style="margin-left:auto">অন্য গাইড:</span>%s</div>\n') % (HB, conf["title"], others)
+           '<span class="oth" style="margin-left:auto">অন্য গাইড: %s</span></div>\n') % (HB, conf["title"], others)
     shell = bar + shell
     # drop nav links of removed modules; list them under "now in the handbook"
     for mid in moved:
