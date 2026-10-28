@@ -129,13 +129,132 @@
     },
   };
 
+
+  // further figures and step players; each returns a list of [svg, caption, stepCaptions?, beforeHeadingText?]
+  const st = (n, body) => '<g data-s="' + n + '">' + body + "</g>";
+  const MORE = {
+    "rotary/alignment"() {
+      const base = '<rect x="20" y="196" width="440" height="14" class="fl"/><rect x="40" y="120" width="150" height="76" rx="8" class="fs"/>' + T(115, 162, L("PUMP (fixed)", "পাম্প (স্থির)"), "ts") +
+        pipe("M190 152H232", 12) + '<rect x="230" y="134" width="10" height="36" class="f"/><rect x="242" y="134" width="10" height="36" class="f"/>' + pipe("M252 152H290", 12, "b") +
+        '<rect x="290" y="112" width="160" height="84" rx="8" class="fs"/>' + T(370, 158, L("MOTOR (movable)", "মোটর (চলমান)"), "ts") + '<rect x="300" y="190" width="24" height="8" class="f"/><rect x="420" y="190" width="24" height="8" class="f"/>';
+      const steps = [
+        st(1, '<rect x="380" y="28" width="56" height="44" rx="6" class="f"/><path class="ring" d="M396 30v-10a12 12 0 0 1 24 0v10"/>' + T(408, 56, "LOTO", "ta")),
+        st(2, '<path class="flow" d="M300 204h24M420 204h24"/>' + T(410, 240, L("clean feet & base", "পা ও বেস পরিষ্কার"), "ts")),
+        st(3, '<path class="arrow" d="M200 140H286"/>' + T(241, 188, L("straight edge", "স্ট্রেইট এজ"), "ts")),
+        st(4, '<circle cx="312" cy="178" r="12" class="f"/><path class="dm" d="M312 178l6-5"/>' + T(240, 240, L("soft foot ≤ 0.05", "সফট ফুট ≤ ০.০৫"), "ta")),
+        st(5, '<rect x="212" y="100" width="16" height="30" class="fa"/><rect x="256" y="100" width="16" height="30" class="fa"/><path class="flowfast" style="--t:.6s;stroke:var(--bad)" d="M228 112H256"/>' + T(242, 88, L("laser / dials", "লেজার / ডায়াল"), "ta")),
+        st(6, '<rect x="300" y="198" width="24" height="5" class="fa"/><rect x="420" y="198" width="24" height="5" class="fa"/><path class="arrow" d="M312 226v-14M432 226v-14"/>' + T(372, 270, L("shims: vertical", "শিম: উল্লম্ব"), "ta")),
+        st(7, '<path class="arrow" d="M470 150h-14M470 150l-5-5M470 150l-5 5"/>' + T(462, 100, L("jack bolts", "জ্যাক বোল্ট"), "ta", "end")),
+        st(8, '<rect x="40" y="24" width="64" height="76" rx="4" class="f"/><path class="dm" d="M50 44h44M50 58h44M50 72h30"/><path class="arrow" style="stroke:var(--ok)" d="M60 86l8 8 18-20"/>' + T(72, 116, L("record", "লিখে রাখুন"), "ta"))
+      ].join("");
+      return [[svg(480, 280, base + steps), L("The alignment job in eight steps. Press Play, or step through with the arrows.", "আট ধাপে অ্যালাইনমেন্টের কাজ। ▶ চালু চাপুন, অথবা তীর দিয়ে এক এক ধাপ দেখুন।"), [
+        L("Lock out the motor and check both shafts turn by hand.", "মোটর লক আউট করুন, দুই শ্যাফট হাতে ঘোরে কিনা দেখুন।"),
+        L("Clean the baseplate and the feet; dirt under a foot is a false reading.", "বেসপ্লেট ও পা পরিষ্কার করুন; পায়ের নিচে ময়লা মানে ভুল রিডিং।"),
+        L("Rough align with a straight edge across the coupling, to about 0.5 mm.", "কাপলিং-এর ওপর স্ট্রেইট এজ রেখে মোটামুটি ০.৫ মিমির মধ্যে আনুন।"),
+        L("Check soft foot one foot at a time. More than 0.05 mm: correct it now.", "একবারে এক পায়ের সফট ফুট দেখুন। ০.০৫ মিমির বেশি হলে এখনই ঠিক করুন।"),
+        L("Fit the laser or dials and record the as-found offset and angle.", "লেজার বা ডায়াল লাগিয়ে শুরুর অফসেট ও কোণ লিখে রাখুন।"),
+        L("Correct the vertical: add or remove shims under the front and back feet.", "উল্লম্ব ঠিক করুন: সামনের ও পেছনের পায়ে শিম দিন বা সরান।"),
+        L("Correct the horizontal with the jack bolts while watching the dials.", "ডায়াল দেখতে দেখতে জ্যাক বোল্ট দিয়ে আনুভূমিক ঠিক করুন।"),
+        L("Tighten the bolts in sequence, measure again, record the final values.", "ক্রম মেনে বোল্ট টাইট দিন, আবার মাপুন, শেষ মান লিখে রাখুন।")], "#s2"]];
+    },
+    "rotary/centrifugal-pumps"() {
+      const base = '<rect x="20" y="214" width="440" height="12" class="fl"/>' + pipe("M20 178H120", 14, "b") + '<circle cx="150" cy="170" r="40" class="fs"/>' + pipe("M150 130V40H300", 14, "b") +
+        '<rect x="200" y="148" width="70" height="44" rx="6" class="fl"/>' + pipe("M270 170H300", 10) + '<rect x="300" y="138" width="140" height="64" rx="8" class="fs"/>' + T(370, 175, L("MOTOR", "মোটর"), "ts") +
+        '<path class="fl" d="M60 168l14 10-14 10zM88 168l-14 10 14 10z"/><path class="fl" d="M210 30l10 14-10 14zM238 30l-10 14 10 14z"/>' + T(74, 204, L("suction valve", "সাকশন ভাল্ভ"), "ts") + T(224, 22, L("discharge valve", "ডিসচার্জ ভাল্ভ"), "ts") +
+        '<rect x="226" y="186" width="16" height="22" rx="3" class="f"/><circle cx="330" cy="70" r="20" class="f"/><path class="dm" d="M330 70l-12 -6"/>';
+      const steps = [
+        st(1, '<rect x="380" y="20" width="80" height="34" rx="6" class="f"/>' + T(420, 42, L("permit ✓", "পারমিট ✓"), "ta")),
+        st(2, '<rect x="228" y="196" width="12" height="10" class="water"/>' + T(234, 252, L("oil level", "অয়েল লেভেল"), "ta")),
+        st(3, '<path d="M60 168l14 10-14 10zM88 168l-14 10 14 10z" style="fill:var(--ok)"/><path class="flow" d="M20 178H120"/>' + T(74, 150, L("FULL open", "পুরো খোলা"), "ta")),
+        st(4, '<path class="arrow" d="M150 128v-14"/><circle cx="150" cy="104" r="4" class="wt"/>' + T(160, 106, L("vent", "ভেন্ট"), "ta", "start")),
+        st(5, '<g class="spin" style="--t:.8s"><path class="vane" d="M150 150v40M130 170h40"/></g><path d="M210 30l10 14-10 14zM238 30l-10 14 10 14z" style="fill:var(--ok)"/><path class="flow" d="M150 130V40H300"/>' + T(370, 126, L("start, open slowly", "চালু, ধীরে খুলুন"), "ta")),
+        st(6, '<g class="needle" style="transform-origin:330px 70px;--from:-60deg;--to:40deg"><path class="ndl" d="M328 70l2-16 2 16z"/></g>' + T(330, 108, L("pressure, amps, noise, leaks", "চাপ, অ্যাম্পিয়ার, শব্দ, লিক"), "ts"))
+      ].join("");
+      return [[svg(480, 260, base + steps), L("Starting a centrifugal pump safely, step by step.", "নিরাপদে সেন্ট্রিফিউগাল পাম্প চালুর ধাপগুলো।"), [
+        L("Permit closed, LOTO removed, guard fitted, people clear.", "পারমিট বন্ধ, LOTO খোলা, গার্ড লাগানো, আশেপাশে কেউ নেই।"),
+        L("Oil in the middle of the sight glass; cooling and seal flush open.", "সাইট গ্লাসের মাঝামাঝি তেল; কুলিং ও সিল ফ্লাশ খোলা।"),
+        L("Open the suction valve fully. Never throttle the suction.", "সাকশন ভাল্ভ পুরো খুলুন। সাকশন কখনো কমাবেন না।"),
+        L("Vent the casing until liquid comes out with no bubbles (priming).", "বুদবুদ ছাড়া তরল না আসা পর্যন্ত কেসিং ভেন্ট করুন (প্রাইমিং)।"),
+        L("Start the motor, then open the discharge valve slowly within about 30 s.", "মোটর চালু করুন, তারপর প্রায় ৩০ সেকেন্ডের মধ্যে ধীরে ধীরে ডিসচার্জ ভাল্ভ খুলুন।"),
+        L("Check discharge pressure, motor amps, noise, seal leakage and bearing temperature.", "ডিসচার্জ চাপ, মোটরের অ্যাম্পিয়ার, শব্দ, সিল লিক ও বেয়ারিং-এর তাপ দেখুন।")], "#s8"]];
+    },
+    "rotary/couplings"() {
+      const card = (x, title, body) => '<g transform="translate(' + x + ' 0)"><rect x="4" y="30" width="104" height="120" rx="8" class="fsoft"/>' + body + T(56, 172, title, "tx") + "</g>";
+      const hubs = '<rect x="14" y="60" width="30" height="60" rx="3" class="fs"/><rect x="68" y="60" width="30" height="60" rx="3" class="fs"/>' + pipe("M4 90H14", 10) + pipe("M98 90H108", 10);
+      return [[svg(580, 200, card(0, L("Jaw (spider)", "জ (স্পাইডার)"), hubs + '<path class="fa" d="M44 64h24v12h-24zM44 84h24v12h-24zM44 104h24v12h-24z"/>') +
+        card(116, L("Tyre", "টায়ার"), hubs + '<path class="fa" d="M44 62q12 28 0 56h24q-12-28 0-56z"/>') +
+        card(232, L("Grid", "গ্রিড"), hubs + '<path class="spring" d="M44 66l6 8 6-8 6 8 6-8M44 86l6 8 6-8 6 8 6-8M44 106l6 8 6-8 6 8 6-8"/>') +
+        card(348, L("Gear", "গিয়ার"), hubs + '<rect x="36" y="56" width="40" height="68" rx="4" class="fl"/><path class="dm" d="M40 66h32M40 74h32M40 82h32M40 90h32M40 98h32M40 106h32M40 114h32"/>') +
+        card(464, L("Disc pack", "ডিস্ক প্যাক"), hubs.replace('x="68"', 'x="74"') + '<path class="dm" d="M48 58v64M52 58v64M56 58v64M60 58v64M64 58v64"/><rect x="44" y="58" width="26" height="64" class="fa" style="opacity:.35"/>') +
+        T(290, 18, L("The middle part flexes so small misalignment doesn't overload the bearings", "মাঝের অংশ সামান্য বাঁকে, তাই ছোট মিসঅ্যালাইনমেন্টে বেয়ারিং-এ বাড়তি চাপ পড়ে না"), "ts") +
+        '<path class="d" d="M290 186h0"/>'), L("Common flexible couplings. Orange is the flexing part: rubber, spring-steel grid, gear teeth or thin steel discs.", "প্রচলিত ফ্লেক্সিবল কাপলিং। কমলা অংশটা বাঁকে: রাবার, স্প্রিং-স্টিলের গ্রিড, গিয়ারের দাঁত বা পাতলা স্টিলের ডিস্ক।")],
+        [svg(480, 170, pipe("M20 85H170", 18) + '<rect x="170" y="55" width="40" height="60" rx="4" class="fs"/><rect x="210" y="70" width="60" height="30" class="fa"/><rect x="270" y="55" width="40" height="60" rx="4" class="fs"/>' + pipe("M310 85H460", 18, "b") +
+          '<path class="d" d="M188 40v100M292 40v100"/>' + '<path class="dm" d="M188 140H292"/><path class="arrow" d="M188 140l8-5M188 140l8 5M292 140l-8-5M292 140l-8 5"/>' + T(240, 160, "DBSE", "ta") + T(240, 50, L("spacer", "স্পেসার"), "tx") +
+          T(90, 60, L("pump shaft", "পাম্প শ্যাফট"), "ts") + T(390, 60, L("motor shaft", "মোটর শ্যাফট"), "ts")), L("DBSE is the gap between the shaft ends. With a spacer coupling, the spacer comes out and the seal can be changed without moving the motor.", "DBSE হলো দুই শ্যাফটের মাথার মাঝের ফাঁক। স্পেসার কাপলিং-এ স্পেসার খুললেই মোটর না সরিয়ে সিল বদলানো যায়।"), null, "#s2"]];
+    },
+    "rotary/rolling-bearings"() {
+      let balls = ""; for (let i = 0; i < 10; i++) { const a = i * Math.PI / 5; balls += '<circle cx="' + r1(130 + 62 * Math.cos(a)) + '" cy="' + r1(120 + 62 * Math.sin(a)) + '" r="14" class="fa"/>'; }
+      const dig = (x, ch, lab, col) => '<rect x="' + x + '" y="70" width="44" height="54" rx="6" class="' + col + '"/>' + T(x + 22, 106, ch, "big") + T(x + 22, 146, lab, "ts");
+      return [[svg(480, 240, '<circle cx="130" cy="120" r="92" class="fl"/><circle cx="130" cy="120" r="78" class="f"/><g class="spin" style="--t:6s">' + balls + '<circle cx="130" cy="120" r="62" fill="none" stroke="var(--muted)" stroke-dasharray="3 4"/></g><circle cx="130" cy="120" r="48" class="fs"/><circle cx="130" cy="120" r="32" class="f"/>' +
+        lab(214, 70, 260, 50, L("outer ring (in housing)", "আউটার রিং (হাউজিং-এ)")) + lab(178, 112, 260, 100, L("ball (rolling element)", "বল (রোলিং এলিমেন্ট)")) + lab(130, 60, 260, 150, L("cage keeps balls apart", "কেজ বলগুলো আলাদা রাখে")) + lab(152, 150, 260, 200, L("inner ring (on shaft)", "ইনার রিং (শ্যাফটে)"))),
+        L("Inside a deep groove ball bearing.", "ডিপ গ্রুভ বল বেয়ারিং-এর ভেতর।")],
+        [svg(480, 180, dig(40, "6", L("type: deep groove ball", "ধরন: ডিপ গ্রুভ বল"), "fs") + dig(150, "2", L("series: light", "সিরিজ: হালকা"), "fs") + dig(260, "0", "", "fa") + dig(306, "5", "", "fa") +
+          T(328, 146, L("bore code 05 × 5 = 25 mm", "বোর কোড ০৫ × ৫ = ২৫ মিমি"), "ta") + T(240, 36, L("How to read 6205", "6205 কীভাবে পড়বেন"), "tx")), L("For bore codes 04 and up, bore = code × 5 mm. Codes 00, 01, 02, 03 are 10, 12, 15 and 17 mm.", "বোর কোড ০৪ থেকে উপরে, বোর = কোড × ৫ মিমি। ০০, ০১, ০২, ০৩ মানে ১০, ১২, ১৫ ও ১৭ মিমি।"), null, "#s2"]];
+    },
+    "rotary/lubrication"() {
+      const box = (x, lvl, title, cls) => '<g transform="translate(' + x + ' 0)"><rect x="10" y="40" width="130" height="120" rx="10" class="f"/><rect x="11" y="' + (160 - lvl) + '" width="128" height="' + (lvl - 1) + '" class="water"/>' +
+        '<circle cx="75" cy="118" r="26" class="fl"/><circle cx="75" cy="144" r="10" class="fa"/><path class="d" d="M10 144h130"/>' + T(75, 186, title, "tx") + '<rect x="40" y="196" width="70" height="18" rx="9" class="tag ' + cls + '"/>' + T(75, 209, cls === "ok" ? L("correct", "সঠিক") : L("wrong", "ভুল"), "tb") + "</g>";
+      return [[svg(480, 230, box(0, 6, L("Too low: dry ball", "খুব কম: বল শুকনো"), "bad") + box(160, 16, L("Centre of lowest ball", "নিচের বলের মাঝ বরাবর"), "ok") + box(320, 70, L("Too high: churning, heat", "খুব বেশি: ঘুরপাক, তাপ"), "bad") +
+        T(240, 22, L("Oil bath level, machine stopped", "অয়েল বাথ লেভেল, মেশিন বন্ধ অবস্থায়"), "tx")), L("The oil should reach about the middle of the lowest ball or roller when the machine is stopped.", "মেশিন বন্ধ অবস্থায় তেল সবচেয়ে নিচের বল বা রোলারের প্রায় মাঝ বরাবর থাকা উচিত।"), null, "#s8"]];
+    },
+    "rotary/vibration"() {
+      const pt = (x, y, l, dx, dy) => '<path class="arrow" d="M' + x + " " + y + "l" + dx + " " + dy + '"/>' + T(x + dx * 1.35, y + dy * 1.35 + 4, l, "ta");
+      return [[svg(480, 230, '<rect x="20" y="190" width="440" height="12" class="fl"/><rect x="40" y="100" width="150" height="90" rx="8" class="fs"/>' + T(115, 150, L("PUMP", "পাম্প"), "ts") + pipe("M190 140H290", 12) + '<rect x="290" y="96" width="160" height="94" rx="8" class="fs"/>' + T(370, 150, L("MOTOR", "মোটর"), "ts") +
+        [[70, 100], [170, 100], [310, 96], [430, 96]].map(([x, y]) => '<circle cx="' + x + '" cy="' + (y + 18) + '" r="7" class="wt"/>').join("") +
+        pt(430, 114, "H", 26, 0) + pt(430, 114, "V", 0, -34) + pt(430, 114, "A", -26, -22) + T(240, 30, L("Every bearing: Horizontal, Vertical, Axial", "প্রতিটি বেয়ারিং-এ: আনুভূমিক, উল্লম্ব, অক্ষীয়"), "tx") + T(240, 220, L("orange dots = bearing housings, the measuring points", "কমলা বিন্দু = বেয়ারিং হাউজিং, মাপার জায়গা"), "ts")),
+        L("Measure on solid metal at each bearing housing, in the same three directions, at the same spot every time.", "প্রতিটি বেয়ারিং হাউজিং-এর শক্ত ধাতুর ওপর একই তিন দিকে, প্রতিবার একই জায়গায় মাপুন।"), null, "#s2"]];
+    },
+  };
+
   const path = location.pathname.replace(/^.*?\/(bn\/)?([a-z-]+\/[a-z0-9-]+)(\.html)?$/, "$2");
-  const make = FIG[path], art = document.querySelector("article");
-  if (!make || !art) return;
-  const [s, cap] = make();
-  const fig = document.createElement("figure");
-  fig.className = "tviz tfig";
-  fig.innerHTML = s + "<figcaption>" + cap + "</figcaption>";
-  const at = art.querySelector("h3, h2:not(:first-of-type)");
-  at ? at.before(fig) : art.appendChild(fig);
+  const make = FIG[path], more = MORE[path], art = document.querySelector("article");
+  if (!(make || more) || !art) return;
+  // a page can have one figure ([svg, caption]) or several; a figure with a third item (step captions)
+  // becomes a player: parts marked data-s="n" appear at step n, like a short video
+  let figs = make ? make() : [];
+  if (typeof figs[0] === "string") figs = [figs];
+  if (more) figs = figs.concat(more());
+  const heads = [...art.querySelectorAll("h3[id]")];  // section headings only, not the beginner box
+  figs.forEach(([s, cap, steps, at], n) => {
+    const fig = document.createElement("figure");
+    fig.className = "tviz tfig" + (steps ? " player" : "");
+    fig.innerHTML = s + (steps ? '<div class="pctl"><button type="button" class="pbtn" data-a="prev" aria-label="' + L("Previous step", "আগের ধাপ") + '">◀</button><button type="button" class="pbtn play" data-a="play">' + L("▶ Play", "▶ চালু") + '</button><button type="button" class="pbtn" data-a="next" aria-label="' + L("Next step", "পরের ধাপ") + '">▶</button><span class="pdots">' + steps.map(() => "<i></i>").join("") + '</span></div><p class="pcap" aria-live="polite"></p>' : "") + "<figcaption>" + cap + "</figcaption>";
+    // where: before a heading containing the given text, else before the n-th section heading
+    const target = (at && (at[0] === "#" ? art.querySelector(at) : heads.find(h => h.textContent.toLowerCase().includes(at)))) || heads[n] || null;
+    target ? target.before(fig) : art.querySelector(".pager") ? art.querySelector(".pager").before(fig) : art.appendChild(fig);
+    if (steps) player(fig, steps);
+  });
+
+  function player(fig, steps) {
+    let i = 0, timer = null;
+    const parts = [...fig.querySelectorAll("[data-s]")], dots = [...fig.querySelectorAll(".pdots i")], cap = fig.querySelector(".pcap"), play = fig.querySelector(".play");
+    const show = k => {
+      i = Math.max(0, Math.min(steps.length - 1, k));
+      parts.forEach(el => { const s = +el.dataset.s; el.classList.toggle("fut", s > i + 1); el.classList.toggle("now", s === i + 1); });
+      dots.forEach((d, j) => { d.className = j < i ? "done" : j === i ? "on" : ""; });
+      cap.innerHTML = "<b>" + (bn ? (i + 1).toLocaleString("bn-BD") : i + 1) + " / " + (bn ? steps.length.toLocaleString("bn-BD") : steps.length) + "</b> " + steps[i];
+    };
+    const stop = () => { clearInterval(timer); timer = null; play.textContent = L("▶ Play", "▶ চালু"); };
+    fig.querySelector(".pctl").addEventListener("click", e => {
+      const a = e.target.dataset.a; if (!a) return;
+      if (a === "play") {
+        if (timer) return stop();
+        if (i >= steps.length - 1) show(0);
+        play.textContent = L("❚❚ Pause", "❚❚ থামান");
+        timer = setInterval(() => { if (i >= steps.length - 1) stop(); else show(i + 1); }, 3200);
+      } else { stop(); show(a === "next" ? i + 1 : i - 1); }
+    });
+    dots.forEach((d, j) => d.addEventListener("click", () => { stop(); show(j); }));
+    show(0);
+  }
 })();
