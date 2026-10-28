@@ -30,9 +30,10 @@ for p in pages:
     m = re.search(r'<meta name="description" content="([^"]*)"', s)
     desc = html.unescape(m.group(1)) if m else title
     bn = rel(p).startswith("bn/")
+    up = "../" * (len(p.relative_to(ROOT).parts) - 1)
     tags = "\n".join([
-        '<link rel="manifest" href="/manifest.webmanifest">',
-        '<link rel="apple-touch-icon" href="/assets/icon-192.png">',
+        '<link rel="manifest" href="%smanifest.webmanifest">' % up,
+        '<link rel="apple-touch-icon" href="%sassets/icon-192.png">' % up,
         '<meta property="og:type" content="website">',
         '<meta property="og:site_name" content="%s">' % ("মেকানিক্যাল হ্যান্ডবুক" if bn else "Mechanical Handbook"),
         '<meta property="og:title" content="%s">' % html.escape(title),
@@ -54,7 +55,7 @@ files = [rel(p) for p in pages if rel(p) != "404.html"]
 files += [rel(p) for p in sorted((ROOT / "assets").iterdir()) if p.suffix in (".css", ".js", ".svg", ".png") and p.name != "og.png"]
 files += ["search.json", "bn/search.json", "manifest.webmanifest"]
 sw = (ROOT / "scripts" / "sw.template.js").read_text()
-sw = sw.replace("__VERSION__", "mh-v%d" % ver).replace("__FILES__", ",\n  ".join('"/%s"' % f for f in files))
+sw = sw.replace("__VERSION__", "mh-v%d" % ver).replace("__FILES__", ",\n  ".join('"%s"' % f for f in files))
 (ROOT / "sw.js").write_text(sw)
 
 # 4. sitemap and robots

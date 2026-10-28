@@ -71,4 +71,4 @@
 })();
 
 // Offline support: keep a copy of the handbook on the phone (only over http/https).
-if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("/sw.js").catch(() => {});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register(new URL("../sw.js", document.currentScript.src)).catch(() => {});

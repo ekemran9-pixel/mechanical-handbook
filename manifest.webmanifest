@@ -2,19 +2,19 @@
   "name": "Mechanical Handbook",
   "short_name": "Mech Handbook",
   "description": "Field handbook, calculators and quiz for mechanical work. English + বাংলা.",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#18222c",
   "theme_color": "#18222c",
   "icons": [
-    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
-    { "src": "/assets/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "shortcuts": [
-    { "name": "Calculators", "url": "/tools.html" },
-    { "name": "ক্যালকুলেটর", "url": "/bn/tools.html" },
-    { "name": "Today", "url": "/today.html" }
+    { "name": "Calculators", "url": "tools.html" },
+    { "name": "ক্যালকুলেটর", "url": "bn/tools.html" },
+    { "name": "Today", "url": "today.html" }
   ]
 }
