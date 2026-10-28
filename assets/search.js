@@ -69,3 +69,6 @@
     try { localStorage.setItem("fh-theme", next); } catch (e) {}
   });
 })();
+
+// Offline support: keep a copy of the handbook on the phone (only over http/https).
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("/sw.js").catch(() => {});

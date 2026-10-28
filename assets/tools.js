@@ -1,6 +1,6 @@
 // Field calculators. Each tool: fields (inputs) and calc(values) returning HTML.
 (function () {
-  const SELF = (document.currentScript && document.currentScript.src) || "", UI_VER = "5";
+  const SELF = (document.currentScript && document.currentScript.src) || "", UI_VER = "6";
   const f = (x, dp = 2) => (isFinite(x) ? Number(x).toLocaleString(undefined, { maximumFractionDigits: dp, minimumFractionDigits: 0 }) : "–");
   const pill = (c, t) => '<span class="pill ' + c + '">' + t + "</span>";
   const muted = t => '<br><span style="color:var(--muted)">' + t + "</span>";
