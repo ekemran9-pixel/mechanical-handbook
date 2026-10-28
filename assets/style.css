@@ -458,3 +458,6 @@ pre.report{white-space:pre-wrap;font-family:var(--mono);font-size:.8rem;backgrou
 }
 .tviz .stretch{transform-origin:28px 85px;animation:stretch 2.6s ease-in-out infinite alternate}
 @keyframes stretch{from{transform:scaleX(1)}to{transform:scaleX(var(--sx))}}
+.foot .more{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;margin-top:6px;color:var(--muted)}
+.foot .more a{text-decoration:none;color:var(--steel);border-bottom:1px solid transparent}
+.foot .more a:hover{border-bottom-color:currentColor}
