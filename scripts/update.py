@@ -9,7 +9,7 @@ import pathlib, re, html, datetime
 
 SITE = "https://ekemran9-pixel.github.io/foreman-handbook"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts)
+pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts and "guides-src" not in p.parts)
 rel = lambda p: p.relative_to(ROOT).as_posix()
 
 # 1. asset version

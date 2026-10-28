@@ -1,6 +1,6 @@
 // Field calculators. Each tool: fields (inputs) and calc(values) returning HTML.
 (function () {
-  const SELF = (document.currentScript && document.currentScript.src) || "", UI_VER = "16";
+  const SELF = (document.currentScript && document.currentScript.src) || "", UI_VER = "18";
   const f = (x, dp = 2) => (isFinite(x) ? Number(x).toLocaleString(undefined, { maximumFractionDigits: dp, minimumFractionDigits: 0 }) : "–");
   const pill = (c, t) => '<span class="pill ' + c + '">' + t + "</span>";
   const muted = t => '<br><span style="color:var(--muted)">' + t + "</span>";
@@ -8,6 +8,9 @@
   const N = (id, label, value, step) => ({ id, label, type: "number", value, step });
   const S = (id, label, options, value) => ({ id, label, type: "select", options, value });
 
+  const PIPE = [["1/2", 21.3, {"10": 2.11, "40": 2.77, "80": 3.73, "160": 4.78, "5S": 1.65, "STD": 2.77, "XS": 3.73, "XXS": 7.47}], ["3/4", 26.7, {"10": 2.11, "40": 2.87, "80": 3.91, "160": 5.56, "5S": 1.65, "STD": 2.87, "XS": 3.91, "XXS": 7.82}], ["1", 33.4, {"10": 2.77, "40": 3.38, "80": 4.55, "160": 6.35, "5S": 1.65, "STD": 3.38, "XS": 4.55, "XXS": 9.09}], ["1-1/4", 42.2, {"10": 2.77, "40": 3.56, "80": 4.85, "160": 6.35, "5S": 1.65, "STD": 3.56, "XS": 4.85, "XXS": 9.7}], ["1-1/2", 48.3, {"10": 2.77, "40": 3.68, "80": 5.08, "160": 7.14, "5S": 1.65, "STD": 3.68, "XS": 5.08, "XXS": 10.15}], ["2", 60.3, {"10": 2.77, "40": 3.91, "80": 5.54, "160": 8.74, "5S": 1.65, "STD": 3.91, "XS": 5.54, "XXS": 11.07}], ["2-1/2", 73, {"10": 3.05, "40": 5.16, "80": 7.01, "160": 9.53, "5S": 2.11, "STD": 5.16, "XS": 7.01, "XXS": 14.02}], ["3", 88.9, {"10": 3.05, "40": 5.49, "80": 7.62, "160": 11.13, "5S": 2.11, "STD": 5.49, "XS": 7.62, "XXS": 15.24}], ["4", 114.3, {"10": 3.05, "40": 6.02, "80": 8.56, "120": 11.13, "160": 13.49, "5S": 2.11, "STD": 6.02, "XS": 8.56, "XXS": 17.12}], ["5", 141.3, {"10": 3.4, "40": 6.55, "80": 9.53, "120": 12.7, "160": 15.88, "5S": 2.77, "STD": 6.55, "XS": 9.53, "XXS": 19.05}], ["6", 168.3, {"10": 3.4, "40": 7.11, "80": 10.97, "120": 14.27, "160": 18.26, "5S": 2.77, "STD": 7.11, "XS": 10.97, "XXS": 21.95}], ["8", 219.1, {"10": 3.76, "20": 6.35, "30": 7.04, "40": 8.18, "60": 10.31, "80": 12.7, "120": 18.26, "160": 23.01, "5S": 2.77, "STD": 8.18, "XS": 12.7, "XXS": 22.23}], ["10", 273, {"10": 4.19, "20": 6.35, "30": 7.8, "40": 9.27, "60": 12.7, "80": 15.09, "120": 21.44, "160": 28.58, "5S": 3.4, "STD": 9.27, "XS": 12.7, "XXS": 25.4}], ["12", 323.8, {"10": 4.57, "20": 6.35, "30": 8.38, "40": 10.31, "60": 14.27, "80": 17.48, "120": 25.4, "160": 33.32, "5S": 3.96, "STD": 9.53, "XS": 12.7, "XXS": 25.4}], ["14", 355.6, {"10": 6.35, "20": 7.92, "30": 9.53, "40": 11.13, "60": 15.09, "80": 19.05, "120": 27.79, "160": 35.71, "5S": 3.96, "STD": 9.53, "XS": 12.7}], ["16", 406.4, {"10": 6.35, "20": 7.92, "30": 9.53, "40": 12.7, "60": 16.66, "80": 21.44, "120": 30.96, "160": 40.49, "5S": 4.19, "STD": 9.53, "XS": 12.7}], ["18", 457, {"10": 6.35, "20": 7.92, "30": 11.13, "40": 14.27, "60": 19.05, "80": 23.83, "120": 34.93, "160": 45.24, "5S": 4.19, "STD": 9.53, "XS": 12.7}], ["20", 508, {"10": 6.35, "20": 9.53, "30": 12.7, "40": 15.09, "60": 20.62, "80": 26.19, "120": 38.1, "160": 50.01, "5S": 4.78, "STD": 9.53, "XS": 12.7}], ["24", 610, {"10": 6.35, "20": 9.53, "30": 14.27, "40": 17.48, "60": 24.61, "80": 30.96, "120": 46.02, "160": 59.54, "5S": 5.54, "STD": 9.53, "XS": 12.7}]]; window.FH_PIPE = PIPE; // [NPS, OD mm, {schedule: wall mm}] ASME B36.10/B36.19
+  const NPS_OPTS = PIPE.map(p => [p[0], p[0] + '"']), SCH_OPTS = [["5S", "Sch 5S"], ["10", "Sch 10"], ["20", "Sch 20"], ["30", "Sch 30"], ["40", "Sch 40"], ["STD", "Sch STD"], ["60", "Sch 60"], ["80", "Sch 80"], ["XS", "Sch XS"], ["120", "Sch 120"], ["160", "Sch 160"], ["XXS", "Sch XXS"]];
+  const eval_size = s => { const m = String(s).trim().match(/^(\d+)(?:-(\d+)\/(\d+))?$|^(\d+)\/(\d+)$/); return !m ? NaN : m[4] ? m[4] / m[5] : +m[1] + (m[2] ? m[2] / m[3] : 0); };
   const tools = [
   /* ---------- Rotary ---------- */
   { id: "align", cat: "Rotary", title: "Alignment check", desc: "Short flexible coupling. Compare laser or dial results with typical tolerance for the speed.",
@@ -177,6 +180,18 @@
     calc(v) { const r = v.r / 2, R = v.R / 2; if (r > R) return "Branch must not be larger than the header."; const n = +v.div; const rows = [];
       for (let i = 0; i <= n / 4; i++) { const th = i * 360 / n; const h = R - Math.sqrt(R * R - Math.pow(r * Math.sin(rad(th)), 2)); rows.push(f(th, 1) + "°: <b>" + f(h, 1) + " mm</b>"); }
       return "Wrap length " + f(Math.PI * v.r, 0) + " mm, spacing " + f(Math.PI * v.r / n, 1) + " mm<br>" + rows.join("<br>") + muted("Ordinates repeat symmetrically around the circle. Measure down from a square reference line."); } },
+  { id: "pipewt", cat: "Piping", title: "Pipe weight by schedule", desc: "Weight, water content and paint area from NPS and schedule (ASME B36.10 / B36.19 wall thickness).",
+    fields: [S("nps", "Size (NPS)", NPS_OPTS, "6"), S("sch", "Schedule", SCH_OPTS, "40"), N("l", "Length (m)", 6, 0.1), S("rho", "Material", [["7.85", "Carbon / alloy steel (7.85)"], ["7.98", "Stainless 304/316 (7.98)"], ["7.80", "Duplex (7.80)"], ["8.94", "Copper-nickel (8.94)"]])],
+    calc(v) { const p = PIPE.find(x => x[0] === v.nps), w = p && p[2][v.sch]; if (!w) return "Sch " + v.sch + " is not made in " + v.nps + "\". Pick another schedule: " + Object.keys(p[2]).join(", ") + ".";
+      const id = p[1] - 2 * w, kgm = Math.PI * (p[1] * p[1] - id * id) / 4 * v.rho / 1000, lpm = Math.PI / 4 * id * id / 1000;
+      return "OD × WT → ID: " + f(p[1], 1) + " × " + f(w, 2) + " → " + f(id, 1) + " mm<br>Weight <b>" + f(kgm, 2) + " kg/m</b>, total <b>" + f(kgm * v.l, 1) + " kg</b><br>Water " + f(lpm, 2) + " L/m, total " + f(lpm * v.l, 0) + " L<br>Full of water " + f((kgm + lpm) * v.l, 1) + " kg · paint area " + f(Math.PI * p[1] / 1000 * v.l, 2) + " m²"; } },
+  { id: "mitre", cat: "Piping", title: "Mitre bend", desc: "Cut angle and lengths for a bend made from straight pipe pieces.",
+    fields: [N("D", "Pipe OD (mm)", 323.8, 0.1), N("A", "Total bend angle (°)", 90), N("W", "Number of welds", 3, 1), N("R", "Bend radius (mm)", 485)],
+    calc(v) { const W = Math.max(1, Math.round(v.W)), c = v.A / (2 * W), t = Math.tan(rad(c));
+      return "Cut angle <b>" + f(c, 2) + "°</b> from square · " + (W + 1) + " pieces (end pieces half length)<br>Cut-back (long side − short side) <b>" + f(v.D * t, 1) + " mm</b><br>Middle piece on centre line " + f(2 * v.R * t, 1) + " mm (outside " + f(2 * (v.R + v.D / 2) * t, 0) + ", inside " + f(2 * (v.R - v.D / 2) * t, 0) + ")<br>End piece to tangent point " + f(v.R * t, 1) + " mm"; } },
+  { id: "slope", cat: "Piping", title: "Slope & elevation", desc: "Fall over a run for a drain or gravity line.",
+    fields: [N("x", "Slope 1 : x (e.g. 100)", 100), N("L", "Run length (mm)", 12000, 10), N("E", "Start elevation (mm)", 3500)],
+    calc(v) { const x = Math.max(1, v.x), drop = v.L / x; return "Fall <b>" + f(drop, 1) + " mm</b><br>End elevation <b>" + f(v.E - drop, 1) + " mm</b><br>" + f(100 / x, 2) + "% · " + f(Math.atan(1 / x) * 180 / Math.PI, 3) + "° · " + f(1000 / x, 1) + " mm per metre"; } },
   { id: "cone", cat: "Piping", title: "Cone / reducer layout", desc: "Flat pattern for a concentric cone (use mean diameters).",
     fields: [N("D", "Large diameter (mm)", 1000), N("d", "Small diameter (mm)", 500), N("H", "Height (mm)", 400)],
     calc(v) { if (v.d >= v.D) return "Small diameter must be less than large."; const Hf = v.H * v.D / (v.D - v.d); const L = Math.hypot(Hf, v.D / 2); const l = L * v.d / v.D; const th = 360 * (v.D / 2) / L;
@@ -208,6 +223,12 @@
     fields: [N("dft", "Target DFT (µm)", 125), N("vs", "Volume solids (%)", 65), N("area", "Area (m²)", 50), N("loss", "Loss factor (%)", 30)],
     calc(v) { const wft = v.dft / (v.vs / 100); const lit = v.area * v.dft / (v.vs * 10) / (1 - v.loss / 100); return "Wet film <b>" + f(wft, 0) + " µm</b><br>Theoretical spread " + f(v.vs * 10 / v.dft, 2) + " m²/L<br>Paint needed <b>" + f(lit, 1) + " L</b>"; } },
   /* ---------- General ---------- */
+  { id: "inchdia", cat: "General", title: "Inch-dia & manpower", desc: "Inch-dia from joint counts per size, then welder-days and crew size.",
+    fields: [{ id: "j", label: "Joints per size, as size:count (e.g. 2:40, 3:12, 6:12)", type: "text", value: "2:40, 3:12, 4:20, 6:12, 8:6" }, N("rate", "Inch-dia per welder per day", 18), N("days", "Working days", 20)],
+    calc(v) { const rows = String(v.j).split(/[,;\n]+/).map(s => s.split(":").map(x => x.trim())).filter(r => r.length === 2 && isFinite(eval_size(r[0])) && isFinite(+r[1]));
+      if (!rows.length) return "Write sizes and joint counts like 2:40, 3:12, 6:12.";
+      const id = rows.reduce((a, r) => a + eval_size(r[0]) * +r[1], 0), jn = rows.reduce((a, r) => a + +r[1], 0), wd = id / Math.max(1, v.rate), w = wd / Math.max(1, v.days);
+      return "Joints " + f(jn, 0) + " · inch-dia <b>" + f(id, 1) + " ID</b><br>Welder-days " + f(wd, 1) + "<br>Welders <b>" + Math.ceil(w) + "</b> (" + f(w, 2) + ") · fitters " + Math.ceil(w) + " · helpers " + Math.ceil(w * 1.5) + muted("Inch-dia = joints × nominal size in inches. Fit-up must stay ahead or welders wait."); } },
   { id: "cyl", cat: "General", title: "Hydraulic cylinder", desc: "Push and pull force, and speed from pump flow.",
     fields: [N("bore", "Bore (mm)", 100), N("rod", "Rod (mm)", 56), N("p", "Pressure (bar)", 160), N("q", "Pump flow (L/min)", 40)],
     calc(v) { const A = Math.PI * v.bore ** 2 / 4 / 100, Ar = A - Math.PI * v.rod ** 2 / 4 / 100; return "Push <b>" + f(v.p * A / 100, 1) + " kN</b>, pull <b>" + f(v.p * Ar / 100, 1) + " kN</b><br>Extend " + f(v.q / (A * 0.1), 2) + " m/min, retract " + f(v.q / (Ar * 0.1), 2) + " m/min"; } },

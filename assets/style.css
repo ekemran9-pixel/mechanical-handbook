@@ -484,3 +484,4 @@ pre.report{white-space:pre-wrap;font-family:var(--mono);font-size:.8rem;backgrou
 .tviz .gbot{fill:color-mix(in srgb,var(--bad) 18%,transparent)}
 .tviz .probe{stroke:var(--ink);stroke-width:2;stroke-dasharray:6 3}
 .tviz .sample{fill:var(--accent);stroke:var(--ink);animation:blink 2.4s ease-in-out infinite;animation-delay:calc(var(--i) * .8s)}
+.gi .gsrc{font-size:.8em;margin-left:6px;white-space:nowrap}

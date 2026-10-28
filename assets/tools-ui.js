@@ -282,6 +282,41 @@
       const a = P(0), b = P(1);
       return svg(s + '<path class="arrow" d="M' + a.map(r1).join(" ") + "L" + b.map(r1).join(" ") + '"/>' + T(250, 70, "PCD " + fmt(v.pcd, 1), "tx") + T(250, 96, fmt(v.pcd * Math.sin(Math.PI / n), 1) + " mm", "big") + T(250, 116, c.L("hole to hole", "দুই ছিদ্রের মাঝে"), "ts"), 196);
     },
+    pipewt(v, c) {
+      const p = (window.FH_PIPE || []).find(x => x[0] === v.nps), w = p && p[2][v.sch];
+      if (!w) return svg(T(160, 85, c.L("schedule not made in this size", "এই সাইজে এই শিডিউল নেই"), "ta"));
+      const id = p[1] - 2 * w, R = 62, ri = Math.min(R - 3, R * id / p[1]), cid = uid(), kg = Math.PI * (p[1] * p[1] - id * id) / 4 * v.rho / 1000 * v.l;
+      return svg('<defs><clipPath id="' + cid + '"><circle cx="78" cy="92" r="' + r1(ri) + '"/></clipPath></defs><circle cx="78" cy="92" r="' + R + '" class="fl"/><circle cx="78" cy="92" r="' + r1(ri) + '" class="f"/><g clip-path="url(#' + cid + ')"><rect class="water fill" x="10" y="25" width="140" height="140"/></g>' +
+        dim(16, 22, 140, 22) + T(78, 16, "OD " + fmt(p[1], 1), "ta") + T(78, 96, "ID " + fmt(id, 1), "tx") + T(150, 40, "WT " + fmt(w, 2), "ts", "start") +
+        T(240, 70, c.L("total weight", "মোট ওজন"), "ts") + T(240, 98, fmt(kg, 1) + " kg", "big") + T(240, 122, v.nps + '" Sch ' + v.sch + " · " + fmt(v.l, 1) + " m", "ts"));
+    },
+    mitre(v, c) {
+      const W = Math.max(1, Math.round(v.W)), A = rad(v.A), cc = A / (2 * W), Ri = v.R - v.D / 2, Ro = v.R + v.D / 2;
+      if (!(v.A > 0 && v.A <= 180 && Ri > 0)) return svg(T(160, 85, c.L("radius must be more than OD/2", "রেডিয়াস OD/২ এর বেশি দিন"), "ta"));
+      const E = Math.max(v.D, v.R * .35), P = (r, f) => [r * Math.cos(f), r * Math.sin(f)], k = Math.cos(cc);
+      const pieces = [[[Ri, -E], [Ro, -E], P(Ro / k, cc), P(Ri / k, cc)]];
+      for (let j = 1; j < W; j++) { const a0 = (2 * j - 1) * cc, a1 = (2 * j + 1) * cc; pieces.push([P(Ri / k, a0), P(Ro / k, a0), P(Ro / k, a1), P(Ri / k, a1)]); }
+      const tA = [-Math.sin(A) * E, Math.cos(A) * E], q1 = P(Ro, A), q2 = P(Ri, A);
+      pieces.push([P(Ri / k, A - cc), P(Ro / k, A - cc), [q1[0] + tA[0], q1[1] + tA[1]], [q2[0] + tA[0], q2[1] + tA[1]]]);
+      const all = pieces.flat().concat([[0, 0]]), xs = all.map(q => q[0]), ys = all.map(q => q[1]);
+      const s = Math.min(290 / (Math.max(...xs) - Math.min(...xs) || 1), 150 / (Math.max(...ys) - Math.min(...ys) || 1)), ox = 160 - (Math.min(...xs) + Math.max(...xs)) / 2 * s, oy = 88 + (Math.min(...ys) + Math.max(...ys)) / 2 * s;
+      const pt = q => r1(ox + q[0] * s) + " " + r1(oy - q[1] * s), arc = Array.from({ length: 31 }, (_, i) => pt(P(v.R, A * i / 30))).join("L"), j0 = P(Ro / k, cc);
+      return svg(pieces.map((q, i) => '<path class="' + (i % 2 ? "fa" : "fs") + ' pop" style="--i:' + i + '" d="M' + q.map(pt).join("L") + 'z"/>').join("") + '<path class="cl" d="M' + arc + '"/>' +
+        T(ox + j0[0] * s + 14, oy - j0[1] * s + 4, fmt(cc * 180 / Math.PI, 2) + "°", "ta", "start") + T(10, 164, (W + 1) + c.L(" pieces · ", "টি টুকরো · ") + W + c.L(" welds", "টি জয়েন্ট"), "ts", "start"));
+    },
+    slope(v, c) {
+      const x = Math.max(1, v.x), drop = v.L / x, d = clamp(25 * 300 / x, 10, 100), y0 = 50, y1 = y0 + d, path = "M24 " + y0 + "L296 " + r1(y1);
+      return svg('<path class="d" d="M14 ' + y0 + 'H306"/>' + pipe(path, 14, "b") + '<path class="flow" d="' + path + '"/>' + dim(304, y0, 304, y1) + T(300, (y0 + y1) / 2 - 6, "↓ " + fmt(drop, 1), "ta", "end") +
+        T(24, y0 - 12, "EL " + fmt(v.E, 0), "tx", "start") + T(296, y1 + 26, "EL " + fmt(v.E - drop, 0), "tx", "end") + T(160, 162, c.L("1 : ", "১ : ") + fmt(x, 0) + c.L(" (drawn steeper)", " (ছবিতে বাড়িয়ে আঁকা)"), "ts"));
+    },
+    inchdia(v, c) {
+      const size = s => { const m = String(s).trim().match(/^(\d+)(?:-(\d+)\/(\d+))?$|^(\d+)\/(\d+)$/); return !m ? NaN : m[4] ? m[4] / m[5] : +m[1] + (m[2] ? m[2] / m[3] : 0); };
+      const rows = String(v.j).split(/[,;\n]+/).map(s => s.split(":").map(x => x.trim())).filter(r => r.length === 2 && isFinite(size(r[0])) && isFinite(+r[1])).slice(0, 6);
+      if (!rows.length) return svg(T(160, 85, "2:40, 3:12, 6:12", "ta"));
+      const ids = rows.map(r => size(r[0]) * +r[1]), mx = Math.max(...ids, 1), tot = ids.reduce((a, b) => a + b, 0), men = Math.min(20, Math.ceil(tot / Math.max(1, v.rate) / Math.max(1, v.days)));
+      return svg(rows.map((r, i) => T(40, 26 + i * 20, r[0] + '"', "tx", "end") + '<rect class="bar grow acc" style="--i:' + i + '" x="46" y="' + (15 + i * 20) + '" width="' + r1(Math.max(2, 190 * ids[i] / mx)) + '" height="14" rx="3"/>' + T(50 + 190 * ids[i] / mx, 26 + i * 20, fmt(ids[i], 0), "tx", "start")).join("") +
+        Array.from({ length: men }, (_, i) => '<g class="pop" style="--i:' + i + '" transform="translate(' + (14 + i * 12) + ' 140)"><circle cx="4" cy="4" r="3.6" class="cog"/><path d="M0 18v-6a4 4 0 0 1 8 0v6z" class="cog"/></g>').join("") + T(26 + men * 12, 154, men + c.L(" welder(s)", " জন ওয়েল্ডার"), "ta", "start"));
+    },
   };
   function tankText(v, c) {
     const R = v.D / 2, full = Math.PI * R * R * v.L; let V;
