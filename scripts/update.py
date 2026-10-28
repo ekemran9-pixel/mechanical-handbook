@@ -7,7 +7,7 @@ Set SITE to the site's address when the Netlify link changes.
 """
 import pathlib, re, html, datetime
 
-SITE = "https://foreman-handbook.netlify.app"
+SITE = "https://ekemran9-pixel.github.io/foreman-handbook"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts)
 rel = lambda p: p.relative_to(ROOT).as_posix()
