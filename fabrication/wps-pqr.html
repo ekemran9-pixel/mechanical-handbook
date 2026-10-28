@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="../assets/style.css?v=25">
+<link rel="stylesheet" href="../assets/style.css?v=27">
 <script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <!--meta-->
 <link rel="manifest" href="../manifest.webmanifest">
@@ -20,8 +20,8 @@
 <meta property="og:site_name" content="Mechanical Handbook">
 <meta property="og:title" content="WPS, PQR &amp; WPQ · Mechanical Handbook">
 <meta property="og:description" content="What each welding document is, essential variables, how to read a WPS and how to keep welding records.">
-<meta property="og:url" content="https://ekemran9-pixel.github.io/foreman-handbook/fabrication/wps-pqr.html">
-<meta property="og:image" content="https://ekemran9-pixel.github.io/foreman-handbook/assets/og.png">
+<meta property="og:url" content="https://ekemran9-pixel.github.io/mechanical-handbook/fabrication/wps-pqr.html">
+<meta property="og:image" content="https://ekemran9-pixel.github.io/mechanical-handbook/assets/og.png">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <!--/meta-->
@@ -51,13 +51,13 @@
 <div class="crumbs"><a href="index.html">Welding &amp; Fabrication</a> › Quality</div>
 <h1>WPS, PQR &amp; WPQ</h1>
 <p class="summary">What each welding document is, essential variables, how to read a WPS and how to keep welding records.</p>
-<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Codes</a></li><li><a href="#s2">What a WPS shows</a></li><li><a href="#s3">Essential variables</a></li><li><a href="#s4">Heat input</a></li><li><a href="#s5">Foreman's job</a></li></ol></details>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Codes</a></li><li><a href="#s2">What a WPS shows</a></li><li><a href="#s3">Essential variables</a></li><li><a href="#s4">Heat input</a></li><li><a href="#s5">Supervisor's job</a></li></ol></details>
 
 <div class="tbl"><table><tr><th>Document</th><th>What it is</th><th>Who uses it</th></tr>
 <tr><td>pWPS</td><td>Preliminary WPS: the proposed recipe before testing</td><td>Welding engineer</td></tr>
 <tr><td>PQR (WPQR in ISO)</td><td>Procedure Qualification Record: actual parameters used on the test coupon, and the test results (tensile, bend, impact, hardness, macro)</td><td>Engineer, inspector</td></tr>
-<tr><td>WPS</td><td>Welding Procedure Specification: the qualified recipe, with allowed ranges, supported by one or more PQRs</td><td>Welders, foreman, QC</td></tr>
-<tr><td>WPQ / WQT</td><td>Welder Performance Qualification: proves a person can weld to the WPS</td><td>QC, foreman for allocation</td></tr></table></div>
+<tr><td>WPS</td><td>Welding Procedure Specification: the qualified recipe, with allowed ranges, supported by one or more PQRs</td><td>Welders, supervisor, QC</td></tr>
+<tr><td>WPQ / WQT</td><td>Welder Performance Qualification: proves a person can weld to the WPS</td><td>QC, supervisor for allocation</td></tr></table></div>
 <h3 id="s1">Codes</h3>
 <ul><li><b>ASME Section IX</b>: procedure and welder qualification for ASME pressure work (boilers, vessels, B31 piping).</li><li><b>AWS D1.1</b>: structural steel. Has <b>prequalified</b> WPSs that don't need testing if all the rules are followed.</li><li><b>ISO 15614-1</b> (procedures) and <b>ISO 9606-1</b> (welders) in Europe and many other regions.</li><li><b>API 1104</b>: pipelines.</li></ul>
 <h3 id="s2">What a WPS shows</h3>
@@ -69,7 +69,7 @@
 <h3 id="s4">Heat input</h3>
 <div class="formula">Heat input (kJ/mm) = (Volts × Amps × 60) ÷ (Travel speed mm/min × 1000)</div>
 <p>ISO adds a thermal efficiency factor k (0.8 for SMAW/GMAW/FCAW, 0.6 for GTAW, 1.0 for SAW). Example: 24 V, 140 A, 150 mm/min = 1.34 kJ/mm (arc energy).</p>
-<h3 id="s5">Foreman's job</h3>
+<h3 id="s5">Supervisor's job</h3>
 <ul><li>Make sure every welder has the right WPS at the joint and is qualified for it (process, position, thickness, diameter, F-number).</li><li>Check preheat and interpass with a contact thermometer or crayons.</li><li>Check consumables match the WPS and are stored properly.</li><li>Keep the <b>weld log</b> (weld map): joint number, welder stamp, WPS, date, NDT required and result, repair number.</li><li>Welders stamp or mark their ID next to each weld (low-stress stamps or paint marker, per spec).</li></ul>
 <div class="pager"><a href="weld-defects.html"><span>Previous</span>Weld defects &amp; repairs</a><a class="nx" href="preheat-pwht.html"><span>Next</span>Preheat, interpass &amp; PWHT</a></div>
 </article></div>
@@ -80,10 +80,10 @@
 <p class="dev"><span>Developer: <b>Emran Mia</b></span><a href="mailto:ekemran9@gmail.com">ekemran9@gmail.com</a><a href="https://wa.me/8801756069944">WhatsApp +880 1756-069944</a></p>
 <p class="more"><span>More guides:</span><a href="../guides/fabrication/">Fabrication guide</a><a href="../guides/phosphate-drum/">Phosphate plant drum guide</a><a href="../guides/phosphate-safety/">Phosphate plant safety guide</a></p>
 </div></footer>
-<script src="../assets/learn-fabrication.js?v=25" defer></script>
-<script src="../assets/learn.js?v=25" defer></script>
-<script src="../assets/figs.js?v=25" defer></script>
-<script src="../assets/search.js?v=25" defer></script>
+<script src="../assets/learn-fabrication.js?v=27" defer></script>
+<script src="../assets/learn.js?v=27" defer></script>
+<script src="../assets/figs.js?v=27" defer></script>
+<script src="../assets/search.js?v=27" defer></script>
 
 </body>
 </html>

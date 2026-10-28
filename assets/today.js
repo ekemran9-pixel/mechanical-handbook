@@ -16,7 +16,7 @@
     st: { "Not started": "শুরু হয়নি", "Waiting permit": "পারমিটের অপেক্ষা", "Waiting parts": "পার্টসের অপেক্ষা", "In progress": "চলছে", "On hold": "স্থগিত", "Done": "সম্পন্ন" },
     today: "আজকের বিষয়", topic: (i, n) => "বিষয় " + i.toLocaleString(LOC) + " / " + n.toLocaleString(LOC), ask: "ক্রুকে জিজ্ঞাসা করুন: ",
     shift: { Day: "দিন", Night: "রাত", Swing: "সুইং" },
-    rTitle: "মেকানিক্যাল শিফট রিপোর্ট", rShift: " শিফট", rForeman: "ফোরম্যান: ", rArea: "এলাকা: ", rCrew: "ক্রু: ", rTalk: "টুলবক্স টক: ",
+    rTitle: "মেকানিক্যাল শিফট রিপোর্ট", rShift: " শিফট", rSupervisor: "সুপারভাইজার: ", rArea: "এলাকা: ", rCrew: "ক্রু: ", rTalk: "টুলবক্স টক: ",
     rDone: "সম্পন্ন", rProg: "চলমান", rBlocked: "আটকে আছে / স্থগিত", rNot: "শুরু হয়নি", rDelay: "দেরি / সমস্যা", rNone: "নেই", rNext: "পরের শিফট", rSafe: "নিরাপত্তা",
     rCheck: (a, b) => "চেকলিস্ট: " + a.toLocaleString(LOC) + "/" + b.toLocaleString(LOC) + " সম্পন্ন", rOpen: "বাকি আইটেম:",
     copied: "কপি হয়েছে", selected: "সিলেক্ট হয়েছে। কপি করতে Ctrl+C চাপুন।",
@@ -24,7 +24,7 @@
     del: "Remove item", done: (d, n) => d + " of " + n + " done", frac: (a, b) => a + "/" + b,
     job: "Job", crew: "Crew", permit: "Permit", status: "Status", delJob: "Remove job", mine: "My items",
     st: {}, today: "Today's topic", topic: (i, n) => "Topic " + i + " of " + n, ask: "Ask the crew: ", shift: {},
-    rTitle: "MECHANICAL SHIFT REPORT", rShift: " shift", rForeman: "Foreman: ", rArea: "Area: ", rCrew: "Crew: ", rTalk: "Toolbox talk: ",
+    rTitle: "MECHANICAL SHIFT REPORT", rShift: " shift", rSupervisor: "Supervisor: ", rArea: "Area: ", rCrew: "Crew: ", rTalk: "Toolbox talk: ",
     rDone: "COMPLETED", rProg: "IN PROGRESS", rBlocked: "BLOCKED / ON HOLD", rNot: "NOT STARTED", rDelay: "DELAYS / PROBLEMS", rNone: "None", rNext: "NEXT SHIFT", rSafe: "SAFETY",
     rCheck: (a, b) => "CHECKLIST: " + a + "/" + b + " complete", rOpen: "Open items:",
     copied: "Copied", selected: "Selected. Press Ctrl+C to copy.",
@@ -136,7 +136,7 @@
     ["Driving on site", ["Speed limits, seat belts, no phones.", "Pedestrians have right of way. Make eye contact.", "Spotter when reversing large vehicles."], "Where do vehicles and people cross on site?"],
     ["Hand tools", ["Use the right tool. No cheater bars on spanners.", "Inspect: cracked handles, mushroomed chisels, worn jaws.", "Pull, don't push, on spanners."], "What damaged tools did we find this week?"],
     ["Bolting", ["Correct gasket and bolts for the line class.", "Lubricate and follow the cross pattern in passes.", "Calibrated torque tools, record each joint."], "Which flanges are being made up today and what's the torque?"],
-    ["Emergency response", ["Know the alarm sounds and the muster points.", "Check the wind direction for gas alarms.", "Foreman does the headcount."], "Where is today's muster point and the nearest eyewash?"],
+    ["Emergency response", ["Know the alarm sounds and the muster points.", "Check the wind direction for gas alarms.", "Supervisor does the headcount."], "Where is today's muster point and the nearest eyewash?"],
   ];
   const talksBn = [
     ["লাইন অব ফায়ার", ["চলমান লোড, স্প্রিং ও চাপযুক্ত লাইনের পথ থেকে সরে দাঁড়ান।", "লোড আর স্থির বস্তুর মাঝে কখনো হাত দেবেন না।", "হাত দূরে রাখতে পুশ স্টিক, ট্যাগলাইন ও টুল ব্যবহার করুন।"], "আজকের কোন কাজে কেউ লাইন অব ফায়ারে পড়তে পারে?"],
@@ -168,7 +168,7 @@
     ["সাইটে গাড়ি চালানো", ["গতিসীমা, সিট বেল্ট, ফোন নয়।", "পথচারীর অগ্রাধিকার। চোখে চোখ রাখুন।", "বড় গাড়ি পেছাতে স্পটার।"], "সাইটে কোথায় গাড়ি ও মানুষ পার হয়?"],
     ["হাতের টুল", ["সঠিক টুল ব্যবহার করুন। স্প্যানারে চিটার বার নয়।", "দেখুন: ফাটা হাতল, মাথা থেঁতলানো ছেনি, ক্ষয়ে যাওয়া চোয়াল।", "স্প্যানারে ঠেলবেন না, টানুন।"], "এই সপ্তাহে কোন নষ্ট টুল পাওয়া গেছে?"],
     ["বোল্টিং", ["লাইন ক্লাস অনুযায়ী সঠিক গ্যাসকেট ও বোল্ট।", "লুব্রিকেট করুন এবং পাসে পাসে ক্রস প্যাটার্ন মানুন।", "ক্যালিব্রেটেড টর্ক টুল, প্রতিটি জয়েন্ট রেকর্ড।"], "আজ কোন ফ্ল্যাঞ্জ জোড়া হচ্ছে, আর টর্ক কত?"],
-    ["জরুরি সাড়া", ["অ্যালার্মের শব্দ ও মাস্টার পয়েন্ট জানুন।", "গ্যাস অ্যালার্মে বাতাসের দিক দেখুন।", "ফোরম্যান হেডকাউন্ট করেন।"], "আজকের মাস্টার পয়েন্ট ও সবচেয়ে কাছের আই-ওয়াশ কোথায়?"],
+    ["জরুরি সাড়া", ["অ্যালার্মের শব্দ ও মাস্টার পয়েন্ট জানুন।", "গ্যাস অ্যালার্মে বাতাসের দিক দেখুন।", "সুপারভাইজার হেডকাউন্ট করেন।"], "আজকের মাস্টার পয়েন্ট ও সবচেয়ে কাছের আই-ওয়াশ কোথায়?"],
   ];
   const talks = BN ? talksBn : talksEn;
   const dayIndex = Math.floor(Date.now() / 86400000);
@@ -201,7 +201,7 @@
     const txt =
       T.rTitle + "\n" +
       now.toLocaleDateString(LOC, { weekday: "short", day: "numeric", month: "short", year: "numeric" }) + " · " + (T.shift[v["r-shift"]] || v["r-shift"]) + T.rShift + "\n" +
-      T.rForeman + (v["r-name"] || "-") + "\n" + T.rArea + (v["r-area"] || "-") + "\n" + T.rCrew + (v["r-crew"] || "-") + "\n" + T.rTalk + talks[talkI][0] + "\n" +
+      T.rSupervisor + (v["r-name"] || "-") + "\n" + T.rArea + (v["r-area"] || "-") + "\n" + T.rCrew + (v["r-crew"] || "-") + "\n" + T.rTalk + talks[talkI][0] + "\n" +
       sect(T.rDone, done) + sect(T.rProg, prog) +
       (blocked.length ? "\n" + T.rBlocked + "\n" + blocked.map(j => line(j) + " – " + stLabel(j.status)).join("\n") + "\n" : "") +
       sect(T.rNot, notStarted) +

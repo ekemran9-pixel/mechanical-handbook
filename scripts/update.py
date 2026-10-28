@@ -7,7 +7,7 @@ Set SITE to the site's address if it changes (for example a custom domain).
 """
 import pathlib, re, html, datetime
 
-SITE = "https://ekemran9-pixel.github.io/foreman-handbook"
+SITE = "https://ekemran9-pixel.github.io/mechanical-handbook"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 pages = sorted(p for p in ROOT.rglob("*.html") if ".git" not in p.parts and "guides-src" not in p.parts)
 rel = lambda p: p.relative_to(ROOT).as_posix()
@@ -23,7 +23,7 @@ for js in ("assets/tools.js", "assets/tools-bn.js"):
     f.write_text(re.sub(r'UI_VER = "\d+"', 'UI_VER = "%d"' % ver, f.read_text()))
 
 # 404.html is served for missing pages at any depth, so its links must be absolute;
-# prefix them with the site's folder (/foreman-handbook on GitHub Pages, nothing on a custom domain)
+# prefix them with the site's folder (/mechanical-handbook on GitHub Pages, nothing on a custom domain)
 from urllib.parse import urlparse
 base = urlparse(SITE).path.rstrip("/")
 nf = ROOT / "404.html"

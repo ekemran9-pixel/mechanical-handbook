@@ -16,8 +16,8 @@ meta = '''<meta charset="utf-8">
 <link rel="apple-touch-icon" href="images/icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ফ্যাব্রিকেশন ফোরম্যান গাইড">
-<meta property="og:description" content="বাংলায় পাইপিং ও ফ্যাব্রিকেশন ফোরম্যানের সম্পূর্ণ গাইড: গ্রেড, শিডিউল, ফ্ল্যাঞ্জ, ফিটিংস, ইলেক্ট্রোড, ধাতুবিদ্যা, ইন্সপেকশন ও ক্যালকুলেটর।">
+<meta property="og:title" content="ফ্যাব্রিকেশন গাইড">
+<meta property="og:description" content="বাংলায় পাইপিং ও ফ্যাব্রিকেশন সুপারভাইজারের সম্পূর্ণ গাইড: গ্রেড, শিডিউল, ফ্ল্যাঞ্জ, ফিটিংস, ইলেক্ট্রোড, ধাতুবিদ্যা, ইন্সপেকশন ও ক্যালকুলেটর।">
 <meta property="og:locale" content="bn_BD">
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}img{max-width:100%}[hidden]{display:none!important}</style>
 '''

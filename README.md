@@ -1,6 +1,6 @@
 # Mechanical Handbook · মেকানিক্যাল হ্যান্ডবুক
 
-Static site (English + বাংলা), live at https://ekemran9-pixel.github.io/foreman-handbook/ (GitHub Pages; every push to `main` publishes automatically)
+Static site (English + বাংলা), live at https://ekemran9-pixel.github.io/mechanical-handbook/ (GitHub Pages; every push to `main` publishes automatically)
 
 ## আপডেট করার নিয়ম
 

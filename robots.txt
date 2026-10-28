@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://ekemran9-pixel.github.io/foreman-handbook/sitemap.xml
+Sitemap: https://ekemran9-pixel.github.io/mechanical-handbook/sitemap.xml

@@ -26,7 +26,7 @@ GUIDES = {
             "drawing": ("piping/isometrics.html", "আইসোমেট্রিক ড্রয়িং"),
             "fab": ("piping/spool-fabrication.html", "স্পুল ফ্যাব্রিকেশন"),
             "inspect": ("inspection/ndt-overview.html", "ইন্সপেকশন ও NDT"),
-            "duty": ("leadership/foreman-role.html", "ফোরম্যানের দায়িত্ব"),
+            "duty": ("leadership/supervisor-role.html", "সুপারভাইজারের দায়িত্ব"),
             "calc": ("tools.html", "ক্যালকুলেটর"),
             "quiz": ("quiz.html", "কুইজ"),
             "glossary": ("glossary.html", "শব্দকোষ"),

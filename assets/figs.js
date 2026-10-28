@@ -310,16 +310,16 @@
     "safety/permit-to-work"() {
       const box = (i, x, y, t, who) => '<rect x="' + x + '" y="' + y + '" width="136" height="66" rx="10" class="fsoft"/>' + T(x + 18, y + 24, bn ? (i).toLocaleString("bn-BD") : i, "big") + T(x + 74, y + 30, t, "tx") + T(x + 74, y + 50, who, "ts");
       const B = [[12, 26], [172, 26], [332, 26], [332, 140], [172, 140], [12, 140]];
-      const D = [[L("Request", "অনুরোধ"), L("foreman", "ফোরম্যান")], [L("Prepare plant", "প্ল্যান্ট প্রস্তুত"), L("operations", "অপারেশন")], [L("Site visit", "সাইট পরিদর্শন"), L("both together", "দুজন একসাথে")],
-        [L("Brief & sign on", "ব্রিফ ও সই"), L("foreman + crew", "ফোরম্যান + ক্রু")], [L("Work", "কাজ"), L("permit on show", "পারমিট টাঙানো")], [L("Close out", "ক্লোজ আউট"), L("both together", "দুজন একসাথে")]];
+      const D = [[L("Request", "অনুরোধ"), L("supervisor", "সুপারভাইজার")], [L("Prepare plant", "প্ল্যান্ট প্রস্তুত"), L("operations", "অপারেশন")], [L("Site visit", "সাইট পরিদর্শন"), L("both together", "দুজন একসাথে")],
+        [L("Brief & sign on", "ব্রিফ ও সই"), L("supervisor + crew", "সুপারভাইজার + ক্রু")], [L("Work", "কাজ"), L("permit on show", "পারমিট টাঙানো")], [L("Close out", "ক্লোজ আউট"), L("both together", "দুজন একসাথে")]];
       const arrows = ["M148 59h22", "M308 59h22", "M400 92v46", "M330 173h-24", "M170 173h-24"];
       const base = B.map(([x, y], i) => box(i + 1, x, y, D[i][0], D[i][1])).join("");
       const steps = B.map(([x, y], i) => st(i + 1, '<rect x="' + x + '" y="' + y + '" width="136" height="66" rx="10" class="zone" style="stroke-width:3"/>' + (i ? '<path class="arrow" d="' + arrows[i - 1] + '"/>' : ""))).join("");
       return [[svg(480, 220, base + steps), L("The life of a permit, from request to close-out.", "অনুরোধ থেকে ক্লোজ আউট: একটা পারমিটের পুরো পথ।"), [
-        L("The foreman requests the permit: what job, where, which tools, when.", "ফোরম্যান পারমিট চান: কী কাজ, কোথায়, কোন যন্ত্র, কখন।"),
+        L("The supervisor requests the permit: what job, where, which tools, when.", "সুপারভাইজার পারমিট চান: কী কাজ, কোথায়, কোন যন্ত্র, কখন।"),
         L("Operations prepare the plant: drain, isolate, purge, gas test, and attach the certificates.", "অপারেশন প্ল্যান্ট প্রস্তুত করে: ড্রেন, আইসোলেট, পার্জ, গ্যাস টেস্ট, আর সার্টিফিকেট সংযুক্ত।"),
-        L("Issuer and foreman walk the job together. The foreman checks every isolation and applies their own lock.", "ইস্যুয়ার ও ফোরম্যান একসাথে কাজের জায়গা হাঁটেন। ফোরম্যান প্রতিটি আইসোলেশন দেখে নিজের তালা দেন।"),
-        L("The foreman briefs every crew member on hazards and controls; each one signs on.", "ফোরম্যান প্রত্যেক কর্মীকে ঝুঁকি ও নিয়ন্ত্রণ বুঝিয়ে দেন; প্রত্যেকে সই করেন।"),
+        L("Issuer and supervisor walk the job together. The supervisor checks every isolation and applies their own lock.", "ইস্যুয়ার ও সুপারভাইজার একসাথে কাজের জায়গা হাঁটেন। সুপারভাইজার প্রতিটি আইসোলেশন দেখে নিজের তালা দেন।"),
+        L("The supervisor briefs every crew member on hazards and controls; each one signs on.", "সুপারভাইজার প্রত্যেক কর্মীকে ঝুঁকি ও নিয়ন্ত্রণ বুঝিয়ে দেন; প্রত্যেকে সই করেন।"),
         L("Work goes ahead with the permit displayed, inside its scope. Anything changes: stop.", "পারমিট টাঙিয়ে, পরিধির ভেতরে কাজ চলে। কিছু বদলালে: থামুন।"),
         L("At the end: site left safe, locks off, permit signed off and returned to operations.", "শেষে: জায়গা নিরাপদ, তালা খোলা, পারমিট সই করে অপারেশনে ফেরত।")], "#s2"]];
     },

@@ -121,7 +121,7 @@ window.QUIZ = [
 ["Rigging","Ladder angle should be…",["45°","60°","75° (1 out for 4 up)","90°"],2,"1:4 ratio, about 75°.","rigging/scaffolding.html"],
 ["Safety","A green scaffold tag means…",["Incomplete","Inspected and safe to use","Do not use","Under construction"],1,"Green = safe to use within its limits.","rigging/scaffolding.html"],
 ["Safety","The best way to isolate a line for confined space entry is…",["Single closed valve","Positive isolation (blind or removed spool)","Tag on the valve","Close the control valve"],1,"Positive isolation is required for entry on most sites.","safety/loto.html"],
-["Safety","Who may remove your personal lock?",["Anyone in your crew","Only you (or the formal lock removal procedure)","The operator","The foreman of the next shift"],1,"One person, one lock, one key.","safety/loto.html"],
+["Safety","Who may remove your personal lock?",["Anyone in your crew","Only you (or the formal lock removal procedure)","The operator","The supervisor of the next shift"],1,"One person, one lock, one key.","safety/loto.html"],
 ["Safety","Acceptable oxygen range for confined space entry is about…",["15–19%","19.5–23.5%","25–30%","Any above 10%"],1,"Below 19.5% is deficient, above 23.5% enriched (fire risk).","safety/confined-space.html"],
 ["Safety","The confined space attendant should…",["Go in to help if someone collapses","Stay at the entrance and raise the alarm","Leave when the entrant is settled","Do the gas test inside"],1,"Most confined space deaths are would-be rescuers.","safety/confined-space.html"],
 ["Safety","At about 100 ppm, H₂S…",["Smells stronger","Kills your sense of smell","Is harmless","Is lighter than air"],1,"Olfactory paralysis: you can't smell it any more. IDLH level.","safety/gas-testing.html"],

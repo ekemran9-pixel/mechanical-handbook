@@ -30,9 +30,9 @@ function show(id, focusEl) {
   if (!$('.pager', mod)) {
     const i = ORDER.indexOf(id), pv = MODULES[i - 1], nx = MODULES[i + 1];
     mod.insertAdjacentHTML('beforeend', `<nav class="pager" aria-label="মডিউল নেভিগেশন">${pv ? `<a href="#${pv[0]}"><small>← আগের · ${bn(pv[1])}</small>${pv[2]}</a>` : ''}${nx ? `<a class="nx" href="#${nx[0]}"><small>পরের · ${bn(nx[1])} →</small>${nx[2]}</a>` : ''}</nav>
-      <div class="foot"><span>এই গাইডের সংখ্যা ও নিয়ম ASME, ASTM, AWS, API স্ট্যান্ডার্ড ও প্রচলিত সাইট-অনুশীলনের ভিত্তিতে শেখার জন্য সাজানো। কাজের সময় প্রজেক্ট স্পেসিফিকেশন, অনুমোদিত WPS, IFC ড্রয়িং ও স্ট্যান্ডার্ডের সর্বশেষ সংস্করণই চূড়ান্ত।</span><span class="morelinks">আরও দেখুন: <a href="https://ekemran9-pixel.github.io/foreman-handbook/bn/" target="_blank" rel="noopener">মেকানিক্যাল হ্যান্ডবুক</a> · <a href="https://ekemran9-pixel.github.io/PORTFOLIO-/phosphate-drum/" target="_blank" rel="noopener">ফসফেট ড্রাম গাইড</a> · <a href="https://ekemran9-pixel.github.io/PORTFOLIO-/phosphate-safety/" target="_blank" rel="noopener">ফসফেট সেফটি গাইড</a></span></div>`);
+      <div class="foot"><span>এই গাইডের সংখ্যা ও নিয়ম ASME, ASTM, AWS, API স্ট্যান্ডার্ড ও প্রচলিত সাইট-অনুশীলনের ভিত্তিতে শেখার জন্য সাজানো। কাজের সময় প্রজেক্ট স্পেসিফিকেশন, অনুমোদিত WPS, IFC ড্রয়িং ও স্ট্যান্ডার্ডের সর্বশেষ সংস্করণই চূড়ান্ত।</span><span class="morelinks">আরও দেখুন: <a href="https://ekemran9-pixel.github.io/mechanical-handbook/bn/" target="_blank" rel="noopener">মেকানিক্যাল হ্যান্ডবুক</a> · <a href="https://ekemran9-pixel.github.io/PORTFOLIO-/phosphate-drum/" target="_blank" rel="noopener">ফসফেট ড্রাম গাইড</a> · <a href="https://ekemran9-pixel.github.io/PORTFOLIO-/phosphate-safety/" target="_blank" rel="noopener">ফসফেট সেফটি গাইড</a></span></div>`);
   }
-  document.title = (id === 'home' ? '' : mod.dataset.title + ' · ') + 'ফ্যাব্রিকেশন ফোরম্যান গাইড';
+  document.title = (id === 'home' ? '' : mod.dataset.title + ' · ') + 'ফ্যাব্রিকেশন গাইড';
   if (focusEl) {
     requestAnimationFrame(() => { focusEl.scrollIntoView({ block: 'start' }); focusEl.classList.remove('hit'); void focusEl.offsetWidth; focusEl.classList.add('hit'); });
   } else window.scrollTo(0, 0);
@@ -403,7 +403,7 @@ $('#fitTable').innerHTML = `<thead><tr><th>NPS</th><th class="num">OD</th><th cl
   const render = () => {
     if (i >= set.length) {
       const b = store.get('quizBest', 0); if (score > b) store.set('quizBest', score); best();
-      box.innerHTML = `<div class="qtop"><span>রাউন্ড শেষ</span></div><div class="qq">আপনার স্কোর: ${bn(score)} / ${bn(set.length)}</div><p class="qx">${score >= 8 ? 'চমৎকার! আপনি ফোরম্যান পর্যায়ের জ্ঞান রাখেন।' : score >= 5 ? 'ভালো। ভুল প্রশ্নগুলোর মডিউল আরেকবার পড়ুন।' : 'মডিউলগুলো ক্রম অনুযায়ী পড়ে আবার চেষ্টা করুন।'}</p><div><button class="btn go" id="qzAgain" type="button">নতুন রাউন্ড</button></div>`;
+      box.innerHTML = `<div class="qtop"><span>রাউন্ড শেষ</span></div><div class="qq">আপনার স্কোর: ${bn(score)} / ${bn(set.length)}</div><p class="qx">${score >= 8 ? 'চমৎকার! আপনি সুপারভাইজার পর্যায়ের জ্ঞান রাখেন।' : score >= 5 ? 'ভালো। ভুল প্রশ্নগুলোর মডিউল আরেকবার পড়ুন।' : 'মডিউলগুলো ক্রম অনুযায়ী পড়ে আবার চেষ্টা করুন।'}</p><div><button class="btn go" id="qzAgain" type="button">নতুন রাউন্ড</button></div>`;
       $('#qzAgain').addEventListener('click', start); return;
     }
     const q = set[i];
