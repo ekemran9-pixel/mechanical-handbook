@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Safety &amp; relief valves · Mechanical Foreman Handbook</title>
+<meta name="description" content="PSV types, terms, set pressure, blowdown, bench testing, overhaul and handling rules.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/static/safety-valves.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/static/safety-valves.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html" aria-current="page">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Static Equipment &amp; Valves"><div class="grp">Heat exchangers</div><a href="shell-tube.html">Shell &amp; tube exchangers</a><a href="exchanger-maintenance.html">Exchanger maintenance &amp; testing</a><a href="air-coolers.html">Air coolers (fin fans)</a><a href="plate-exchangers.html">Plate heat exchangers</a><div class="grp">Vessels &amp; tanks</div><a href="pressure-vessels.html">Pressure vessels</a><a href="columns.html">Columns &amp; trays</a><a href="storage-tanks.html">Storage tanks (API 650/653)</a><div class="grp">Valves</div><a href="valve-types.html">Valve types</a><a href="valve-maintenance.html">Valve repair &amp; testing</a><a href="safety-valves.html" aria-current="page">Safety &amp; relief valves</a><a href="control-valves.html">Control valves (mechanical)</a><div class="grp">Steam systems</div><a href="steam-traps.html">Steam traps</a><a href="boilers.html">Boilers (basics)</a><a href="cooling-towers.html">Cooling towers</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Static Equipment &amp; Valves</a> › Valves</div>
+<h1>Safety &amp; relief valves</h1>
+<p class="summary">PSV types, terms, set pressure, blowdown, bench testing, overhaul and handling rules.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Terms</a></li><li><a href="#s2">Types</a></li><li><a href="#s3">Bench test procedure</a></li><li><a href="#s4">Handling and installation</a></li><li><a href="#s5">Inspection interval</a></li></ol></details>
+
+<h3 id="s1">Terms</h3>
+<ul><li><b>Set pressure</b>: pressure at which the valve starts to open.</li><li><b>Overpressure</b>: pressure rise above set to reach full lift (often 10%).</li><li><b>Accumulation</b>: pressure rise above MAWP during discharge (10% for single valve, 16% multiple valves, 21% fire case per ASME VIII).</li><li><b>Blowdown</b>: difference between set and reseat pressure, typically 7–10% (steam 2–6%).</li><li><b>CDTP</b> (cold differential test pressure): bench set pressure corrected for back pressure and temperature.</li><li><b>Simmer</b>: audible leakage just below set (compressible fluids).</li><li><b>Chatter</b>: rapid opening and closing. Destroys seats. Caused by oversizing, inlet losses above 3% of set, or high built-up back pressure.</li></ul>
+<h3 id="s2">Types</h3>
+<ul><li><b>Safety valve</b>: pops open fully. Steam, gas, vapour.</li><li><b>Relief valve</b>: opens in proportion to overpressure. Liquids.</li><li><b>Safety relief valve</b>: either service.</li><li><b>Conventional spring loaded</b>: back pressure affects set pressure.</li><li><b>Balanced bellows</b>: bellows cancels back pressure effect. The bonnet vent must be open to atmosphere (leakage there = failed bellows).</li><li><b>Pilot operated</b>: main valve held shut by system pressure via pilot. Tight up to near set. Clean service.</li></ul>
+<h3 id="s3">Bench test procedure</h3>
+<ol class="steps"><li>Record as-received: pop the valve before cleaning to find the "as found" set pressure. This shows whether it would have protected the equipment.</li><li>Strip, clean, inspect: nozzle, disc, guide, spring, bellows, stem.</li><li>Lap disc and nozzle seats flat (optical flat to check: max 2–3 light bands).</li><li>Reassemble, set the spring adjusting screw to approximately set.</li><li>Test on a test bench with the right medium (air/nitrogen for gas, water for liquid, steam for steam valves where required).</li><li>Adjust to CDTP. Confirm set pressure repeats (e.g. 3 consecutive pops within ±3% for set below 70 psi, or ±2 psi; ±3% above).</li><li>Seat tightness test to API 527: at 90% of set, count bubbles per minute through a tube 6 mm below water. E.g. 40 bubbles/min allowed for orifice F and smaller at set up to 1000 psi.</li><li>Fit seal wire with tag: set pressure, date, shop, valve tag number.</li></ol>
+<h3 id="s4">Handling and installation</h3>
+<ul><li>Carry and store upright. Rough handling shifts set pressure.</li><li>Keep inlet and outlet capped until fitted.</li><li>Inlet pipe pressure drop &lt; 3% of set pressure. No block valve unless locked open with a car seal (CSO) under a permit system.</li><li>Outlet pipe supported, no load on the valve body. Drain the discharge line low points.</li><li>Don't use the lifting lever unless the system pressure is at least 75% of set.</li><li>Never gag a PSV on an operating system.</li></ul>
+<h3 id="s5">Inspection interval</h3>
+<p>Typically 2–5 years, based on service and history (clean service longer, fouling or corrosive service shorter). Use as-found results to adjust the interval.</p>
+<div class="pager"><a href="valve-maintenance.html"><span>Previous</span>Valve repair &amp; testing</a><a class="nx" href="control-valves.html"><span>Next</span>Control valves (mechanical)</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

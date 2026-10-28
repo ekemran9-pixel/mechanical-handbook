@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lathe work · Mechanical Foreman Handbook</title>
+<meta name="description" content="Lathe parts, cutting speeds, tooling, setting up, turning, facing, boring, threading and safety.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/workshop/lathe.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/workshop/lathe.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html" aria-current="page">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Workshop, Machining &amp; Fasteners"><div class="grp">Measurement</div><a href="measuring-tools.html">Measuring tools</a><a href="limits-fits.html">Limits, fits &amp; tolerances</a><div class="grp">Machining</div><a href="lathe.html" aria-current="page">Lathe work</a><a href="milling-drilling.html">Milling, drilling &amp; tapping</a><div class="grp">Fasteners</div><a href="threads.html">Threads &amp; identification</a><a href="fasteners.html">Bolts, nuts &amp; washers</a><a href="torque.html">Torque &amp; preload</a><a href="keys-shafts.html">Keys, splines &amp; shaft locking</a><div class="grp">Tools</div><a href="hand-power-tools.html">Hand &amp; power tools</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Workshop, Machining &amp; Fasteners</a> › Machining</div>
+<h1>Lathe work</h1>
+<p class="summary">Lathe parts, cutting speeds, tooling, setting up, turning, facing, boring, threading and safety.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Cutting speed and rpm</a></li><li><a href="#s2">Set-up</a></li><li><a href="#s3">Operations</a></li><li><a href="#s4">Common shaft repairs</a></li><li><a href="#s5">Safety</a></li></ol></details>
+
+<h3 id="s1">Cutting speed and rpm</h3>
+<div class="formula">rpm = (Cutting speed m/min × 1000) ÷ (π × Diameter mm)</div>
+<div class="tbl"><table><tr><th>Material</th><th>HSS (m/min)</th><th>Carbide (m/min)</th></tr>
+<tr><td>Mild steel</td><td>25–35</td><td>120–250</td></tr>
+<tr><td>Medium carbon / alloy steel</td><td>15–25</td><td>90–180</td></tr>
+<tr><td>Stainless (austenitic)</td><td>10–20</td><td>80–150</td></tr>
+<tr><td>Cast iron</td><td>15–25</td><td>80–150</td></tr>
+<tr><td>Brass / bronze</td><td>40–90</td><td>150–300</td></tr>
+<tr><td>Aluminium</td><td>60–150</td><td>200–600</td></tr></table></div>
+<p>Example: 80 mm mild steel bar, carbide at 150 m/min: rpm = 150,000 ÷ (3.14 × 80) ≈ 600 rpm.</p>
+<h3 id="s2">Set-up</h3>
+<ul><li>Three-jaw chuck: quick, self-centring, ±0.05 mm typical runout.</li><li>Four-jaw independent: clock true to 0.01 mm. Best for repair work on shafts.</li><li>Between centres: for long shafts. Use a steady rest for long thin work.</li><li>Tool height on centre exactly. Below centre rubs, above centre digs.</li><li>Keep tool overhang short.</li></ul>
+<h3 id="s3">Operations</h3>
+<ul><li><b>Facing</b>: from outside to centre (or centre out for finishing).</li><li><b>Turning</b>: rough with heavy cuts, finish with light cut (0.1–0.3 mm), fine feed.</li><li><b>Boring</b>: largest boring bar that fits, shortest overhang.</li><li><b>Threading</b>: set the gearbox for pitch, set compound to 29–30° for 60° threads, use the thread dial for re-engagement, check with a thread gauge or the mating part.</li><li><b>Parting</b>: tool exactly on centre, slow speed, plenty of coolant, close to the chuck.</li></ul>
+<h3 id="s4">Common shaft repairs</h3>
+<ul><li>Worn bearing seat: metal spray or welding and re-machine, or sleeve (machine undersize, shrink on a sleeve, finish to size). Check with the engineer for critical shafts.</li><li>Damaged threads: recut if enough material, else build up and recut.</li><li>Straightening bent shafts: by press or controlled heat, only with engineering approval for critical rotating shafts.</li><li>Always check final runout between centres.</li></ul>
+<h3 id="s5">Safety</h3>
+<ul><li>No gloves near the rotating chuck (entanglement). No loose sleeves, rings, long hair.</li><li>Remove the chuck key every time. Never leave it in.</li><li>Guards in place, e-stop tested.</li><li>Use a brush or hook for swarf, never hands.</li></ul>
+<div class="pager"><a href="limits-fits.html"><span>Previous</span>Limits, fits &amp; tolerances</a><a class="nx" href="milling-drilling.html"><span>Next</span>Milling, drilling &amp; tapping</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

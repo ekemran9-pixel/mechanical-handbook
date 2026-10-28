@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>জয়েন্ট ডিজাইন ও ফিট-আপ · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="জয়েন্টের ধরন, গ্রুভ প্রস্তুতি, বেভেল কোণ, রুট গ্যাপ, ব্যাকিং, ট্যাকিং এবং প্লেট ও পাইপের ফিট-আপ টলারেন্স।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../fabrication/joint-design.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../fabrication/joint-design.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html" aria-current="page">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="ওয়েল্ডিং ও ফেব্রিকেশন"><div class="grp">ওয়েল্ডিং প্রসেস</div><a href="welding-processes.html">ওয়েল্ডিং প্রসেসের তুলনা</a><a href="smaw.html">SMAW (স্টিক ওয়েল্ডিং)</a><a href="gtaw.html">GTAW (TIG ওয়েল্ডিং)</a><a href="gmaw-fcaw.html">GMAW ও FCAW (MIG ও ফ্লাক্স কোর)</a><a href="saw.html">SAW (সাবমার্জড আর্ক)</a><div class="grp">উপাদান</div><a href="filler-metals.html">ফিলার মেটাল গাইড</a><a href="metallurgy.html">ওয়েল্ডারের জন্য স্টিলের ধাতুবিদ্যা</a><div class="grp">জয়েন্ট ডিজাইন</div><a href="joint-design.html" aria-current="page">জয়েন্ট ডিজাইন ও ফিট-আপ</a><a href="weld-symbols.html">ওয়েল্ড সিম্বল (AWS A2.4 / ISO 2553)</a><a href="positions.html">ওয়েল্ডিং পজিশন ও যোগ্যতা</a><div class="grp">গুণমান</div><a href="weld-defects.html">ওয়েল্ডের ত্রুটি ও মেরামত</a><a href="wps-pqr.html">WPS, PQR ও WPQ</a><a href="preheat-pwht.html">প্রিহিট, ইন্টারপাস ও PWHT</a><a href="distortion.html">ডিস্টরশন নিয়ন্ত্রণ</a><div class="grp">বিশেষ উপাদান</div><a href="stainless-welding.html">স্টেইনলেস ও ডুপ্লেক্স ওয়েল্ডিং</a><a href="alloy-welding.html">Cr-Mo, P91 ও ভিন্ন ধাতুর ওয়েল্ড</a><a href="aluminium-welding.html">অ্যালুমিনিয়াম ওয়েল্ডিং</a><div class="grp">কাটিং ও ফর্মিং</div><a href="cutting-gouging.html">কাটিং ও গাউজিং</a><a href="plate-forming.html">রোলিং, বেন্ডিং ও ফর্মিং</a><a href="layout-development.html">লেআউট ও প্যাটার্ন ডেভেলপমেন্ট</a><a href="welding-safety.html">ওয়েল্ডিং ও কাটিংয়ের নিরাপত্তা</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">ওয়েল্ডিং ও ফেব্রিকেশন</a> › জয়েন্ট ডিজাইন</div>
+<h1>জয়েন্ট ডিজাইন ও ফিট-আপ</h1>
+<p class="summary">জয়েন্টের ধরন, গ্রুভ প্রস্তুতি, বেভেল কোণ, রুট গ্যাপ, ব্যাকিং, ট্যাকিং এবং প্লেট ও পাইপের ফিট-আপ টলারেন্স।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">পাঁচটি মৌলিক জয়েন্ট</a></li><li><a href="#s2">গ্রুভ প্রস্তুতি</a></li><li><a href="#s3">পাইপের প্রান্ত প্রস্তুতি (ASME B16.25)</a></li><li><a href="#s4">রুট গ্যাপ ও ল্যান্ড</a></li><li><a href="#s5">ব্যাকিং</a></li><li><a href="#s6">ফিট-আপ টলারেন্স</a></li><li><a href="#s7">ট্যাক ওয়েল্ড</a></li></ol></details>
+
+<h3 id="s1">পাঁচটি মৌলিক জয়েন্ট</h3>
+<ul><li><b>বাট</b>: একই তলে কিনারায় কিনারায়।</li><li><b>টি</b>: একটি টুকরো অন্যটির পৃষ্ঠের সাথে সমকোণে।</li><li><b>কর্নার</b>: কিনারায় মিলিত সমকোণী টুকরো।</li><li><b>ল্যাপ</b>: একটির উপর আরেকটি।</li><li><b>এজ</b>: কিনারা বরাবর ওয়েল্ড করা সমান্তরাল টুকরো।</li></ul>
+<h3 id="s2">গ্রুভ প্রস্তুতি</h3>
+<div class="tbl"><table><tr><th>প্রস্তুতি</th><th>পুরুত্ব (গাইড)</th><th>মন্তব্য</th></tr>
+<tr><td>স্কয়ার</td><td>3–6 mm পর্যন্ত</td><td>পুরুত্বের প্রায় অর্ধেক ফাঁক, বা দুই পাশে</td></tr>
+<tr><td>সিঙ্গেল V</td><td>6–20 mm</td><td>প্লেটে 60° মোট (প্রতি পাশে 30°); পাইপে 75° (37.5°)</td></tr>
+<tr><td>ডাবল V (X)</td><td>&gt; 20 mm, দুই পাশে প্রবেশ</td><td>সিঙ্গেল V এর অর্ধেক ওয়েল্ড মেটাল, কম ডিস্টরশন। দ্বিতীয় পাশে ব্যাক গাউজ</td></tr>
+<tr><td>সিঙ্গেল বেভেল</td><td>টি ও কর্নার জয়েন্ট</td><td>একটি অংশে 45° বেভেল</td></tr>
+<tr><td>J ও U</td><td>মোটা প্লেট ও পাইপ</td><td>কম ওয়েল্ড মেটাল, মেশিনিং লাগে</td></tr>
+<tr><td>কম্পাউন্ড বেভেল (পাইপ)</td><td>দেয়াল &gt; 22 mm</td><td>37.5° তারপর 10° (ASME B16.25)</td></tr></table></div>
+<h3 id="s3">পাইপের প্রান্ত প্রস্তুতি (ASME B16.25)</h3>
+<div class="tbl"><table><tr><th>দেয়ালের পুরুত্ব t</th><th>প্রস্তুতি</th></tr>
+<tr><td>t ≤ 3 mm (কিছু ক্ষেত্রে 5 mm পর্যন্ত)</td><td>স্কয়ার কাট বা সামান্য চ্যামফার</td></tr>
+<tr><td>3 &lt; t ≤ 22 mm</td><td>37.5° ± 2.5°, ল্যান্ড 1.6 ± 0.8 mm</td></tr>
+<tr><td>t &gt; 22 mm</td><td>19 mm গভীরতা পর্যন্ত 37.5°, তারপর 10° ± 1°, ল্যান্ড 1.6 mm</td></tr></table></div>
+<h3 id="s4">রুট গ্যাপ ও ল্যান্ড</h3>
+<ul><li>রুট গ্যাপ সাধারণত WPS অনুযায়ী 1.6–3.2 mm। কম হলে: ল্যাক অফ পেনিট্রেশন। বেশি হলে: বার্ন-থ্রু, অতিরিক্ত পেনিট্রেশন।</li><li>ল্যান্ড (রুট ফেস) 0–2 mm। কিছু GTAW রুটে ফেদার এজ (ল্যান্ড নেই)।</li></ul>
+<h3 id="s5">ব্যাকিং</h3>
+<ul><li><b>স্টিল ব্যাকিং স্ট্রিপ</b>: স্থায়ী, স্ট্রাকচারালে প্রচলিত। অবিচ্ছিন্ন ও ফিউজড হতে হবে। পাইপিংয়ে ব্যবহার হয় না কারণ ক্রেভিস করোশন ও প্রবাহে বাধা।</li><li><b>সিরামিক ব্যাকিং</b>: খোলা যায়, আকার দেওয়া রুট দেয়। এক পাশের প্লেট ওয়েল্ডে ভালো।</li><li><b>কপার ব্যাকিং</b>: চিল বার, খোলা যায়।</li><li><b>কনজিউমেবল ইনসার্ট (EB রিং)</b>: পাইপে, রুটে গলে মিশে যায়।</li><li><b>গ্যাস ব্যাকিং</b>: স্টেইনলেসে পার্জ।</li></ul>
+<h3 id="s6">ফিট-আপ টলারেন্স</h3>
+<ul><li>পাইপে <b>হাই-লো (ভেতরের মিসঅ্যালাইনমেন্ট)</b>: সাধারণত ≤ 1.6 mm বা WPS / কোড অনুযায়ী। বেশি হলে মোটা দিক কাউন্টারবোর বা টেপার (1:4) করুন।</li><li>প্লেট মিসঅ্যালাইনমেন্ট (AWS D1.1): পাতলা অংশের 10%, সর্বোচ্চ 3 mm।</li><li>ফিলেট ওয়েল্ডের ফিট-আপ ফাঁক: 1.6 mm পর্যন্ত ঠিক আছে; 1.6–5 mm হলে লেগ সাইজে ফাঁক যোগ করুন (D1.1)।</li><li>পাইপ স্কয়ার কিনা দেখুন: বেশিরভাগ সাইজে প্রান্ত কাটায় ≤ 1.6 mm স্কয়ারের বাইরে।</li><li>ওয়েল্ডিংয়ের আগে ফ্ল্যাঞ্জ অ্যালাইনমেন্ট: পাইপের সাথে ফেস স্কয়ার 1/2° (বা 100 mm এ 0.5 mm) এর মধ্যে, বোল্ট হোল সেন্টারলাইনের দুই পাশে (টু-হোলড) যদি ড্রয়িংয়ে অন্য না বলা থাকে।</li></ul>
+<h3 id="s7">ট্যাক ওয়েল্ড</h3>
+<ul><li>রুটের মতোই WPS, ফিলার ও প্রিহিট ব্যবহার করুন।</li><li>ট্যাককারীকে প্রসেসে যোগ্য হতে হবে।</li><li>পাইপ: 6" পর্যন্ত সমান দূরত্বে ৩–৪টি ট্যাক, বড়তে বেশি। দৈর্ঘ্য দেয়ালের প্রায় 2–3 গুণ, সর্বনিম্ন 12–25 mm।</li><li>ট্যাকের প্রান্ত পাতলা করে গ্রাইন্ড করুন যাতে রুট মিশে যায়। ফাটা ট্যাক পুরো গ্রাইন্ড করে ফেলুন।</li><li>ব্রিজ ট্যাক (বার দিয়ে বেভেলের উপরে) গুরুত্বপূর্ণ কাজে রুট ট্যাক এড়ায়। সাবধানে সরিয়ে জায়গাটি গ্রাইন্ড ও পরীক্ষা করুন।</li></ul>
+<div class="pager"><a href="metallurgy.html"><span>আগের</span>ওয়েল্ডারের জন্য স্টিলের ধাতুবিদ্যা</a><a class="nx" href="weld-symbols.html"><span>পরের</span>ওয়েল্ড সিম্বল (AWS A2.4 / ISO 2553)</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

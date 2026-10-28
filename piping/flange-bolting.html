@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flange bolting (ASME PCC-1) · Mechanical Foreman Handbook</title>
+<meta name="description" content="Bolt-up procedure, torque patterns, torque values, lubrication, tensioning, and joint integrity records.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/piping/flange-bolting.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/piping/flange-bolting.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html" aria-current="page">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Piping"><div class="grp">Pipe &amp; fittings</div><a href="pipe-sizes.html">Pipe sizes &amp; schedules</a><a href="pipe-materials.html">Piping materials (ASTM)</a><a href="fittings.html">Fittings &amp; take-outs</a><div class="grp">Flanges &amp; bolting</div><a href="flanges.html">Flanges</a><a href="gaskets.html">Gaskets</a><a href="flange-bolting.html" aria-current="page">Flange bolting (ASME PCC-1)</a><div class="grp">Drawings &amp; layout</div><a href="isometrics.html">Reading P&amp;IDs &amp; isometrics</a><a href="spool-fabrication.html">Spool fabrication &amp; erection</a><a href="pipe-supports.html">Pipe supports</a><div class="grp">Testing &amp; cleaning</div><a href="pressure-testing.html">Pressure testing</a><a href="flushing.html">Flushing, blowing &amp; cleaning</a><div class="grp">Small bore &amp; tubing</div><a href="small-bore.html">Small bore, threaded &amp; tubing</a><a href="non-metallic.html">Non-metallic piping</a><a href="expansion-joints.html">Expansion joints &amp; bellows</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Piping</a> › Flanges &amp; bolting</div>
+<h1>Flange bolting (ASME PCC-1)</h1>
+<p class="summary">Bolt-up procedure, torque patterns, torque values, lubrication, tensioning, and joint integrity records.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Before bolting</a></li><li><a href="#s2">Legacy cross-pattern sequence (PCC-1)</a></li><li><a href="#s3">Cross pattern orders</a></li><li><a href="#s4">Torque from bolt stress</a></li><li><a href="#s5">Typical torque for B7 studs (K = 0.16, oiled / moly, at ~50 ksi / 345 MPa)</a></li><li><a href="#s6">Hydraulic tensioning</a></li><li><a href="#s7">Joint integrity records</a></li></ol></details>
+
+<p>Most flange leaks are caused by uneven or insufficient bolt load, damaged faces, wrong gaskets or misaligned flanges. A controlled bolt-up fixes most of them.</p>
+<h3 id="s1">Before bolting</h3>
+<ol class="steps"><li>Check flange faces for damage. Clean with a non-metallic brush.</li><li>Check flange alignment (PCC-1 guide): centreline offset ≤ 1.5 mm, gap parallelism ≤ 0.8 mm difference, rotational alignment within 3 mm at bolt holes, gap no more than twice the gasket thickness. Don't force flanges together with bolts.</li><li>Check gasket type, size, rating. Check stud and nut grade and length (one to three threads through the nut).</li><li>Clean and lubricate threads and the nut bearing face with the specified lubricant. Note its nut factor K.</li><li>Number the bolts clockwise (1, 2, 3 …).</li></ol>
+<h3 id="s2">Legacy cross-pattern sequence (PCC-1)</h3>
+<ol class="steps"><li><b>Install</b>: hand tighten, then snug to 20–30 N·m (not more than 20% of target). Check the gap is even.</li><li><b>Round 1</b>: 20–30% of target torque, cross pattern.</li><li><b>Round 2</b>: 50–70% of target, cross pattern.</li><li><b>Round 3</b>: 100% of target, cross pattern.</li><li><b>Round 4</b>: 100% in a circular (rotational) pattern, clockwise, until nuts no longer turn.</li><li><b>Round 5</b> (optional): 100% circular after at least 4 hours (relaxation check).</li></ol>
+<p>Measure gaps at 4 or 8 places between rounds. Correct uneven gaps in the next round.</p>
+<p>PCC-1 also gives faster alternative patterns (e.g. quadrant patterns) that work well on large flanges with many bolts.</p>
+<h3 id="s3">Cross pattern orders</h3>
+<div class="tbl"><table><tr><th>Bolts</th><th>Order</th></tr>
+<tr><td>4</td><td>1-3-2-4</td></tr>
+<tr><td>8</td><td>1-5-3-7 → 2-6-4-8</td></tr>
+<tr><td>12</td><td>1-7-4-10 → 2-8-5-11 → 3-9-6-12</td></tr>
+<tr><td>16</td><td>1-9-5-13 → 3-11-7-15 → 2-10-6-14 → 4-12-8-16</td></tr>
+<tr><td>20</td><td>1-11-6-16 → 3-13-8-18 → 5-15-10-20 → 2-12-7-17 → 4-14-9-19</td></tr></table></div>
+<h3 id="s4">Torque from bolt stress</h3>
+<div class="formula">T = K × F × D     F = target stress × tensile stress area</div>
+<p>Target bolt stress for B7 studs is often 40–70% of yield (yield 724 MPa for B7 up to 2½"). Many sites use a target of about 345–414 MPa (50–60 ksi) for spiral wound gaskets on RF flanges, adjusted for the gasket and flange limits.</p>
+<h3 id="s5">Typical torque for B7 studs (K = 0.16, oiled / moly, at ~50 ksi / 345 MPa)</h3>
+<div class="tbl"><table><tr><th>Stud size</th><th>Tensile area (in²)</th><th>Torque ft·lb</th><th>Torque N·m</th></tr>
+<tr><td>1/2"-13</td><td>0.142</td><td>50</td><td>60</td></tr>
+<tr><td>5/8"-11</td><td>0.226</td><td>90</td><td>130</td></tr>
+<tr><td>3/4"-10</td><td>0.334</td><td>170</td><td>230</td></tr>
+<tr><td>7/8"-9</td><td>0.462</td><td>270</td><td>370</td></tr>
+<tr><td>1"-8</td><td>0.606</td><td>400</td><td>550</td></tr>
+<tr><td>1-1/8"-8</td><td>0.790</td><td>590</td><td>800</td></tr>
+<tr><td>1-1/4"-8</td><td>1.000</td><td>830</td><td>1,130</td></tr>
+<tr><td>1-1/2"-8</td><td>1.492</td><td>1,490</td><td>2,020</td></tr>
+<tr><td>1-3/4"-8</td><td>2.077</td><td>2,420</td><td>3,290</td></tr>
+<tr><td>2"-8</td><td>2.771</td><td>3,690</td><td>5,010</td></tr></table></div>
+<p style="font-size:.85rem;color:var(--muted)">Calculated as T = 0.16 × (50,000 psi × area) × D ÷ 12. Use your site's approved torque tables, which account for gasket type, flange class and lubricant.</p>
+<h3 id="s6">Hydraulic tensioning</h3>
+<ul><li>Stretches the stud directly with a hydraulic tool. Load is not affected by friction.</li><li>Needs longer studs (one extra diameter of thread above the nut).</li><li>Tension 50% or 100% of the bolts at once. With 50% coverage, do two passes plus a check pass.</li><li>Account for load loss when the tool is released (load transfer factor), per the calculation.</li></ul>
+<h3 id="s7">Joint integrity records</h3>
+<ul><li>Tag each joint after make-up: joint ID, gasket, bolt material, torque/tension value, tool serial, date, technician, verifier.</li><li>Critical joints (high pressure, toxic, hot): independent verification and sign-off before leak test.</li><li>Bolting technicians trained and qualified (PCC-1 Appendix A).</li></ul>
+<div class="warn"><b>Never</b> tighten or loosen flange bolts on a pressurised joint (hot bolting only under a specific, approved procedure with half the bolts at a time).</div>
+<div class="pager"><a href="gaskets.html"><span>Previous</span>Gaskets</a><a class="nx" href="isometrics.html"><span>Next</span>Reading P&amp;IDs &amp; isometrics</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

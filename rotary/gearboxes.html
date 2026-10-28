@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gearboxes · Mechanical Foreman Handbook</title>
+<meta name="description" content="Gear types, backlash, tooth contact, bearing settings, lubrication and how to read gear tooth damage.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/rotary/gearboxes.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/rotary/gearboxes.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html" aria-current="page">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Rotary Equipment"><div class="grp">Pumps</div><a href="centrifugal-pumps.html">Centrifugal pump basics</a><a href="pump-curves.html">Pump curves &amp; system curves</a><a href="pump-types.html">Pump types &amp; API 610 codes</a><a href="pump-overhaul.html">Pump overhaul procedure</a><a href="pd-pumps.html">Positive displacement pumps</a><a href="pump-troubleshooting.html">Pump troubleshooting</a><div class="grp">Seals &amp; packing</div><a href="mechanical-seals.html">Mechanical seals</a><a href="seal-plans.html">Seal flush plans (API 682)</a><a href="gland-packing.html">Gland packing</a><div class="grp">Bearings &amp; lubrication</div><a href="rolling-bearings.html">Rolling element bearings</a><a href="bearing-mounting.html">Bearing mounting &amp; removal</a><a href="plain-bearings.html">Plain &amp; tilting-pad bearings</a><a href="lubrication.html">Lubrication</a><a href="oil-analysis.html">Oil analysis</a><div class="grp">Alignment &amp; vibration</div><a href="alignment.html">Shaft alignment</a><a href="dial-alignment.html">Dial indicator alignment methods</a><a href="vibration.html">Vibration analysis</a><a href="balancing.html">Balancing</a><a href="condition-monitoring.html">Condition monitoring</a><div class="grp">Drives &amp; transmission</div><a href="couplings.html">Couplings</a><a href="gearboxes.html" aria-current="page">Gearboxes</a><a href="belts-chains.html">Belt &amp; chain drives</a><a href="electric-motors.html">Electric motors (mechanical side)</a><div class="grp">Fluid power</div><a href="hydraulics.html">Hydraulic systems</a><a href="pneumatics.html">Compressed air &amp; pneumatics</a><div class="grp">Compressors &amp; turbines</div><a href="recip-compressors.html">Reciprocating compressors</a><a href="centrifugal-compressors.html">Centrifugal compressors</a><a href="screw-compressors.html">Screw &amp; air compressors</a><a href="steam-turbines.html">Steam turbines</a><a href="gas-turbines.html">Gas turbines (overview)</a><div class="grp">Other machines</div><a href="fans-blowers.html">Fans &amp; blowers</a><a href="agitators.html">Agitators &amp; mixers</a><a href="conveyors.html">Belt conveyors</a><a href="cranes-hoists.html">Cranes &amp; hoists (maintenance)</a><div class="grp">Reliability</div><a href="rca.html">Root cause analysis</a><a href="maintenance-strategy.html">Maintenance strategy &amp; KPIs</a><a href="preservation.html">Storage &amp; preservation</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Rotary Equipment</a> › Drives &amp; transmission</div>
+<h1>Gearboxes</h1>
+<p class="summary">Gear types, backlash, tooth contact, bearing settings, lubrication and how to read gear tooth damage.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Gear types</a></li><li><a href="#s2">Backlash</a></li><li><a href="#s3">Tooth contact check</a></li><li><a href="#s4">Bearings and endplay</a></li><li><a href="#s5">Lubrication</a></li><li><a href="#s6">Tooth damage (AGMA 1010)</a></li><li><a href="#s7">Overhaul checks</a></li></ol></details>
+
+<h3 id="s1">Gear types</h3>
+<div class="tbl"><table><tr><th>Type</th><th>Notes</th></tr>
+<tr><td>Spur</td><td>Straight teeth, parallel shafts. Simple, noisy at speed. No axial thrust</td></tr>
+<tr><td>Helical</td><td>Angled teeth. Quieter, stronger, creates axial thrust. Most industrial reducers</td></tr>
+<tr><td>Double helical / herringbone</td><td>Thrust cancels. High power turbine gears</td></tr>
+<tr><td>Straight / spiral bevel</td><td>Shafts at 90°. Spiral bevel quieter. Set by shims for contact pattern</td></tr>
+<tr><td>Worm and wheel</td><td>High ratio in one stage, low efficiency at high ratios, can be self-locking. Bronze wheel</td></tr>
+<tr><td>Planetary (epicyclic)</td><td>Compact, high torque. Sun, planets, ring and carrier</td></tr></table></div>
+<h3 id="s2">Backlash</h3>
+<p>Backlash is the free play between meshing teeth. It allows for oil film, heat and tolerances.</p>
+<ol class="steps"><li>Lock one gear (pinion usually).</li><li>Mount a dial indicator on a tooth of the other gear, perpendicular to the tooth, at the pitch circle.</li><li>Rock the gear back and forth. Read total movement.</li><li>Repeat at 3–4 positions around the gear.</li></ol>
+<p>Typical industrial backlash: about 0.03–0.06 × module (mm) for helical gears, more for large or hot gears. Use the maker's figure.</p>
+<h3 id="s3">Tooth contact check</h3>
+<ol class="steps"><li>Clean teeth with solvent.</li><li>Paint 3–4 teeth of the pinion thinly with Prussian blue or marking compound.</li><li>Rotate the gears through mesh under light braking.</li><li>Read the pattern transferred to the mating gear.</li><li>Good: contact over 80% or more of face width and centred about the pitch line.</li><li>Contact at one end: misalignment, shafts not parallel, housing distortion, bearing wear.</li><li>Contact at tips or roots only: wrong centre distance.</li></ol>
+<p>For bevel gears, adjust the pinion position (shims behind the pinion bearing cage) and gear position to centre the pattern.</p>
+<h3 id="s4">Bearings and endplay</h3>
+<ul><li>Tapered roller bearings are set with a small endplay (e.g. 0.05–0.10 mm) or preload, using shims under the end cap.</li><li>Measure endplay with a dial on the shaft end while pushing and pulling.</li><li>Hot running increases preload in some arrangements. Follow the maker.</li></ul>
+<h3 id="s5">Lubrication</h3>
+<ul><li>Use the right ISO VG (often 150–320 for industrial helical, 460–680 for worm) and type (EP mineral, PAO synthetic, PAG for worms only if specified).</li><li>Fill to the sight glass or dipstick mark with the gearbox stopped.</li><li>Change interval: 2,500–5,000 h mineral, 10,000 h+ synthetic, or by oil analysis.</li><li>Clean breathers. Fit desiccant breathers in wet or dusty areas.</li><li>Oil temperature under about 90 °C mineral, 100 °C synthetic.</li></ul>
+<h3 id="s6">Tooth damage (AGMA 1010)</h3>
+<div class="tbl"><table><tr><th>Damage</th><th>Looks like</th><th>Cause</th></tr>
+<tr><td>Running-in polish</td><td>Shiny smooth flanks</td><td>Normal</td></tr>
+<tr><td>Micropitting (grey staining)</td><td>Matt grey frosted areas</td><td>Thin oil film, high load, rough surfaces</td></tr>
+<tr><td>Macropitting</td><td>Craters near pitch line</td><td>Surface fatigue, overload</td></tr>
+<tr><td>Spalling</td><td>Large flakes out</td><td>Advanced pitting, case crushing</td></tr>
+<tr><td>Scuffing / scoring</td><td>Radial streaks from tip to root, welded material</td><td>Oil film failure, wrong oil, high speed and load</td></tr>
+<tr><td>Abrasive wear</td><td>Scratches, step at end of contact</td><td>Dirty oil</td></tr>
+<tr><td>Plastic flow</td><td>Rolled-over tips, ridges</td><td>Overload on soft gears</td></tr>
+<tr><td>Tooth breakage (fatigue)</td><td>Beach marks on fracture face, at root</td><td>Overload, misalignment, stress raiser</td></tr>
+<tr><td>Tooth breakage (overload)</td><td>Rough, fibrous fracture</td><td>Sudden shock load</td></tr>
+<tr><td>Corrosion</td><td>Rust, etching</td><td>Water in oil, wrong additives</td></tr></table></div>
+<h3 id="s7">Overhaul checks</h3>
+<ul><li>Shaft centre distance and parallelism (housing bore check).</li><li>All bearings, seals, shims recorded and replaced.</li><li>Gear runout on the shaft.</li><li>Housing split face flatness, sealant (anaerobic) on metal-to-metal joints.</li><li>Clean all magnetic plugs. Look at what's on them before cleaning.</li></ul>
+<div class="pager"><a href="couplings.html"><span>Previous</span>Couplings</a><a class="nx" href="belts-chains.html"><span>Next</span>Belt &amp; chain drives</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

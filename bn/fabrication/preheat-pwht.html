@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>প্রিহিট, ইন্টারপাস ও PWHT · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="কেন ও কীভাবে প্রিহিট করবেন, ইন্টারপাস নিয়ন্ত্রণ, পোস্ট-হিট, PWHT সাইকেল, থার্মোকাপল বসানো ও রেকর্ড।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../fabrication/preheat-pwht.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../fabrication/preheat-pwht.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html" aria-current="page">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="ওয়েল্ডিং ও ফেব্রিকেশন"><div class="grp">ওয়েল্ডিং প্রসেস</div><a href="welding-processes.html">ওয়েল্ডিং প্রসেসের তুলনা</a><a href="smaw.html">SMAW (স্টিক ওয়েল্ডিং)</a><a href="gtaw.html">GTAW (TIG ওয়েল্ডিং)</a><a href="gmaw-fcaw.html">GMAW ও FCAW (MIG ও ফ্লাক্স কোর)</a><a href="saw.html">SAW (সাবমার্জড আর্ক)</a><div class="grp">উপাদান</div><a href="filler-metals.html">ফিলার মেটাল গাইড</a><a href="metallurgy.html">ওয়েল্ডারের জন্য স্টিলের ধাতুবিদ্যা</a><div class="grp">জয়েন্ট ডিজাইন</div><a href="joint-design.html">জয়েন্ট ডিজাইন ও ফিট-আপ</a><a href="weld-symbols.html">ওয়েল্ড সিম্বল (AWS A2.4 / ISO 2553)</a><a href="positions.html">ওয়েল্ডিং পজিশন ও যোগ্যতা</a><div class="grp">গুণমান</div><a href="weld-defects.html">ওয়েল্ডের ত্রুটি ও মেরামত</a><a href="wps-pqr.html">WPS, PQR ও WPQ</a><a href="preheat-pwht.html" aria-current="page">প্রিহিট, ইন্টারপাস ও PWHT</a><a href="distortion.html">ডিস্টরশন নিয়ন্ত্রণ</a><div class="grp">বিশেষ উপাদান</div><a href="stainless-welding.html">স্টেইনলেস ও ডুপ্লেক্স ওয়েল্ডিং</a><a href="alloy-welding.html">Cr-Mo, P91 ও ভিন্ন ধাতুর ওয়েল্ড</a><a href="aluminium-welding.html">অ্যালুমিনিয়াম ওয়েল্ডিং</a><div class="grp">কাটিং ও ফর্মিং</div><a href="cutting-gouging.html">কাটিং ও গাউজিং</a><a href="plate-forming.html">রোলিং, বেন্ডিং ও ফর্মিং</a><a href="layout-development.html">লেআউট ও প্যাটার্ন ডেভেলপমেন্ট</a><a href="welding-safety.html">ওয়েল্ডিং ও কাটিংয়ের নিরাপত্তা</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">ওয়েল্ডিং ও ফেব্রিকেশন</a> › গুণমান</div>
+<h1>প্রিহিট, ইন্টারপাস ও PWHT</h1>
+<p class="summary">কেন ও কীভাবে প্রিহিট করবেন, ইন্টারপাস নিয়ন্ত্রণ, পোস্ট-হিট, PWHT সাইকেল, থার্মোকাপল বসানো ও রেকর্ড।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">প্রিহিট</a></li><li><a href="#s2">সাধারণ সর্বনিম্ন প্রিহিট (গাইড, সবসময় WPS মানুন)</a></li><li><a href="#s3">ইন্টারপাস তাপমাত্রা</a></li><li><a href="#s4">পোস্ট-হিট (ডিহাইড্রোজেনেশন)</a></li><li><a href="#s5">PWHT (পোস্ট ওয়েল্ড হিট ট্রিটমেন্ট)</a></li><li><a href="#s6">গরম ও ঠান্ডা করার হার</a></li><li><a href="#s7">থার্মোকাপল ও ব্যান্ডের প্রস্থ</a></li><li><a href="#s8">PWHT এর আগে</a></li><li><a href="#s9">PWHT এর পরে</a></li></ol></details>
+
+<h3 id="s1">প্রিহিট</h3>
+<p>প্রিহিট ঠান্ডা হওয়ার হার ধীর করে, তাই শক্ত মার্টেনসাইট কম হয় এবং হাইড্রোজেন বের হতে পারে। আর্দ্রতাও দূর করে।</p>
+<ul><li>গ্যাস টর্চ (রোজবাড), ইলেকট্রিক রেজিস্ট্যান্স প্যাড বা ইন্ডাকশন কয়েল দিয়ে দিন।</li><li>জয়েন্টের প্রতি পাশে কমপক্ষে 75 mm (3") বা 4 × পুরুত্ব (কিছু কোড) চওড়া জায়গা পুরো পুরুত্ব জুড়ে গরম করুন।</li><li>সম্ভব হলে তাপের উৎসের বিপরীত পাশে মাপুন, বা টর্চ সরানোর পর প্রতি 25 mm পুরুত্বে 1 মিনিট অপেক্ষা করুন (ISO 13916 নিয়ম)।</li><li>কন্টাক্ট থার্মোমিটার, থার্মোকাপল বা তাপমাত্রা নির্দেশক ক্রেয়ন ব্যবহার করুন। নির্দিষ্ট তাপমাত্রার ক্রেয়ন স্টিল সেই তাপমাত্রায় পৌঁছালে গলে যায়।</li></ul>
+<h3 id="s2">সাধারণ সর্বনিম্ন প্রিহিট (গাইড, সবসময় WPS মানুন)</h3>
+<div class="tbl"><table><tr><th>উপাদান</th><th>পুরুত্ব</th><th>সর্বনিম্ন প্রিহিট</th></tr>
+<tr><td>P1 কার্বন স্টিল, C ≤ 0.30%</td><td>≤ 25 mm</td><td>10 °C (ভেজা বা ঠান্ডা হলে শুকানোর মতো গরম)</td></tr>
+<tr><td>P1 কার্বন স্টিল</td><td>&gt; 25 mm, বা বেশি CE</td><td>80–100 °C</td></tr>
+<tr><td>P3 (C-½Mo)</td><td>সব</td><td>80 °C</td></tr>
+<tr><td>P4 (1¼Cr-½Mo)</td><td>সব</td><td>120–150 °C</td></tr>
+<tr><td>P5A (2¼Cr-1Mo)</td><td>সব</td><td>150–200 °C</td></tr>
+<tr><td>P5B (5Cr, 9Cr)</td><td>সব</td><td>200 °C+</td></tr>
+<tr><td>P91</td><td>সব</td><td>200–250 °C, সর্বোচ্চ ইন্টারপাস ~300 °C</td></tr>
+<tr><td>P8 অস্টেনিটিক স্টেইনলেস</td><td>সব</td><td>নেই (শুধু শুকনো)। ইন্টারপাস সর্বোচ্চ ~150–175 °C</td></tr></table></div>
+<h3 id="s3">ইন্টারপাস তাপমাত্রা</h3>
+<ul><li><b>সর্বনিম্ন ইন্টারপাস</b> = সর্বনিম্ন প্রিহিট। ওয়েল্ড শেষ (বা পোস্ট-হিট) না হওয়া পর্যন্ত জয়েন্ট এর নিচে ঠান্ডা হতে দেবেন না।</li><li><b>সর্বোচ্চ ইন্টারপাস</b> টাফনেস ও ক্ষয়রোধ রক্ষা করে: কার্বন স্টিলে প্রায়ই 250–315 °C, স্টেইনলেসে 150–175 °C, ডুপ্লেক্সে 100–150 °C।</li></ul>
+<h3 id="s4">পোস্ট-হিট (ডিহাইড্রোজেনেশন)</h3>
+<p>ওয়েল্ডিংয়ের ঠিক পরে, জয়েন্ট ঠান্ডা হওয়ার আগে প্রায় 200–300 °C এ তুলে 1–4 ঘণ্টা (প্রসিডিউর অনুযায়ী) রাখুন। মোটা Cr-Mo ও বেশি বাঁধনের জয়েন্ট যা সরাসরি PWHT তে যেতে পারে না সেখানে প্রচলিত।</p>
+<h3 id="s5">PWHT (পোস্ট ওয়েল্ড হিট ট্রিটমেন্ট)</h3>
+<p>সম্পূর্ণ ওয়েল্ডকে লোয়ার ক্রিটিক্যাল তাপমাত্রার নিচে গরম করে অবশিষ্ট স্ট্রেস মুক্ত করা এবং HAZ টেম্পার করা।</p>
+<div class="tbl"><table><tr><th>উপাদান (B31.3 / ASME VIII গাইড)</th><th>কখন দরকার</th><th>তাপমাত্রা</th><th>ধরে রাখার সময়</th></tr>
+<tr><td>P1 কার্বন স্টিল</td><td>নামমাত্র পুরুত্ব &gt; 19 mm (3/4") (পুরনো B31.3 Table 331.1.1; নতুন সংস্করণে ভিন্ন)</td><td>595–650 °C</td><td>প্রতি 25 mm এ 1 ঘণ্টা, সর্বনিম্ন 1 ঘণ্টা</td></tr>
+<tr><td>P3</td><td>&gt; 19 mm বা নির্দিষ্ট UTS বেশি</td><td>595–720 °C</td><td>1 ঘণ্টা/25 mm, সর্বনিম্ন 1 ঘণ্টা</td></tr>
+<tr><td>P4</td><td>&gt; 13 mm বা কোড অনুযায়ী</td><td>705–745 °C</td><td>1 ঘণ্টা/25 mm, সর্বনিম্ন 2 ঘণ্টা</td></tr>
+<tr><td>P5A, P5B</td><td>বেশিরভাগ পুরুত্ব</td><td>705–760 °C</td><td>1 ঘণ্টা/25 mm, সর্বনিম্ন 2 ঘণ্টা</td></tr>
+<tr><td>P91 (15E)</td><td>সবসময়</td><td>730–775 °C</td><td>1 ঘণ্টা/25 mm, সর্বনিম্ন 2 ঘণ্টা</td></tr>
+<tr><td>P8 স্টেইনলেস</td><td>সাধারণত দরকার নেই</td><td>–</td><td>–</td></tr></table></div>
+<p style="font-size:.85rem;color:var(--muted)">কোডের টেবিল সংস্করণভেদে বদলায়। সবসময় প্রকল্পের কোড সংস্করণ ও ইঞ্জিনিয়ারের PWHT প্রসিডিউর ব্যবহার করুন।</p>
+<h3 id="s6">গরম ও ঠান্ডা করার হার</h3>
+<ul><li>315–425 °C এর উপরে গরম ও ঠান্ডা করা নিয়ন্ত্রণ করুন। প্রচলিত নিয়ম: সর্বোচ্চ হার (°C/h) = 220 × 25 ÷ পুরুত্ব (mm), 220 °C/h এর বেশি নয় এবং 55 °C/h এর কম নয়।</li><li>নিয়ন্ত্রণ তাপমাত্রার নিচে (প্রায়ই 300–425 °C) ইনসুলেশনের নিচে স্থির বাতাসে ঠান্ডা করুন।</li></ul>
+<h3 id="s7">থার্মোকাপল ও ব্যান্ডের প্রস্থ</h3>
+<ul><li>সোক ব্যান্ড: ওয়েল্ডের প্রস্থ সাথে প্রতি পাশে কমপক্ষে 1 t (পুরুত্ব) বা 25 mm, যেটি কম (B31.3 বলে ওয়েল্ড সাথে প্রতি পাশে সর্বনিম্ন 25 mm; AWS D10.10 এ বিস্তারিত)।</li><li>হিটেড ব্যান্ড ও ইনসুলেশন ব্যান্ড আরও চওড়া (ইনসুলেশন ব্যান্ড প্রায়ই সোক ব্যান্ড + 4 × √(R t))।</li><li>ক্যাপাসিটর ডিসচার্জ ওয়েল্ডিং দিয়ে থার্মোকাপল লাগান। প্রতি জয়েন্টে সাধারণত কমপক্ষে 2টি (অনুভূমিক পাইপে উপরে ও নিচে), বড় পাইপে বেশি।</li><li>পুরো চার্ট রেকর্ড করুন: গরম করা, সোক, ঠান্ডা করা, সময়ের স্কেল ও থার্মোকাপল ID সহ।</li></ul>
+<h3 id="s8">PWHT এর আগে</h3>
+<ul><li>অ্যাটাচমেন্টসহ সব ওয়েল্ডিং শেষ। PWHT এর পর ওয়েল্ড মানে আবার PWHT।</li><li>প্রয়োজন হলে PWHT এর আগে NDT সম্পন্ন।</li><li>পাইপিংয়ে সাপোর্ট দিন: তাপে শক্তি কমে এবং পাইপ ঝুলে যেতে পারে।</li><li>তাপের জায়গা থেকে ভাল্ভ, ইনস্ট্রুমেন্ট ও নরম উপাদান সরান।</li><li>চিমনি প্রভাব (ভেতর দিয়ে ঠান্ডা বাতাস) রোধে খোলা মুখ বন্ধ করুন।</li></ul>
+<h3 id="s9">PWHT এর পরে</h3>
+<ul><li>হার্ডনেস টেস্ট (প্রায়ই দরকার: যেমন P4/P5 এ ≤ 225 HB, কিছু Cr-Mo তে ≤ 241 HB, সাওয়ার কার্বন স্টিলে ≤ 200 HB)।</li><li>নির্দিষ্ট থাকলে PWHT এর পর চূড়ান্ত NDT।</li><li>চার্ট ওয়েল্ড রেকর্ডের সাথে যুক্ত করুন।</li></ul>
+<div class="pager"><a href="wps-pqr.html"><span>আগের</span>WPS, PQR ও WPQ</a><a class="nx" href="distortion.html"><span>পরের</span>ডিস্টরশন নিয়ন্ত্রণ</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

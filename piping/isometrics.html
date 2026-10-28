@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Reading P&amp;IDs &amp; isometrics · Mechanical Foreman Handbook</title>
+<meta name="description" content="How to read P&amp;IDs and piping isometrics: symbols, line numbers, north arrow, dimensions, BOM and weld numbering.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/piping/isometrics.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/piping/isometrics.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html" aria-current="page">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Piping"><div class="grp">Pipe &amp; fittings</div><a href="pipe-sizes.html">Pipe sizes &amp; schedules</a><a href="pipe-materials.html">Piping materials (ASTM)</a><a href="fittings.html">Fittings &amp; take-outs</a><div class="grp">Flanges &amp; bolting</div><a href="flanges.html">Flanges</a><a href="gaskets.html">Gaskets</a><a href="flange-bolting.html">Flange bolting (ASME PCC-1)</a><div class="grp">Drawings &amp; layout</div><a href="isometrics.html" aria-current="page">Reading P&amp;IDs &amp; isometrics</a><a href="spool-fabrication.html">Spool fabrication &amp; erection</a><a href="pipe-supports.html">Pipe supports</a><div class="grp">Testing &amp; cleaning</div><a href="pressure-testing.html">Pressure testing</a><a href="flushing.html">Flushing, blowing &amp; cleaning</a><div class="grp">Small bore &amp; tubing</div><a href="small-bore.html">Small bore, threaded &amp; tubing</a><a href="non-metallic.html">Non-metallic piping</a><a href="expansion-joints.html">Expansion joints &amp; bellows</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Piping</a> › Drawings &amp; layout</div>
+<h1>Reading P&amp;IDs &amp; isometrics</h1>
+<p class="summary">How to read P&IDs and piping isometrics: symbols, line numbers, north arrow, dimensions, BOM and weld numbering.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">P&amp;ID (piping and instrumentation diagram)</a></li><li><a href="#s2">Isometric drawing</a></li><li><a href="#s3">Common isometric symbols</a></li><li><a href="#s4">Checking an iso before fabrication</a></li></ol></details>
+
+<h3 id="s1">P&amp;ID (piping and instrumentation diagram)</h3>
+<ul><li>Shows the process: equipment, lines, valves, instruments and control loops. Not to scale.</li><li><b>Line number</b> format often: size – service – sequence – line class – insulation, e.g. <code>6"-P-1023-A1A-H</code>.</li><li><b>Line class (piping spec)</b>: tells you materials, rating, gaskets, bolts, valve types and branch table for that line.</li><li>Instrument bubbles: letters show the function (FT flow transmitter, PI pressure indicator, TIC temperature indicating controller, LSHH level switch high-high, PSV pressure safety valve).</li><li>Valve symbols: gate (bow tie), globe (bow tie with a dot), ball (bow tie with a circle), check (with arrow or Z), butterfly, control valve (with actuator on top).</li><li>Spec breaks shown with a symbol where the line class changes.</li></ul>
+<h3 id="s2">Isometric drawing</h3>
+<ul><li>3D view of a single line (or part) drawn on 30° axes. Not to scale, but fully dimensioned.</li><li><b>North arrow</b> shows plant north. Lines run along N–S, E–W or up–down.</li><li><b>Coordinates</b> (N 1200, E 2350) and <b>elevations</b> (EL +105.300 or TOS, BOP, COP) locate the line in the plant.</li><li>BOP = bottom of pipe, COP/CL = centreline, TOS = top of steel.</li><li><b>Dimensions</b>: centre-to-centre or face-to-face as shown, in mm or feet-inches.</li><li><b>Bill of materials (BOM)</b>: every component with size, rating, material spec and quantity.</li><li><b>Weld numbers</b>: shop welds and field welds (FW). Field weld often marked with extra length (e.g. +100 mm) for site fit-up.</li><li><b>Spool numbers</b>: the pieces fabricated in the shop and shipped to site.</li><li><b>Supports</b>: tag numbers and types on the iso, details on separate support drawings.</li><li><b>Continuation</b>: "Continued on drawing …" at each end.</li></ul>
+<h3 id="s3">Common isometric symbols</h3>
+<div class="tbl"><table><tr><th>Symbol</th><th>Meaning</th></tr>
+<tr><td>Dot on line</td><td>Shop weld</td></tr>
+<tr><td>Dot with flag or "FW"</td><td>Field weld</td></tr>
+<tr><td>Two short parallel lines across pipe</td><td>Flanged joint</td></tr>
+<tr><td>Triangle on pipe</td><td>Reducer (concentric/eccentric with flat side shown)</td></tr>
+<tr><td>Hatching or slope arrow</td><td>Line slopes (e.g. 1:100 toward drain)</td></tr>
+<tr><td>"PS" or support tag</td><td>Pipe support</td></tr>
+<tr><td>Vent/drain symbols (HPV, LPD)</td><td>High point vent, low point drain</td></tr></table></div>
+<h3 id="s4">Checking an iso before fabrication</h3>
+<ol class="steps"><li>Latest revision? Check the revision cloud and title block.</li><li>Line class and BOM match the spec.</li><li>Dimensions add up: sum of segments = overall dimension between coordinates.</li><li>Valve orientation (stem, flow direction) and handwheel access.</li><li>Branch and instrument connection sizes and ratings.</li><li>Weld numbering, NDT requirements and PWHT notes.</li><li>Field weld locations sensible for transport and fit-up.</li></ol>
+<div class="pager"><a href="flange-bolting.html"><span>Previous</span>Flange bolting (ASME PCC-1)</a><a class="nx" href="spool-fabrication.html"><span>Next</span>Spool fabrication &amp; erection</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

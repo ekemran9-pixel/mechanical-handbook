@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ওয়েল্ডারের জন্য স্টিলের ধাতুবিদ্যা · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="স্টিলের ধরন, কার্বন ইকুইভ্যালেন্ট, শক্ত হওয়ার প্রবণতা, HAZ, হাইড্রোজেন ক্র্যাকিং, P-নম্বর ও তাপ কীভাবে গুণ বদলায়।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../fabrication/metallurgy.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../fabrication/metallurgy.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html" aria-current="page">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="ওয়েল্ডিং ও ফেব্রিকেশন"><div class="grp">ওয়েল্ডিং প্রসেস</div><a href="welding-processes.html">ওয়েল্ডিং প্রসেসের তুলনা</a><a href="smaw.html">SMAW (স্টিক ওয়েল্ডিং)</a><a href="gtaw.html">GTAW (TIG ওয়েল্ডিং)</a><a href="gmaw-fcaw.html">GMAW ও FCAW (MIG ও ফ্লাক্স কোর)</a><a href="saw.html">SAW (সাবমার্জড আর্ক)</a><div class="grp">উপাদান</div><a href="filler-metals.html">ফিলার মেটাল গাইড</a><a href="metallurgy.html" aria-current="page">ওয়েল্ডারের জন্য স্টিলের ধাতুবিদ্যা</a><div class="grp">জয়েন্ট ডিজাইন</div><a href="joint-design.html">জয়েন্ট ডিজাইন ও ফিট-আপ</a><a href="weld-symbols.html">ওয়েল্ড সিম্বল (AWS A2.4 / ISO 2553)</a><a href="positions.html">ওয়েল্ডিং পজিশন ও যোগ্যতা</a><div class="grp">গুণমান</div><a href="weld-defects.html">ওয়েল্ডের ত্রুটি ও মেরামত</a><a href="wps-pqr.html">WPS, PQR ও WPQ</a><a href="preheat-pwht.html">প্রিহিট, ইন্টারপাস ও PWHT</a><a href="distortion.html">ডিস্টরশন নিয়ন্ত্রণ</a><div class="grp">বিশেষ উপাদান</div><a href="stainless-welding.html">স্টেইনলেস ও ডুপ্লেক্স ওয়েল্ডিং</a><a href="alloy-welding.html">Cr-Mo, P91 ও ভিন্ন ধাতুর ওয়েল্ড</a><a href="aluminium-welding.html">অ্যালুমিনিয়াম ওয়েল্ডিং</a><div class="grp">কাটিং ও ফর্মিং</div><a href="cutting-gouging.html">কাটিং ও গাউজিং</a><a href="plate-forming.html">রোলিং, বেন্ডিং ও ফর্মিং</a><a href="layout-development.html">লেআউট ও প্যাটার্ন ডেভেলপমেন্ট</a><a href="welding-safety.html">ওয়েল্ডিং ও কাটিংয়ের নিরাপত্তা</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">ওয়েল্ডিং ও ফেব্রিকেশন</a> › উপাদান</div>
+<h1>ওয়েল্ডারের জন্য স্টিলের ধাতুবিদ্যা</h1>
+<p class="summary">স্টিলের ধরন, কার্বন ইকুইভ্যালেন্ট, শক্ত হওয়ার প্রবণতা, HAZ, হাইড্রোজেন ক্র্যাকিং, P-নম্বর ও তাপ কীভাবে গুণ বদলায়।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">স্টিলের ধরন</a></li><li><a href="#s2">কার্বন ইকুইভ্যালেন্ট</a></li><li><a href="#s3">হিট-অ্যাফেক্টেড জোন (HAZ)</a></li><li><a href="#s4">হাইড্রোজেন (কোল্ড) ক্র্যাকিং</a></li><li><a href="#s5">হট (সলিডিফিকেশন) ক্র্যাকিং</a></li><li><a href="#s6">ল্যামেলার টিয়ারিং</a></li><li><a href="#s7">স্টেইনলেসের সমস্যা</a></li><li><a href="#s8">ASME P-নম্বর</a></li></ol></details>
+
+<h3 id="s1">স্টিলের ধরন</h3>
+<div class="tbl"><table><tr><th>ধরন</th><th>উদাহরণ</th><th>ওয়েল্ডিংয়ে সতর্কতা</th></tr>
+<tr><td>লো কার্বন (&lt; 0.25% C)</td><td>A36, A106 B, A516-70, S355</td><td>সহজ। মোটা সেকশনে হাইড্রোজেন ক্র্যাকিং</td></tr>
+<tr><td>মিডিয়াম/হাই কার্বন</td><td>AISI 1045, রেল, শ্যাফট</td><td>শক্ত HAZ, প্রিহিট, লো-H, ধীরে ঠান্ডা</td></tr>
+<tr><td>লো অ্যালয় Cr-Mo</td><td>P11, P22, P91</td><td>প্রিহিট, ইন্টারপাস নিয়ন্ত্রণ, PWHT। হাইড্রোজেন ক্র্যাকিং, রিহিট ক্র্যাকিং</td></tr>
+<tr><td>কোয়েঞ্চড অ্যান্ড টেম্পার্ড</td><td>A514, S690Q</td><td>শক্তি ধরে রাখতে হিট ইনপুট সীমা, প্রিহিট ও ইন্টারপাস সর্বোচ্চ</td></tr>
+<tr><td>অস্টেনিটিক স্টেইনলেস</td><td>304, 316, 321</td><td>ডিস্টরশন, সেনসিটাইজেশন, হট ক্র্যাকিং, প্রিহিট নয়</td></tr>
+<tr><td>ফেরিটিক স্টেইনলেস</td><td>409, 430</td><td>গ্রেন বৃদ্ধি, ভঙ্গুরতা</td></tr>
+<tr><td>মার্টেনসিটিক স্টেইনলেস</td><td>410, 420, CA6NM</td><td>খুব শক্ত HAZ, প্রিহিট 200–300 °C, PWHT</td></tr>
+<tr><td>ডুপ্লেক্স</td><td>2205, 2507</td><td>ফেরাইট/অস্টেনাইট ভারসাম্য: হিট ইনপুট 0.5–2.5 kJ/mm, ইন্টারপাস ≤ 150 °C (সুপার ডুপ্লেক্সে 100 °C)</td></tr></table></div>
+<h3 id="s2">কার্বন ইকুইভ্যালেন্ট</h3>
+<div class="formula">CE (IIW) = C + Mn/6 + (Cr + Mo + V)/5 + (Ni + Cu)/15</div>
+<ul><li>CE &lt; 0.40: ভালো ওয়েল্ডেবিলিটি, মাঝারি পুরুত্বে প্রিহিট সামান্য বা নয়।</li><li>CE 0.40–0.50: প্রিহিট লাগে, বিশেষ করে মোটায়।</li><li>CE &gt; 0.50: প্রিহিট, লো-H, ঠান্ডা হওয়া নিয়ন্ত্রণ, হয়তো PWHT।</li></ul>
+<p>লো কার্বন আধুনিক স্টিল ও পাইপলাইনে Pcm (Ito-Bessyo) ব্যবহৃত হয়: Pcm = C + Si/30 + (Mn + Cu + Cr)/20 + Ni/60 + Mo/15 + V/10 + 5B।</p>
+<h3 id="s3">হিট-অ্যাফেক্টেড জোন (HAZ)</h3>
+<p>ওয়েল্ডের পাশের বেস মেটাল যা গরম হয়েছে কিন্তু গলেনি। এর দানার গঠন বদলে যায়। শক্ত হতে পারে এমন স্টিল দ্রুত ঠান্ডা হলে <b>মার্টেনসাইট</b> তৈরি হয়: শক্ত ও ভঙ্গুর। HAZ হার্ডনেস সীমা প্রায়ই সাওয়ার সার্ভিসে 248 HV10 (NACE MR0175/ISO 15156 এ 22 HRC) এবং সাধারণ সার্ভিসে 325–350 HV।</p>
+<h3 id="s4">হাইড্রোজেন (কোল্ড) ক্র্যাকিং</h3>
+<p>তিনটি জিনিস একসাথে লাগে: হাইড্রোজেন, শক্ত মাইক্রোস্ট্রাকচার এবং স্ট্রেস। ওয়েল্ডিংয়ের ঘণ্টাখানেক পরে (48 ঘণ্টা পর্যন্ত) HAZ বা ওয়েল্ড মেটালে দেখা দেয়। একটি দূর করুন:</p>
+<ul><li>লো-হাইড্রোজেন কনজিউমেবল, শুকনো ও পরিষ্কার জয়েন্ট।</li><li>ঠান্ডা হওয়া ধীর করতে ও হাইড্রোজেন বের হতে দিতে প্রিহিট ও ইন্টারপাস তাপমাত্রা।</li><li>গুরুত্বপূর্ণ জয়েন্টে ওয়েল্ডিংয়ের পরপরই পোস্ট-হিট (হাইড্রোজেন বেক-আউট, যেমন 200–300 °C এ 2 ঘণ্টা)।</li><li>বাঁধন (restraint) কমান, ভালো ফিট-আপ।</li><li>সংবেদনশীল স্টিলে চূড়ান্ত NDT দেরিতে (প্রায়ই 24–48 ঘণ্টা)।</li></ul>
+<h3 id="s5">হট (সলিডিফিকেশন) ক্র্যাকিং</h3>
+<ul><li>জমার সময় সেন্টারলাইন ফাটল। কারণ সালফার ও ফসফরাস, গভীর সরু বিড, বেশি বাঁধন।</li><li>অস্টেনিটিক স্টেইনলেস ফিলারে প্রতিরোধের জন্য কিছু ফেরাইট (FN 3–10) থাকে।</li><li>সমাধান: বিডের আকার প্রস্থ ≥ গভীরতা, ক্রেটার ভরুন, বেস মেটাল পরিষ্কার।</li></ul>
+<h3 id="s6">ল্যামেলার টিয়ারিং</h3>
+<p>পুরুত্বের দিকে লোড পড়া T-জয়েন্টের নিচে প্লেটে ধাপের মতো ফাটল। Z-গ্রেড প্লেট (পুরুত্বের দিকে পরীক্ষিত), বাটারিং, লোড ছড়িয়ে দেয় এমন জয়েন্ট ডিজাইন ব্যবহার করুন।</p>
+<h3 id="s7">স্টেইনলেসের সমস্যা</h3>
+<ul><li><b>সেনসিটাইজেশন</b>: 450–850 °C এ ক্রোমিয়াম কার্বাইড তৈরি হয়ে ক্রোমিয়াম-কম অঞ্চল ক্ষয় হয় (ওয়েল্ড ডিকে)। L গ্রেড (≤ 0.03% C) বা স্থিতিশীল (321, 347) ব্যবহার করুন। হিট ইনপুট ও ইন্টারপাস কম রাখুন।</li><li><b>সিগমা ফেজ</b>: 600–900 °C এ দীর্ঘ সময় থেকে ভঙ্গুর ফেজ।</li><li><b>ডিস্টরশন</b>: স্টেইনলেস কার্বন স্টিলের চেয়ে 50% বেশি প্রসারিত হয় এবং তাপ কম পরিবহন করে।</li><li><b>দূষণ</b>: কার্বন স্টিলের যন্ত্র ও গ্রাইন্ডিং ডিস্ক লোহা রেখে যায় যাতে মরিচা ধরে। শুধু স্টেইনলেসের ব্রাশ ও ডিস্ক ব্যবহার করুন।</li></ul>
+<h3 id="s8">ASME P-নম্বর</h3>
+<div class="tbl"><table><tr><th>P-No.</th><th>উপাদান</th></tr>
+<tr><td>1</td><td>কার্বন স্টিল (A106, A516, A105)</td></tr>
+<tr><td>3</td><td>C-½Mo, ½Cr-½Mo</td></tr>
+<tr><td>4</td><td>1Cr-½Mo, 1¼Cr-½Mo (P11, P12)</td></tr>
+<tr><td>5A</td><td>2¼Cr-1Mo (P22), 3Cr-1Mo</td></tr>
+<tr><td>5B</td><td>5Cr-½Mo (P5), 9Cr-1Mo (P9); নতুন সংস্করণে 9Cr-1Mo-V (P91) হলো 15E</td></tr>
+<tr><td>6</td><td>মার্টেনসিটিক স্টেইনলেস (410)</td></tr>
+<tr><td>7</td><td>ফেরিটিক স্টেইনলেস (405, 430)</td></tr>
+<tr><td>8</td><td>অস্টেনিটিক স্টেইনলেস (304, 316, 321, 347)</td></tr>
+<tr><td>9A/9B</td><td>নিকেল স্টিল (2½–3½ Ni)</td></tr>
+<tr><td>10H</td><td>ডুপ্লেক্স স্টেইনলেস</td></tr>
+<tr><td>11A</td><td>9% Ni, কোয়েঞ্চড অ্যান্ড টেম্পার্ড স্টিল</td></tr>
+<tr><td>21–25</td><td>অ্যালুমিনিয়াম অ্যালয়</td></tr>
+<tr><td>31–35</td><td>কপার অ্যালয়</td></tr>
+<tr><td>41–49</td><td>নিকেল অ্যালয়</td></tr>
+<tr><td>51–53</td><td>টাইটানিয়াম</td></tr></table></div>
+<div class="pager"><a href="filler-metals.html"><span>আগের</span>ফিলার মেটাল গাইড</a><a class="nx" href="joint-design.html"><span>পরের</span>জয়েন্ট ডিজাইন ও ফিট-আপ</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

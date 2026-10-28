@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ব্যালান্সিং · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="আনব্যালান্সের ধরন, ব্যালান্স গ্রেড, ট্রায়াল ওয়েট দিয়ে সিঙ্গেল ও টু-প্লেন ফিল্ড ব্যালান্সিং এবং ভেক্টর পদ্ধতি।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rotary/balancing.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rotary/balancing.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html" aria-current="page">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রোটারি যন্ত্রপাতি"><div class="grp">পাম্প</div><a href="centrifugal-pumps.html">সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a href="pump-curves.html">পাম্প কার্ভ ও সিস্টেম কার্ভ</a><a href="pump-types.html">পাম্পের ধরন ও API 610 কোড</a><a href="pump-overhaul.html">পাম্প ওভারহল পদ্ধতি</a><a href="pd-pumps.html">পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a href="pump-troubleshooting.html">পাম্পের সমস্যা সমাধান</a><div class="grp">সিল ও প্যাকিং</div><a href="mechanical-seals.html">মেকানিক্যাল সিল</a><a href="seal-plans.html">সিল ফ্লাশ প্ল্যান (API 682)</a><a href="gland-packing.html">গ্ল্যান্ড প্যাকিং</a><div class="grp">বিয়ারিং ও লুব্রিকেশন</div><a href="rolling-bearings.html">রোলিং এলিমেন্ট বিয়ারিং</a><a href="bearing-mounting.html">বিয়ারিং লাগানো ও খোলা</a><a href="plain-bearings.html">প্লেইন ও টিল্টিং-প্যাড বিয়ারিং</a><a href="lubrication.html">লুব্রিকেশন</a><a href="oil-analysis.html">তেল বিশ্লেষণ</a><div class="grp">অ্যালাইনমেন্ট ও ভাইব্রেশন</div><a href="alignment.html">শ্যাফট অ্যালাইনমেন্ট</a><a href="dial-alignment.html">ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a href="vibration.html">ভাইব্রেশন বিশ্লেষণ</a><a href="balancing.html" aria-current="page">ব্যালান্সিং</a><a href="condition-monitoring.html">কন্ডিশন মনিটরিং</a><div class="grp">ড্রাইভ ও ট্রান্সমিশন</div><a href="couplings.html">কাপলিং</a><a href="gearboxes.html">গিয়ারবক্স</a><a href="belts-chains.html">বেল্ট ও চেইন ড্রাইভ</a><a href="electric-motors.html">ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</a><div class="grp">ফ্লুইড পাওয়ার</div><a href="hydraulics.html">হাইড্রলিক সিস্টেম</a><a href="pneumatics.html">কম্প্রেসড এয়ার ও নিউমেটিক্স</a><div class="grp">কম্প্রেসর ও টারবাইন</div><a href="recip-compressors.html">রেসিপ্রোকেটিং কম্প্রেসর</a><a href="centrifugal-compressors.html">সেন্ট্রিফিউগাল কম্প্রেসর</a><a href="screw-compressors.html">স্ক্রু ও এয়ার কম্প্রেসর</a><a href="steam-turbines.html">স্টিম টারবাইন</a><a href="gas-turbines.html">গ্যাস টারবাইন (সংক্ষেপে)</a><div class="grp">অন্যান্য যন্ত্র</div><a href="fans-blowers.html">ফ্যান ও ব্লোয়ার</a><a href="agitators.html">অ্যাজিটেটর ও মিক্সার</a><a href="conveyors.html">বেল্ট কনভেয়র</a><a href="cranes-hoists.html">ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><div class="grp">রিলায়েবিলিটি</div><a href="rca.html">রুট কজ অ্যানালাইসিস</a><a href="maintenance-strategy.html">রক্ষণাবেক্ষণ কৌশল ও KPI</a><a href="preservation.html">সংরক্ষণ ও প্রিজারভেশন</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রোটারি যন্ত্রপাতি</a> › অ্যালাইনমেন্ট ও ভাইব্রেশন</div>
+<h1>ব্যালান্সিং</h1>
+<p class="summary">আনব্যালান্সের ধরন, ব্যালান্স গ্রেড, ট্রায়াল ওয়েট দিয়ে সিঙ্গেল ও টু-প্লেন ফিল্ড ব্যালান্সিং এবং ভেক্টর পদ্ধতি।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">আনব্যালান্সের ধরন</a></li><li><a href="#s2">ব্যালান্স কোয়ালিটি গ্রেড (ISO 21940-11, আগে ISO 1940)</a></li><li><a href="#s3">ব্যালান্সিংয়ের আগে</a></li><li><a href="#s4">সিঙ্গেল-প্লেন ফিল্ড ব্যালান্সিং (ফেজসহ)</a></li><li><a href="#s5">কোণের নিয়ম</a></li><li><a href="#s6">চার-রান পদ্ধতি (ফেজ ছাড়া)</a></li><li><a href="#s7">টু-প্লেন ব্যালান্সিং</a></li><li><a href="#s8">ওজন লাগানো</a></li></ol></details>
+
+<h3 id="s1">আনব্যালান্সের ধরন</h3>
+<ul><li><b>স্ট্যাটিক</b>: এক পাশে ভারী জায়গা। রোটর থামলে ভারী দিক নিচে থাকে। এক তলে ঠিক হয়।</li><li><b>কাপল</b>: দুই প্রান্তে 180° দূরে সমান দুটি ভারী জায়গা। স্ট্যাটিকভাবে ব্যালান্সড কিন্তু দোলে। দুই তল লাগে।</li><li><b>ডায়নামিক</b>: দুটোর মিশ্রণ। চওড়া রোটরে সাধারণ। দুই তল লাগে।</li></ul>
+<p>মোটামুটি নিয়ম: দৈর্ঘ্য/ব্যাস প্রায় 0.5 এর কম (ফ্যান, পুলি, সরু ইমপেলার) হলে প্রায়ই এক তলেই হয়।</p>
+<h3 id="s2">ব্যালান্স কোয়ালিটি গ্রেড (ISO 21940-11, আগে ISO 1940)</h3>
+<div class="tbl"><table><tr><th>গ্রেড</th><th>সাধারণ রোটর</th></tr>
+<tr><td>G40</td><td>গাড়ির চাকা, ধীর ইঞ্জিনের ক্র্যাঙ্কশ্যাফট</td></tr>
+<tr><td>G16</td><td>কৃষি যন্ত্র, ক্রাশার</td></tr>
+<tr><td>G6.3</td><td>ফ্যান, পাম্প ইমপেলার, ফ্লাইহুইল, সাধারণ যন্ত্র</td></tr>
+<tr><td>G2.5</td><td>টারবাইন, কম্প্রেসর, মোটর রোটর, উচ্চ গতির পাম্প, মেশিন টুল ড্রাইভ</td></tr>
+<tr><td>G1</td><td>গ্রাইন্ডার, টেপ রেকর্ডার, নির্ভুল স্পিন্ডল</td></tr></table></div>
+<div class="formula">Permissible residual unbalance U (g·mm) = 9549 × G × M ÷ n</div>
+<p>M = রোটরের ভর (kg), n = rpm, G = গ্রেড। U কে কারেকশন রেডিয়াস (mm) দিয়ে ভাগ করলে গ্রাম পাবেন। রোটরের জ্যামিতি অনুযায়ী তলগুলোর মাঝে ভাগ করুন (প্রতিসম রোটরে প্রতিটিতে অর্ধেক)।</p>
+<p>উদাহরণ: 1480 rpm এ 120 kg ফ্যান ইমপেলার, G6.3: U = 9549 × 6.3 × 120 ÷ 1480 = 4,878 g·mm। 400 mm রেডিয়াসে: মোট 12.2 g।</p>
+<h3 id="s3">ব্যালান্সিংয়ের আগে</h3>
+<ul><li>নিশ্চিত হোন এটা আনব্যালান্স: প্রধান 1X রেডিয়াল, ফেজ স্থির, H/V ফেজ ~90° দূরে।</li><li>রোটর পরিষ্কার করুন। ফ্যানের বেশিরভাগ আনব্যালান্স জমা ময়লা থেকে।</li><li>ঢিলা ভাব, ফাটা ব্লেড, বিয়ারিং ক্ষয়, উৎকেন্দ্রিক পুলি, রেজোন্যান্স চেক করুন। ব্যালান্সিং এগুলো ঠিক করতে পারে না।</li><li>রোটর ঘষছে না তা নিশ্চিত করুন।</li></ul>
+<h3 id="s4">সিঙ্গেল-প্লেন ফিল্ড ব্যালান্সিং (ফেজসহ)</h3>
+<ol class="steps"><li>তলের সবচেয়ে কাছের বিয়ারিংয়ে সেন্সর রেডিয়ালি বসান। শ্যাফটের রিফ্লেক্টিভ দাগে ট্যাকো বসান।</li><li><b>রান 0 (মূল)</b>: 1X অ্যামপ্লিচিউড ও ফেজ রেকর্ড করুন (যেমন 60° এ 8.0 mm/s)।</li><li>এমন একটি <b>ট্রায়াল ওয়েট</b> বাছুন যা রিডিং কমপক্ষে 30% বদলায় (বা রোটর ওজনের প্রায় 10% বল দেয়)। জানা কোণ ও রেডিয়াসে লাগান। ভর ও অবস্থান লিখুন।</li><li><b>রান 1</b>: নতুন অ্যামপ্লিচিউড ও ফেজ রেকর্ড করুন (যেমন 140° এ 5.0 mm/s)।</li><li>যন্ত্র (বা ভেক্টর গণিত) ট্রায়াল ওয়েটের প্রভাব বের করে: T = Run1 − Run0।</li><li>সংশোধন ওজন = ট্রায়াল ওয়েট × (|O| ÷ |T|), T কে O এর বিপরীতে আনতে যতটা কোণ সরাতে হয় ততটা সরিয়ে বসান।</li><li>ট্রায়াল ওয়েট খুলুন (রাখতে না বললে) এবং সংশোধন ওজন লাগান।</li><li><b>রান 2</b>: চেক করুন। দরকার হলে সামান্য ঠিক করুন।</li></ol>
+<h3 id="s5">কোণের নিয়ম</h3>
+<p>প্রতিবার একই দিকে কোণ মাপুন। বেশিরভাগ যন্ত্র বলে "ঘূর্ণনের বিপরীতে" বা "ঘূর্ণনের দিকে"। শুরুর আগে রোটরে কোণের দাগ দিন। প্রথম সংশোধনের পর ফেজ ভুল দিকে গেলে নিয়মটি চেক করুন।</p>
+<h3 id="s6">চার-রান পদ্ধতি (ফেজ ছাড়া)</h3>
+<p>ট্যাকো না থাকলে ব্যবহৃত। মূল অ্যামপ্লিচিউড নিন, তারপর 0°, 120° ও 240° এ ট্রায়াল ওয়েট দিয়ে চালান। পোলার প্লটে প্রতিটি রিডিংয়ের সমান ব্যাসার্ধের বৃত্ত আঁকুন; ছেদবিন্দু সংশোধন দেয়। ধীর কিন্তু শুধু অ্যামপ্লিচিউড মিটার লাগে।</p>
+<h3 id="s7">টু-প্লেন ব্যালান্সিং</h3>
+<p>দুটি সেন্সর (প্রতি বিয়ারিংয়ে একটি), দুটি ট্রায়াল ওয়েট (প্রতি তলে একটি, একবারে একটি)। রান: মূল, প্লেন 1 এ ট্রায়াল, প্লেন 2 এ ট্রায়াল। যন্ত্র ইনফ্লুয়েন্স কোএফিসিয়েন্ট সমাধান করে দুই তলের সংশোধন ওজন দেয়। পুরো সময় সেন্সরের অবস্থান একই রাখুন।</p>
+<h3 id="s8">ওজন লাগানো</h3>
+<ul><li>ওয়েল্ড করা ওজন: ওয়েল্ডিং আর্থ রোটরেই ক্ল্যাম্প করুন, কখনো বিয়ারিংয়ের মধ্য দিয়ে নয়। যোগ্য ওয়েল্ডার ও অনুমোদিত প্রসিডিউর।</li><li>বোল্ট-অন ও ক্লিপ-অন ওজন: গতিতে খুলে যেতে পারবে না তা নিশ্চিত করুন। থ্রেড লকার দিন।</li><li>ধাতু সরাতে গ্রাইন্ডিং বা ড্রিলিং: শক্তির জন্য ইঞ্জিনিয়ারিংয়ের সাথে কথা বলুন।</li><li>চূড়ান্ত ওজন, অবস্থান ও রিডিং জব কার্ডে লিখুন।</li></ul>
+<div class="warn"><b>ছিটকে যাওয়া ওজন প্রাণ নেয়।</b> রান চলার সময় ঘূর্ণন তলের বাইরে থাকুন। প্রতিটি রানে গার্ড লাগানো থাকবে।</div>
+<div class="pager"><a href="vibration.html"><span>আগের</span>ভাইব্রেশন বিশ্লেষণ</a><a class="nx" href="condition-monitoring.html"><span>পরের</span>কন্ডিশন মনিটরিং</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>পাম্প ওভারহল পদ্ধতি · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="OH2 প্রসেস পাম্প খোলা, পরীক্ষা, মাপজোখ ও পুনরায় জোড়ার ধাপে ধাপে পদ্ধতি, কোন রিডিং রেকর্ড করবেন সহ।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rotary/pump-overhaul.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rotary/pump-overhaul.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html" aria-current="page">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রোটারি যন্ত্রপাতি"><div class="grp">পাম্প</div><a href="centrifugal-pumps.html">সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a href="pump-curves.html">পাম্প কার্ভ ও সিস্টেম কার্ভ</a><a href="pump-types.html">পাম্পের ধরন ও API 610 কোড</a><a href="pump-overhaul.html" aria-current="page">পাম্প ওভারহল পদ্ধতি</a><a href="pd-pumps.html">পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a href="pump-troubleshooting.html">পাম্পের সমস্যা সমাধান</a><div class="grp">সিল ও প্যাকিং</div><a href="mechanical-seals.html">মেকানিক্যাল সিল</a><a href="seal-plans.html">সিল ফ্লাশ প্ল্যান (API 682)</a><a href="gland-packing.html">গ্ল্যান্ড প্যাকিং</a><div class="grp">বিয়ারিং ও লুব্রিকেশন</div><a href="rolling-bearings.html">রোলিং এলিমেন্ট বিয়ারিং</a><a href="bearing-mounting.html">বিয়ারিং লাগানো ও খোলা</a><a href="plain-bearings.html">প্লেইন ও টিল্টিং-প্যাড বিয়ারিং</a><a href="lubrication.html">লুব্রিকেশন</a><a href="oil-analysis.html">তেল বিশ্লেষণ</a><div class="grp">অ্যালাইনমেন্ট ও ভাইব্রেশন</div><a href="alignment.html">শ্যাফট অ্যালাইনমেন্ট</a><a href="dial-alignment.html">ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a href="vibration.html">ভাইব্রেশন বিশ্লেষণ</a><a href="balancing.html">ব্যালান্সিং</a><a href="condition-monitoring.html">কন্ডিশন মনিটরিং</a><div class="grp">ড্রাইভ ও ট্রান্সমিশন</div><a href="couplings.html">কাপলিং</a><a href="gearboxes.html">গিয়ারবক্স</a><a href="belts-chains.html">বেল্ট ও চেইন ড্রাইভ</a><a href="electric-motors.html">ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</a><div class="grp">ফ্লুইড পাওয়ার</div><a href="hydraulics.html">হাইড্রলিক সিস্টেম</a><a href="pneumatics.html">কম্প্রেসড এয়ার ও নিউমেটিক্স</a><div class="grp">কম্প্রেসর ও টারবাইন</div><a href="recip-compressors.html">রেসিপ্রোকেটিং কম্প্রেসর</a><a href="centrifugal-compressors.html">সেন্ট্রিফিউগাল কম্প্রেসর</a><a href="screw-compressors.html">স্ক্রু ও এয়ার কম্প্রেসর</a><a href="steam-turbines.html">স্টিম টারবাইন</a><a href="gas-turbines.html">গ্যাস টারবাইন (সংক্ষেপে)</a><div class="grp">অন্যান্য যন্ত্র</div><a href="fans-blowers.html">ফ্যান ও ব্লোয়ার</a><a href="agitators.html">অ্যাজিটেটর ও মিক্সার</a><a href="conveyors.html">বেল্ট কনভেয়র</a><a href="cranes-hoists.html">ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><div class="grp">রিলায়েবিলিটি</div><a href="rca.html">রুট কজ অ্যানালাইসিস</a><a href="maintenance-strategy.html">রক্ষণাবেক্ষণ কৌশল ও KPI</a><a href="preservation.html">সংরক্ষণ ও প্রিজারভেশন</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রোটারি যন্ত্রপাতি</a> › পাম্প</div>
+<h1>পাম্প ওভারহল পদ্ধতি</h1>
+<p class="summary">OH2 প্রসেস পাম্প খোলা, পরীক্ষা, মাপজোখ ও পুনরায় জোড়ার ধাপে ধাপে পদ্ধতি, কোন রিডিং রেকর্ড করবেন সহ।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">শুরু করার আগে</a></li><li><a href="#s2">খোলা</a></li><li><a href="#s3">পরীক্ষা ও মাপ</a></li><li><a href="#s4">পুনরায় জোড়া</a></li><li><a href="#s5">রেকর্ড শিট</a></li></ol></details>
+
+<p>এই ক্রম কার্টিজ সিল ও অয়েল-লুব্রিকেটেড বিয়ারিংসহ সাধারণ OH2 ব্যাক পুল-আউট পাম্পের জন্য। নির্মাতার ম্যানুয়াল অনুযায়ী মানিয়ে নিন।</p>
+<h3 id="s1">শুরু করার আগে</h3>
+<ol class="steps"><li>পারমিট, মোটর ব্রেকারে LOTO, সাকশন ও ডিসচার্জ ভাল্ভ লক করে বন্ধ। ফ্লাশ ও সিল লাইন আইসোলেট।</li><li>কেসিং নিরাপদ জায়গায় ড্রেন ও ভেন্ট করুন। গেজে শূন্য চাপ নিশ্চিত করুন।</li><li>প্রোডাক্ট দাহ্য বা বিষাক্ত হলে গ্যাস টেস্ট।</li><li>খোলার আগের রিডিং নিন: অ্যালাইনমেন্ট, কাপলিং গ্যাপ, ভাইব্রেশন ইতিহাস, সিল লিকেজ নোট।</li><li>স্পেয়ার প্রস্তুত রাখুন: সিল, বিয়ারিং, গ্যাসকেট, ও-রিং, দরকার হলে ওয়্যার রিং, লক ওয়াশার ও নাট।</li></ol>
+<h3 id="s2">খোলা</h3>
+<ol class="steps"><li>কাপলিং গার্ড ও স্পেসার খুলুন। হাবে দাগ দিন।</li><li>বিয়ারিং হাউজিংয়ের তেল ড্রেন করুন। বিশ্লেষণের জন্য নমুনা রাখুন।</li><li>সিল ফ্লাশ ও কুলিং লাইন খুলুন। খোলা মুখ ক্যাপ করুন।</li><li>কিছু ঢিলা করার আগে কার্টিজ সিলের সেটিং ক্লিপ লাগান।</li><li>বিয়ারিং ফ্রেম স্লিং বা স্ট্যান্ডে সাপোর্ট দিন। কেসিং বোল্ট খুলুন। জ্যাকিং স্ক্রু ব্যবহার করুন, ফেসের মাঝে কখনো ওয়েজ নয়।</li><li>রোটেটিং অ্যাসেম্বলি টেনে বের করে পরিষ্কার বেঞ্চে নিন।</li><li>ইমপেলার নাট খুলুন (ঘড়ির কাঁটার দিকে ঘোরা পাম্পে সাধারণত বাম-হাতি থ্রেড, চেক করুন)। টাইট হলে পুলার দিয়ে ইমপেলার খুলুন।</li><li>সিল কার্টিজ স্লাইড করে বের করুন। পুলার বা তাপ দিয়ে কাপলিং হাব খুলুন।</li><li>বিয়ারিং এন্ড কভার খুলে শ্যাফট ও বিয়ারিং প্রেস করে বের করুন।</li></ol>
+<h3 id="s3">পরীক্ষা ও মাপ</h3>
+<div class="tbl"><table><tr><th>আইটেম</th><th>কীভাবে</th><th>সাধারণ গ্রহণযোগ্যতা</th></tr>
+<tr><td>শ্যাফট সোজা আছে কিনা</td><td>সেন্টার বা V-ব্লকে, সিল এরিয়া, বিয়ারিং সিট ও ইমপেলার ফিটে ডায়াল</td><td>≤ 0.025 mm TIR (API), সাধারণত ≤ 0.05 mm</td></tr>
+<tr><td>বিয়ারিং সিট</td><td>মাইক্রোমিটার, ২ জায়গায় × ২ দিকে</td><td>ফিট টলারেন্সের মধ্যে (যেমন k5)</td></tr>
+<tr><td>হাউজিং বোর</td><td>বোর গেজ</td><td>H6/H7 এর মধ্যে, ওভালিটি 0.01 mm এর বেশি নয়</td></tr>
+<tr><td>ওয়্যার রিং ক্লিয়ারেন্স</td><td>ইমপেলার রিং OD মাইক্রোমিটারে, কেসিং রিং ID বোর গেজে</td><td>নতুনের 2 গুণ হলে বদলান</td></tr>
+<tr><td>ইমপেলার</td><td>চোখে দেখা, ফাটল সন্দেহ হলে PT</td><td>এপাশ-ওপাশ পিটিং নয়, মেরামত হলে G2.5 এ ব্যালান্স</td></tr>
+<tr><td>ইমপেলার বোর ও শ্যাফট</td><td>মাপুন</td><td>হালকা ইন্টারফেরেন্স বা 0.01–0.03 mm ক্লিয়ারেন্স (OEM অনুযায়ী)</td></tr>
+<tr><td>কি</td><td>কি-ওয়েতে ফিট</td><td>পাশে স্নাগ ফিট, উপরে ক্লিয়ারেন্স থাকবে</td></tr>
+<tr><td>কেসিং গ্যাসকেট ফেস</td><td>চোখে, স্ট্রেইট এজ</td><td>রেডিয়াল দাগ বা স্টিম কাট নেই</td></tr>
+<tr><td>বিয়ারিং হাউজিং লেবিরিন্থ সিল</td><td>চোখে</td><td>ও-রিং ভালো, ড্রেন হোল নিচে</td></tr></table></div>
+<h3 id="s4">পুনরায় জোড়া</h3>
+<ol class="steps"><li>সব যন্ত্রাংশ পরিষ্কার করুন। অয়েল প্যাসেজ ফুঁ দিয়ে পরিষ্কার করুন।</li><li>ইন্ডাকশন হিটারে বিয়ারিং প্রায় 110 °C এ গরম করুন। শোল্ডারে ঠেকিয়ে ধরে রাখুন যতক্ষণ না আঁকড়ে ধরে।</li><li>অ্যাঙ্গুলার কন্টাক্ট জোড়া সঠিক বিন্যাসে লাগান (সাধারণত ব্যাক-টু-ব্যাক, আউটার রিংয়ের দাগে "V" বাইরের দিকে)।</li><li>বিয়ারিং ঠান্ডা হলে লক ওয়াশার ও নাট লাগান। টাইট করে একটি ট্যাব বাঁকান।</li><li>শ্যাফট হাউজিংয়ে ঢুকিয়ে এন্ড কভার লাগান। ডায়াল দিয়ে শ্যাফট এন্ড ফ্লোট চেক করুন: জোড়া অ্যাঙ্গুলার কন্টাক্টে সাধারণত 0.05–0.10 mm, বল/রোলার মিশ্রণে বেশি।</li><li>নিজের বিয়ারিংয়ে বসানো অবস্থায় সিল স্লিভ ও ইমপেলার ফিটে শ্যাফট রানআউট চেক করুন।</li><li>শ্যাফটে ডায়াল রেখে সিল চেম্বার ফেস রানআউট চেক করুন: শ্যাফট ব্যাসের প্রতি 25 mm এ ≤ 0.013 mm।</li><li>সিল কার্টিজ ও ইমপেলার লাগান। ইমপেলার নাট OEM মানে টর্ক করুন।</li><li>নতুন কেসিং গ্যাসকেট দিন। রোটেটিং অ্যাসেম্বলি বসান। কেসিং বোল্ট স্টার প্যাটার্নে সমানভাবে টাইট করুন।</li><li>হাতে ঘুরিয়ে দেখুন রোটর মুক্তভাবে ঘোরে। সেমি-ওপেন ইমপেলারে এখন সামনের ক্লিয়ারেন্স সেট করুন।</li><li>সিল গ্ল্যান্ড নাট টাইট করুন, তারপর সেটিং ক্লিপ খুলুন।</li><li>কাপলিং হাব লাগিয়ে পাম্প অ্যালাইন করুন (দেখুন <a href="alignment.html">শ্যাফট অ্যালাইনমেন্ট</a>)।</li><li>বিয়ারিং হাউজিংয়ে দাগ পর্যন্ত তেল দিন। ফ্লাশ লাইন জোড়া দিন।</li></ol>
+<h3 id="s5">রেকর্ড শিট</h3>
+<p>কমপক্ষে রেকর্ড করুন: শ্যাফট রানআউট (৩ পয়েন্ট), এন্ড ফ্লোট, রিং ক্লিয়ারেন্স (পুরনো ও নতুন), লাগানো বিয়ারিং নম্বর, সিলের সিরিয়াল নম্বর, ইমপেলার নাট টর্ক, চূড়ান্ত অ্যালাইনমেন্ট রিডিং, সফট ফুট রিডিং, কাপলিং গ্যাপ। সই ও তারিখ দিন। পরের ফেইলিওর বিশ্লেষণে এই সংখ্যাগুলোই শুরুর পয়েন্ট।</p>
+<div class="note"><b>টিপস।</b> প্রতিটি অংশ খোলার সময় ছবি তুলুন। নষ্ট সিল ফেস বা বিয়ারিং বলে দেয় কেন নষ্ট হয়েছে। RCA এর জন্য রেখে দিন, স্ক্র্যাপ বিনে ফেলবেন না।</div>
+<div class="pager"><a href="pump-types.html"><span>আগের</span>পাম্পের ধরন ও API 610 কোড</a><a class="nx" href="pd-pumps.html"><span>পরের</span>পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

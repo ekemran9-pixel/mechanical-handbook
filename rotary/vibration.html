@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vibration analysis · Mechanical Foreman Handbook</title>
+<meta name="description" content="Units, measurement points, ISO 10816/20816 limits, the main fault signatures, phase analysis and route planning.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/rotary/vibration.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/rotary/vibration.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html" aria-current="page">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Rotary Equipment"><div class="grp">Pumps</div><a href="centrifugal-pumps.html">Centrifugal pump basics</a><a href="pump-curves.html">Pump curves &amp; system curves</a><a href="pump-types.html">Pump types &amp; API 610 codes</a><a href="pump-overhaul.html">Pump overhaul procedure</a><a href="pd-pumps.html">Positive displacement pumps</a><a href="pump-troubleshooting.html">Pump troubleshooting</a><div class="grp">Seals &amp; packing</div><a href="mechanical-seals.html">Mechanical seals</a><a href="seal-plans.html">Seal flush plans (API 682)</a><a href="gland-packing.html">Gland packing</a><div class="grp">Bearings &amp; lubrication</div><a href="rolling-bearings.html">Rolling element bearings</a><a href="bearing-mounting.html">Bearing mounting &amp; removal</a><a href="plain-bearings.html">Plain &amp; tilting-pad bearings</a><a href="lubrication.html">Lubrication</a><a href="oil-analysis.html">Oil analysis</a><div class="grp">Alignment &amp; vibration</div><a href="alignment.html">Shaft alignment</a><a href="dial-alignment.html">Dial indicator alignment methods</a><a href="vibration.html" aria-current="page">Vibration analysis</a><a href="balancing.html">Balancing</a><a href="condition-monitoring.html">Condition monitoring</a><div class="grp">Drives &amp; transmission</div><a href="couplings.html">Couplings</a><a href="gearboxes.html">Gearboxes</a><a href="belts-chains.html">Belt &amp; chain drives</a><a href="electric-motors.html">Electric motors (mechanical side)</a><div class="grp">Fluid power</div><a href="hydraulics.html">Hydraulic systems</a><a href="pneumatics.html">Compressed air &amp; pneumatics</a><div class="grp">Compressors &amp; turbines</div><a href="recip-compressors.html">Reciprocating compressors</a><a href="centrifugal-compressors.html">Centrifugal compressors</a><a href="screw-compressors.html">Screw &amp; air compressors</a><a href="steam-turbines.html">Steam turbines</a><a href="gas-turbines.html">Gas turbines (overview)</a><div class="grp">Other machines</div><a href="fans-blowers.html">Fans &amp; blowers</a><a href="agitators.html">Agitators &amp; mixers</a><a href="conveyors.html">Belt conveyors</a><a href="cranes-hoists.html">Cranes &amp; hoists (maintenance)</a><div class="grp">Reliability</div><a href="rca.html">Root cause analysis</a><a href="maintenance-strategy.html">Maintenance strategy &amp; KPIs</a><a href="preservation.html">Storage &amp; preservation</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Rotary Equipment</a> › Alignment &amp; vibration</div>
+<h1>Vibration analysis</h1>
+<p class="summary">Units, measurement points, ISO 10816/20816 limits, the main fault signatures, phase analysis and route planning.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Units</a></li><li><a href="#s2">Measurement points</a></li><li><a href="#s3">ISO 10816-3 / 20816-3 zones</a></li><li><a href="#s4">Trending is more useful than limits</a></li><li><a href="#s5">Spectrum basics</a></li><li><a href="#s6">Fault signatures</a></li><li><a href="#s7">Bearing defect frequencies</a></li><li><a href="#s8">Phase analysis</a></li><li><a href="#s9">Bump test</a></li><li><a href="#s10">Quick power-off test</a></li></ol></details>
+
+<h3 id="s1">Units</h3>
+<div class="tbl"><table><tr><th>Quantity</th><th>Unit</th><th>Best for</th></tr>
+<tr><td>Displacement</td><td>µm pk-pk (mils)</td><td>Low speed, shaft movement in sleeve bearings (proximity probes)</td></tr>
+<tr><td>Velocity</td><td>mm/s RMS (in/s pk)</td><td>Overall machine condition 10–1000 Hz. The standard for most plant machines</td></tr>
+<tr><td>Acceleration</td><td>g (m/s²)</td><td>High frequency: bearing defects, gear mesh</td></tr></table></div>
+<p>Conversions: in/s pk × 25.4 ÷ 1.414 = mm/s RMS. 0.3 in/s pk ≈ 5.4 mm/s RMS.</p>
+<h3 id="s2">Measurement points</h3>
+<ul><li>On every bearing housing: horizontal (H), vertical (V) and axial (A).</li><li>As close to the bearing load zone as possible, on solid metal, not on covers or fins.</li><li>Same spot every time. Mark it or fit a stud.</li><li>Magnet mounting is good to about 2 kHz (flat rare-earth magnet higher). Hand-held probes only for quick checks.</li><li>Machine at normal load and temperature.</li></ul>
+<h3 id="s3">ISO 10816-3 / 20816-3 zones</h3>
+<div class="tbl"><table><tr><th>Machine</th><th>Foundation</th><th>A/B</th><th>B/C</th><th>C/D</th></tr>
+<tr><td>Group 2: 15–300 kW</td><td>Rigid</td><td>1.4</td><td>2.8</td><td>4.5</td></tr>
+<tr><td>Group 2</td><td>Flexible</td><td>2.3</td><td>4.5</td><td>7.1</td></tr>
+<tr><td>Group 1: 300 kW–50 MW</td><td>Rigid</td><td>2.3</td><td>4.5</td><td>7.1</td></tr>
+<tr><td>Group 1</td><td>Flexible</td><td>3.5</td><td>7.1</td><td>11.0</td></tr></table></div>
+<p>mm/s RMS, 10–1000 Hz on bearing housings. A = new. B = unrestricted long-term. C = limited period, plan repair. D = damage likely. A foundation is "rigid" if the machine's lowest natural frequency on it is at least 25% above running speed.</p>
+<p>API 610 pumps: overall limit for new pumps on test is typically 3.0 mm/s RMS (bearing housing), within the preferred operating range.</p>
+<h3 id="s4">Trending is more useful than limits</h3>
+<p>A machine running steadily at 4 mm/s may be fine. One that went from 1.5 to 3 mm/s in a month has a problem developing. A doubling from baseline is a common alert level.</p>
+<h3 id="s5">Spectrum basics</h3>
+<p>The FFT spectrum splits the signal into frequencies. Everything is related to running speed: <b>1X</b> = running speed. A 2960 rpm motor: 1X = 49.3 Hz.</p>
+<h3 id="s6">Fault signatures</h3>
+<div class="tbl"><table><tr><th>Fault</th><th>Spectrum</th><th>Other clues</th></tr>
+<tr><td>Static unbalance</td><td>High 1X radial, low harmonics</td><td>H and V phase differ ~90°; phase same on both bearings</td></tr>
+<tr><td>Couple unbalance</td><td>High 1X radial</td><td>Phase ~180° between the two bearings</td></tr>
+<tr><td>Overhung rotor unbalance</td><td>1X radial and high 1X axial</td><td>Axial phase in-phase</td></tr>
+<tr><td>Angular misalignment</td><td>High 1X axial, often 2X, 3X</td><td>Axial phase ~180° across coupling</td></tr>
+<tr><td>Parallel misalignment</td><td>High 2X radial, 1X</td><td>Radial phase ~180° across coupling</td></tr>
+<tr><td>Bent shaft</td><td>1X axial dominant, some 2X</td><td>Axial phase 180° end to end of the same shaft</td></tr>
+<tr><td>Mechanical looseness (structural)</td><td>1X high in one direction</td><td>Phase differs between foot and base</td></tr>
+<tr><td>Looseness (rotating / bearing fit)</td><td>Many harmonics 1X–10X, often ½X multiples</td><td>Unstable phase, truncated waveform</td></tr>
+<tr><td>Rub</td><td>Sub-harmonics (½X, ⅓X) and harmonics, noise floor up</td><td>Truncated waveform, can be transient</td></tr>
+<tr><td>Rolling bearing defects</td><td>Non-synchronous peaks and harmonics with sidebands</td><td>Envelope/demod spectrum, high-frequency carpet</td></tr>
+<tr><td>Gear problems</td><td>Gear mesh frequency (GMF = teeth × rpm) with sidebands at the shaft speed of the bad gear</td><td>2× GMF rises with wear</td></tr>
+<tr><td>Belt problems</td><td>Belt frequency and harmonics below 1X</td><td>Strobe the belt</td></tr>
+<tr><td>Vane / blade pass</td><td>Vanes × 1X</td><td>Higher off BEP, small cutwater gap</td></tr>
+<tr><td>Cavitation</td><td>Random broadband high frequency</td><td>Noise, suction pressure low</td></tr>
+<tr><td>Electrical (stator)</td><td>2× line frequency (100 Hz / 120 Hz)</td><td>Drops instantly at power cut</td></tr>
+<tr><td>Rotor bars broken</td><td>1X with sidebands at pole pass frequency</td><td>Motor current analysis confirms</td></tr>
+<tr><td>Oil whirl</td><td>0.42–0.48X</td><td>Sleeve bearings, light load</td></tr>
+<tr><td>Oil whip</td><td>Locks onto first critical speed</td><td>Dangerous, can wreck bearings</td></tr>
+<tr><td>Resonance</td><td>High peak at a natural frequency</td><td>Changes sharply with speed, bump test confirms</td></tr></table></div>
+<h3 id="s7">Bearing defect frequencies</h3>
+<ul><li><b>BPFO</b> (ball pass outer race): about 0.4 × number of balls × rpm.</li><li><b>BPFI</b> (inner race): about 0.6 × number of balls × rpm, with 1X sidebands.</li><li><b>BSF</b> (ball spin), <b>FTF</b> (cage, about 0.4X).</li><li>Software calculates them from the bearing number. Inner race defects show sidebands at 1X because the defect rotates in and out of the load zone.</li></ul>
+<p><b>Stages of bearing failure:</b> 1) ultrasonic only (stress waves, &gt; 20 kHz), 2) envelope/demod peaks at defect frequencies, 3) defect frequencies visible in the velocity spectrum with harmonics, 4) noise floor rises, 1X rises, discrete peaks disappear into haystack. Replace in stage 3 at the latest.</p>
+<h3 id="s8">Phase analysis</h3>
+<p>Phase compares the timing of vibration at two points, using a tachometer reference or two channels. It tells unbalance from misalignment from bent shaft when the spectra look the same. Take phase in H, V and A at each bearing.</p>
+<h3 id="s9">Bump test</h3>
+<p>With the machine stopped, hit the structure with a soft-faced mallet and capture the ring-down spectrum. Peaks show natural frequencies. A natural frequency within ±20% of 1X or another forcing frequency is a resonance risk.</p>
+<h3 id="s10">Quick power-off test</h3>
+<p>Watch the live reading and cut the power. If the vibration drops instantly, the cause is electrical. If it coasts down with speed, it's mechanical.</p>
+<div class="pager"><a href="dial-alignment.html"><span>Previous</span>Dial indicator alignment methods</a><a class="nx" href="balancing.html"><span>Next</span>Balancing</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

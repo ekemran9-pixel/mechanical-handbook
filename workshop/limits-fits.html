@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Limits, fits &amp; tolerances · Mechanical Foreman Handbook</title>
+<meta name="description" content="ISO hole-basis fits, common fit classes for bearings, couplings and bushings, and reading GD&amp;T basics.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/workshop/limits-fits.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/workshop/limits-fits.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html" aria-current="page">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Workshop, Machining &amp; Fasteners"><div class="grp">Measurement</div><a href="measuring-tools.html">Measuring tools</a><a href="limits-fits.html" aria-current="page">Limits, fits &amp; tolerances</a><div class="grp">Machining</div><a href="lathe.html">Lathe work</a><a href="milling-drilling.html">Milling, drilling &amp; tapping</a><div class="grp">Fasteners</div><a href="threads.html">Threads &amp; identification</a><a href="fasteners.html">Bolts, nuts &amp; washers</a><a href="torque.html">Torque &amp; preload</a><a href="keys-shafts.html">Keys, splines &amp; shaft locking</a><div class="grp">Tools</div><a href="hand-power-tools.html">Hand &amp; power tools</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Workshop, Machining &amp; Fasteners</a> › Measurement</div>
+<h1>Limits, fits &amp; tolerances</h1>
+<p class="summary">ISO hole-basis fits, common fit classes for bearings, couplings and bushings, and reading GD&T basics.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Fit types</a></li><li><a href="#s2">Common fits (hole basis)</a></li><li><a href="#s3">Example values (nominal 50 mm)</a></li><li><a href="#s4">IT grades</a></li><li><a href="#s5">Basic GD&amp;T symbols</a></li><li><a href="#s6">Surface finish</a></li></ol></details>
+
+<h3 id="s1">Fit types</h3>
+<ul><li><b>Clearance fit</b>: always a gap (H7/g6, H7/h6). Sliding parts.</li><li><b>Transition fit</b>: might be a small gap or small interference (H7/k6, H7/js6). Location, keyed hubs.</li><li><b>Interference fit</b>: always tight (H7/p6, H7/s6). Pressed or shrunk parts.</li></ul>
+<p>Capital letter = hole, small letter = shaft. Number = tolerance grade (IT). Lower number = tighter. H holes have zero lower deviation.</p>
+<h3 id="s2">Common fits (hole basis)</h3>
+<div class="tbl"><table><tr><th>Fit</th><th>Type</th><th>Typical use</th></tr>
+<tr><td>H11/c11</td><td>Loose running</td><td>Agricultural, loose pivots</td></tr>
+<tr><td>H9/d9</td><td>Free running</td><td>Large clearance bearings</td></tr>
+<tr><td>H8/f7</td><td>Close running</td><td>Plain bearings, spindles</td></tr>
+<tr><td>H7/g6</td><td>Sliding</td><td>Sliding gears, locating pins</td></tr>
+<tr><td>H7/h6</td><td>Locational clearance</td><td>Spigots, housings for bearing outer rings (free end)</td></tr>
+<tr><td>H7/k6</td><td>Locational transition</td><td>Couplings, pulleys with keys, bearing inner rings (light)</td></tr>
+<tr><td>H7/n6</td><td>Locational transition (tight)</td><td>Gears, heavier hubs</td></tr>
+<tr><td>H7/p6</td><td>Locational interference</td><td>Bushes, press fit</td></tr>
+<tr><td>H7/s6</td><td>Medium drive</td><td>Shrink fits, permanent assemblies</td></tr></table></div>
+<h3 id="s3">Example values (nominal 50 mm)</h3>
+<div class="tbl"><table><tr><th>Tolerance</th><th>Limits (µm)</th><th>Size range (mm)</th></tr>
+<tr><td>H7 hole</td><td>+25 / 0</td><td>50.000 – 50.025</td></tr>
+<tr><td>g6 shaft</td><td>−9 / −25</td><td>49.975 – 49.991</td></tr>
+<tr><td>h6 shaft</td><td>0 / −16</td><td>49.984 – 50.000</td></tr>
+<tr><td>k6 shaft</td><td>+18 / +2</td><td>50.002 – 50.018</td></tr>
+<tr><td>m6 shaft</td><td>+25 / +9</td><td>50.009 – 50.025</td></tr>
+<tr><td>p6 shaft</td><td>+42 / +26</td><td>50.026 – 50.042</td></tr></table></div>
+<p>H7/k6 on 50 mm: from 0.023 mm clearance to 0.018 mm interference.</p>
+<h3 id="s4">IT grades</h3>
+<ul><li>IT5–IT7: precision machining (bearing seats, grinding).</li><li>IT8–IT9: good turning and milling.</li><li>IT11–IT13: rough machining, cutting.</li></ul>
+<h3 id="s5">Basic GD&amp;T symbols</h3>
+<div class="tbl"><table><tr><th>Symbol name</th><th>Controls</th></tr>
+<tr><td>Flatness</td><td>How flat a surface is</td></tr>
+<tr><td>Straightness</td><td>A line or axis</td></tr>
+<tr><td>Circularity (roundness)</td><td>Cross-section roundness</td></tr>
+<tr><td>Cylindricity</td><td>Roundness + straightness + taper</td></tr>
+<tr><td>Perpendicularity</td><td>90° to a datum</td></tr>
+<tr><td>Parallelism</td><td>Parallel to a datum</td></tr>
+<tr><td>Position</td><td>Location of a feature (holes)</td></tr>
+<tr><td>Concentricity / coaxiality</td><td>Axes in line</td></tr>
+<tr><td>Circular runout / total runout</td><td>What a dial reads when the part spins on its datum axis</td></tr></table></div>
+<h3 id="s6">Surface finish</h3>
+<p>Ra in µm. Typical: rough turning 6.3–12.5, finish turning 1.6–3.2, grinding 0.4–0.8, lapping 0.05–0.2. Bearing seats often Ra 0.8–1.6. Seal sleeve running surface 0.2–0.4.</p>
+<div class="pager"><a href="measuring-tools.html"><span>Previous</span>Measuring tools</a><a class="nx" href="lathe.html"><span>Next</span>Lathe work</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

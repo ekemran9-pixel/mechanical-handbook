@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Flanges · Mechanical Foreman Handbook</title>
+<meta name="description" content="Flange types, ASME B16.5 and B16.47 classes, facings, pressure-temperature ratings and dimension basics.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/piping/flanges.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/piping/flanges.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html" aria-current="page">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Piping"><div class="grp">Pipe &amp; fittings</div><a href="pipe-sizes.html">Pipe sizes &amp; schedules</a><a href="pipe-materials.html">Piping materials (ASTM)</a><a href="fittings.html">Fittings &amp; take-outs</a><div class="grp">Flanges &amp; bolting</div><a href="flanges.html" aria-current="page">Flanges</a><a href="gaskets.html">Gaskets</a><a href="flange-bolting.html">Flange bolting (ASME PCC-1)</a><div class="grp">Drawings &amp; layout</div><a href="isometrics.html">Reading P&amp;IDs &amp; isometrics</a><a href="spool-fabrication.html">Spool fabrication &amp; erection</a><a href="pipe-supports.html">Pipe supports</a><div class="grp">Testing &amp; cleaning</div><a href="pressure-testing.html">Pressure testing</a><a href="flushing.html">Flushing, blowing &amp; cleaning</a><div class="grp">Small bore &amp; tubing</div><a href="small-bore.html">Small bore, threaded &amp; tubing</a><a href="non-metallic.html">Non-metallic piping</a><a href="expansion-joints.html">Expansion joints &amp; bellows</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Piping</a> › Flanges &amp; bolting</div>
+<h1>Flanges</h1>
+<p class="summary">Flange types, ASME B16.5 and B16.47 classes, facings, pressure-temperature ratings and dimension basics.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Flange types</a></li><li><a href="#s2">Standards</a></li><li><a href="#s3">Pressure-temperature ratings (B16.5, Group 1.1 carbon steel A105/WCB)</a></li><li><a href="#s4">Facings</a></li><li><a href="#s5">Flange face damage limits (ASME PCC-1 Appendix D)</a></li><li><a href="#s6">Bolt holes and studs (Class 150 and 300 examples)</a></li></ol></details>
+
+<h3 id="s1">Flange types</h3>
+<div class="tbl"><table><tr><th>Type</th><th>Notes</th></tr>
+<tr><td>Weld neck (WN)</td><td>Butt welded, tapered hub. Best for high pressure, temperature and cyclic loads. Bore must match pipe schedule</td></tr>
+<tr><td>Slip-on (SO)</td><td>Slides over pipe, two fillet welds. Cheap, easy to align. Lower fatigue strength (about 2/3 of WN)</td></tr>
+<tr><td>Socket weld (SW)</td><td>Small bore, single fillet weld</td></tr>
+<tr><td>Threaded</td><td>Small bore, no welding (non-hazardous, low pressure)</td></tr>
+<tr><td>Lap joint</td><td>Loose backing flange over a stub end. Rotates for bolt alignment; flange can be carbon steel over a stainless stub end</td></tr>
+<tr><td>Blind</td><td>Closes the end</td></tr>
+<tr><td>Orifice flange</td><td>WN with pressure tappings and jackscrews, for flow measurement</td></tr>
+<tr><td>Spectacle blind / spade and spacer</td><td>Positive isolation between flanges</td></tr>
+<tr><td>Long weld neck, nipo flange, swivel ring, anchor flange</td><td>Special uses</td></tr></table></div>
+<h3 id="s2">Standards</h3>
+<ul><li><b>ASME B16.5</b>: NPS ½ to 24, Classes 150, 300, 400, 600, 900, 1500, 2500.</li><li><b>ASME B16.47</b>: NPS 26 to 60. <b>Series A</b> (MSS SP-44, heavier) and <b>Series B</b> (API 605, lighter). They don't bolt together.</li><li><b>EN 1092-1</b>: PN 6, 10, 16, 25, 40, 63, 100…</li><li><b>API 6A</b>: wellhead flanges (2,000 to 20,000 psi).</li></ul>
+<h3 id="s3">Pressure-temperature ratings (B16.5, Group 1.1 carbon steel A105/WCB)</h3>
+<div class="tbl"><table><tr><th>Temp °C</th><th>Cl 150 bar</th><th>Cl 300</th><th>Cl 600</th><th>Cl 900</th><th>Cl 1500</th><th>Cl 2500</th></tr>
+<tr><td>−29 to 38</td><td>19.6</td><td>51.1</td><td>102.1</td><td>153.2</td><td>255.3</td><td>425.5</td></tr>
+<tr><td>100</td><td>17.7</td><td>46.6</td><td>93.2</td><td>139.8</td><td>233.0</td><td>388.3</td></tr>
+<tr><td>200</td><td>13.8</td><td>43.8</td><td>87.6</td><td>131.4</td><td>219.0</td><td>365.0</td></tr>
+<tr><td>300</td><td>10.2</td><td>39.8</td><td>79.6</td><td>119.5</td><td>199.1</td><td>331.8</td></tr>
+<tr><td>400</td><td>6.5</td><td>34.7</td><td>69.4</td><td>104.2</td><td>173.6</td><td>289.3</td></tr>
+<tr><td>425</td><td>5.5</td><td>28.8</td><td>57.5</td><td>86.3</td><td>143.8</td><td>239.7</td></tr></table></div>
+<p style="font-size:.85rem;color:var(--muted)">Values from ASME B16.5 Table 2-1.1 (rounded). Other materials have their own tables.</p>
+<h3 id="s4">Facings</h3>
+<ul><li><b>RF (raised face)</b>: 1.6 mm (Class 150/300) or 6.4 mm (Class 400 and up) raised. Serrated spiral or concentric finish 3.2–6.3 µm Ra (125–250 µin) for spiral wound and sheet gaskets.</li><li><b>FF (flat face)</b>: full face gasket. Cast iron, FRP, rubber-lined. Never bolt an RF steel flange to FF cast iron: it cracks.</li><li><b>RTJ (ring type joint)</b>: grooved face for metal ring gaskets. High pressure.</li><li>Tongue and groove, male and female: special.</li></ul>
+<h3 id="s5">Flange face damage limits (ASME PCC-1 Appendix D)</h3>
+<ul><li>Radial scratches across the gasket seating area are the most serious.</li><li>For spiral wound gaskets: radial defects deeper than the serrations or wider than about 1.5 mm across more than 50% of the seating width need repair (machining).</li><li>Check with a straight edge and a feeler for flatness (warping).</li></ul>
+<h3 id="s6">Bolt holes and studs (Class 150 and 300 examples)</h3>
+<div class="tbl"><table><tr><th>NPS</th><th>Cl 150 studs</th><th>Cl 300 studs</th></tr>
+<tr><td>2</td><td>4 × 5/8"</td><td>8 × 5/8"</td></tr>
+<tr><td>3</td><td>4 × 5/8"</td><td>8 × 3/4"</td></tr>
+<tr><td>4</td><td>8 × 5/8"</td><td>8 × 3/4"</td></tr>
+<tr><td>6</td><td>8 × 3/4"</td><td>12 × 3/4"</td></tr>
+<tr><td>8</td><td>8 × 3/4"</td><td>12 × 7/8"</td></tr>
+<tr><td>10</td><td>12 × 7/8"</td><td>16 × 1"</td></tr>
+<tr><td>12</td><td>12 × 7/8"</td><td>16 × 1-1/8"</td></tr>
+<tr><td>16</td><td>16 × 1"</td><td>20 × 1-1/4"</td></tr>
+<tr><td>24</td><td>20 × 1-1/4"</td><td>24 × 1-1/2"</td></tr></table></div>
+<p>Bolt holes straddle the vertical and horizontal centrelines ("two-holing") unless the drawing says otherwise.</p>
+<div class="pager"><a href="fittings.html"><span>Previous</span>Fittings &amp; take-outs</a><a class="nx" href="gaskets.html"><span>Next</span>Gaskets</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Preheat, interpass &amp; PWHT · Mechanical Foreman Handbook</title>
+<meta name="description" content="Why and how to preheat, interpass control, post-heat, PWHT cycles, thermocouple placement and records.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/fabrication/preheat-pwht.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/fabrication/preheat-pwht.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html" aria-current="page">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Welding &amp; Fabrication"><div class="grp">Welding processes</div><a href="welding-processes.html">Welding processes compared</a><a href="smaw.html">SMAW (stick welding)</a><a href="gtaw.html">GTAW (TIG welding)</a><a href="gmaw-fcaw.html">GMAW &amp; FCAW (MIG and flux core)</a><a href="saw.html">SAW (submerged arc)</a><div class="grp">Materials</div><a href="filler-metals.html">Filler metal guide</a><a href="metallurgy.html">Steel metallurgy for welders</a><div class="grp">Joint design</div><a href="joint-design.html">Joint design &amp; fit-up</a><a href="weld-symbols.html">Weld symbols (AWS A2.4 / ISO 2553)</a><a href="positions.html">Welding positions &amp; qualification</a><div class="grp">Quality</div><a href="weld-defects.html">Weld defects &amp; repairs</a><a href="wps-pqr.html">WPS, PQR &amp; WPQ</a><a href="preheat-pwht.html" aria-current="page">Preheat, interpass &amp; PWHT</a><a href="distortion.html">Distortion control</a><div class="grp">Special materials</div><a href="stainless-welding.html">Welding stainless &amp; duplex</a><a href="alloy-welding.html">Cr-Mo, P91 &amp; dissimilar welds</a><a href="aluminium-welding.html">Welding aluminium</a><div class="grp">Cutting &amp; forming</div><a href="cutting-gouging.html">Cutting &amp; gouging</a><a href="plate-forming.html">Rolling, bending &amp; forming</a><a href="layout-development.html">Layout &amp; pattern development</a><a href="welding-safety.html">Welding &amp; cutting safety</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Welding &amp; Fabrication</a> › Quality</div>
+<h1>Preheat, interpass &amp; PWHT</h1>
+<p class="summary">Why and how to preheat, interpass control, post-heat, PWHT cycles, thermocouple placement and records.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Preheat</a></li><li><a href="#s2">Typical minimum preheat (guide, always follow WPS)</a></li><li><a href="#s3">Interpass temperature</a></li><li><a href="#s4">Post-heat (dehydrogenation)</a></li><li><a href="#s5">PWHT (post weld heat treatment)</a></li><li><a href="#s6">Heating and cooling rates</a></li><li><a href="#s7">Thermocouples and band widths</a></li><li><a href="#s8">Before PWHT</a></li><li><a href="#s9">After PWHT</a></li></ol></details>
+
+<h3 id="s1">Preheat</h3>
+<p>Preheat slows the cooling rate, so less hard martensite forms and hydrogen can diffuse out. It also drives off moisture.</p>
+<ul><li>Apply with gas torches (rosebud), electric resistance pads or induction coils.</li><li>Heat a band at least 75 mm (3") each side of the joint, or 4× thickness (some codes), through the full thickness.</li><li>Measure on the side opposite the heat source where possible, or wait 1 minute per 25 mm thickness after removing the torch (ISO 13916 rule).</li><li>Use contact thermometers, thermocouples or temperature indicating crayons. A crayon rated at the temperature melts when the steel reaches it.</li></ul>
+<h3 id="s2">Typical minimum preheat (guide, always follow WPS)</h3>
+<div class="tbl"><table><tr><th>Material</th><th>Thickness</th><th>Minimum preheat</th></tr>
+<tr><td>P1 carbon steel, C ≤ 0.30%</td><td>≤ 25 mm</td><td>10 °C (warm to dry if wet or cold)</td></tr>
+<tr><td>P1 carbon steel</td><td>&gt; 25 mm, or high CE</td><td>80–100 °C</td></tr>
+<tr><td>P3 (C-½Mo)</td><td>All</td><td>80 °C</td></tr>
+<tr><td>P4 (1¼Cr-½Mo)</td><td>All</td><td>120–150 °C</td></tr>
+<tr><td>P5A (2¼Cr-1Mo)</td><td>All</td><td>150–200 °C</td></tr>
+<tr><td>P5B (5Cr, 9Cr)</td><td>All</td><td>200 °C+</td></tr>
+<tr><td>P91</td><td>All</td><td>200–250 °C, max interpass ~300 °C</td></tr>
+<tr><td>P8 austenitic stainless</td><td>All</td><td>None (just dry). Interpass max ~150–175 °C</td></tr></table></div>
+<h3 id="s3">Interpass temperature</h3>
+<ul><li><b>Minimum interpass</b> = minimum preheat. Don't let the joint cool below it until the weld is done (or post-heated).</li><li><b>Maximum interpass</b> protects toughness and corrosion resistance: often 250–315 °C for carbon steel, 150–175 °C for stainless, 100–150 °C for duplex.</li></ul>
+<h3 id="s4">Post-heat (dehydrogenation)</h3>
+<p>Right after welding, before the joint cools, raise it to around 200–300 °C and hold for 1–4 hours (by procedure). Common on thick Cr-Mo and high-restraint joints that can't go straight into PWHT.</p>
+<h3 id="s5">PWHT (post weld heat treatment)</h3>
+<p>Heating the completed weld to below the lower critical temperature to relieve residual stresses and temper the HAZ.</p>
+<div class="tbl"><table><tr><th>Material (B31.3 / ASME VIII guide)</th><th>When required</th><th>Temperature</th><th>Hold time</th></tr>
+<tr><td>P1 carbon steel</td><td>Nominal thickness &gt; 19 mm (3/4") (older B31.3 Table 331.1.1; newer editions differ)</td><td>595–650 °C</td><td>1 h per 25 mm, min 1 h</td></tr>
+<tr><td>P3</td><td>&gt; 19 mm or specified UTS high</td><td>595–720 °C</td><td>1 h/25 mm, min 1 h</td></tr>
+<tr><td>P4</td><td>&gt; 13 mm or as code</td><td>705–745 °C</td><td>1 h/25 mm, min 2 h</td></tr>
+<tr><td>P5A, P5B</td><td>Most thicknesses</td><td>705–760 °C</td><td>1 h/25 mm, min 2 h</td></tr>
+<tr><td>P91 (15E)</td><td>Always</td><td>730–775 °C</td><td>1 h/25 mm, min 2 h</td></tr>
+<tr><td>P8 stainless</td><td>Normally not required</td><td>–</td><td>–</td></tr></table></div>
+<p style="font-size:.85rem;color:var(--muted)">Code tables change between editions. Always use the project's code edition and the engineer's PWHT procedure.</p>
+<h3 id="s6">Heating and cooling rates</h3>
+<ul><li>Above 315–425 °C, control heating and cooling. A common rule: max rate (°C/h) = 220 × 25 ÷ thickness (mm), not more than 220 °C/h and not less than 55 °C/h.</li><li>Below the control temperature (often 300–425 °C) cool in still air under insulation.</li></ul>
+<h3 id="s7">Thermocouples and band widths</h3>
+<ul><li>Soak band: weld width plus at least 1 t (thickness) or 25 mm each side, whichever is less (B31.3 says weld plus 25 mm each side minimum; AWS D10.10 gives more detail).</li><li>Heated band and insulation band wider (insulation band often soak band + 4 × √(R t)).</li><li>Attach thermocouples by capacitor discharge welding. Usually at least 2 per joint (top and bottom for horizontal pipe), more for large pipe.</li><li>Record the full chart: heating, soak, cooling, with time scale and thermocouple ID.</li></ul>
+<h3 id="s8">Before PWHT</h3>
+<ul><li>All welding, including attachments, finished. Welding after PWHT means doing it again.</li><li>NDT done if required before PWHT.</li><li>Support the piping: strength drops at temperature and the pipe can sag.</li><li>Remove valves, instruments and soft materials from the heat zone.</li><li>Open ends closed to stop chimney effect (draught cooling the inside).</li></ul>
+<h3 id="s9">After PWHT</h3>
+<ul><li>Hardness test (often required: e.g. ≤ 225 HB for P4/P5, ≤ 241 HB for some Cr-Mo, ≤ 200 HB for sour carbon steel).</li><li>Final NDT if specified after PWHT.</li><li>Attach the chart to the weld record.</li></ul>
+<div class="pager"><a href="wps-pqr.html"><span>Previous</span>WPS, PQR &amp; WPQ</a><a class="nx" href="distortion.html"><span>Next</span>Distortion control</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

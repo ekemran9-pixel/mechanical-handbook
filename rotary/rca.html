@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Root cause analysis · Mechanical Foreman Handbook</title>
+<meta name="description" content="A practical RCA method for equipment failures: 5 Whys, fishbone, fault tree and physical evidence.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/rotary/rca.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/rotary/rca.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html" aria-current="page">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Rotary Equipment"><div class="grp">Pumps</div><a href="centrifugal-pumps.html">Centrifugal pump basics</a><a href="pump-curves.html">Pump curves &amp; system curves</a><a href="pump-types.html">Pump types &amp; API 610 codes</a><a href="pump-overhaul.html">Pump overhaul procedure</a><a href="pd-pumps.html">Positive displacement pumps</a><a href="pump-troubleshooting.html">Pump troubleshooting</a><div class="grp">Seals &amp; packing</div><a href="mechanical-seals.html">Mechanical seals</a><a href="seal-plans.html">Seal flush plans (API 682)</a><a href="gland-packing.html">Gland packing</a><div class="grp">Bearings &amp; lubrication</div><a href="rolling-bearings.html">Rolling element bearings</a><a href="bearing-mounting.html">Bearing mounting &amp; removal</a><a href="plain-bearings.html">Plain &amp; tilting-pad bearings</a><a href="lubrication.html">Lubrication</a><a href="oil-analysis.html">Oil analysis</a><div class="grp">Alignment &amp; vibration</div><a href="alignment.html">Shaft alignment</a><a href="dial-alignment.html">Dial indicator alignment methods</a><a href="vibration.html">Vibration analysis</a><a href="balancing.html">Balancing</a><a href="condition-monitoring.html">Condition monitoring</a><div class="grp">Drives &amp; transmission</div><a href="couplings.html">Couplings</a><a href="gearboxes.html">Gearboxes</a><a href="belts-chains.html">Belt &amp; chain drives</a><a href="electric-motors.html">Electric motors (mechanical side)</a><div class="grp">Fluid power</div><a href="hydraulics.html">Hydraulic systems</a><a href="pneumatics.html">Compressed air &amp; pneumatics</a><div class="grp">Compressors &amp; turbines</div><a href="recip-compressors.html">Reciprocating compressors</a><a href="centrifugal-compressors.html">Centrifugal compressors</a><a href="screw-compressors.html">Screw &amp; air compressors</a><a href="steam-turbines.html">Steam turbines</a><a href="gas-turbines.html">Gas turbines (overview)</a><div class="grp">Other machines</div><a href="fans-blowers.html">Fans &amp; blowers</a><a href="agitators.html">Agitators &amp; mixers</a><a href="conveyors.html">Belt conveyors</a><a href="cranes-hoists.html">Cranes &amp; hoists (maintenance)</a><div class="grp">Reliability</div><a href="rca.html" aria-current="page">Root cause analysis</a><a href="maintenance-strategy.html">Maintenance strategy &amp; KPIs</a><a href="preservation.html">Storage &amp; preservation</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Rotary Equipment</a> › Reliability</div>
+<h1>Root cause analysis</h1>
+<p class="summary">A practical RCA method for equipment failures: 5 Whys, fishbone, fault tree and physical evidence.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">When to do an RCA</a></li><li><a href="#s2">Preserve the evidence</a></li><li><a href="#s3">The 5 Whys</a></li><li><a href="#s4">Fishbone (Ishikawa)</a></li><li><a href="#s5">Physical, human and latent roots</a></li><li><a href="#s6">Report template</a></li></ol></details>
+
+<p>Repairing the same pump four times a year is expensive. RCA finds why it fails so you can stop it.</p>
+<h3 id="s1">When to do an RCA</h3>
+<ul><li>Any safety or environmental event.</li><li>Repeat failures (e.g. the same machine twice in 12 months).</li><li>High-cost failures or long downtime.</li><li>Bad actor list: the top 10 machines by maintenance cost.</li></ul>
+<h3 id="s2">Preserve the evidence</h3>
+<ol class="steps"><li>Photograph the machine before and during dismantling.</li><li>Take oil samples before draining.</li><li>Record as-found measurements: alignment, clearances, positions, bolt tightness.</li><li>Bag and tag failed parts (bearings, seal faces, gaskets). Don't clean them.</li><li>Collect data: operating trends (flow, pressure, temperature, vibration) around the failure time, work order history, operator logs.</li></ol>
+<h3 id="s3">The 5 Whys</h3>
+<p>Ask "why?" until you reach something you can fix with a system change.</p>
+<ol><li>Why did the pump stop? Bearing seized.</li><li>Why did the bearing seize? No oil in the housing.</li><li>Why was there no oil? The constant level oiler was empty.</li><li>Why was it empty? It isn't on the lube route.</li><li>Why isn't it on the route? The pump was installed last year and the route was never updated.</li></ol>
+<p><b>Root cause:</b> no process to add new equipment to lube routes. <b>Fix:</b> add an MOC/handover step that updates the PM and lube routes.</p>
+<h3 id="s4">Fishbone (Ishikawa)</h3>
+<p>List possible causes on branches: <b>Machine, Method, Material, Man (people), Measurement, Environment</b>. Then test each one against the evidence. Cross out the ones the evidence disproves.</p>
+<h3 id="s5">Physical, human and latent roots</h3>
+<ul><li><b>Physical root</b>: the mechanism (fatigue, corrosion, overload, wear).</li><li><b>Human root</b>: the decision or action that caused it (wrong oil added).</li><li><b>Latent root</b>: the system or organisational gap that allowed it (no labelling, no training).</li></ul>
+<p>Fixing only the physical root means it will happen again somewhere else.</p>
+<h3 id="s6">Report template</h3>
+<ol><li>What happened (one paragraph, facts only).</li><li>Impact (safety, production, cost).</li><li>Timeline.</li><li>Evidence (photos, measurements, data).</li><li>Analysis (5 Whys, fishbone).</li><li>Root causes (physical, human, latent).</li><li>Actions: owner, due date, how we'll know it worked.</li></ol>
+<div class="note"><b>Blame-free.</b> People hide facts when they fear punishment. Focus on how the system let it happen.</div>
+<div class="pager"><a href="cranes-hoists.html"><span>Previous</span>Cranes &amp; hoists (maintenance)</a><a class="nx" href="maintenance-strategy.html"><span>Next</span>Maintenance strategy &amp; KPIs</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>স্লিং লোড ও সেন্টার অফ গ্র্যাভিটি · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="কোণে স্লিং টেনশন, অসমান পা, তিন ও চার পায়ের স্লিং এবং সেন্টার অফ গ্র্যাভিটি খুঁজে বের করা।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rigging/sling-loads.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rigging/sling-loads.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html" aria-current="page">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="স্ট্রাকচারাল স্টিল, রিগিং ও লিফটিং"><div class="grp">স্ট্রাকচারাল স্টিল</div><a href="steel-sections.html">স্টিল সেকশন ও গ্রেড</a><a href="steel-erection.html">স্টিল ইরেকশন</a><a href="bolted-connections.html">স্ট্রাকচারাল বোল্টিং</a><div class="grp">রিগিং</div><a href="rigging-gear.html">রিগিং সরঞ্জাম</a><a href="sling-loads.html" aria-current="page">স্লিং লোড ও সেন্টার অফ গ্র্যাভিটি</a><div class="grp">ক্রেন ও লিফটিং</div><a href="cranes.html">মোবাইল ক্রেন</a><a href="lift-planning.html">লিফট পরিকল্পনা</a><a href="hand-signals.html">ক্রেনের হাতের সংকেত</a><a href="hoists-jacking.html">চেইন ব্লক, জ্যাকিং ও স্কিডিং</a><div class="grp">প্রবেশ</div><a href="scaffolding.html">স্ক্যাফোল্ডিং ও প্রবেশ</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">স্ট্রাকচারাল স্টিল, রিগিং ও লিফটিং</a> › রিগিং</div>
+<h1>স্লিং লোড ও সেন্টার অফ গ্র্যাভিটি</h1>
+<p class="summary">কোণে স্লিং টেনশন, অসমান পা, তিন ও চার পায়ের স্লিং এবং সেন্টার অফ গ্র্যাভিটি খুঁজে বের করা।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">স্লিং কোণ</a></li><li><a href="#s2">মাল্টি-লেগ স্লিং</a></li><li><a href="#s3">অসমান পা (CoG কেন্দ্র থেকে সরে)</a></li><li><a href="#s4">সেন্টার অফ গ্র্যাভিটি খোঁজা</a></li><li><a href="#s5">D/d অনুপাত (পিন বা শ্যাকলের উপর ওয়্যার রোপ)</a></li></ol></details>
+
+<h3 id="s1">স্লিং কোণ</h3>
+<div class="formula">Tension per leg = (Load ÷ Number of legs) ÷ sin(angle from horizontal)</div>
+<div class="tbl"><table><tr><th>অনুভূমিক থেকে কোণ</th><th>ফ্যাক্টর (1/sin)</th><th>10 t লোডে ২-লেগের প্রতিটি লেগ</th></tr>
+<tr><td>90°</td><td>1.000</td><td>5.0 t</td></tr><tr><td>75°</td><td>1.035</td><td>5.2 t</td></tr><tr><td>60°</td><td>1.155</td><td>5.8 t</td></tr><tr><td>50°</td><td>1.305</td><td>6.5 t</td></tr><tr><td>45°</td><td>1.414</td><td>7.1 t</td></tr><tr><td>30°</td><td>2.000</td><td>10.0 t</td></tr></table></div>
+<p>মাঠের দ্রুত পদ্ধতি: স্লিং কোণ ফ্যাক্টর = স্লিংয়ের দৈর্ঘ্য ÷ উচ্চতা (হুক থেকে লোডের সংযোগ পয়েন্ট পর্যন্ত খাড়া দূরত্ব)।</p>
+<h3 id="s2">মাল্টি-লেগ স্লিং</h3>
+<ul><li>দুই পা: প্রতিসম হলে লোড ভাগ করে।</li><li><b>তিন ও চার পায়ের স্লিং</b>: রিগিং সমান ভাগ করার জন্য ডিজাইন না হলে (স্প্রেডার, ইকুয়ালাইজার বিম) ধরে নিন শুধু <b>দুটি পা</b> লোড বহন করে। স্ট্যান্ডার্ড (যেমন EN 13414, ASME) ৩ ও ৪ পায়ের ব্রাইডলকে এই ভিত্তিতে বা কম ফ্যাক্টরে রেট করে।</li></ul>
+<h3 id="s3">অসমান পা (CoG কেন্দ্র থেকে সরে)</h3>
+<p>যে লোডের সেন্টার অফ গ্র্যাভিটি একটি লিফটিং পয়েন্টের কাছে, সেখানে CoG এর কাছের পা বেশি বহন করে।</p>
+<div class="formula">Vertical load on leg A = W × (distance from CoG to B) ÷ (distance A to B)</div>
+<p>তারপর A এর টেনশন = A এর খাড়া লোড × (A এর স্লিং দৈর্ঘ্য ÷ উচ্চতা)।</p>
+<p>উদাহরণ: 10 t লোড, লিফটিং পয়েন্ট 4 m দূরে, A থেকে CoG 1 m। A তে খাড়া = 10 × 3 ÷ 4 = 7.5 t; B তে = 2.5 t। হুক অবশ্যই CoG এর ঠিক উপরে থাকবে, তাই পা A ছোট বা খাড়া।</p>
+<h3 id="s4">সেন্টার অফ গ্র্যাভিটি খোঁজা</h3>
+<ul><li>ড্রয়িং বা ভেন্ডর ডেটা দেখুন (যন্ত্রে প্রায়ই CoG চিহ্নিত)।</li><li>মিলিত আইটেমে: রেফারেন্স পয়েন্ট থেকে CoG = Σ(ওজন × দূরত্ব) ÷ Σ ওজন।</li><li>ট্রায়াল লিফট: কয়েক সেমি তুলুন। লোড CoG এর দিকে হেলে। নামিয়ে অ্যাডজাস্ট করে আবার চেষ্টা করুন।</li><li>স্থিতিশীলতার জন্য CoG লিফটিং পয়েন্টের নিচে রাখুন। CoG এর নিচ থেকে তোলা লোড উল্টে যেতে পারে।</li></ul>
+<h3 id="s5">D/d অনুপাত (পিন বা শ্যাকলের উপর ওয়্যার রোপ)</h3>
+<p>ওয়্যার রোপ ছোট ব্যাসে বাঁকালে শক্তি কমে। D/d = পিনের ব্যাস ÷ রোপের ব্যাস। D/d = 1 এ আই দক্ষতা প্রায় 50% এ নামে; D/d 5 এ প্রায় 75%; D/d 25 এ প্রায় 93%। বড় পিন বা সুরক্ষামূলক থিম্বল ব্যবহার করুন।</p>
+<div class="pager"><a href="rigging-gear.html"><span>আগের</span>রিগিং সরঞ্জাম</a><a class="nx" href="cranes.html"><span>পরের</span>মোবাইল ক্রেন</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

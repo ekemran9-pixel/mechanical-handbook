@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shell &amp; tube exchangers · Mechanical Foreman Handbook</title>
+<meta name="description" content="TEMA types, parts, fixed tubesheet vs floating head vs U-tube, and how to read an exchanger data sheet.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/static/shell-tube.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/static/shell-tube.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html" aria-current="page">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Static Equipment &amp; Valves"><div class="grp">Heat exchangers</div><a href="shell-tube.html" aria-current="page">Shell &amp; tube exchangers</a><a href="exchanger-maintenance.html">Exchanger maintenance &amp; testing</a><a href="air-coolers.html">Air coolers (fin fans)</a><a href="plate-exchangers.html">Plate heat exchangers</a><div class="grp">Vessels &amp; tanks</div><a href="pressure-vessels.html">Pressure vessels</a><a href="columns.html">Columns &amp; trays</a><a href="storage-tanks.html">Storage tanks (API 650/653)</a><div class="grp">Valves</div><a href="valve-types.html">Valve types</a><a href="valve-maintenance.html">Valve repair &amp; testing</a><a href="safety-valves.html">Safety &amp; relief valves</a><a href="control-valves.html">Control valves (mechanical)</a><div class="grp">Steam systems</div><a href="steam-traps.html">Steam traps</a><a href="boilers.html">Boilers (basics)</a><a href="cooling-towers.html">Cooling towers</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Static Equipment &amp; Valves</a> › Heat exchangers</div>
+<h1>Shell &amp; tube exchangers</h1>
+<p class="summary">TEMA types, parts, fixed tubesheet vs floating head vs U-tube, and how to read an exchanger data sheet.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">TEMA designation</a></li><li><a href="#s2">Common designs</a></li><li><a href="#s3">Parts</a></li><li><a href="#s4">Which fluid goes where</a></li><li><a href="#s5">Tube data</a></li></ol></details>
+
+<h3 id="s1">TEMA designation</h3>
+<p>Three letters: <b>front head</b> type, <b>shell</b> type, <b>rear head</b> type. Example: <code>AES</code> = removable channel and cover, one-pass shell, split-ring floating head.</p>
+<div class="tbl"><table><tr><th>Letter</th><th>Front head</th><th>Shell</th><th>Rear head</th></tr>
+<tr><td>A</td><td>Channel with removable cover</td><td></td><td></td></tr>
+<tr><td>B</td><td>Bonnet (integral cover)</td><td></td><td></td></tr>
+<tr><td>C</td><td>Channel integral with tubesheet, removable cover</td><td></td><td></td></tr>
+<tr><td>N</td><td>Channel integral with tubesheet (fixed)</td><td></td><td>Fixed tubesheet like N</td></tr>
+<tr><td>D</td><td>Special high pressure closure</td><td></td><td></td></tr>
+<tr><td>E</td><td></td><td>One-pass shell</td><td></td></tr>
+<tr><td>F</td><td></td><td>Two-pass shell with long baffle</td><td></td></tr>
+<tr><td>G, H</td><td></td><td>Split flow, double split flow</td><td></td></tr>
+<tr><td>J</td><td></td><td>Divided flow</td><td></td></tr>
+<tr><td>K</td><td></td><td>Kettle reboiler</td><td></td></tr>
+<tr><td>X</td><td></td><td>Cross flow</td><td></td></tr>
+<tr><td>L, M</td><td></td><td></td><td>Fixed tubesheet like A / B</td></tr>
+<tr><td>P</td><td></td><td></td><td>Outside packed floating head</td></tr>
+<tr><td>S</td><td></td><td></td><td>Floating head with backing device (split ring)</td></tr>
+<tr><td>T</td><td></td><td></td><td>Pull-through floating head</td></tr>
+<tr><td>U</td><td></td><td></td><td>U-tube bundle</td></tr>
+<tr><td>W</td><td></td><td></td><td>Externally sealed floating tubesheet</td></tr></table></div>
+<h3 id="s2">Common designs</h3>
+<ul><li><b>Fixed tubesheet (BEM, NEN)</b>: cheapest. Shell side can't be mechanically cleaned. Needs an expansion joint for big temperature differences.</li><li><b>U-tube (BEU, AEU)</b>: bundle removable, handles expansion. Tube insides hard to clean at the bends.</li><li><b>Floating head (AES, AET)</b>: bundle removable, both sides cleanable. Most common in refineries.</li></ul>
+<h3 id="s3">Parts</h3>
+<ul><li>Shell, shell cover, channel, channel cover, pass partition plates.</li><li>Tubesheets (stationary and floating), tubes, baffles, tie rods and spacers, impingement plate.</li><li>Floating head cover, split backing ring.</li><li>Gaskets: channel cover, tubesheet (both sides), floating head, shell cover.</li></ul>
+<h3 id="s4">Which fluid goes where</h3>
+<ul><li>Tube side: corrosive, fouling, high pressure or cooling water (easier to clean and cheaper to upgrade).</li><li>Shell side: viscous, condensing, low flow fluids.</li></ul>
+<h3 id="s5">Tube data</h3>
+<ul><li>Common OD: 19.05 mm (¾") and 25.4 mm (1"). Wall in BWG: 14 BWG = 2.11 mm, 16 BWG = 1.65 mm, 18 BWG = 1.24 mm.</li><li>Pitch: triangular (more tubes, shell side hard to clean) or square / rotated square (cleanable lanes).</li><li>Tube to tubesheet joint: rolled (expanded), rolled and seal welded, or strength welded.</li></ul>
+<div class="pager"><i></i><a class="nx" href="exchanger-maintenance.html"><span>Next</span>Exchanger maintenance &amp; testing</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

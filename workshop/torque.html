@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Torque &amp; preload · Mechanical Foreman Handbook</title>
+<meta name="description" content="Why preload matters, torque formula, standard torque tables for metric bolts, torque tools and calibration.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/workshop/torque.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/workshop/torque.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html" aria-current="page">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Workshop, Machining &amp; Fasteners"><div class="grp">Measurement</div><a href="measuring-tools.html">Measuring tools</a><a href="limits-fits.html">Limits, fits &amp; tolerances</a><div class="grp">Machining</div><a href="lathe.html">Lathe work</a><a href="milling-drilling.html">Milling, drilling &amp; tapping</a><div class="grp">Fasteners</div><a href="threads.html">Threads &amp; identification</a><a href="fasteners.html">Bolts, nuts &amp; washers</a><a href="torque.html" aria-current="page">Torque &amp; preload</a><a href="keys-shafts.html">Keys, splines &amp; shaft locking</a><div class="grp">Tools</div><a href="hand-power-tools.html">Hand &amp; power tools</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Workshop, Machining &amp; Fasteners</a> › Fasteners</div>
+<h1>Torque &amp; preload</h1>
+<p class="summary">Why preload matters, torque formula, standard torque tables for metric bolts, torque tools and calibration.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Why preload matters</a></li><li><a href="#s2">Torque formula</a></li><li><a href="#s3">Metric coarse bolts: tightening torque (lightly oiled, friction μ ≈ 0.12)</a></li><li><a href="#s4">Torque tools</a></li><li><a href="#s5">Calibration</a></li><li><a href="#s6">Extension adapters</a></li></ol></details>
+
+<h3 id="s1">Why preload matters</h3>
+<p>A bolt works like a spring. Tightened properly, the clamped parts carry the working load and the bolt sees little change in stress. Under-tightened, the joint separates, slips and the bolt fatigues or loosens.</p>
+<h3 id="s2">Torque formula</h3>
+<div class="formula">T (N·m) = K × F (kN) × d (mm)</div>
+<p>About 90% of torque goes into overcoming friction (thread and under the nut). Only 10% stretches the bolt. That's why lubrication changes the result so much.</p>
+<div class="tbl"><table><tr><th>Condition</th><th>Nut factor K (typical)</th></tr>
+<tr><td>Dry, as received black oxide</td><td>0.20</td></tr><tr><td>Zinc plated dry</td><td>0.20–0.22</td></tr><tr><td>Light oil</td><td>0.15–0.18</td></tr><tr><td>Moly paste (MoS₂)</td><td>0.10–0.12</td></tr><tr><td>Copper anti-seize</td><td>0.13–0.15</td></tr><tr><td>PTFE coated</td><td>0.08–0.12</td></tr></table></div>
+<h3 id="s3">Metric coarse bolts: tightening torque (lightly oiled, friction μ ≈ 0.12)</h3>
+<div class="tbl"><table><tr><th>Size</th><th>8.8 torque N·m</th><th>10.9 torque N·m</th><th>12.9 torque N·m</th></tr>
+<tr><td>M6</td><td>10</td><td>15</td><td>17</td></tr><tr><td>M8</td><td>25</td><td>36</td><td>42</td></tr><tr><td>M10</td><td>48</td><td>71</td><td>83</td></tr><tr><td>M12</td><td>84</td><td>123</td><td>144</td></tr><tr><td>M16</td><td>206</td><td>302</td><td>354</td></tr><tr><td>M20</td><td>415</td><td>592</td><td>692</td></tr><tr><td>M24</td><td>714</td><td>1,017</td><td>1,190</td></tr><tr><td>M30</td><td>1,428</td><td>2,033</td><td>2,380</td></tr><tr><td>M36</td><td>2,482</td><td>3,535</td><td>4,136</td></tr></table></div>
+<p style="font-size:.85rem;color:var(--muted)">Typical VDI 2230 table values for 90% use of yield strength with μ = 0.12. Dry or plated bolts need more torque for the same preload; moly paste needs less. Equipment manuals and gasketed joints use their own values.</p>
+<h3 id="s4">Torque tools</h3>
+<ul><li><b>Click wrench</b>: set, pull smoothly at 90° to the handle until click. Wind back to the lowest setting after use (not zero below the scale).</li><li>Use within 20–100% of the wrench range for accuracy (±4% typical, ISO 6789).</li><li><b>Torque multiplier</b>: gear ratio; the reaction arm must rest on a solid point.</li><li><b>Hydraulic torque wrench</b>: square drive or low profile cassette. Pressure-to-torque chart for each tool. Reaction point must be secure.</li><li><b>Torque-angle method</b>: snug, then turn a set angle. More consistent preload.</li><li><b>Direct tension indicators (DTI washers)</b> and ultrasonic bolt elongation measurement for critical joints.</li></ul>
+<h3 id="s5">Calibration</h3>
+<p>Calibrate torque wrenches every 12 months or 5,000 cycles (ISO 6789), or after a drop. Hydraulic pumps and gauges as a set. Record tool serial numbers on critical joints.</p>
+<h3 id="s6">Extension adapters</h3>
+<p>An adapter (crow's foot) that extends the wrench length changes the actual torque:</p>
+<div class="formula">Wrench setting = T × L ÷ (L + E)</div>
+<p>L = wrench length to the drive centre, E = extension length. A crow's foot at 90° to the handle needs no correction.</p>
+<div class="pager"><a href="fasteners.html"><span>Previous</span>Bolts, nuts &amp; washers</a><a class="nx" href="keys-shafts.html"><span>Next</span>Keys, splines &amp; shaft locking</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

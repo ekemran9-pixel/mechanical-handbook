@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pump overhaul procedure · Mechanical Foreman Handbook</title>
+<meta name="description" content="Step-by-step strip, inspect, measure and rebuild of an OH2 process pump, with the readings to record.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/rotary/pump-overhaul.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/rotary/pump-overhaul.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html" aria-current="page">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Rotary Equipment"><div class="grp">Pumps</div><a href="centrifugal-pumps.html">Centrifugal pump basics</a><a href="pump-curves.html">Pump curves &amp; system curves</a><a href="pump-types.html">Pump types &amp; API 610 codes</a><a href="pump-overhaul.html" aria-current="page">Pump overhaul procedure</a><a href="pd-pumps.html">Positive displacement pumps</a><a href="pump-troubleshooting.html">Pump troubleshooting</a><div class="grp">Seals &amp; packing</div><a href="mechanical-seals.html">Mechanical seals</a><a href="seal-plans.html">Seal flush plans (API 682)</a><a href="gland-packing.html">Gland packing</a><div class="grp">Bearings &amp; lubrication</div><a href="rolling-bearings.html">Rolling element bearings</a><a href="bearing-mounting.html">Bearing mounting &amp; removal</a><a href="plain-bearings.html">Plain &amp; tilting-pad bearings</a><a href="lubrication.html">Lubrication</a><a href="oil-analysis.html">Oil analysis</a><div class="grp">Alignment &amp; vibration</div><a href="alignment.html">Shaft alignment</a><a href="dial-alignment.html">Dial indicator alignment methods</a><a href="vibration.html">Vibration analysis</a><a href="balancing.html">Balancing</a><a href="condition-monitoring.html">Condition monitoring</a><div class="grp">Drives &amp; transmission</div><a href="couplings.html">Couplings</a><a href="gearboxes.html">Gearboxes</a><a href="belts-chains.html">Belt &amp; chain drives</a><a href="electric-motors.html">Electric motors (mechanical side)</a><div class="grp">Fluid power</div><a href="hydraulics.html">Hydraulic systems</a><a href="pneumatics.html">Compressed air &amp; pneumatics</a><div class="grp">Compressors &amp; turbines</div><a href="recip-compressors.html">Reciprocating compressors</a><a href="centrifugal-compressors.html">Centrifugal compressors</a><a href="screw-compressors.html">Screw &amp; air compressors</a><a href="steam-turbines.html">Steam turbines</a><a href="gas-turbines.html">Gas turbines (overview)</a><div class="grp">Other machines</div><a href="fans-blowers.html">Fans &amp; blowers</a><a href="agitators.html">Agitators &amp; mixers</a><a href="conveyors.html">Belt conveyors</a><a href="cranes-hoists.html">Cranes &amp; hoists (maintenance)</a><div class="grp">Reliability</div><a href="rca.html">Root cause analysis</a><a href="maintenance-strategy.html">Maintenance strategy &amp; KPIs</a><a href="preservation.html">Storage &amp; preservation</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Rotary Equipment</a> › Pumps</div>
+<h1>Pump overhaul procedure</h1>
+<p class="summary">Step-by-step strip, inspect, measure and rebuild of an OH2 process pump, with the readings to record.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Before you start</a></li><li><a href="#s2">Strip</a></li><li><a href="#s3">Inspect and measure</a></li><li><a href="#s4">Rebuild</a></li><li><a href="#s5">Record sheet</a></li></ol></details>
+
+<p>This sequence fits a typical OH2 back pull-out pump with a cartridge seal and oil-lubricated bearings. Adapt it to the maker's manual.</p>
+<h3 id="s1">Before you start</h3>
+<ol class="steps"><li>Permit, LOTO on the motor breaker, suction and discharge valves locked shut. Flush and seal lines isolated.</li><li>Drain and vent the casing to a safe place. Check for zero pressure on the gauge.</li><li>Gas test if the product is flammable or toxic.</li><li>Take as-found readings: alignment, coupling gap, vibration history, seal leakage note.</li><li>Get spares ready: seal, bearings, gaskets, O-rings, wear rings if due, lock washer and nut.</li></ol>
+<h3 id="s2">Strip</h3>
+<ol class="steps"><li>Remove coupling guard and spacer. Mark the hubs.</li><li>Drain the bearing housing oil. Keep a sample for analysis.</li><li>Disconnect seal flush and cooling lines. Cap the open ends.</li><li>Fit the seal setting clips on the cartridge seal before loosening anything.</li><li>Support the bearing frame with a sling or stand. Remove the casing bolts. Use jacking screws, never wedges between faces.</li><li>Pull out the rotating assembly. Take it to a clean bench.</li><li>Remove the impeller nut (usually left-hand thread on a clockwise pump, check). Remove the impeller with a puller if tight.</li><li>Slide off the seal cartridge. Remove the coupling hub with a puller or heat.</li><li>Remove bearing end covers and press out the shaft and bearings.</li></ol>
+<h3 id="s3">Inspect and measure</h3>
+<div class="tbl"><table><tr><th>Item</th><th>How</th><th>Typical acceptance</th></tr>
+<tr><td>Shaft straightness</td><td>Between centres or in V-blocks, dial at seal area, bearing seats and impeller fit</td><td>≤ 0.025 mm TIR (API), ≤ 0.05 mm general</td></tr>
+<tr><td>Bearing seats</td><td>Micrometer, 2 positions × 2 planes</td><td>Within the fit tolerance (e.g. k5)</td></tr>
+<tr><td>Housing bores</td><td>Bore gauge</td><td>Within H6/H7, no ovality above 0.01 mm</td></tr>
+<tr><td>Wear ring clearance</td><td>Micrometer impeller ring OD, bore gauge casing ring ID</td><td>Replace at 2× new clearance</td></tr>
+<tr><td>Impeller</td><td>Visual, PT if cracked suspected</td><td>No through-pitting, balance to G2.5 if repaired</td></tr>
+<tr><td>Impeller bore to shaft</td><td>Measure</td><td>Light interference or 0.01–0.03 mm clearance per OEM</td></tr>
+<tr><td>Keys</td><td>Fit in keyway</td><td>Side fit snug, top clearance present</td></tr>
+<tr><td>Casing gasket faces</td><td>Visual, straight edge</td><td>No radial scratches or steam cuts</td></tr>
+<tr><td>Bearing housing labyrinth seals</td><td>Visual</td><td>O-rings good, drain holes at the bottom</td></tr></table></div>
+<h3 id="s4">Rebuild</h3>
+<ol class="steps"><li>Clean all parts. Blow out oil passages.</li><li>Heat bearings on an induction heater to about 110 °C. Fit against the shoulder and hold until it grips.</li><li>Fit angular contact pairs in the right arrangement (usually back-to-back, the "V" points outward on the outer rings' marks).</li><li>Fit the lock washer and nut once the bearings cool. Tighten, then bend a tab.</li><li>Fit the shaft into the housing, then the end covers. Check shaft end float with a dial: typical 0.05–0.10 mm for paired angular contact bearings, larger for ball/roller combos.</li><li>Check shaft runout at the seal sleeve and the impeller fit, mounted in its own bearings.</li><li>Check seal chamber face runout with the dial on the shaft: ≤ 0.013 mm per 25 mm of shaft diameter.</li><li>Fit the seal cartridge and impeller. Torque the impeller nut to OEM value.</li><li>Fit the new casing gasket. Install the rotating assembly. Tighten casing bolts evenly in a star pattern.</li><li>Check the rotor turns freely by hand. For semi-open impellers set front clearance now.</li><li>Tighten the seal gland nuts, then remove setting clips.</li><li>Refit the coupling hub, align the pump (see <a href="alignment.html">Shaft alignment</a>).</li><li>Fill bearing housing oil to the mark. Reconnect flush lines.</li></ol>
+<h3 id="s5">Record sheet</h3>
+<p>Record at least: shaft runout (3 points), end float, ring clearances (old and new), bearing numbers fitted, seal serial number, impeller nut torque, final alignment readings, soft foot readings, coupling gap. Sign and date it. These numbers are the starting point for the next failure analysis.</p>
+<div class="note"><b>Tip.</b> Photograph each part as removed. A failed seal face or bearing tells you why it failed. Keep them for the RCA, don't throw them in the scrap bin.</div>
+<div class="pager"><a href="pump-types.html"><span>Previous</span>Pump types &amp; API 610 codes</a><a class="nx" href="pd-pumps.html"><span>Next</span>Positive displacement pumps</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shaft alignment · Mechanical Foreman Handbook</title>
+<meta name="description" content="Why alignment matters, the full alignment procedure, soft foot, pipe strain, tolerances and thermal growth.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/rotary/alignment.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/rotary/alignment.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html" aria-current="page">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Rotary Equipment"><div class="grp">Pumps</div><a href="centrifugal-pumps.html">Centrifugal pump basics</a><a href="pump-curves.html">Pump curves &amp; system curves</a><a href="pump-types.html">Pump types &amp; API 610 codes</a><a href="pump-overhaul.html">Pump overhaul procedure</a><a href="pd-pumps.html">Positive displacement pumps</a><a href="pump-troubleshooting.html">Pump troubleshooting</a><div class="grp">Seals &amp; packing</div><a href="mechanical-seals.html">Mechanical seals</a><a href="seal-plans.html">Seal flush plans (API 682)</a><a href="gland-packing.html">Gland packing</a><div class="grp">Bearings &amp; lubrication</div><a href="rolling-bearings.html">Rolling element bearings</a><a href="bearing-mounting.html">Bearing mounting &amp; removal</a><a href="plain-bearings.html">Plain &amp; tilting-pad bearings</a><a href="lubrication.html">Lubrication</a><a href="oil-analysis.html">Oil analysis</a><div class="grp">Alignment &amp; vibration</div><a href="alignment.html" aria-current="page">Shaft alignment</a><a href="dial-alignment.html">Dial indicator alignment methods</a><a href="vibration.html">Vibration analysis</a><a href="balancing.html">Balancing</a><a href="condition-monitoring.html">Condition monitoring</a><div class="grp">Drives &amp; transmission</div><a href="couplings.html">Couplings</a><a href="gearboxes.html">Gearboxes</a><a href="belts-chains.html">Belt &amp; chain drives</a><a href="electric-motors.html">Electric motors (mechanical side)</a><div class="grp">Fluid power</div><a href="hydraulics.html">Hydraulic systems</a><a href="pneumatics.html">Compressed air &amp; pneumatics</a><div class="grp">Compressors &amp; turbines</div><a href="recip-compressors.html">Reciprocating compressors</a><a href="centrifugal-compressors.html">Centrifugal compressors</a><a href="screw-compressors.html">Screw &amp; air compressors</a><a href="steam-turbines.html">Steam turbines</a><a href="gas-turbines.html">Gas turbines (overview)</a><div class="grp">Other machines</div><a href="fans-blowers.html">Fans &amp; blowers</a><a href="agitators.html">Agitators &amp; mixers</a><a href="conveyors.html">Belt conveyors</a><a href="cranes-hoists.html">Cranes &amp; hoists (maintenance)</a><div class="grp">Reliability</div><a href="rca.html">Root cause analysis</a><a href="maintenance-strategy.html">Maintenance strategy &amp; KPIs</a><a href="preservation.html">Storage &amp; preservation</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Rotary Equipment</a> › Alignment &amp; vibration</div>
+<h1>Shaft alignment</h1>
+<p class="summary">Why alignment matters, the full alignment procedure, soft foot, pipe strain, tolerances and thermal growth.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Terms</a></li><li><a href="#s2">Procedure</a></li><li><a href="#s3">Soft foot</a></li><li><a href="#s4">Pipe strain check</a></li><li><a href="#s5">Typical tolerances</a></li><li><a href="#s6">Correcting with shims</a></li><li><a href="#s7">Bolt bound and base bound</a></li><li><a href="#s8">Thermal growth</a></li><li><a href="#s9">Vertical machines</a></li><li><a href="#s10">Good practice</a></li></ol></details>
+
+<p>Misalignment loads bearings, seals and couplings. It shows up as high axial vibration, warm couplings, short bearing and seal life and wasted energy. Good alignment is the cheapest reliability improvement you can make.</p>
+<h3 id="s1">Terms</h3>
+<ul><li><b>Offset (parallel)</b>: the distance between shaft centrelines, measured at the coupling centre. Expressed in mm.</li><li><b>Angularity</b>: the angle between centrelines. Expressed as a gap difference per 100 mm of diameter (mm/100 mm), or in mrad (1 mrad = 0.1 mm/100 mm).</li><li>Both are measured in the <b>vertical</b> plane and the <b>horizontal</b> plane: four values in total.</li><li><b>Stationary machine</b>: the one you don't move (usually the pump or gearbox). <b>Movable machine</b>: usually the motor.</li></ul>
+<h3 id="s2">Procedure</h3>
+<ol class="steps"><li><b>Safety</b>: LOTO the driver, isolate the driven machine. Check both shafts can be turned.</li><li><b>Prepare</b>: clean the baseplate, feet and shims. Check bolts and holes. Have a set of precut stainless shims.</li><li><b>Check run-out</b> of the coupling hubs (≤ 0.05 mm) and that the shafts aren't bent.</li><li><b>Rough align</b> with a straight edge and feelers to within about 0.5 mm.</li><li><b>Check soft foot</b> on every foot and correct it (below).</li><li><b>Check pipe strain</b> on the stationary machine.</li><li><b>Measure</b> with laser or dials. Record as-found values.</li><li><b>Correct vertical</b>: add or remove shims under the movable machine's front and back feet.</li><li><b>Correct horizontal</b>: move sideways with jack bolts, with dials on the feet to watch the move.</li><li><b>Tighten</b> the hold-down bolts in a set sequence and to torque.</li><li><b>Re-measure</b>. Repeat until in tolerance.</li><li><b>Record</b> final readings, shims added, coupling gap. Refit guard.</li></ol>
+<h3 id="s3">Soft foot</h3>
+<p>Soft foot means one foot doesn't sit flat. Tightening its bolt twists the frame, distorts bearing bores and changes alignment.</p>
+<ol class="steps"><li>Tighten all foot bolts.</li><li>Put a dial on one foot (or use the laser soft foot program).</li><li>Loosen that bolt only. Read the rise.</li><li>Retighten. Repeat for every foot.</li><li>Any foot rising more than 0.05 mm needs correction.</li></ol>
+<div class="tbl"><table><tr><th>Type</th><th>Check</th><th>Fix</th></tr>
+<tr><td>Parallel (short foot)</td><td>Feeler gauge shows the same gap all round the foot</td><td>Add shim of that thickness</td></tr>
+<tr><td>Angled foot</td><td>Gap varies across the foot</td><td>Step shim or machine the foot / base</td></tr>
+<tr><td>Induced (from pipe or a bent foot)</td><td>Reading changes with other bolts</td><td>Remove the external force first</td></tr>
+<tr><td>Squishy foot</td><td>Too many shims, dirt, rust</td><td>Clean, replace with max 3–4 shims</td></tr></table></div>
+<h3 id="s4">Pipe strain check</h3>
+<p>Mount dials on the stationary shaft or coupling in vertical and horizontal planes. Loosen the suction and discharge flange bolts. If the shaft moves more than 0.05 mm, the piping is forcing the machine. Fix supports or re-fit the spool. Never bend a pump to suit the pipe.</p>
+<h3 id="s5">Typical tolerances</h3>
+<p>For short flexible couplings (values are at the coupling centre):</p>
+<div class="tbl"><table><tr><th>Speed (rpm)</th><th>Offset excellent</th><th>Offset acceptable</th><th>Angular excellent</th><th>Angular acceptable</th></tr>
+<tr><td>600</td><td>0.13</td><td>0.23</td><td>0.09 /100</td><td>0.13 /100</td></tr>
+<tr><td>750–1000</td><td>0.07</td><td>0.13</td><td>0.06 /100</td><td>0.10 /100</td></tr>
+<tr><td>1500</td><td>0.06</td><td>0.09</td><td>0.05 /100</td><td>0.07 /100</td></tr>
+<tr><td>3000</td><td>0.03</td><td>0.06</td><td>0.03 /100</td><td>0.04 /100</td></tr>
+<tr><td>6000</td><td>0.02</td><td>0.03</td><td>0.02 /100</td><td>0.03 /100</td></tr></table></div>
+<p>Spacer couplings are judged by angle across each flex element: a common limit is 0.5 mm per metre of spacer length (0.5 mrad) for 3000 rpm.</p>
+<h3 id="s6">Correcting with shims</h3>
+<p>With rim-face or laser data you calculate corrections at the front feet and back feet. The laser does it for you. By hand:</p>
+<div class="formula">Foot correction = Offset + (Angle × Distance from coupling centre to foot)</div>
+<p>Use angle as a slope (mm per mm). Watch the sign: positive means the movable machine is high and you remove shims.</p>
+<h3 id="s7">Bolt bound and base bound</h3>
+<ul><li><b>Bolt bound</b>: the motor can't move far enough sideways because the bolts hit the holes. Move the stationary machine slightly, or open the holes on the movable one (with engineering approval).</li><li><b>Base bound</b>: the motor needs to go lower but there are no shims left. Raise the stationary machine or machine the base.</li></ul>
+<h3 id="s8">Thermal growth</h3>
+<p>Machines grow as they warm. A hot pump centreline rises; a motor grows a little. Set the cold alignment so the shafts come into line hot.</p>
+<div class="formula">ΔL (mm) = α × L (mm) × ΔT (°C)    steel α = 0.0000117</div>
+<p>Example: pump centreline 450 mm above the base, casing support temperature rises 60 °C: ΔL = 0.0000117 × 450 × 60 = 0.32 mm. Set the pump 0.32 mm low compared with the motor cold (or the motor 0.32 mm high), minus the motor's own growth.</p>
+<p>Makers often give cold offsets on the alignment drawing. Hot alignment checks (with probes, or Dodd bars, or a laser hot check right after shutdown) confirm them.</p>
+<h3 id="s9">Vertical machines</h3>
+<p>Vertical pumps with a rigid motor stand are checked for <b>squareness</b> of the motor mounting face and <b>concentricity</b> (rabbet fit). Shim between motor and stand only if the design allows.</p>
+<h3 id="s10">Good practice</h3>
+<ul><li>Turn both shafts together in the direction of rotation for readings.</li><li>Don't use a coupling spider as a lever for turning.</li><li>Use precut stainless shims, never more than 4 per foot. Mark the thickness.</li><li>Leave the movable machine with some shim under every foot (0.5–1 mm) for future correction.</li><li>Recheck alignment after the first 24–48 h of running on new installations.</li></ul>
+<div class="pager"><a href="oil-analysis.html"><span>Previous</span>Oil analysis</a><a class="nx" href="dial-alignment.html"><span>Next</span>Dial indicator alignment methods</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

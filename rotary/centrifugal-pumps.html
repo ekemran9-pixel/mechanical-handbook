@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Centrifugal pump basics · Mechanical Foreman Handbook</title>
+<meta name="description" content="How a centrifugal pump works, its main parts, NPSH, cavitation and the checks that matter on site.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/rotary/centrifugal-pumps.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/rotary/centrifugal-pumps.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html" aria-current="page">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Rotary Equipment"><div class="grp">Pumps</div><a href="centrifugal-pumps.html" aria-current="page">Centrifugal pump basics</a><a href="pump-curves.html">Pump curves &amp; system curves</a><a href="pump-types.html">Pump types &amp; API 610 codes</a><a href="pump-overhaul.html">Pump overhaul procedure</a><a href="pd-pumps.html">Positive displacement pumps</a><a href="pump-troubleshooting.html">Pump troubleshooting</a><div class="grp">Seals &amp; packing</div><a href="mechanical-seals.html">Mechanical seals</a><a href="seal-plans.html">Seal flush plans (API 682)</a><a href="gland-packing.html">Gland packing</a><div class="grp">Bearings &amp; lubrication</div><a href="rolling-bearings.html">Rolling element bearings</a><a href="bearing-mounting.html">Bearing mounting &amp; removal</a><a href="plain-bearings.html">Plain &amp; tilting-pad bearings</a><a href="lubrication.html">Lubrication</a><a href="oil-analysis.html">Oil analysis</a><div class="grp">Alignment &amp; vibration</div><a href="alignment.html">Shaft alignment</a><a href="dial-alignment.html">Dial indicator alignment methods</a><a href="vibration.html">Vibration analysis</a><a href="balancing.html">Balancing</a><a href="condition-monitoring.html">Condition monitoring</a><div class="grp">Drives &amp; transmission</div><a href="couplings.html">Couplings</a><a href="gearboxes.html">Gearboxes</a><a href="belts-chains.html">Belt &amp; chain drives</a><a href="electric-motors.html">Electric motors (mechanical side)</a><div class="grp">Fluid power</div><a href="hydraulics.html">Hydraulic systems</a><a href="pneumatics.html">Compressed air &amp; pneumatics</a><div class="grp">Compressors &amp; turbines</div><a href="recip-compressors.html">Reciprocating compressors</a><a href="centrifugal-compressors.html">Centrifugal compressors</a><a href="screw-compressors.html">Screw &amp; air compressors</a><a href="steam-turbines.html">Steam turbines</a><a href="gas-turbines.html">Gas turbines (overview)</a><div class="grp">Other machines</div><a href="fans-blowers.html">Fans &amp; blowers</a><a href="agitators.html">Agitators &amp; mixers</a><a href="conveyors.html">Belt conveyors</a><a href="cranes-hoists.html">Cranes &amp; hoists (maintenance)</a><div class="grp">Reliability</div><a href="rca.html">Root cause analysis</a><a href="maintenance-strategy.html">Maintenance strategy &amp; KPIs</a><a href="preservation.html">Storage &amp; preservation</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Rotary Equipment</a> › Pumps</div>
+<h1>Centrifugal pump basics</h1>
+<p class="summary">How a centrifugal pump works, its main parts, NPSH, cavitation and the checks that matter on site.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Main parts</a></li><li><a href="#s2">Impeller types</a></li><li><a href="#s3">NPSH and cavitation</a></li><li><a href="#s4">Recirculation</a></li><li><a href="#s5">Operating window</a></li><li><a href="#s6">Axial and radial thrust</a></li><li><a href="#s7">Priming</a></li><li><a href="#s8">Start-up checklist</a></li></ol></details>
+
+<p>A centrifugal pump adds energy to a liquid by spinning it. The impeller throws liquid outward, raising its velocity. The volute or diffuser then slows the liquid and turns that velocity into pressure. A pump makes <b>head</b> (metres of liquid), not pressure. The same pump lifts water and petrol to the same height, but the gauge reads differently because of the specific gravity.</p>
+<div class="formula">Pressure (bar) = Head (m) × SG ÷ 10.2</div>
+<h3 id="s1">Main parts</h3>
+<div class="tbl"><table><tr><th>Part</th><th>Job</th><th>What to inspect</th></tr>
+<tr><td>Casing (volute or diffuser)</td><td>Collects liquid, converts velocity to pressure</td><td>Erosion at the cutwater, corrosion, gasket faces, cracks</td></tr>
+<tr><td>Impeller</td><td>Gives energy to the liquid</td><td>Vane tip erosion, cavitation pitting at the eye, blocked passages, balance</td></tr>
+<tr><td>Wear rings (casing and impeller)</td><td>Control leakage from discharge back to suction</td><td>Clearance against the new value, scoring, galling</td></tr>
+<tr><td>Shaft and sleeve</td><td>Carries the impeller, protects the shaft under the seal</td><td>Runout, wear under the seal, keyway damage, thread damage</td></tr>
+<tr><td>Bearing housing / frame</td><td>Holds radial and thrust bearings, oil sump</td><td>Bore wear, oil level marks, breather, labyrinth seals</td></tr>
+<tr><td>Seal chamber / stuffing box</td><td>Houses mechanical seal or packing</td><td>Face squareness, bore concentricity, flush ports clear</td></tr>
+<tr><td>Coupling</td><td>Transmits torque from the driver</td><td>Element wear, hub fit, spacer length</td></tr></table></div>
+<h3 id="s2">Impeller types</h3>
+<ul><li><b>Closed</b>: shrouds on both sides of the vanes. High efficiency, clean liquids. Uses wear rings.</li>
+<li><b>Semi-open</b>: one shroud. Handles some solids. Efficiency depends on front clearance, set by axial adjustment (often 0.3–0.5 mm).</li>
+<li><b>Open</b>: no shrouds. Slurries and stringy material.</li>
+<li><b>Single suction</b> vs <b>double suction</b>: double suction halves NPSHr and balances axial thrust. Common in between-bearing pumps.</li></ul>
+<h3 id="s3">NPSH and cavitation</h3>
+<p>NPSH (net positive suction head) is how far the suction pressure sits above the liquid's vapour pressure, in metres of liquid. <b>NPSHa</b> is what the system gives. <b>NPSHr</b> is what the pump needs, from the maker's curve (the point where head falls by 3%).</p>
+<div class="formula">NPSHa = (P_surface − P_vapour) × 10.2 ÷ SG + Z_static − H_friction</div>
+<p>P in bar absolute, Z positive if the liquid level is above the pump centreline. Keep NPSHa above NPSHr with a margin. A common rule is NPSHa ≥ NPSHr + 1 m, or a ratio of 1.1 to 1.3. High-energy pumps, hot water and hydrocarbons near boiling need more.</p>
+<p><b>Cavitation</b> happens when pressure in the impeller eye drops below vapour pressure. Bubbles form, travel to higher pressure and collapse with great force. That collapse eats metal.</p>
+<ul><li>Sounds like gravel or marbles in the casing.</li><li>Head and flow fluctuate, motor amps swing.</li><li>Broadband vibration and noise.</li><li>Pitting on the low-pressure (front) side of the vanes, near the eye.</li></ul>
+<p><b>Fixes:</b> raise suction tank level, clean the suction strainer, open the suction valve fully (never throttle suction), shorten or enlarge the suction line, cool the liquid, reduce flow toward BEP, or fit an inducer.</p>
+<h3 id="s4">Recirculation</h3>
+<p>Running far left of BEP (low flow) causes suction and discharge recirculation. Liquid turns back inside the impeller. It sounds like cavitation and damages the <b>pressure side</b> of the vanes and the shrouds. The fix is more flow: a minimum flow bypass, not a smaller suction valve.</p>
+<h3 id="s5">Operating window</h3>
+<ul><li>Best: 80–110% of BEP flow.</li><li>Allowable: roughly 70–120% of BEP for most process pumps (API 610 preferred range).</li><li>Below minimum continuous flow: heating, recirculation, high vibration, seal and bearing damage.</li><li>Far right of the curve: high NPSHr, cavitation, motor overload.</li></ul>
+<h3 id="s6">Axial and radial thrust</h3>
+<p>Pressure acts unequally on the two sides of an impeller, making axial thrust toward suction. Makers balance it with <b>balance holes</b> and back wear rings, back vanes (pump-out vanes), opposed impellers in multistage pumps, or a balance drum or disc. Worn rings or blocked balance holes raise thrust and overload the thrust bearing.</p>
+<p>Radial thrust is lowest at BEP in a single volute and rises at low and high flow. Double volutes reduce it. High radial load bends the shaft and wears the seal faces and the rings.</p>
+<h3 id="s7">Priming</h3>
+<p>Most centrifugal pumps can't pump air. Fill the casing and suction line before start. Vent at the casing high point until liquid flows without bubbles. Self-priming designs keep liquid in the casing to re-prime.</p>
+<h3 id="s8">Start-up checklist</h3>
+<ol class="steps"><li>Permit closed, LOTO removed, guard fitted.</li><li>Oil level correct, oiler filled, cooling water on.</li><li>Seal flush and quench lines open, seal pot pressurised if fitted.</li><li>Suction valve fully open, casing vented and primed.</li><li>Discharge valve closed or cracked (centrifugal), per site procedure.</li><li>Check rotation by bump if the motor was disconnected.</li><li>Start, then open discharge slowly within 30 s to avoid running at shut-off.</li><li>Check discharge pressure, amps, noise, seal leakage and bearing temperature.</li><li>Take baseline vibration after 30 minutes.</li></ol>
+<div class="warn"><b>Never run dry or dead-headed.</b> At shut-off all motor power turns into heat in a small volume of liquid. A small pump can boil its contents in minutes.</div>
+<div class="pager"><i></i><a class="nx" href="pump-curves.html"><span>Next</span>Pump curves &amp; system curves</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

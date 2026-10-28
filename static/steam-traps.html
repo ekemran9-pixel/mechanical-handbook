@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Steam traps · Mechanical Foreman Handbook</title>
+<meta name="description" content="Trap types, how to test them, common faults and good installation practice.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/static/steam-traps.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/static/steam-traps.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html" aria-current="page">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Static Equipment &amp; Valves"><div class="grp">Heat exchangers</div><a href="shell-tube.html">Shell &amp; tube exchangers</a><a href="exchanger-maintenance.html">Exchanger maintenance &amp; testing</a><a href="air-coolers.html">Air coolers (fin fans)</a><a href="plate-exchangers.html">Plate heat exchangers</a><div class="grp">Vessels &amp; tanks</div><a href="pressure-vessels.html">Pressure vessels</a><a href="columns.html">Columns &amp; trays</a><a href="storage-tanks.html">Storage tanks (API 650/653)</a><div class="grp">Valves</div><a href="valve-types.html">Valve types</a><a href="valve-maintenance.html">Valve repair &amp; testing</a><a href="safety-valves.html">Safety &amp; relief valves</a><a href="control-valves.html">Control valves (mechanical)</a><div class="grp">Steam systems</div><a href="steam-traps.html" aria-current="page">Steam traps</a><a href="boilers.html">Boilers (basics)</a><a href="cooling-towers.html">Cooling towers</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Static Equipment &amp; Valves</a> › Steam systems</div>
+<h1>Steam traps</h1>
+<p class="summary">Trap types, how to test them, common faults and good installation practice.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Types</a></li><li><a href="#s2">Testing</a></li><li><a href="#s3">Installation</a></li></ol></details>
+
+<p>A steam trap lets condensate and air out and holds steam in. Failed open traps waste steam. Failed closed traps flood equipment, causing water hammer, corrosion and poor heating.</p>
+<h3 id="s1">Types</h3>
+<div class="tbl"><table><tr><th>Type</th><th>How it works</th><th>Use</th></tr>
+<tr><td>Thermodynamic (TD)</td><td>Disc snaps shut on flash steam velocity</td><td>Steam mains drip legs, tracing. Small, robust</td></tr>
+<tr><td>Float &amp; thermostatic (F&amp;T)</td><td>Float opens on level; thermostatic element vents air</td><td>Heat exchangers, process with modulating loads. Continuous discharge</td></tr>
+<tr><td>Inverted bucket</td><td>Bucket floats when steam is under it, sinks with condensate</td><td>Mains, process, superheated (with check). Needs a water seal (prime)</td></tr>
+<tr><td>Thermostatic (balanced pressure, bimetallic)</td><td>Opens when condensate cools below steam temperature</td><td>Tracing, startup air venting, where subcooled discharge is acceptable</td></tr></table></div>
+<h3 id="s2">Testing</h3>
+<ul><li><b>Ultrasound</b>: listen to the cycling. TD traps click; F&amp;T discharge steadily; bucket traps cycle.</li><li><b>Temperature</b>: inlet hot, outlet cooler. Inlet cold = blocked or failed closed (or no load).</li><li><b>Sight glass / test valve</b>: open discharge to atmosphere downstream: flash steam (lazy, white) is normal; live steam (clear blue jet near the outlet) means blowing.</li></ul>
+<h3 id="s3">Installation</h3>
+<ul><li>Drip legs on mains every 30–50 m and at low points, with pocket the same size as the main for small mains.</li><li>Strainer and isolation valves before the trap, check valve after when lifting condensate.</li><li>One trap per piece of equipment (no group trapping).</li><li>Install the trap below the drain point.</li></ul>
+<div class="pager"><a href="control-valves.html"><span>Previous</span>Control valves (mechanical)</a><a class="nx" href="boilers.html"><span>Next</span>Boilers (basics)</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

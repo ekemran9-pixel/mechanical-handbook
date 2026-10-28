@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>সেন্ট্রিফিউগাল পাম্পের মূল কথা · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="সেন্ট্রিফিউগাল পাম্প কীভাবে কাজ করে, এর প্রধান অংশ, NPSH, ক্যাভিটেশন এবং সাইটে যে চেকগুলো জরুরি।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rotary/centrifugal-pumps.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rotary/centrifugal-pumps.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html" aria-current="page">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রোটারি যন্ত্রপাতি"><div class="grp">পাম্প</div><a href="centrifugal-pumps.html" aria-current="page">সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a href="pump-curves.html">পাম্প কার্ভ ও সিস্টেম কার্ভ</a><a href="pump-types.html">পাম্পের ধরন ও API 610 কোড</a><a href="pump-overhaul.html">পাম্প ওভারহল পদ্ধতি</a><a href="pd-pumps.html">পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a href="pump-troubleshooting.html">পাম্পের সমস্যা সমাধান</a><div class="grp">সিল ও প্যাকিং</div><a href="mechanical-seals.html">মেকানিক্যাল সিল</a><a href="seal-plans.html">সিল ফ্লাশ প্ল্যান (API 682)</a><a href="gland-packing.html">গ্ল্যান্ড প্যাকিং</a><div class="grp">বিয়ারিং ও লুব্রিকেশন</div><a href="rolling-bearings.html">রোলিং এলিমেন্ট বিয়ারিং</a><a href="bearing-mounting.html">বিয়ারিং লাগানো ও খোলা</a><a href="plain-bearings.html">প্লেইন ও টিল্টিং-প্যাড বিয়ারিং</a><a href="lubrication.html">লুব্রিকেশন</a><a href="oil-analysis.html">তেল বিশ্লেষণ</a><div class="grp">অ্যালাইনমেন্ট ও ভাইব্রেশন</div><a href="alignment.html">শ্যাফট অ্যালাইনমেন্ট</a><a href="dial-alignment.html">ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a href="vibration.html">ভাইব্রেশন বিশ্লেষণ</a><a href="balancing.html">ব্যালান্সিং</a><a href="condition-monitoring.html">কন্ডিশন মনিটরিং</a><div class="grp">ড্রাইভ ও ট্রান্সমিশন</div><a href="couplings.html">কাপলিং</a><a href="gearboxes.html">গিয়ারবক্স</a><a href="belts-chains.html">বেল্ট ও চেইন ড্রাইভ</a><a href="electric-motors.html">ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</a><div class="grp">ফ্লুইড পাওয়ার</div><a href="hydraulics.html">হাইড্রলিক সিস্টেম</a><a href="pneumatics.html">কম্প্রেসড এয়ার ও নিউমেটিক্স</a><div class="grp">কম্প্রেসর ও টারবাইন</div><a href="recip-compressors.html">রেসিপ্রোকেটিং কম্প্রেসর</a><a href="centrifugal-compressors.html">সেন্ট্রিফিউগাল কম্প্রেসর</a><a href="screw-compressors.html">স্ক্রু ও এয়ার কম্প্রেসর</a><a href="steam-turbines.html">স্টিম টারবাইন</a><a href="gas-turbines.html">গ্যাস টারবাইন (সংক্ষেপে)</a><div class="grp">অন্যান্য যন্ত্র</div><a href="fans-blowers.html">ফ্যান ও ব্লোয়ার</a><a href="agitators.html">অ্যাজিটেটর ও মিক্সার</a><a href="conveyors.html">বেল্ট কনভেয়র</a><a href="cranes-hoists.html">ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><div class="grp">রিলায়েবিলিটি</div><a href="rca.html">রুট কজ অ্যানালাইসিস</a><a href="maintenance-strategy.html">রক্ষণাবেক্ষণ কৌশল ও KPI</a><a href="preservation.html">সংরক্ষণ ও প্রিজারভেশন</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রোটারি যন্ত্রপাতি</a> › পাম্প</div>
+<h1>সেন্ট্রিফিউগাল পাম্পের মূল কথা</h1>
+<p class="summary">সেন্ট্রিফিউগাল পাম্প কীভাবে কাজ করে, এর প্রধান অংশ, NPSH, ক্যাভিটেশন এবং সাইটে যে চেকগুলো জরুরি।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">প্রধান অংশসমূহ</a></li><li><a href="#s2">ইমপেলারের ধরন</a></li><li><a href="#s3">NPSH ও ক্যাভিটেশন</a></li><li><a href="#s4">রিসার্কুলেশন</a></li><li><a href="#s5">চালানোর সীমা</a></li><li><a href="#s6">অ্যাক্সিয়াল ও রেডিয়াল থ্রাস্ট</a></li><li><a href="#s7">প্রাইমিং</a></li><li><a href="#s8">স্টার্ট-আপ চেকলিস্ট</a></li></ol></details>
+
+<p>সেন্ট্রিফিউগাল পাম্প তরলকে ঘুরিয়ে শক্তি দেয়। ইমপেলার তরলকে বাইরের দিকে ছুড়ে দেয়, ফলে বেগ (velocity) বাড়ে। এরপর ভলিউট বা ডিফিউজার সেই বেগ কমিয়ে চাপে (pressure) রূপান্তর করে। পাম্প আসলে <b>হেড</b> (তরলের মিটার উচ্চতা) তৈরি করে, সরাসরি চাপ নয়। একই পাম্প পানি আর পেট্রোলকে একই উচ্চতায় তুলবে, কিন্তু স্পেসিফিক গ্র্যাভিটি (SG) ভিন্ন হওয়ায় গেজের রিডিং ভিন্ন হবে।</p>
+<div class="formula">Pressure (bar) = Head (m) × SG ÷ 10.2</div>
+<h3 id="s1">প্রধান অংশসমূহ</h3>
+<div class="tbl"><table><tr><th>অংশ</th><th>কাজ</th><th>কী পরীক্ষা করবেন</th></tr>
+<tr><td>কেসিং (ভলিউট বা ডিফিউজার)</td><td>তরল সংগ্রহ করে, বেগকে চাপে রূপান্তর করে</td><td>কাটওয়াটারে ক্ষয় (erosion), মরিচা, গ্যাসকেট ফেস, ফাটল</td></tr>
+<tr><td>ইমপেলার</td><td>তরলকে শক্তি দেয়</td><td>ভেনের ডগায় ক্ষয়, আইতে ক্যাভিটেশন পিটিং, বন্ধ পথ, ব্যালান্স</td></tr>
+<tr><td>ওয়্যার রিং (কেসিং ও ইমপেলার)</td><td>ডিসচার্জ থেকে সাকশনে লিকেজ নিয়ন্ত্রণ করে</td><td>নতুন অবস্থার তুলনায় ক্লিয়ারেন্স, দাগ, গলিং</td></tr>
+<tr><td>শ্যাফট ও স্লিভ</td><td>ইমপেলার বহন করে, সিলের নিচে শ্যাফট রক্ষা করে</td><td>রানআউট, সিলের নিচে ক্ষয়, কি-ওয়ে ক্ষতি, থ্রেড ক্ষতি</td></tr>
+<tr><td>বিয়ারিং হাউজিং / ফ্রেম</td><td>রেডিয়াল ও থ্রাস্ট বিয়ারিং এবং অয়েল সাম্প ধরে রাখে</td><td>বোর ক্ষয়, অয়েল লেভেল দাগ, ব্রিদার, লেবিরিন্থ সিল</td></tr>
+<tr><td>সিল চেম্বার / স্টাফিং বক্স</td><td>মেকানিক্যাল সিল বা প্যাকিং রাখে</td><td>ফেস স্কয়ারনেস, বোর কনসেন্ট্রিসিটি, ফ্লাশ পোর্ট পরিষ্কার</td></tr>
+<tr><td>কাপলিং</td><td>মোটর থেকে টর্ক পৌঁছায়</td><td>এলিমেন্ট ক্ষয়, হাব ফিট, স্পেসারের দৈর্ঘ্য</td></tr></table></div>
+<h3 id="s2">ইমপেলারের ধরন</h3>
+<ul><li><b>ক্লোজড</b>: ভেনের দুই পাশে শ্রাউড। দক্ষতা বেশি, পরিষ্কার তরলের জন্য। ওয়্যার রিং থাকে।</li>
+<li><b>সেমি-ওপেন</b>: এক পাশে শ্রাউড। কিছু কঠিন কণা সামলাতে পারে। দক্ষতা নির্ভর করে সামনের ক্লিয়ারেন্সের উপর, যা অ্যাক্সিয়াল অ্যাডজাস্টমেন্টে সেট করা হয় (সাধারণত 0.3–0.5 mm)।</li>
+<li><b>ওপেন</b>: শ্রাউড নেই। স্লারি ও আঁশযুক্ত তরল।</li>
+<li><b>সিঙ্গেল সাকশন</b> বনাম <b>ডাবল সাকশন</b>: ডাবল সাকশন NPSHr অর্ধেক করে এবং অ্যাক্সিয়াল থ্রাস্ট ব্যালান্স করে। বিটুইন-বিয়ারিং পাম্পে বেশি দেখা যায়।</li></ul>
+<h3 id="s3">NPSH ও ক্যাভিটেশন</h3>
+<p>NPSH (net positive suction head) হলো সাকশন চাপ তরলের ভেপার প্রেশারের চেয়ে কত মিটার বেশি। <b>NPSHa</b> হলো সিস্টেম যা দেয়। <b>NPSHr</b> হলো পাম্পের যা দরকার, নির্মাতার কার্ভ থেকে (যেখানে হেড 3% কমে যায়)।</p>
+<div class="formula">NPSHa = (P_surface − P_vapour) × 10.2 ÷ SG + Z_static − H_friction</div>
+<p>P বার অ্যাবসোলিউটে, তরলের লেভেল পাম্পের সেন্টারলাইনের উপরে হলে Z পজিটিভ। NPSHa সবসময় NPSHr এর চেয়ে কিছু বেশি রাখুন। সাধারণ নিয়ম: NPSHa ≥ NPSHr + 1 m, অথবা অনুপাত 1.1 থেকে 1.3। হাই-এনার্জি পাম্প, গরম পানি এবং ফুটন্ত অবস্থার কাছাকাছি হাইড্রোকার্বনে আরও বেশি মার্জিন দরকার।</p>
+<p><b>ক্যাভিটেশন</b> হয় যখন ইমপেলারের আইতে চাপ ভেপার প্রেশারের নিচে নেমে যায়। বুদবুদ তৈরি হয়, উচ্চ চাপের জায়গায় গিয়ে প্রচণ্ড জোরে ফেটে যায়। এই ফাটা ধাতু খেয়ে ফেলে।</p>
+<ul><li>কেসিংয়ের ভেতরে নুড়ি পাথর বা মার্বেলের মতো শব্দ।</li><li>হেড ও ফ্লো ওঠানামা করে, মোটরের অ্যাম্পিয়ার দোলে।</li><li>ব্রডব্যান্ড ভাইব্রেশন ও শব্দ।</li><li>ভেনের নিম্নচাপ (সামনের) দিকে, আইয়ের কাছে পিটিং।</li></ul>
+<p><b>সমাধান:</b> সাকশন ট্যাংকের লেভেল বাড়ান, সাকশন স্ট্রেইনার পরিষ্কার করুন, সাকশন ভাল্ভ পুরো খুলুন (সাকশন কখনো থ্রটল করবেন না), সাকশন লাইন ছোট বা বড় করুন, তরল ঠান্ডা করুন, ফ্লো BEP এর দিকে কমান, অথবা ইনডিউসার লাগান।</p>
+<h3 id="s4">রিসার্কুলেশন</h3>
+<p>BEP এর অনেক বামে (কম ফ্লোতে) চালালে সাকশন ও ডিসচার্জ রিসার্কুলেশন হয়। ইমপেলারের ভেতরে তরল উল্টো ঘোরে। শব্দ ক্যাভিটেশনের মতো, কিন্তু ক্ষতি হয় ভেনের <b>প্রেশার সাইডে</b> এবং শ্রাউডে। সমাধান হলো বেশি ফ্লো: মিনিমাম ফ্লো বাইপাস লাগান, সাকশন ভাল্ভ ছোট করা নয়।</p>
+<h3 id="s5">চালানোর সীমা</h3>
+<ul><li>সবচেয়ে ভালো: BEP ফ্লোর 80–110%।</li><li>গ্রহণযোগ্য: বেশিরভাগ প্রসেস পাম্পে BEP এর প্রায় 70–120% (API 610 প্রেফার্ড রেঞ্জ)।</li><li>মিনিমাম কন্টিনিউয়াস ফ্লোর নিচে: গরম হওয়া, রিসার্কুলেশন, বেশি ভাইব্রেশন, সিল ও বিয়ারিং ক্ষতি।</li><li>কার্ভের অনেক ডানে: NPSHr বেশি, ক্যাভিটেশন, মোটর ওভারলোড।</li></ul>
+<h3 id="s6">অ্যাক্সিয়াল ও রেডিয়াল থ্রাস্ট</h3>
+<p>ইমপেলারের দুই পাশে চাপ সমান না হওয়ায় সাকশনের দিকে অ্যাক্সিয়াল থ্রাস্ট তৈরি হয়। নির্মাতারা এটি ব্যালান্স করেন <b>ব্যালান্স হোল</b> ও পেছনের ওয়্যার রিং দিয়ে, ব্যাক ভেন (পাম্প-আউট ভেন) দিয়ে, মাল্টিস্টেজ পাম্পে বিপরীতমুখী ইমপেলার দিয়ে, অথবা ব্যালান্স ড্রাম বা ডিস্ক দিয়ে। ক্ষয়ে যাওয়া রিং বা বন্ধ ব্যালান্স হোল থ্রাস্ট বাড়িয়ে থ্রাস্ট বিয়ারিং ওভারলোড করে।</p>
+<p>সিঙ্গেল ভলিউটে রেডিয়াল থ্রাস্ট BEP তে সবচেয়ে কম, কম ও বেশি ফ্লোতে বাড়ে। ডাবল ভলিউট এটি কমায়। বেশি রেডিয়াল লোড শ্যাফট বাঁকায় এবং সিল ফেস ও রিং ক্ষয় করে।</p>
+<h3 id="s7">প্রাইমিং</h3>
+<p>বেশিরভাগ সেন্ট্রিফিউগাল পাম্প বাতাস পাম্প করতে পারে না। চালুর আগে কেসিং ও সাকশন লাইন তরলে ভরুন। কেসিংয়ের উঁচু পয়েন্টে ভেন্ট করুন যতক্ষণ না বুদবুদ ছাড়া তরল বের হয়। সেলফ-প্রাইমিং পাম্প কেসিংয়ে তরল ধরে রাখে যাতে আবার প্রাইম হয়।</p>
+<h3 id="s8">স্টার্ট-আপ চেকলিস্ট</h3>
+<ol class="steps"><li>পারমিট বন্ধ, LOTO খোলা, গার্ড লাগানো।</li><li>অয়েল লেভেল ঠিক, অয়েলার ভরা, কুলিং ওয়াটার চালু।</li><li>সিল ফ্লাশ ও কোয়েঞ্চ লাইন খোলা, সিল পট থাকলে প্রেশারাইজড।</li><li>সাকশন ভাল্ভ পুরো খোলা, কেসিং ভেন্ট ও প্রাইম করা।</li><li>ডিসচার্জ ভাল্ভ বন্ধ বা সামান্য খোলা (সেন্ট্রিফিউগাল), সাইট প্রসিডিউর অনুযায়ী।</li><li>মোটর খোলা হয়ে থাকলে বাম্প করে রোটেশন চেক করুন।</li><li>চালু করুন, তারপর 30 সেকেন্ডের মধ্যে ধীরে ডিসচার্জ খুলুন যাতে শাট-অফে না চলে।</li><li>ডিসচার্জ চাপ, অ্যাম্পিয়ার, শব্দ, সিল লিকেজ ও বিয়ারিং তাপমাত্রা দেখুন।</li><li>30 মিনিট পর বেসলাইন ভাইব্রেশন নিন।</li></ol>
+<div class="warn"><b>কখনো শুকনো বা ডেড-হেডেড চালাবেন না।</b> শাট-অফে মোটরের পুরো শক্তি অল্প তরলে তাপ হয়ে জমে। ছোট পাম্প কয়েক মিনিটেই ভেতরের তরল ফুটিয়ে ফেলতে পারে।</div>
+<div class="pager"><i></i><a class="nx" href="pump-curves.html"><span>পরের</span>পাম্প কার্ভ ও সিস্টেম কার্ভ</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

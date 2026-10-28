@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>উপাদানের বৈশিষ্ট্য · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="প্রচলিত ইঞ্জিনিয়ারিং ধাতুর ঘনত্ব, তাপীয় প্রসারণ, গলনাঙ্ক ও মডুলাস।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../reference/materials-data.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../reference/materials-data.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html" aria-current="page">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রেফারেন্স টেবিল"><div class="grp">একক</div><a href="conversions.html">একক রূপান্তর</a><a href="fractions.html">ভগ্নাংশ, দশমিক ও mm</a><div class="grp">ফাস্টেনার</div><a href="spanner-sizes.html">স্প্যানার ও বোল্ট সাইজ</a><div class="grp">ইঞ্জিনিয়ারিং ডেটা</div><a href="materials-data.html" aria-current="page">উপাদানের বৈশিষ্ট্য</a><a href="steam-table.html">স্যাচুরেটেড স্টিম টেবিল</a><a href="formulas.html">সূত্রের তালিকা</a><a href="abbreviations.html">সংক্ষেপ (অ্যাব্রিভিয়েশন)</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রেফারেন্স টেবিল</a> › ইঞ্জিনিয়ারিং ডেটা</div>
+<h1>উপাদানের বৈশিষ্ট্য</h1>
+<p class="summary">প্রচলিত ইঞ্জিনিয়ারিং ধাতুর ঘনত্ব, তাপীয় প্রসারণ, গলনাঙ্ক ও মডুলাস।</p>
+
+
+<div class="tbl"><table><tr><th>উপাদান</th><th>ঘনত্ব (kg/m³)</th><th>প্রসারণ (µm/m·°C)</th><th>গলনাঙ্ক (°C)</th><th>E মডুলাস (GPa)</th><th>তাপ পরিবাহিতা (W/m·K)</th></tr>
+<tr><td>Carbon steel</td><td>7,850</td><td>11.7</td><td>1,425–1,540</td><td>200–210</td><td>45–50</td></tr>
+<tr><td>Cr-Mo steel</td><td>7,850</td><td>12.4</td><td>~1,500</td><td>210</td><td>35–40</td></tr>
+<tr><td>Stainless 304/316</td><td>7,950–8,000</td><td>16.5–17.3</td><td>1,375–1,450</td><td>193</td><td>16</td></tr>
+<tr><td>Duplex 2205</td><td>7,800</td><td>13.0</td><td>~1,450</td><td>200</td><td>19</td></tr>
+<tr><td>Cast iron (grey)</td><td>7,200</td><td>10.5</td><td>1,150–1,200</td><td>100–130</td><td>50</td></tr>
+<tr><td>Aluminium (6061)</td><td>2,700</td><td>23.6</td><td>580–650</td><td>69</td><td>167</td></tr>
+<tr><td>Copper</td><td>8,940</td><td>16.6</td><td>1,085</td><td>117</td><td>390</td></tr>
+<tr><td>Brass</td><td>8,500</td><td>19</td><td>900–940</td><td>100</td><td>110</td></tr>
+<tr><td>Bronze</td><td>8,800</td><td>18</td><td>950–1,050</td><td>110</td><td>60</td></tr>
+<tr><td>Titanium Gr 2</td><td>4,510</td><td>8.6</td><td>1,665</td><td>105</td><td>17</td></tr>
+<tr><td>Inconel 625</td><td>8,440</td><td>12.8</td><td>1,290–1,350</td><td>205</td><td>10</td></tr>
+<tr><td>Monel 400</td><td>8,800</td><td>13.9</td><td>1,300–1,350</td><td>180</td><td>22</td></tr>
+<tr><td>Babbitt (tin)</td><td>7,400</td><td>23</td><td>~240</td><td>52</td><td>56</td></tr></table></div>
+<p>উপাদান: Carbon steel = কার্বন স্টিল, Stainless = স্টেইনলেস, Cast iron = ঢালাই লোহা, Aluminium = অ্যালুমিনিয়াম, Copper = তামা, Brass = পিতল, Bronze = ব্রোঞ্জ, Titanium = টাইটানিয়াম।</p>
+<h3 id="s1">তরল ও গ্যাস</h3>
+<div class="tbl"><table><tr><th>তরল</th><th>ঘনত্ব (kg/m³) / SG</th></tr>
+<tr><td>Water 20 °C</td><td>998 / 1.00</td></tr><tr><td>Seawater</td><td>1,025 / 1.025</td></tr><tr><td>Diesel</td><td>830–860 / 0.84</td></tr><tr><td>Gasoline</td><td>720–750 / 0.74</td></tr><tr><td>Lube oil VG 68</td><td>870–880 / 0.88</td></tr><tr><td>Air 20 °C, 1 atm</td><td>1.2</td></tr></table></div>
+<p>Water = পানি, Seawater = সমুদ্রের পানি, Gasoline = পেট্রোল, Lube oil = লুব অয়েল, Air = বাতাস।</p>
+<div class="pager"><a href="spanner-sizes.html"><span>আগের</span>স্প্যানার ও বোল্ট সাইজ</a><a class="nx" href="steam-table.html"><span>পরের</span>স্যাচুরেটেড স্টিম টেবিল</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

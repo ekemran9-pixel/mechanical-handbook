@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>টর্ক ও প্রিলোড · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="প্রিলোড কেন গুরুত্বপূর্ণ, টর্কের সূত্র, মেট্রিক বোল্টের স্ট্যান্ডার্ড টর্ক টেবিল, টর্ক টুল ও ক্যালিব্রেশন।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../workshop/torque.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../workshop/torque.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html" aria-current="page">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="ওয়ার্কশপ, মেশিনিং ও ফাস্টেনার"><div class="grp">পরিমাপ</div><a href="measuring-tools.html">মাপার যন্ত্র</a><a href="limits-fits.html">লিমিটস, ফিটস ও টলারেন্স</a><div class="grp">মেশিনিং</div><a href="lathe.html">লেদের কাজ</a><a href="milling-drilling.html">মিলিং, ড্রিলিং ও ট্যাপিং</a><div class="grp">ফাস্টেনার</div><a href="threads.html">থ্রেড ও চেনার উপায়</a><a href="fasteners.html">বোল্ট, নাট ও ওয়াশার</a><a href="torque.html" aria-current="page">টর্ক ও প্রিলোড</a><a href="keys-shafts.html">কি, স্প্লাইন ও শ্যাফট লকিং</a><div class="grp">যন্ত্র</div><a href="hand-power-tools.html">হ্যান্ড টুল ও পাওয়ার টুল</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">ওয়ার্কশপ, মেশিনিং ও ফাস্টেনার</a> › ফাস্টেনার</div>
+<h1>টর্ক ও প্রিলোড</h1>
+<p class="summary">প্রিলোড কেন গুরুত্বপূর্ণ, টর্কের সূত্র, মেট্রিক বোল্টের স্ট্যান্ডার্ড টর্ক টেবিল, টর্ক টুল ও ক্যালিব্রেশন।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">প্রিলোড কেন গুরুত্বপূর্ণ</a></li><li><a href="#s2">টর্কের সূত্র</a></li><li><a href="#s3">মেট্রিক কোর্স বোল্ট: টাইটেনিং টর্ক (হালকা তেল, ঘর্ষণ μ ≈ 0.12)</a></li><li><a href="#s4">টর্ক টুল</a></li><li><a href="#s5">ক্যালিব্রেশন</a></li><li><a href="#s6">এক্সটেনশন অ্যাডাপ্টার</a></li></ol></details>
+
+<h3 id="s1">প্রিলোড কেন গুরুত্বপূর্ণ</h3>
+<p>বোল্ট স্প্রিংয়ের মতো কাজ করে। ঠিকমতো টাইট করলে আটকানো অংশগুলো কাজের লোড বহন করে এবং বোল্টের স্ট্রেস সামান্য বদলায়। কম টাইট হলে জয়েন্ট আলাদা হয়, পিছলে যায় এবং বোল্ট ফ্যাটিগ হয় বা ঢিলা হয়।</p>
+<h3 id="s2">টর্কের সূত্র</h3>
+<div class="formula">T (N·m) = K × F (kN) × d (mm)</div>
+<p>টর্কের প্রায় 90% ঘর্ষণ (থ্রেড ও নাটের নিচে) কাটাতে যায়। মাত্র 10% বোল্টকে প্রসারিত করে। এজন্যই লুব্রিকেশন ফলাফল এত বদলায়।</p>
+<div class="tbl"><table><tr><th>অবস্থা</th><th>নাট ফ্যাক্টর K (সাধারণ)</th></tr>
+<tr><td>শুকনো, যেমন এসেছে ব্ল্যাক অক্সাইড</td><td>0.20</td></tr><tr><td>জিংক প্লেটেড শুকনো</td><td>0.20–0.22</td></tr><tr><td>হালকা তেল</td><td>0.15–0.18</td></tr><tr><td>মলি পেস্ট (MoS₂)</td><td>0.10–0.12</td></tr><tr><td>কপার অ্যান্টি-সিজ</td><td>0.13–0.15</td></tr><tr><td>PTFE কোটেড</td><td>0.08–0.12</td></tr></table></div>
+<h3 id="s3">মেট্রিক কোর্স বোল্ট: টাইটেনিং টর্ক (হালকা তেল, ঘর্ষণ μ ≈ 0.12)</h3>
+<div class="tbl"><table><tr><th>সাইজ</th><th>8.8 টর্ক N·m</th><th>10.9 টর্ক N·m</th><th>12.9 টর্ক N·m</th></tr>
+<tr><td>M6</td><td>10</td><td>15</td><td>17</td></tr><tr><td>M8</td><td>25</td><td>36</td><td>42</td></tr><tr><td>M10</td><td>48</td><td>71</td><td>83</td></tr><tr><td>M12</td><td>84</td><td>123</td><td>144</td></tr><tr><td>M16</td><td>206</td><td>302</td><td>354</td></tr><tr><td>M20</td><td>415</td><td>592</td><td>692</td></tr><tr><td>M24</td><td>714</td><td>1,017</td><td>1,190</td></tr><tr><td>M30</td><td>1,428</td><td>2,033</td><td>2,380</td></tr><tr><td>M36</td><td>2,482</td><td>3,535</td><td>4,136</td></tr></table></div>
+<p style="font-size:.85rem;color:var(--muted)">μ = 0.12 এ ইল্ড শক্তির 90% ব্যবহারে সাধারণ VDI 2230 টেবিলের মান। একই প্রিলোডে শুকনো বা প্লেটেড বোল্টে বেশি টর্ক লাগে; মলি পেস্টে কম।</p>
+<h3 id="s4">টর্ক টুল</h3>
+<ul><li><b>ক্লিক রেঞ্চ</b>: সেট করুন, হাতলের সাথে 90° এ মসৃণভাবে টানুন যতক্ষণ না ক্লিক হয়। ব্যবহারের পর সর্বনিম্ন সেটিংয়ে ফেরান (স্কেলের নিচে শূন্য নয়)।</li><li>নির্ভুলতার জন্য রেঞ্চের রেঞ্জের 20–100% এর মধ্যে ব্যবহার করুন (সাধারণত ±4%, ISO 6789)।</li><li><b>টর্ক মাল্টিপ্লায়ার</b>: গিয়ার অনুপাত; রিঅ্যাকশন আর্ম শক্ত জায়গায় ঠেকাতে হবে।</li><li><b>হাইড্রলিক টর্ক রেঞ্চ</b>: স্কয়ার ড্রাইভ বা লো প্রোফাইল ক্যাসেট। প্রতিটি টুলের চাপ-থেকে-টর্ক চার্ট। রিঅ্যাকশন পয়েন্ট সুরক্ষিত হতে হবে।</li><li><b>টর্ক-অ্যাঙ্গেল পদ্ধতি</b>: হালকা টাইট, তারপর নির্দিষ্ট কোণ ঘোরান। বেশি সামঞ্জস্যপূর্ণ প্রিলোড।</li><li>গুরুত্বপূর্ণ জয়েন্টে <b>ডাইরেক্ট টেনশন ইন্ডিকেটর (DTI ওয়াশার)</b> ও আল্ট্রাসনিক বোল্ট প্রসারণ মাপা।</li></ul>
+<h3 id="s5">ক্যালিব্রেশন</h3>
+<p>টর্ক রেঞ্চ প্রতি 12 মাস বা 5,000 চক্রে (ISO 6789), বা পড়ে গেলে ক্যালিব্রেট করুন। হাইড্রলিক পাম্প ও গেজ একসাথে সেট হিসেবে। গুরুত্বপূর্ণ জয়েন্টে টুলের সিরিয়াল নম্বর রেকর্ড করুন।</p>
+<h3 id="s6">এক্সটেনশন অ্যাডাপ্টার</h3>
+<p>রেঞ্চের দৈর্ঘ্য বাড়ায় এমন অ্যাডাপ্টার (ক্রো'স ফুট) প্রকৃত টর্ক বদলায়:</p>
+<div class="formula">Wrench setting = T × L ÷ (L + E)</div>
+<p>L = ড্রাইভ কেন্দ্র পর্যন্ত রেঞ্চের দৈর্ঘ্য, E = এক্সটেনশনের দৈর্ঘ্য। হাতলের সাথে 90° এ ক্রো'স ফুটে সংশোধন লাগে না।</p>
+<div class="pager"><a href="fasteners.html"><span>আগের</span>বোল্ট, নাট ও ওয়াশার</a><a class="nx" href="keys-shafts.html"><span>পরের</span>কি, স্প্লাইন ও শ্যাফট লকিং</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

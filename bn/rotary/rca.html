@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>রুট কজ অ্যানালাইসিস · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="যন্ত্রের ব্যর্থতার জন্য ব্যবহারিক RCA পদ্ধতি: 5 Whys, ফিশবোন, ফল্ট ট্রি ও প্রমাণ সংরক্ষণ।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rotary/rca.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rotary/rca.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html" aria-current="page">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রোটারি যন্ত্রপাতি"><div class="grp">পাম্প</div><a href="centrifugal-pumps.html">সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a href="pump-curves.html">পাম্প কার্ভ ও সিস্টেম কার্ভ</a><a href="pump-types.html">পাম্পের ধরন ও API 610 কোড</a><a href="pump-overhaul.html">পাম্প ওভারহল পদ্ধতি</a><a href="pd-pumps.html">পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a href="pump-troubleshooting.html">পাম্পের সমস্যা সমাধান</a><div class="grp">সিল ও প্যাকিং</div><a href="mechanical-seals.html">মেকানিক্যাল সিল</a><a href="seal-plans.html">সিল ফ্লাশ প্ল্যান (API 682)</a><a href="gland-packing.html">গ্ল্যান্ড প্যাকিং</a><div class="grp">বিয়ারিং ও লুব্রিকেশন</div><a href="rolling-bearings.html">রোলিং এলিমেন্ট বিয়ারিং</a><a href="bearing-mounting.html">বিয়ারিং লাগানো ও খোলা</a><a href="plain-bearings.html">প্লেইন ও টিল্টিং-প্যাড বিয়ারিং</a><a href="lubrication.html">লুব্রিকেশন</a><a href="oil-analysis.html">তেল বিশ্লেষণ</a><div class="grp">অ্যালাইনমেন্ট ও ভাইব্রেশন</div><a href="alignment.html">শ্যাফট অ্যালাইনমেন্ট</a><a href="dial-alignment.html">ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a href="vibration.html">ভাইব্রেশন বিশ্লেষণ</a><a href="balancing.html">ব্যালান্সিং</a><a href="condition-monitoring.html">কন্ডিশন মনিটরিং</a><div class="grp">ড্রাইভ ও ট্রান্সমিশন</div><a href="couplings.html">কাপলিং</a><a href="gearboxes.html">গিয়ারবক্স</a><a href="belts-chains.html">বেল্ট ও চেইন ড্রাইভ</a><a href="electric-motors.html">ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</a><div class="grp">ফ্লুইড পাওয়ার</div><a href="hydraulics.html">হাইড্রলিক সিস্টেম</a><a href="pneumatics.html">কম্প্রেসড এয়ার ও নিউমেটিক্স</a><div class="grp">কম্প্রেসর ও টারবাইন</div><a href="recip-compressors.html">রেসিপ্রোকেটিং কম্প্রেসর</a><a href="centrifugal-compressors.html">সেন্ট্রিফিউগাল কম্প্রেসর</a><a href="screw-compressors.html">স্ক্রু ও এয়ার কম্প্রেসর</a><a href="steam-turbines.html">স্টিম টারবাইন</a><a href="gas-turbines.html">গ্যাস টারবাইন (সংক্ষেপে)</a><div class="grp">অন্যান্য যন্ত্র</div><a href="fans-blowers.html">ফ্যান ও ব্লোয়ার</a><a href="agitators.html">অ্যাজিটেটর ও মিক্সার</a><a href="conveyors.html">বেল্ট কনভেয়র</a><a href="cranes-hoists.html">ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><div class="grp">রিলায়েবিলিটি</div><a href="rca.html" aria-current="page">রুট কজ অ্যানালাইসিস</a><a href="maintenance-strategy.html">রক্ষণাবেক্ষণ কৌশল ও KPI</a><a href="preservation.html">সংরক্ষণ ও প্রিজারভেশন</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রোটারি যন্ত্রপাতি</a> › রিলায়েবিলিটি</div>
+<h1>রুট কজ অ্যানালাইসিস</h1>
+<p class="summary">যন্ত্রের ব্যর্থতার জন্য ব্যবহারিক RCA পদ্ধতি: 5 Whys, ফিশবোন, ফল্ট ট্রি ও প্রমাণ সংরক্ষণ।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">কখন RCA করবেন</a></li><li><a href="#s2">প্রমাণ সংরক্ষণ</a></li><li><a href="#s3">৫ বার কেন (5 Whys)</a></li><li><a href="#s4">ফিশবোন (ইশিকাওয়া)</a></li><li><a href="#s5">ভৌত, মানবিক ও সুপ্ত কারণ</a></li><li><a href="#s6">রিপোর্ট টেমপ্লেট</a></li></ol></details>
+
+<p>বছরে চারবার একই পাম্প মেরামত ব্যয়বহুল। RCA খুঁজে বের করে কেন নষ্ট হয়, যাতে তা বন্ধ করা যায়।</p>
+<h3 id="s1">কখন RCA করবেন</h3>
+<ul><li>যেকোনো নিরাপত্তা বা পরিবেশগত ঘটনা।</li><li>পুনরাবৃত্ত ব্যর্থতা (যেমন 12 মাসে একই মেশিন দুবার)।</li><li>উচ্চ খরচের ব্যর্থতা বা দীর্ঘ বন্ধ।</li><li>ব্যাড অ্যাক্টর তালিকা: রক্ষণাবেক্ষণ খরচে শীর্ষ 10টি মেশিন।</li></ul>
+<h3 id="s2">প্রমাণ সংরক্ষণ</h3>
+<ol class="steps"><li>খোলার আগে ও খোলার সময় মেশিনের ছবি তুলুন।</li><li>ড্রেন করার আগে তেলের নমুনা নিন।</li><li>খোলার আগের মাপ রেকর্ড করুন: অ্যালাইনমেন্ট, ক্লিয়ারেন্স, অবস্থান, বোল্টের টাইটনেস।</li><li>নষ্ট অংশ (বিয়ারিং, সিল ফেস, গ্যাসকেট) ব্যাগে রেখে ট্যাগ করুন। পরিষ্কার করবেন না।</li><li>ডেটা সংগ্রহ করুন: ব্যর্থতার সময়ের আশেপাশের অপারেটিং ট্রেন্ড (ফ্লো, চাপ, তাপমাত্রা, ভাইব্রেশন), ওয়ার্ক অর্ডারের ইতিহাস, অপারেটরের লগ।</li></ol>
+<h3 id="s3">৫ বার কেন (5 Whys)</h3>
+<p>এমন কিছুতে না পৌঁছানো পর্যন্ত "কেন?" জিজ্ঞাসা করুন যা সিস্টেম পরিবর্তন করে ঠিক করা যায়।</p>
+<ol><li>পাম্প কেন থামল? বিয়ারিং আটকে গেছে।</li><li>বিয়ারিং কেন আটকাল? হাউজিংয়ে তেল ছিল না।</li><li>তেল কেন ছিল না? কনস্ট্যান্ট লেভেল অয়েলার খালি ছিল।</li><li>কেন খালি ছিল? এটি লুব রুটে নেই।</li><li>কেন রুটে নেই? পাম্পটি গত বছর বসানো হয়েছিল এবং রুট কখনো আপডেট করা হয়নি।</li></ol>
+<p><b>মূল কারণ:</b> নতুন যন্ত্র লুব রুটে যোগ করার কোনো প্রক্রিয়া নেই। <b>সমাধান:</b> MOC/হ্যান্ডওভারে PM ও লুব রুট আপডেটের ধাপ যোগ করুন।</p>
+<h3 id="s4">ফিশবোন (ইশিকাওয়া)</h3>
+<p>শাখায় সম্ভাব্য কারণগুলো লিখুন: <b>মেশিন, পদ্ধতি, উপাদান, মানুষ, পরিমাপ, পরিবেশ</b>। তারপর প্রমাণের সাথে প্রতিটি পরীক্ষা করুন। প্রমাণ যেগুলো ভুল প্রমাণ করে সেগুলো কেটে দিন।</p>
+<h3 id="s5">ভৌত, মানবিক ও সুপ্ত কারণ</h3>
+<ul><li><b>ভৌত কারণ</b>: প্রক্রিয়া (ফ্যাটিগ, ক্ষয়, ওভারলোড, ক্ষয়)।</li><li><b>মানবিক কারণ</b>: যে সিদ্ধান্ত বা কাজ এটি ঘটিয়েছে (ভুল তেল দেওয়া)।</li><li><b>সুপ্ত কারণ</b>: যে সিস্টেম বা প্রাতিষ্ঠানিক ফাঁক এটি হতে দিয়েছে (লেবেল নেই, প্রশিক্ষণ নেই)।</li></ul>
+<p>শুধু ভৌত কারণ ঠিক করলে অন্য কোথাও আবার ঘটবে।</p>
+<h3 id="s6">রিপোর্ট টেমপ্লেট</h3>
+<ol><li>কী ঘটেছে (এক অনুচ্ছেদ, শুধু তথ্য)।</li><li>প্রভাব (নিরাপত্তা, উৎপাদন, খরচ)।</li><li>সময়রেখা।</li><li>প্রমাণ (ছবি, মাপ, ডেটা)।</li><li>বিশ্লেষণ (5 Whys, ফিশবোন)।</li><li>মূল কারণ (ভৌত, মানবিক, সুপ্ত)।</li><li>ব্যবস্থা: দায়িত্বপ্রাপ্ত, শেষ তারিখ, কাজ করেছে কিনা কীভাবে বুঝবেন।</li></ol>
+<div class="note"><b>দোষারোপমুক্ত।</b> শাস্তির ভয়ে মানুষ তথ্য লুকায়। কীভাবে সিস্টেম এটি ঘটতে দিল সেদিকে মনোযোগ দিন।</div>
+<div class="pager"><a href="cranes-hoists.html"><span>আগের</span>ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><a class="nx" href="maintenance-strategy.html"><span>পরের</span>রক্ষণাবেক্ষণ কৌশল ও KPI</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

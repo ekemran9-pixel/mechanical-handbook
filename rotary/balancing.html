@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Balancing · Mechanical Foreman Handbook</title>
+<meta name="description" content="Unbalance types, balance grades, single and two-plane field balancing with trial weights and the vector method.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/rotary/balancing.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/rotary/balancing.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html" aria-current="page">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Rotary Equipment"><div class="grp">Pumps</div><a href="centrifugal-pumps.html">Centrifugal pump basics</a><a href="pump-curves.html">Pump curves &amp; system curves</a><a href="pump-types.html">Pump types &amp; API 610 codes</a><a href="pump-overhaul.html">Pump overhaul procedure</a><a href="pd-pumps.html">Positive displacement pumps</a><a href="pump-troubleshooting.html">Pump troubleshooting</a><div class="grp">Seals &amp; packing</div><a href="mechanical-seals.html">Mechanical seals</a><a href="seal-plans.html">Seal flush plans (API 682)</a><a href="gland-packing.html">Gland packing</a><div class="grp">Bearings &amp; lubrication</div><a href="rolling-bearings.html">Rolling element bearings</a><a href="bearing-mounting.html">Bearing mounting &amp; removal</a><a href="plain-bearings.html">Plain &amp; tilting-pad bearings</a><a href="lubrication.html">Lubrication</a><a href="oil-analysis.html">Oil analysis</a><div class="grp">Alignment &amp; vibration</div><a href="alignment.html">Shaft alignment</a><a href="dial-alignment.html">Dial indicator alignment methods</a><a href="vibration.html">Vibration analysis</a><a href="balancing.html" aria-current="page">Balancing</a><a href="condition-monitoring.html">Condition monitoring</a><div class="grp">Drives &amp; transmission</div><a href="couplings.html">Couplings</a><a href="gearboxes.html">Gearboxes</a><a href="belts-chains.html">Belt &amp; chain drives</a><a href="electric-motors.html">Electric motors (mechanical side)</a><div class="grp">Fluid power</div><a href="hydraulics.html">Hydraulic systems</a><a href="pneumatics.html">Compressed air &amp; pneumatics</a><div class="grp">Compressors &amp; turbines</div><a href="recip-compressors.html">Reciprocating compressors</a><a href="centrifugal-compressors.html">Centrifugal compressors</a><a href="screw-compressors.html">Screw &amp; air compressors</a><a href="steam-turbines.html">Steam turbines</a><a href="gas-turbines.html">Gas turbines (overview)</a><div class="grp">Other machines</div><a href="fans-blowers.html">Fans &amp; blowers</a><a href="agitators.html">Agitators &amp; mixers</a><a href="conveyors.html">Belt conveyors</a><a href="cranes-hoists.html">Cranes &amp; hoists (maintenance)</a><div class="grp">Reliability</div><a href="rca.html">Root cause analysis</a><a href="maintenance-strategy.html">Maintenance strategy &amp; KPIs</a><a href="preservation.html">Storage &amp; preservation</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Rotary Equipment</a> › Alignment &amp; vibration</div>
+<h1>Balancing</h1>
+<p class="summary">Unbalance types, balance grades, single and two-plane field balancing with trial weights and the vector method.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Types of unbalance</a></li><li><a href="#s2">Balance quality grades (ISO 21940-11, was ISO 1940)</a></li><li><a href="#s3">Before balancing</a></li><li><a href="#s4">Single-plane field balancing (with phase)</a></li><li><a href="#s5">Angle conventions</a></li><li><a href="#s6">Four-run method (no phase)</a></li><li><a href="#s7">Two-plane balancing</a></li><li><a href="#s8">Fitting weights</a></li></ol></details>
+
+<h3 id="s1">Types of unbalance</h3>
+<ul><li><b>Static</b>: heavy spot on one side. The rotor turns to rest heavy side down. Fixed in one plane.</li><li><b>Couple</b>: two equal heavy spots 180° apart on opposite ends. Statically balanced but wobbles. Needs two planes.</li><li><b>Dynamic</b>: a mix of both. The general case on wide rotors. Needs two planes.</li></ul>
+<p>Rule of thumb: rotors with length/diameter below about 0.5 (fans, pulleys, narrow impellers) can often be done in one plane.</p>
+<h3 id="s2">Balance quality grades (ISO 21940-11, was ISO 1940)</h3>
+<div class="tbl"><table><tr><th>Grade</th><th>Typical rotor</th></tr>
+<tr><td>G40</td><td>Car wheels, crankshafts of slow engines</td></tr>
+<tr><td>G16</td><td>Agricultural machinery, crushers</td></tr>
+<tr><td>G6.3</td><td>Fans, pump impellers, flywheels, general machinery</td></tr>
+<tr><td>G2.5</td><td>Turbines, compressors, motor rotors, high speed pumps, machine tool drives</td></tr>
+<tr><td>G1</td><td>Grinders, tape recorders, precision spindles</td></tr></table></div>
+<div class="formula">Permissible residual unbalance U (g·mm) = 9549 × G × M ÷ n</div>
+<p>M = rotor mass (kg), n = rpm, G = grade. Divide U by the correction radius (mm) to get grams. Split between planes as the rotor geometry requires (half each for a symmetrical rotor).</p>
+<p>Example: 120 kg fan impeller at 1480 rpm, G6.3: U = 9549 × 6.3 × 120 ÷ 1480 = 4,878 g·mm. At 400 mm radius: 12.2 g total.</p>
+<h3 id="s3">Before balancing</h3>
+<ul><li>Confirm it's unbalance: dominant 1X radial, phase steady, H/V phase ~90° apart.</li><li>Clean the rotor. Deposits cause most fan unbalance.</li><li>Check for looseness, cracked blades, bearing wear, eccentric pulleys, resonance. Balancing can't fix those.</li><li>Check the rotor isn't rubbing.</li></ul>
+<h3 id="s4">Single-plane field balancing (with phase)</h3>
+<ol class="steps"><li>Mount the sensor radially on the bearing nearest the plane. Mount the tacho on a reflective mark on the shaft.</li><li><b>Run 0 (original)</b>: record 1X amplitude and phase (e.g. 8.0 mm/s at 60°).</li><li>Choose a <b>trial weight</b> that changes the reading by at least 30% (or gives a force of about 10% of rotor weight). Fit it at a known angle and radius. Record its mass and position.</li><li><b>Run 1</b>: record new amplitude and phase (e.g. 5.0 mm/s at 140°).</li><li>The instrument (or vector math) works out the effect of the trial weight: T = Run1 − Run0.</li><li>Correction weight = trial weight × (|O| ÷ |T|), placed at angle shifted by the angle needed to bring T opposite O.</li><li>Remove the trial weight (unless told to leave it) and fit the correction.</li><li><b>Run 2</b>: check. Trim if needed.</li></ol>
+<h3 id="s5">Angle conventions</h3>
+<p>Measure angles in the same direction every time. Most instruments say "against rotation" or "with rotation". Mark the rotor with angles before starting. If the phase moved the wrong way after the first correction, check the convention.</p>
+<h3 id="s6">Four-run method (no phase)</h3>
+<p>Used when there is no tacho. Take the original amplitude, then run with the trial weight at 0°, 120° and 240°. Draw circles with radii equal to each reading on a polar plot; their intersection gives the correction. Slower but needs only an amplitude meter.</p>
+<h3 id="s7">Two-plane balancing</h3>
+<p>Two sensors (one per bearing), two trial weights (one per plane, one at a time). Runs: original, trial in plane 1, trial in plane 2. The instrument solves the influence coefficients and gives correction weights for both planes. Keep the same sensor positions throughout.</p>
+<h3 id="s8">Fitting weights</h3>
+<ul><li>Weld-on weights: weld only with the welding earth clamped on the rotor, never through bearings. Use a qualified welder and approved procedure.</li><li>Bolt-on and clip-on weights: check they can't come loose at speed. Use thread locker.</li><li>Grinding or drilling to remove metal: check with engineering for strength.</li><li>Record final weights, positions and readings on the job card.</li></ul>
+<div class="warn"><b>Thrown weights kill.</b> Stay out of the plane of rotation during runs. Guard fitted for every run.</div>
+<div class="pager"><a href="vibration.html"><span>Previous</span>Vibration analysis</a><a class="nx" href="condition-monitoring.html"><span>Next</span>Condition monitoring</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

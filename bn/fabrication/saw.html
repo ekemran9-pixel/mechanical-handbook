@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SAW (সাবমার্জড আর্ক) · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="সাবমার্জড আর্কের যন্ত্রপাতি, তার/ফ্লাক্স জোড়া, সেটিং ও ফ্লাক্স ব্যবস্থাপনা।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../fabrication/saw.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../fabrication/saw.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html" aria-current="page">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="ওয়েল্ডিং ও ফেব্রিকেশন"><div class="grp">ওয়েল্ডিং প্রসেস</div><a href="welding-processes.html">ওয়েল্ডিং প্রসেসের তুলনা</a><a href="smaw.html">SMAW (স্টিক ওয়েল্ডিং)</a><a href="gtaw.html">GTAW (TIG ওয়েল্ডিং)</a><a href="gmaw-fcaw.html">GMAW ও FCAW (MIG ও ফ্লাক্স কোর)</a><a href="saw.html" aria-current="page">SAW (সাবমার্জড আর্ক)</a><div class="grp">উপাদান</div><a href="filler-metals.html">ফিলার মেটাল গাইড</a><a href="metallurgy.html">ওয়েল্ডারের জন্য স্টিলের ধাতুবিদ্যা</a><div class="grp">জয়েন্ট ডিজাইন</div><a href="joint-design.html">জয়েন্ট ডিজাইন ও ফিট-আপ</a><a href="weld-symbols.html">ওয়েল্ড সিম্বল (AWS A2.4 / ISO 2553)</a><a href="positions.html">ওয়েল্ডিং পজিশন ও যোগ্যতা</a><div class="grp">গুণমান</div><a href="weld-defects.html">ওয়েল্ডের ত্রুটি ও মেরামত</a><a href="wps-pqr.html">WPS, PQR ও WPQ</a><a href="preheat-pwht.html">প্রিহিট, ইন্টারপাস ও PWHT</a><a href="distortion.html">ডিস্টরশন নিয়ন্ত্রণ</a><div class="grp">বিশেষ উপাদান</div><a href="stainless-welding.html">স্টেইনলেস ও ডুপ্লেক্স ওয়েল্ডিং</a><a href="alloy-welding.html">Cr-Mo, P91 ও ভিন্ন ধাতুর ওয়েল্ড</a><a href="aluminium-welding.html">অ্যালুমিনিয়াম ওয়েল্ডিং</a><div class="grp">কাটিং ও ফর্মিং</div><a href="cutting-gouging.html">কাটিং ও গাউজিং</a><a href="plate-forming.html">রোলিং, বেন্ডিং ও ফর্মিং</a><a href="layout-development.html">লেআউট ও প্যাটার্ন ডেভেলপমেন্ট</a><a href="welding-safety.html">ওয়েল্ডিং ও কাটিংয়ের নিরাপত্তা</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">ওয়েল্ডিং ও ফেব্রিকেশন</a> › ওয়েল্ডিং প্রসেস</div>
+<h1>SAW (সাবমার্জড আর্ক)</h1>
+<p class="summary">সাবমার্জড আর্কের যন্ত্রপাতি, তার/ফ্লাক্স জোড়া, সেটিং ও ফ্লাক্স ব্যবস্থাপনা।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">তার ও ফ্লাক্সের শ্রেণি (AWS A5.17)</a></li><li><a href="#s2">সেটিং</a></li><li><a href="#s3">ফ্লাক্স ব্যবস্থাপনা</a></li><li><a href="#s4">ত্রুটি</a></li></ol></details>
+
+<ul><li>দানাদার ফ্লাক্সের নিচে আর্ক চাপা থাকে। আর্ক দেখা যায় না, স্প্যাটার নেই, খুব বেশি জমা।</li><li>লম্বা সোজা সিম এবং ঘোরানো ভেসেল বা পাইপে (পজিশনার বা রোলারে) পরিধি সিমে ব্যবহৃত।</li><li>ট্র্যাক্টর, কলাম-অ্যান্ড-বুম বা পাইপ মিল ব্যবস্থা। বেশি উৎপাদনে ট্যান্ডেম ও টুইন তার।</li></ul>
+<h3 id="s1">তার ও ফ্লাক্সের শ্রেণি (AWS A5.17)</h3>
+<p><code>F7A2-EM12K</code>: ফ্লাক্স + তার 70 ksi টেনসাইল দেয় (7), ওয়েল্ডেড অবস্থায় (A), −20 °F এ 27 J ইমপ্যাক্ট (2), EM12K তার দিয়ে (মাঝারি ম্যাঙ্গানিজ, সিলিকন কিল্ড)।</p>
+<ul><li>মাল্টি-পাসে নিউট্রাল ফ্লাক্স। অ্যাক্টিভ ফ্লাক্স Mn/Si যোগ করে: শুধু ১–২ পাসের জন্য ঠিক।</li><li>অ্যাগ্লোমারেটেড বনাম ফিউজড ফ্লাক্স: অ্যাগ্লোমারেটেড দ্রুত আর্দ্রতা শোষে।</li></ul>
+<h3 id="s2">সেটিং</h3>
+<ul><li>সাধারণত 3.2–4.0 mm তার, 400–700 A, 28–36 V, 300–600 mm/min।</li><li>আর্ক ঢাকার মতো ফ্লাক্সের গভীরতা (প্রায় 25–30 mm)।</li><li>পরিধি সিমে তার শীর্ষবিন্দুর সামান্য আগে (ঘূর্ণনের বিপরীতে) রাখুন যাতে পুল শীর্ষে জমে।</li></ul>
+<h3 id="s3">ফ্লাক্স ব্যবস্থাপনা</h3>
+<ul><li>শুকনো রাখুন। ভেজা অ্যাগ্লোমারেটেড ফ্লাক্স নির্মাতা অনুযায়ী বেক করুন (প্রায়ই 300–350 °C, 2 ঘণ্টা) এবং 150 °C এ রাখুন।</li><li>পুনর্ব্যবহৃত ফ্লাক্স চালুন এবং গুঁড়া ও স্ল্যাগ সরান। নতুন ফ্লাক্সের সাথে মেশান।</li><li>পাসের মাঝে গলিত স্ল্যাগ সরাতে হবে।</li></ul>
+<h3 id="s4">ত্রুটি</h3>
+<ul><li>সেন্টারলাইন (সলিডিফিকেশন) ফাটল: গভীর সরু বিড (গভীরতা/প্রস্থ অনুপাত 1 এর বেশি)। কারেন্ট কমান, ভোল্টেজ বাড়ান, ধীরে চালান।</li><li>ভেজা ফ্লাক্স বা মরিচা থেকে পোরোসিটি।</li><li>গ্রুভ ওয়েল্ডে টোতে স্ল্যাগ আটকা।</li></ul>
+<div class="pager"><a href="gmaw-fcaw.html"><span>আগের</span>GMAW ও FCAW (MIG ও ফ্লাক্স কোর)</a><a class="nx" href="filler-metals.html"><span>পরের</span>ফিলার মেটাল গাইড</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

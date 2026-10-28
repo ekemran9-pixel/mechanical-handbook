@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>পাম্প কার্ভ ও সিস্টেম কার্ভ · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="পাম্প কার্ভ পড়া, অপারেটিং পয়েন্ট বের করা, অ্যাফিনিটি ল ব্যবহার এবং প্যারালাল ও সিরিজে পাম্প বোঝা।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rotary/pump-curves.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rotary/pump-curves.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html" aria-current="page">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রোটারি যন্ত্রপাতি"><div class="grp">পাম্প</div><a href="centrifugal-pumps.html">সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a href="pump-curves.html" aria-current="page">পাম্প কার্ভ ও সিস্টেম কার্ভ</a><a href="pump-types.html">পাম্পের ধরন ও API 610 কোড</a><a href="pump-overhaul.html">পাম্প ওভারহল পদ্ধতি</a><a href="pd-pumps.html">পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a href="pump-troubleshooting.html">পাম্পের সমস্যা সমাধান</a><div class="grp">সিল ও প্যাকিং</div><a href="mechanical-seals.html">মেকানিক্যাল সিল</a><a href="seal-plans.html">সিল ফ্লাশ প্ল্যান (API 682)</a><a href="gland-packing.html">গ্ল্যান্ড প্যাকিং</a><div class="grp">বিয়ারিং ও লুব্রিকেশন</div><a href="rolling-bearings.html">রোলিং এলিমেন্ট বিয়ারিং</a><a href="bearing-mounting.html">বিয়ারিং লাগানো ও খোলা</a><a href="plain-bearings.html">প্লেইন ও টিল্টিং-প্যাড বিয়ারিং</a><a href="lubrication.html">লুব্রিকেশন</a><a href="oil-analysis.html">তেল বিশ্লেষণ</a><div class="grp">অ্যালাইনমেন্ট ও ভাইব্রেশন</div><a href="alignment.html">শ্যাফট অ্যালাইনমেন্ট</a><a href="dial-alignment.html">ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a href="vibration.html">ভাইব্রেশন বিশ্লেষণ</a><a href="balancing.html">ব্যালান্সিং</a><a href="condition-monitoring.html">কন্ডিশন মনিটরিং</a><div class="grp">ড্রাইভ ও ট্রান্সমিশন</div><a href="couplings.html">কাপলিং</a><a href="gearboxes.html">গিয়ারবক্স</a><a href="belts-chains.html">বেল্ট ও চেইন ড্রাইভ</a><a href="electric-motors.html">ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</a><div class="grp">ফ্লুইড পাওয়ার</div><a href="hydraulics.html">হাইড্রলিক সিস্টেম</a><a href="pneumatics.html">কম্প্রেসড এয়ার ও নিউমেটিক্স</a><div class="grp">কম্প্রেসর ও টারবাইন</div><a href="recip-compressors.html">রেসিপ্রোকেটিং কম্প্রেসর</a><a href="centrifugal-compressors.html">সেন্ট্রিফিউগাল কম্প্রেসর</a><a href="screw-compressors.html">স্ক্রু ও এয়ার কম্প্রেসর</a><a href="steam-turbines.html">স্টিম টারবাইন</a><a href="gas-turbines.html">গ্যাস টারবাইন (সংক্ষেপে)</a><div class="grp">অন্যান্য যন্ত্র</div><a href="fans-blowers.html">ফ্যান ও ব্লোয়ার</a><a href="agitators.html">অ্যাজিটেটর ও মিক্সার</a><a href="conveyors.html">বেল্ট কনভেয়র</a><a href="cranes-hoists.html">ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><div class="grp">রিলায়েবিলিটি</div><a href="rca.html">রুট কজ অ্যানালাইসিস</a><a href="maintenance-strategy.html">রক্ষণাবেক্ষণ কৌশল ও KPI</a><a href="preservation.html">সংরক্ষণ ও প্রিজারভেশন</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রোটারি যন্ত্রপাতি</a> › পাম্প</div>
+<h1>পাম্প কার্ভ ও সিস্টেম কার্ভ</h1>
+<p class="summary">পাম্প কার্ভ পড়া, অপারেটিং পয়েন্ট বের করা, অ্যাফিনিটি ল ব্যবহার এবং প্যারালাল ও সিরিজে পাম্প বোঝা।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">কার্ভে কী থাকে</a></li><li><a href="#s2">সিস্টেম কার্ভ</a></li><li><a href="#s3">অ্যাফিনিটি ল</a></li><li><a href="#s4">প্যারালালে পাম্প</a></li><li><a href="#s5">সিরিজে পাম্প</a></li><li><a href="#s6">স্পেসিফিক স্পিড</a></li><li><a href="#s7">মাঠের ডেটা পড়া</a></li></ol></details>
+
+<h3 id="s1">কার্ভে কী থাকে</h3>
+<p>পাম্প পারফরম্যান্স কার্ভে ফ্লো (Q) এর বিপরীতে দেখানো হয়:</p>
+<ul><li><b>হেড (H)</b>: ফ্লো বাড়লে কমে। শূন্য ফ্লোতে যে হেড তাকে শাট-অফ হেড বলে।</li><li><b>দক্ষতা (η)</b>: বেস্ট এফিসিয়েন্সি পয়েন্ট (BEP) পর্যন্ত বাড়ে, তারপর কমে।</li><li><b>পাওয়ার (P)</b>: ব্রেক পাওয়ার, রেডিয়াল ইমপেলারে সাধারণত ফ্লোর সাথে বাড়ে।</li><li><b>NPSHr</b>: ফ্লোর সাথে বাড়ে, বেশি ফ্লোতে খুব দ্রুত।</li></ul>
+<p>কার্ভ প্রায়ই কয়েকটি ইমপেলার ব্যাসের জন্য আঁকা থাকে। রেটেড পয়েন্ট ডেটা শিটে দেওয়া থাকে।</p>
+<figure><svg viewBox="0 0 420 230" role="img" aria-label="পাম্প হেড কার্ভ ও সিস্টেম কার্ভ মিলিত হয় অপারেটিং পয়েন্টে">
+<line class="ln" x1="50" y1="20" x2="50" y2="190"/><line class="ln" x1="50" y1="190" x2="400" y2="190"/>
+<path class="ac" d="M50 50 C 150 52, 260 75, 380 160"/>
+<path class="ln" d="M50 130 C 150 128, 250 105, 380 40" stroke-dasharray="5 4"/>
+<circle class="fa" cx="268" cy="96" r="5"/>
+<text x="275" y="90">অপারেটিং পয়েন্ট</text>
+<text x="300" y="150">পাম্প কার্ভ</text>
+<text x="300" y="45" class="m">সিস্টেম কার্ভ</text>
+<text x="56" y="44" class="m">শাট-অফ হেড</text>
+<text x="56" y="125" class="m">স্ট্যাটিক হেড</text>
+<text x="215" y="212">ফ্লো Q →</text>
+<text x="8" y="105" class="m">হেড</text>
+</svg><figcaption>পাম্প সেখানেই চলে যেখানে তার কার্ভ সিস্টেম কার্ভকে ছেদ করে। ডিসচার্জ ভাল্ভ থ্রটল করলে সিস্টেম কার্ভ খাড়া হয় এবং পয়েন্ট বামে সরে।</figcaption></figure>
+<h3 id="s2">সিস্টেম কার্ভ</h3>
+<div class="formula">H_system = H_static + k × Q²</div>
+<p>স্ট্যাটিক হেড হলো দুই ট্যাংকের উচ্চতার পার্থক্য এবং চাপের পার্থক্য। ঘর্ষণ ফ্লোর বর্গের সাথে বাড়ে। পাম্প সেখানে স্থির হয় যেখানে তার কার্ভ সিস্টেম কার্ভকে কাটে।</p>
+<ul><li>ডিসচার্জ থ্রটলিং: ঘর্ষণ যোগ করে, সিস্টেম কার্ভ খাড়া হয়, ফ্লো কমে। সহজ কিন্তু শক্তির অপচয়।</li><li>বন্ধ স্ট্রেইনার বা ময়লা হিট এক্সচেঞ্জার: থ্রটলিংয়ের মতোই প্রভাব।</li><li>গন্তব্য ট্যাংকের চাপ বেশি: স্ট্যাটিক হেড বাড়ে, পুরো কার্ভ উপরে ওঠে।</li></ul>
+<h3 id="s3">অ্যাফিনিটি ল</h3>
+<p>একই পাম্পে গতি (N) পরিবর্তন বা ছোট ইমপেলার ট্রিম (D, প্রায় 10% পর্যন্ত) করলে:</p>
+<div class="formula">Q2 = Q1 × (N2/N1)      H2 = H1 × (N2/N1)²      P2 = P1 × (N2/N1)³</div>
+<p>গতি 20% কমালে পাওয়ার প্রায় 51% এ নেমে আসে। এজন্যই যেসব পাম্পে মূলত ঘর্ষণ হেড, সেখানে VFD অনেক শক্তি বাঁচায়। স্ট্যাটিক হেড বেশি হলে সাশ্রয় কম, কারণ পাম্পকে তবুও স্ট্যাটিক উচ্চতা অতিক্রম করতে হয়।</p>
+<p>NPSHr ও মোটামুটি গতির বর্গের সাথে পরিবর্তিত হয়।</p>
+<h3 id="s4">প্যারালালে পাম্প</h3>
+<ul><li>হেড একই থাকে, প্রতিটি হেডে ফ্লো যোগ হয়।</li><li>সিস্টেম কার্ভ খাড়া হলে দ্বিতীয় পাম্প দ্বিগুণের অনেক কম ফ্লো যোগ করে।</li><li>পাম্পগুলোর শাট-অফ হেড কাছাকাছি হতে হবে। দুর্বল পাম্প শাট-অফে ঠেলে দেওয়া হয়ে গরম হতে পারে।</li><li>প্রতিটি পাম্পের ডিসচার্জে চেক ভাল্ভ লাগবে।</li></ul>
+<h3 id="s5">সিরিজে পাম্প</h3>
+<ul><li>ফ্লো একই থাকে, হেড যোগ হয়।</li><li>দ্বিতীয় পাম্পের কেসিং মিলিত চাপের জন্য রেটেড হতে হবে।</li><li>বুস্টার ও বেশি স্ট্যাটিক হেডের ট্রান্সফারে ব্যবহৃত।</li></ul>
+<h3 id="s6">স্পেসিফিক স্পিড</h3>
+<div class="formula">Ns = N × √Q ÷ H^0.75   (rpm, m³/s, m)</div>
+<p>কম Ns (মেট্রিকে প্রায় 30 এর নিচে) মানে সরু রেডিয়াল ইমপেলার, বেশি হেড ও কম ফ্লো। বেশি Ns মানে মিক্সড-ফ্লো বা অ্যাক্সিয়াল ইমপেলার, কম হেড ও বেশি ফ্লো। সাকশন স্পেসিফিক স্পিড (Nss, NPSHr দিয়ে) US এককে প্রায় 11,000 (মেট্রিকে 213) এর বেশি হলে স্থিতিশীল অপারেটিং রেঞ্জ সরু হওয়ার সতর্কতা।</p>
+<h3 id="s7">মাঠের ডেটা পড়া</h3>
+<ol class="steps"><li>সাকশন ও ডিসচার্জ প্রেশার গেজ পড়ুন। SG দিয়ে হেডে রূপান্তর করুন।</li><li>ডিফারেনশিয়াল হেড = (Pd − Ps) × 10.2 ÷ SG, সাথে গেজের উচ্চতার পার্থক্য।</li><li>ফ্লোমিটার থেকে ফ্লো পড়ুন, অথবা ট্যাংক লেভেলের পরিবর্তন থেকে অনুমান করুন।</li><li>কার্ভে বসান। একই ফ্লোতে কার্ভের নিচে থাকলে ভেতরে ক্ষয় (রিং, ইমপেলার) বা ভুল গতি।</li><li>SG ও ভিসকোসিটি অনুযায়ী পাওয়ার কার্ভের সাথে অ্যাম্পিয়ার মেলান।</li></ol>
+<div class="note"><b>মাঠের নিয়ম।</b> একই ফ্লোতে কার্ভের চেয়ে 10% কম হেড দিলে সাধারণত ওয়্যার রিং বা ইমপেলার ক্ষয়ে গেছে, বা গতি কম। আগে গতি চেক করুন, তারপর খুলুন।</div>
+<div class="pager"><a href="centrifugal-pumps.html"><span>আগের</span>সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a class="nx" href="pump-types.html"><span>পরের</span>পাম্পের ধরন ও API 610 কোড</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

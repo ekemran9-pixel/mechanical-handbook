@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pressure testing · Mechanical Foreman Handbook</title>
+<meta name="description" content="Hydrostatic, pneumatic and service tests to ASME B31.3: test pressures, test packs, safety and sign-off.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/piping/pressure-testing.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/piping/pressure-testing.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html" aria-current="page">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Piping"><div class="grp">Pipe &amp; fittings</div><a href="pipe-sizes.html">Pipe sizes &amp; schedules</a><a href="pipe-materials.html">Piping materials (ASTM)</a><a href="fittings.html">Fittings &amp; take-outs</a><div class="grp">Flanges &amp; bolting</div><a href="flanges.html">Flanges</a><a href="gaskets.html">Gaskets</a><a href="flange-bolting.html">Flange bolting (ASME PCC-1)</a><div class="grp">Drawings &amp; layout</div><a href="isometrics.html">Reading P&amp;IDs &amp; isometrics</a><a href="spool-fabrication.html">Spool fabrication &amp; erection</a><a href="pipe-supports.html">Pipe supports</a><div class="grp">Testing &amp; cleaning</div><a href="pressure-testing.html" aria-current="page">Pressure testing</a><a href="flushing.html">Flushing, blowing &amp; cleaning</a><div class="grp">Small bore &amp; tubing</div><a href="small-bore.html">Small bore, threaded &amp; tubing</a><a href="non-metallic.html">Non-metallic piping</a><a href="expansion-joints.html">Expansion joints &amp; bellows</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Piping</a> › Testing &amp; cleaning</div>
+<h1>Pressure testing</h1>
+<p class="summary">Hydrostatic, pneumatic and service tests to ASME B31.3: test pressures, test packs, safety and sign-off.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Test pressures (ASME B31.3)</a></li><li><a href="#s2">Test pack contents</a></li><li><a href="#s3">Hydrotest procedure</a></li><li><a href="#s4">Pneumatic test extra rules</a></li></ol></details>
+
+<h3 id="s1">Test pressures (ASME B31.3)</h3>
+<div class="tbl"><table><tr><th>Test</th><th>Pressure</th><th>Notes</th></tr>
+<tr><td>Hydrostatic (345.4)</td><td>1.5 × design pressure × (St / S)</td><td>St/S = allowable stress at test temp ÷ at design temp (max 6.5). Must not exceed yield at test temperature</td></tr>
+<tr><td>Pneumatic (345.5)</td><td>1.1 × design pressure</td><td>Max 1.33 × design for some. Hold, then reduce to design pressure for inspection</td></tr>
+<tr><td>Hydropneumatic</td><td>As hydrostatic</td><td></td></tr>
+<tr><td>Initial service leak test</td><td>Operating pressure</td><td>Category D fluid service only</td></tr>
+<tr><td>Sensitive leak test</td><td>Lower of 1.05 bar(g) or 25% of design</td><td>Bubble test, Category M or specified</td></tr></table></div>
+<p>Hold the test pressure for at least <b>10 minutes</b>, then examine all joints. On hydrotest the examination can be at design pressure if not lower than the test pressure as required.</p>
+<p>Example: design 20 bar at 200 °C, A106 B. S at 200 °C ≈ S at ambient (138 MPa), ratio 1.0. Hydro test = 30 bar.</p>
+<h3 id="s2">Test pack contents</h3>
+<ul><li>P&amp;IDs marked with test boundaries (colour highlighted), test points, vents, drains.</li><li>Isometrics, weld summary, NDT and PWHT clearance, punch list.</li><li>Test procedure, test pressure calculation.</li><li>Gauge calibration certificates, relief valve certificate.</li><li>Signatures: construction, QC, client, third party as required.</li></ul>
+<h3 id="s3">Hydrotest procedure</h3>
+<ol class="steps"><li>Walk the line with the test pack. Check supports in place, spring hangers locked, welds not painted or insulated (unless allowed), all NDT complete.</li><li>Remove or isolate: instruments, control valves, PSVs, rupture discs, expansion joints, check valve discs (if needed), equipment not rated for test. Fit spools and blinds rated for test pressure.</li><li>Fit 2 calibrated gauges (range 1.5 to 4 × test pressure): one at the pump, one at the far or highest point. Fit a relief valve set slightly above test pressure (e.g. 5–10%).</li><li>Fill from the low point with clean water (for stainless: chlorides &lt; 50 ppm, often &lt; 25 ppm). Vent all high points until water comes out free of air.</li><li>Let temperature stabilise. Note metal temperature (avoid brittle fracture: test above MDMT + margin, typically ≥ 16 °C for carbon steel).</li><li>Raise pressure gradually: 50%, hold and check, then steps of 10% to test pressure.</li><li>Hold at least 10 minutes (often 30 min–1 h per spec). Record on a chart recorder if required.</li><li>Inspect all joints at test or design pressure. Mark any leak.</li><li>Depressurise slowly. Open vents before draining so the system doesn't pull a vacuum.</li><li>Drain fully, blow dry with air where needed (especially stainless and lines going into dry service).</li><li>Sign off. Reinstate removed items with new gaskets.</li></ol>
+<h3 id="s4">Pneumatic test extra rules</h3>
+<ul><li>Needs owner approval and a safety assessment of stored energy and exclusion distance.</li><li>Leak check welds by soap solution or by sensitive method before raising pressure.</li><li>Raise to 25% (or 1.7 bar) first for a preliminary check, then in steps of 10% of test pressure.</li><li>Nobody inside the exclusion zone during pressurising and hold.</li></ul>
+<div class="warn"><b>Stored energy in gas is enormous.</b> A pneumatic test failure can throw fragments hundreds of metres. Even on hydrotests, trapped air pockets store energy. Vent thoroughly.</div>
+<div class="pager"><a href="pipe-supports.html"><span>Previous</span>Pipe supports</a><a class="nx" href="flushing.html"><span>Next</span>Flushing, blowing &amp; cleaning</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

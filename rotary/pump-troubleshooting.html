@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pump troubleshooting · Mechanical Foreman Handbook</title>
+<meta name="description" content="Symptom-by-symptom fault finding for centrifugal pumps, from no flow to short seal life.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/rotary/pump-troubleshooting.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/rotary/pump-troubleshooting.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html" aria-current="page">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Rotary Equipment"><div class="grp">Pumps</div><a href="centrifugal-pumps.html">Centrifugal pump basics</a><a href="pump-curves.html">Pump curves &amp; system curves</a><a href="pump-types.html">Pump types &amp; API 610 codes</a><a href="pump-overhaul.html">Pump overhaul procedure</a><a href="pd-pumps.html">Positive displacement pumps</a><a href="pump-troubleshooting.html" aria-current="page">Pump troubleshooting</a><div class="grp">Seals &amp; packing</div><a href="mechanical-seals.html">Mechanical seals</a><a href="seal-plans.html">Seal flush plans (API 682)</a><a href="gland-packing.html">Gland packing</a><div class="grp">Bearings &amp; lubrication</div><a href="rolling-bearings.html">Rolling element bearings</a><a href="bearing-mounting.html">Bearing mounting &amp; removal</a><a href="plain-bearings.html">Plain &amp; tilting-pad bearings</a><a href="lubrication.html">Lubrication</a><a href="oil-analysis.html">Oil analysis</a><div class="grp">Alignment &amp; vibration</div><a href="alignment.html">Shaft alignment</a><a href="dial-alignment.html">Dial indicator alignment methods</a><a href="vibration.html">Vibration analysis</a><a href="balancing.html">Balancing</a><a href="condition-monitoring.html">Condition monitoring</a><div class="grp">Drives &amp; transmission</div><a href="couplings.html">Couplings</a><a href="gearboxes.html">Gearboxes</a><a href="belts-chains.html">Belt &amp; chain drives</a><a href="electric-motors.html">Electric motors (mechanical side)</a><div class="grp">Fluid power</div><a href="hydraulics.html">Hydraulic systems</a><a href="pneumatics.html">Compressed air &amp; pneumatics</a><div class="grp">Compressors &amp; turbines</div><a href="recip-compressors.html">Reciprocating compressors</a><a href="centrifugal-compressors.html">Centrifugal compressors</a><a href="screw-compressors.html">Screw &amp; air compressors</a><a href="steam-turbines.html">Steam turbines</a><a href="gas-turbines.html">Gas turbines (overview)</a><div class="grp">Other machines</div><a href="fans-blowers.html">Fans &amp; blowers</a><a href="agitators.html">Agitators &amp; mixers</a><a href="conveyors.html">Belt conveyors</a><a href="cranes-hoists.html">Cranes &amp; hoists (maintenance)</a><div class="grp">Reliability</div><a href="rca.html">Root cause analysis</a><a href="maintenance-strategy.html">Maintenance strategy &amp; KPIs</a><a href="preservation.html">Storage &amp; preservation</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Rotary Equipment</a> › Pumps</div>
+<h1>Pump troubleshooting</h1>
+<p class="summary">Symptom-by-symptom fault finding for centrifugal pumps, from no flow to short seal life.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">No flow or very low flow</a></li><li><a href="#s2">Flow or head lower than design</a></li><li><a href="#s3">Motor overload</a></li><li><a href="#s4">Vibration and noise</a></li><li><a href="#s5">Bearings running hot</a></li><li><a href="#s6">Short seal life</a></li><li><a href="#s7">Pump loses prime after running</a></li><li><a href="#s8">Good questions to ask the operator</a></li></ol></details>
+
+<p>Work from the outside in. Check the system before opening the pump. Most pump problems are suction problems.</p>
+<h3 id="s1">No flow or very low flow</h3>
+<ul><li>Pump not primed, or air lock in the suction line (high spots).</li><li>Suction valve closed, strainer blocked, foot valve stuck.</li><li>Wrong rotation. Check by bumping the motor. 3-phase motors reverse when two phases are swapped.</li><li>Speed too low (VFD setpoint, belt slip).</li><li>Discharge head higher than shut-off (blocked line, closed downstream valve, wrong valve line-up).</li><li>Impeller blocked or loose on the shaft (key sheared).</li><li>Air leak at the suction: packing, flange gaskets, cracks. Air entrainment from a vortex at low tank level.</li></ul>
+<h3 id="s2">Flow or head lower than design</h3>
+<ul><li>Worn wear rings or impeller. Compare with the curve at the same flow.</li><li>Gas in the liquid, near boiling liquid.</li><li>Higher viscosity than design.</li><li>Impeller trimmed or wrong impeller fitted.</li><li>Semi-open impeller front clearance too large.</li></ul>
+<h3 id="s3">Motor overload</h3>
+<ul><li>Operating far right on the curve: low system resistance (a burst line, a bypass open).</li><li>Higher SG or viscosity than design.</li><li>Mechanical rubbing: wear rings, impeller to casing, bent shaft.</li><li>Packing too tight.</li><li>Electrical: low voltage, single phasing.</li></ul>
+<h3 id="s4">Vibration and noise</h3>
+<div class="tbl"><table><tr><th>Clue</th><th>Probable cause</th></tr>
+<tr><td>Gravel noise, unsteady gauges</td><td>Cavitation (low NPSHa) or air entrainment</td></tr>
+<tr><td>Rumble at low flow</td><td>Recirculation</td></tr>
+<tr><td>High 1X</td><td>Impeller unbalance (damage, deposits), bent shaft</td></tr>
+<tr><td>High 1X/2X axial</td><td>Misalignment, pipe strain</td></tr>
+<tr><td>Vane pass frequency high</td><td>Impeller too close to cutwater, operating off BEP</td></tr>
+<tr><td>Bearing frequencies</td><td>Bearing damage</td></tr>
+<tr><td>Changes when bolts are loosened</td><td>Soft foot, base resonance, looseness</td></tr></table></div>
+<h3 id="s5">Bearings running hot</h3>
+<ul><li>Too much grease, or oil level too high (churning).</li><li>Oil level too low, oiler empty or on wrong side.</li><li>Wrong oil viscosity, water in oil.</li><li>Misalignment, too tight a fit, C3 bearing needed but CN fitted.</li><li>High thrust from worn wear rings or blocked balance holes.</li><li>Cooling water off on cooled housings.</li></ul>
+<h3 id="s6">Short seal life</h3>
+<ul><li>Dry running at start-up or from vapour in the seal chamber. Vent properly.</li><li>Flush orifice blocked, cooler fouled.</li><li>Running off BEP: shaft deflection.</li><li>Misalignment, pipe strain, bent shaft, worn bearings.</li><li>Setting clips left in, or wrong setting length on a component seal.</li><li>Elastomer not compatible with the product or flush.</li><li>Solids in the seal chamber.</li></ul>
+<h3 id="s7">Pump loses prime after running</h3>
+<ul><li>Suction air leak.</li><li>Liquid level falls below the vortex limit.</li><li>Gas coming out of the liquid (dissolved gas, temperature rise).</li></ul>
+<h3 id="s8">Good questions to ask the operator</h3>
+<ol><li>When did it start? After maintenance, after a process change, slowly or suddenly?</li><li>Is the flow and pressure the same as usual?</li><li>Has the product changed (temperature, grade, density)?</li><li>Is the spare pump doing the same?</li><li>Any valves changed around the system?</li></ol>
+<div class="pager"><a href="pd-pumps.html"><span>Previous</span>Positive displacement pumps</a><a class="nx" href="mechanical-seals.html"><span>Next</span>Mechanical seals</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

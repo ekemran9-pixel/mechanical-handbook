@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SMAW (স্টিক ওয়েল্ডিং) · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="যন্ত্রপাতি, ইলেকট্রোড বাছাই, কারেন্টের রেঞ্জ, কৌশল, আর্ক ব্লো এবং লো-হাইড্রোজেন রডের নিয়ম।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../fabrication/smaw.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../fabrication/smaw.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html" aria-current="page">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="ওয়েল্ডিং ও ফেব্রিকেশন"><div class="grp">ওয়েল্ডিং প্রসেস</div><a href="welding-processes.html">ওয়েল্ডিং প্রসেসের তুলনা</a><a href="smaw.html" aria-current="page">SMAW (স্টিক ওয়েল্ডিং)</a><a href="gtaw.html">GTAW (TIG ওয়েল্ডিং)</a><a href="gmaw-fcaw.html">GMAW ও FCAW (MIG ও ফ্লাক্স কোর)</a><a href="saw.html">SAW (সাবমার্জড আর্ক)</a><div class="grp">উপাদান</div><a href="filler-metals.html">ফিলার মেটাল গাইড</a><a href="metallurgy.html">ওয়েল্ডারের জন্য স্টিলের ধাতুবিদ্যা</a><div class="grp">জয়েন্ট ডিজাইন</div><a href="joint-design.html">জয়েন্ট ডিজাইন ও ফিট-আপ</a><a href="weld-symbols.html">ওয়েল্ড সিম্বল (AWS A2.4 / ISO 2553)</a><a href="positions.html">ওয়েল্ডিং পজিশন ও যোগ্যতা</a><div class="grp">গুণমান</div><a href="weld-defects.html">ওয়েল্ডের ত্রুটি ও মেরামত</a><a href="wps-pqr.html">WPS, PQR ও WPQ</a><a href="preheat-pwht.html">প্রিহিট, ইন্টারপাস ও PWHT</a><a href="distortion.html">ডিস্টরশন নিয়ন্ত্রণ</a><div class="grp">বিশেষ উপাদান</div><a href="stainless-welding.html">স্টেইনলেস ও ডুপ্লেক্স ওয়েল্ডিং</a><a href="alloy-welding.html">Cr-Mo, P91 ও ভিন্ন ধাতুর ওয়েল্ড</a><a href="aluminium-welding.html">অ্যালুমিনিয়াম ওয়েল্ডিং</a><div class="grp">কাটিং ও ফর্মিং</div><a href="cutting-gouging.html">কাটিং ও গাউজিং</a><a href="plate-forming.html">রোলিং, বেন্ডিং ও ফর্মিং</a><a href="layout-development.html">লেআউট ও প্যাটার্ন ডেভেলপমেন্ট</a><a href="welding-safety.html">ওয়েল্ডিং ও কাটিংয়ের নিরাপত্তা</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">ওয়েল্ডিং ও ফেব্রিকেশন</a> › ওয়েল্ডিং প্রসেস</div>
+<h1>SMAW (স্টিক ওয়েল্ডিং)</h1>
+<p class="summary">যন্ত্রপাতি, ইলেকট্রোড বাছাই, কারেন্টের রেঞ্জ, কৌশল, আর্ক ব্লো এবং লো-হাইড্রোজেন রডের নিয়ম।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">প্রচলিত ইলেকট্রোড</a></li><li><a href="#s2">E7018-1 H4R পড়া</a></li><li><a href="#s3">কারেন্টের রেঞ্জ (সাধারণ, DCEP)</a></li><li><a href="#s4">কৌশল</a></li><li><a href="#s5">আর্ক ব্লো</a></li><li><a href="#s6">লো-হাইড্রোজেন রড নিয়ন্ত্রণ</a></li></ol></details>
+
+<h3 id="s1">প্রচলিত ইলেকট্রোড</h3>
+<div class="tbl"><table><tr><th>AWS A5.1</th><th>কোটিং</th><th>কারেন্ট</th><th>বৈশিষ্ট্য</th><th>ব্যবহার</th></tr>
+<tr><td>E6010</td><td>বেশি সেলুলোজ সোডিয়াম</td><td>DCEP</td><td>গভীর খোঁড়া আর্ক, দ্রুত জমে</td><td>পাইপের রুট (ডাউনহিল বা আপহিল), ক্রস-কান্ট্রি পাইপলাইন</td></tr>
+<tr><td>E6011</td><td>বেশি সেলুলোজ পটাসিয়াম</td><td>AC / DCEP</td><td>AC তে 6010 এর মতো</td><td>ময়লা, মরিচা ধরা স্টিল, মেইনটেন্যান্স</td></tr>
+<tr><td>E6013</td><td>রুটাইল পটাসিয়াম</td><td>AC / DC±</td><td>নরম আর্ক, সহজে স্ল্যাগ ওঠে, দেখতে সুন্দর</td><td>হালকা ফেব্রিকেশন, শিট, কম গুরুত্বপূর্ণ কাজ</td></tr>
+<tr><td>E7016</td><td>লো হাইড্রোজেন পটাসিয়াম</td><td>AC / DCEP</td><td>মসৃণ</td><td>স্ট্রাকচারালে রুট রান, জাপান/এশিয়ায় প্রচলিত</td></tr>
+<tr><td>E7018</td><td>লো হাইড্রোজেন আয়রন পাউডার</td><td>AC / DCEP</td><td>কোডের স্ট্যান্ডার্ড</td><td>স্ট্রাকচারাল, প্রেশার, সব পজিশন, গুরুত্বপূর্ণ কাজ</td></tr>
+<tr><td>E7024</td><td>আয়রন পাউডার রুটাইল</td><td>AC / DC±</td><td>বেশি জমা</td><td>শুধু ফ্ল্যাট ও হরাইজন্টাল ফিলেট</td></tr>
+<tr><td>E8018-B2, E9018-B3</td><td>লো হাইড্রোজেন অ্যালয়</td><td>DCEP</td><td>Cr-Mo স্টিল</td><td>1¼Cr-½Mo, 2¼Cr-1Mo</td></tr>
+<tr><td>E8018-C1/C3</td><td>লো হাইড্রোজেন নিকেল</td><td>DCEP</td><td>নিম্ন তাপমাত্রায় টাফনেস</td><td>LTCS (A333 Gr 6)</td></tr></table></div>
+<h3 id="s2">E7018-1 H4R পড়া</h3>
+<ul><li><b>E</b>: ইলেকট্রোড। <b>70</b>: সর্বনিম্ন 70 ksi (480 MPa) টেনসাইল।</li><li><b>1</b>: সব পজিশন (2 = ফ্ল্যাট ও হরাইজন্টাল ফিলেট, 4 = ভার্টিক্যাল ডাউন)।</li><li><b>8</b>: কোটিংয়ের ধরন ও কারেন্ট (লো-হাইড্রোজেন আয়রন পাউডার, AC বা DCEP)।</li><li><b>-1</b>: উন্নত ইমপ্যাক্ট টাফনেস। <b>H4</b>: ডিফিউসিবল হাইড্রোজেন ≤ 4 mL/100 g। <b>R</b>: আর্দ্রতা প্রতিরোধী কোটিং।</li></ul>
+<h3 id="s3">কারেন্টের রেঞ্জ (সাধারণ, DCEP)</h3>
+<div class="tbl"><table><tr><th>ব্যাস</th><th>E6010</th><th>E7018</th><th>E6013</th></tr>
+<tr><td>2.5 mm (3/32")</td><td>40–80 A</td><td>70–100 A</td><td>45–90 A</td></tr>
+<tr><td>3.2 mm (1/8")</td><td>75–125 A</td><td>90–150 A</td><td>80–130 A</td></tr>
+<tr><td>4.0 mm (5/32")</td><td>110–170 A</td><td>120–200 A</td><td>105–180 A</td></tr>
+<tr><td>5.0 mm (3/16")</td><td>140–215 A</td><td>180–270 A</td><td>150–230 A</td></tr></table></div>
+<p>মাঝামাঝি থেকে শুরু করুন, ভার্টিক্যাল ও ওভারহেডে কম সেট করুন (প্রায় 10–15% কম)।</p>
+<h3 id="s4">কৌশল</h3>
+<ul><li><b>আর্ক দৈর্ঘ্য</b>: প্রায় ইলেকট্রোডের কোর ব্যাসের সমান। E7018 এ ছোট, টাইট আর্ক লাগে; লম্বা আর্কে পোরোসিটি হয়।</li><li><b>ড্র্যাগ অ্যাঙ্গেল</b>: চলার দিকে 5–15° (ভার্টিক্যালে উপরে ঠেলুন)।</li><li><b>ওয়ার্ক অ্যাঙ্গেল</b>: ফিলেটে 45°, বাট জয়েন্টে 90°।</li><li><b>উইভ</b>: ইলেকট্রোড ব্যাসের 2.5–3 গুণের বেশি চওড়া নয় (কোড প্রায়ই সীমিত করে)।</li><li><b>রিস্ট্রাইক</b>: লো-H রডে জয়েন্টের সামনে আঘাত করে ক্রেটারের উপর পিছিয়ে আসুন, বা শুরুর জায়গা গ্রাইন্ড করুন। শুরুতে পোরোসিটি এড়ান।</li><li>ওয়েল্ড জোনের বাইরে <b>আর্ক স্ট্রাইক</b> ত্রুটি। জয়েন্টের ভেতরে আঘাত করুন।</li><li>পাসের মাঝে স্ল্যাগ পুরো পরিষ্কার করুন। উঁচু জায়গা ও খাড়া টো গ্রাইন্ড করুন।</li></ul>
+<h3 id="s5">আর্ক ব্লো</h3>
+<p>চৌম্বক ক্ষেত্র আর্ককে পাশে ঠেলে দেয়, বেশিরভাগ DC তে জয়েন্টের প্রান্তে বা চুম্বকিত পাইপে।</p>
+<ul><li>রড অনুমতি দিলে AC তে যান।</li><li>আর্থ ক্ল্যাম্প সরান, বা দুটি আর্থ ব্যবহার করুন।</li><li>ভারী ট্যাকের দিকে বা আর্থের দিকে ওয়েল্ড করুন।</li><li>আর্ক ছোট করুন, ব্লোর বিপরীতে ইলেকট্রোড কাত করুন।</li><li>পাইপের প্রান্ত ডিম্যাগনেটাইজ করুন (ডিগাউসিং কয়েল) বা চারপাশে কেবল পেঁচিয়ে DC দিয়ে বাতিল করুন।</li></ul>
+<h3 id="s6">লো-হাইড্রোজেন রড নিয়ন্ত্রণ</h3>
+<ul><li>না খোলা অবস্থায় শুকনো স্টোরে রাখুন। হারমেটিক্যালি সিল করা ক্যান/ভ্যাক-প্যাক উল্লিখিত সময়ের মধ্যে (প্রায়ই 9–12 ঘণ্টা) সরাসরি ব্যবহার করা যায়।</li><li>খোলা রড আবার বেক করুন: সাধারণত 350 °C ± 25 °C এ 1–2 ঘণ্টা (নির্মাতার ডেটা শিট মানুন)। পুনঃবেক সীমিত (প্রায়ই সর্বোচ্চ 2–3 বার)।</li><li>হোল্ডিং ওভেনে 120–150 °C এ রাখুন।</li><li>সাইটে পোর্টেবল কুইভার ≥ 65 °C এ, প্লাগ লাগানো।</li><li>বাতাসে রাখার সীমা (AWS D1.1): E70XX সর্বোচ্চ 4 ঘণ্টা, বেশি শক্তির রডে কম। ওভেনে ফেরত দিন বা বাতিল করুন।</li><li>সেলুলোজিক রড (E6010) ওভেনে রাখবেন না: এগুলোর আর্দ্রতা দরকার।</li></ul>
+<div class="pager"><a href="welding-processes.html"><span>আগের</span>ওয়েল্ডিং প্রসেসের তুলনা</a><a class="nx" href="gtaw.html"><span>পরের</span>GTAW (TIG ওয়েল্ডিং)</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

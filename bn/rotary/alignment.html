@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>শ্যাফট অ্যালাইনমেন্ট · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="অ্যালাইনমেন্ট কেন জরুরি, পুরো অ্যালাইনমেন্ট পদ্ধতি, সফট ফুট, পাইপ স্ট্রেইন, টলারেন্স ও থার্মাল গ্রোথ।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rotary/alignment.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rotary/alignment.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html" aria-current="page">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রোটারি যন্ত্রপাতি"><div class="grp">পাম্প</div><a href="centrifugal-pumps.html">সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a href="pump-curves.html">পাম্প কার্ভ ও সিস্টেম কার্ভ</a><a href="pump-types.html">পাম্পের ধরন ও API 610 কোড</a><a href="pump-overhaul.html">পাম্প ওভারহল পদ্ধতি</a><a href="pd-pumps.html">পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a href="pump-troubleshooting.html">পাম্পের সমস্যা সমাধান</a><div class="grp">সিল ও প্যাকিং</div><a href="mechanical-seals.html">মেকানিক্যাল সিল</a><a href="seal-plans.html">সিল ফ্লাশ প্ল্যান (API 682)</a><a href="gland-packing.html">গ্ল্যান্ড প্যাকিং</a><div class="grp">বিয়ারিং ও লুব্রিকেশন</div><a href="rolling-bearings.html">রোলিং এলিমেন্ট বিয়ারিং</a><a href="bearing-mounting.html">বিয়ারিং লাগানো ও খোলা</a><a href="plain-bearings.html">প্লেইন ও টিল্টিং-প্যাড বিয়ারিং</a><a href="lubrication.html">লুব্রিকেশন</a><a href="oil-analysis.html">তেল বিশ্লেষণ</a><div class="grp">অ্যালাইনমেন্ট ও ভাইব্রেশন</div><a href="alignment.html" aria-current="page">শ্যাফট অ্যালাইনমেন্ট</a><a href="dial-alignment.html">ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a href="vibration.html">ভাইব্রেশন বিশ্লেষণ</a><a href="balancing.html">ব্যালান্সিং</a><a href="condition-monitoring.html">কন্ডিশন মনিটরিং</a><div class="grp">ড্রাইভ ও ট্রান্সমিশন</div><a href="couplings.html">কাপলিং</a><a href="gearboxes.html">গিয়ারবক্স</a><a href="belts-chains.html">বেল্ট ও চেইন ড্রাইভ</a><a href="electric-motors.html">ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</a><div class="grp">ফ্লুইড পাওয়ার</div><a href="hydraulics.html">হাইড্রলিক সিস্টেম</a><a href="pneumatics.html">কম্প্রেসড এয়ার ও নিউমেটিক্স</a><div class="grp">কম্প্রেসর ও টারবাইন</div><a href="recip-compressors.html">রেসিপ্রোকেটিং কম্প্রেসর</a><a href="centrifugal-compressors.html">সেন্ট্রিফিউগাল কম্প্রেসর</a><a href="screw-compressors.html">স্ক্রু ও এয়ার কম্প্রেসর</a><a href="steam-turbines.html">স্টিম টারবাইন</a><a href="gas-turbines.html">গ্যাস টারবাইন (সংক্ষেপে)</a><div class="grp">অন্যান্য যন্ত্র</div><a href="fans-blowers.html">ফ্যান ও ব্লোয়ার</a><a href="agitators.html">অ্যাজিটেটর ও মিক্সার</a><a href="conveyors.html">বেল্ট কনভেয়র</a><a href="cranes-hoists.html">ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><div class="grp">রিলায়েবিলিটি</div><a href="rca.html">রুট কজ অ্যানালাইসিস</a><a href="maintenance-strategy.html">রক্ষণাবেক্ষণ কৌশল ও KPI</a><a href="preservation.html">সংরক্ষণ ও প্রিজারভেশন</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রোটারি যন্ত্রপাতি</a> › অ্যালাইনমেন্ট ও ভাইব্রেশন</div>
+<h1>শ্যাফট অ্যালাইনমেন্ট</h1>
+<p class="summary">অ্যালাইনমেন্ট কেন জরুরি, পুরো অ্যালাইনমেন্ট পদ্ধতি, সফট ফুট, পাইপ স্ট্রেইন, টলারেন্স ও থার্মাল গ্রোথ।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">পরিভাষা</a></li><li><a href="#s2">পদ্ধতি</a></li><li><a href="#s3">সফট ফুট</a></li><li><a href="#s4">পাইপ স্ট্রেইন চেক</a></li><li><a href="#s5">সাধারণ টলারেন্স</a></li><li><a href="#s6">শিম দিয়ে ঠিক করা</a></li><li><a href="#s7">বোল্ট বাউন্ড ও বেস বাউন্ড</a></li><li><a href="#s8">থার্মাল গ্রোথ</a></li><li><a href="#s9">ভার্টিক্যাল মেশিন</a></li><li><a href="#s10">ভালো অভ্যাস</a></li></ol></details>
+
+<p>মিসঅ্যালাইনমেন্ট বিয়ারিং, সিল ও কাপলিংয়ে লোড বাড়ায়। এর ফলে অ্যাক্সিয়াল ভাইব্রেশন বেশি হয়, কাপলিং গরম হয়, বিয়ারিং ও সিলের আয়ু কমে এবং শক্তির অপচয় হয়। ভালো অ্যালাইনমেন্ট হলো রিলায়েবিলিটি বাড়ানোর সবচেয়ে সস্তা উপায়।</p>
+<h3 id="s1">পরিভাষা</h3>
+<ul><li><b>অফসেট (প্যারালাল)</b>: কাপলিংয়ের কেন্দ্রে দুই শ্যাফট সেন্টারলাইনের দূরত্ব। mm এ প্রকাশ।</li><li><b>অ্যাঙ্গুলারিটি</b>: সেন্টারলাইনগুলোর মাঝের কোণ। ব্যাসের প্রতি 100 mm এ গ্যাপের পার্থক্য (mm/100 mm), বা mrad এ (1 mrad = 0.1 mm/100 mm)।</li><li>দুটোই <b>ভার্টিক্যাল</b> ও <b>হরাইজন্টাল</b> তলে মাপা হয়: মোট চারটি মান।</li><li><b>স্টেশনারি মেশিন</b>: যেটি নড়ানো হয় না (সাধারণত পাম্প বা গিয়ারবক্স)। <b>মুভেবল মেশিন</b>: সাধারণত মোটর।</li></ul>
+<h3 id="s2">পদ্ধতি</h3>
+<ol class="steps"><li><b>নিরাপত্তা</b>: ড্রাইভারে LOTO, চালিত মেশিন আইসোলেট। দুই শ্যাফটই ঘোরানো যায় কিনা দেখুন।</li><li><b>প্রস্তুতি</b>: বেসপ্লেট, ফুট ও শিম পরিষ্কার করুন। বোল্ট ও ছিদ্র চেক করুন। আগে থেকে কাটা স্টেইনলেস শিমের সেট রাখুন।</li><li>কাপলিং হাবের <b>রানআউট</b> চেক করুন (≤ 0.05 mm) এবং শ্যাফট বাঁকা কিনা।</li><li>স্ট্রেইট এজ ও ফিলার দিয়ে প্রায় 0.5 mm এর মধ্যে <b>মোটামুটি অ্যালাইন</b> করুন।</li><li>প্রতিটি ফুটে <b>সফট ফুট চেক</b> ও ঠিক করুন (নিচে দেখুন)।</li><li>স্টেশনারি মেশিনে <b>পাইপ স্ট্রেইন</b> চেক করুন।</li><li>লেজার বা ডায়াল দিয়ে <b>মাপুন</b>। খোলার আগের মান রেকর্ড করুন।</li><li><b>ভার্টিক্যাল ঠিক করুন</b>: মুভেবল মেশিনের সামনের ও পেছনের ফুটের নিচে শিম যোগ বা বাদ দিন।</li><li><b>হরাইজন্টাল ঠিক করুন</b>: জ্যাক বোল্ট দিয়ে পাশে সরান, ফুটে ডায়াল রেখে সরানো দেখুন।</li><li>হোল্ড-ডাউন বোল্ট নির্দিষ্ট ক্রমে ও টর্কে <b>টাইট</b> করুন।</li><li><b>আবার মাপুন</b>। টলারেন্সে না আসা পর্যন্ত পুনরাবৃত্তি করুন।</li><li>চূড়ান্ত রিডিং, যোগ করা শিম, কাপলিং গ্যাপ <b>রেকর্ড</b> করুন। গার্ড লাগান।</li></ol>
+<h3 id="s3">সফট ফুট</h3>
+<p>সফট ফুট মানে একটি ফুট সমানভাবে বসে না। তার বোল্ট টাইট করলে ফ্রেম মোচড়ায়, বিয়ারিং বোর বিকৃত হয় এবং অ্যালাইনমেন্ট বদলে যায়।</p>
+<ol class="steps"><li>সব ফুট বোল্ট টাইট করুন।</li><li>একটি ফুটে ডায়াল বসান (বা লেজারের সফট ফুট প্রোগ্রাম ব্যবহার করুন)।</li><li>শুধু সেই বোল্ট ঢিলা করুন। কতটা উঠল পড়ুন।</li><li>আবার টাইট করুন। প্রতিটি ফুটে পুনরাবৃত্তি করুন।</li><li>যে ফুট 0.05 mm এর বেশি ওঠে, তা ঠিক করতে হবে।</li></ol>
+<div class="tbl"><table><tr><th>ধরন</th><th>চেক</th><th>সমাধান</th></tr>
+<tr><td>প্যারালাল (শর্ট ফুট)</td><td>ফিলার গেজে ফুটের চারদিকে একই ফাঁক</td><td>সেই পুরুত্বের শিম দিন</td></tr>
+<tr><td>কোণাকুনি ফুট</td><td>ফুট জুড়ে ফাঁক ভিন্ন</td><td>স্টেপ শিম বা ফুট/বেস মেশিন করুন</td></tr>
+<tr><td>প্ররোচিত (পাইপ বা বাঁকা ফুট থেকে)</td><td>অন্য বোল্টের সাথে রিডিং বদলায়</td><td>আগে বাইরের বল দূর করুন</td></tr>
+<tr><td>স্কুইশি ফুট</td><td>বেশি শিম, ময়লা, মরিচা</td><td>পরিষ্কার করে সর্বোচ্চ ৩–৪টি শিম দিন</td></tr></table></div>
+<h3 id="s4">পাইপ স্ট্রেইন চেক</h3>
+<p>স্টেশনারি শ্যাফট বা কাপলিংয়ে ভার্টিক্যাল ও হরাইজন্টাল তলে ডায়াল বসান। সাকশন ও ডিসচার্জ ফ্ল্যাঞ্জের বোল্ট ঢিলা করুন। শ্যাফট 0.05 mm এর বেশি নড়লে পাইপিং মেশিনকে টানছে। সাপোর্ট ঠিক করুন বা স্পুল নতুন করে ফিট করুন। পাইপের সাথে মেলাতে কখনো পাম্প বাঁকাবেন না।</p>
+<h3 id="s5">সাধারণ টলারেন্স</h3>
+<p>শর্ট ফ্লেক্সিবল কাপলিংয়ের জন্য (মান কাপলিংয়ের কেন্দ্রে):</p>
+<div class="tbl"><table><tr><th>গতি (rpm)</th><th>অফসেট চমৎকার</th><th>অফসেট গ্রহণযোগ্য</th><th>অ্যাঙ্গুলার চমৎকার</th><th>অ্যাঙ্গুলার গ্রহণযোগ্য</th></tr>
+<tr><td>600</td><td>0.13</td><td>0.23</td><td>0.09 /100</td><td>0.13 /100</td></tr>
+<tr><td>750–1000</td><td>0.07</td><td>0.13</td><td>0.06 /100</td><td>0.10 /100</td></tr>
+<tr><td>1500</td><td>0.06</td><td>0.09</td><td>0.05 /100</td><td>0.07 /100</td></tr>
+<tr><td>3000</td><td>0.03</td><td>0.06</td><td>0.03 /100</td><td>0.04 /100</td></tr>
+<tr><td>6000</td><td>0.02</td><td>0.03</td><td>0.02 /100</td><td>0.03 /100</td></tr></table></div>
+<p>স্পেসার কাপলিংয়ে প্রতিটি ফ্লেক্স এলিমেন্টের কোণ দিয়ে বিচার করা হয়: 3000 rpm এ সাধারণ সীমা স্পেসারের প্রতি মিটারে 0.5 mm (0.5 mrad)।</p>
+<h3 id="s6">শিম দিয়ে ঠিক করা</h3>
+<p>রিম-ফেস বা লেজার ডেটা থেকে সামনের ও পেছনের ফুটের সংশোধন হিসাব করা হয়। লেজার নিজেই করে দেয়। হাতে করলে:</p>
+<div class="formula">Foot correction = Offset + (Angle × Distance from coupling centre to foot)</div>
+<p>কোণকে ঢাল হিসেবে নিন (mm প্রতি mm)। চিহ্ন খেয়াল করুন: পজিটিভ মানে মুভেবল মেশিন উঁচু, শিম বাদ দিতে হবে।</p>
+<h3 id="s7">বোল্ট বাউন্ড ও বেস বাউন্ড</h3>
+<ul><li><b>বোল্ট বাউন্ড</b>: বোল্ট ছিদ্রে আটকে যাওয়ায় মোটর যথেষ্ট পাশে সরানো যায় না। স্টেশনারি মেশিন সামান্য সরান, বা মুভেবল মেশিনের ছিদ্র বড় করুন (ইঞ্জিনিয়ারিং অনুমোদনসহ)।</li><li><b>বেস বাউন্ড</b>: মোটর আরও নিচে নামানো দরকার কিন্তু শিম আর নেই। স্টেশনারি মেশিন উঁচু করুন বা বেস মেশিন করুন।</li></ul>
+<h3 id="s8">থার্মাল গ্রোথ</h3>
+<p>গরম হলে মেশিন বড় হয়। গরম পাম্পের সেন্টারলাইন ওঠে; মোটর সামান্য বাড়ে। ঠান্ডা অবস্থায় অ্যালাইনমেন্ট এমনভাবে সেট করুন যাতে গরম হলে শ্যাফট এক লাইনে আসে।</p>
+<div class="formula">ΔL (mm) = α × L (mm) × ΔT (°C)    steel α = 0.0000117</div>
+<p>উদাহরণ: বেস থেকে 450 mm উপরে পাম্পের সেন্টারলাইন, কেসিং সাপোর্টের তাপমাত্রা 60 °C বাড়ে: ΔL = 0.0000117 × 450 × 60 = 0.32 mm। ঠান্ডা অবস্থায় পাম্পকে মোটরের চেয়ে 0.32 mm নিচে রাখুন (বা মোটরকে 0.32 mm উপরে), মোটরের নিজের বৃদ্ধি বাদ দিয়ে।</p>
+<p>নির্মাতারা প্রায়ই অ্যালাইনমেন্ট ড্রয়িংয়ে কোল্ড অফসেট দেন। হট অ্যালাইনমেন্ট চেক (প্রোব, ডড বার, বা বন্ধের পরপরই লেজার হট চেক) দিয়ে নিশ্চিত হওয়া যায়।</p>
+<h3 id="s9">ভার্টিক্যাল মেশিন</h3>
+<p>রিজিড মোটর স্ট্যান্ডসহ ভার্টিক্যাল পাম্পে মোটর মাউন্টিং ফেসের <b>স্কয়ারনেস</b> এবং <b>কনসেন্ট্রিসিটি</b> (র‍্যাবেট ফিট) চেক করা হয়। ডিজাইনে অনুমতি থাকলেই শুধু মোটর ও স্ট্যান্ডের মাঝে শিম দিন।</p>
+<h3 id="s10">ভালো অভ্যাস</h3>
+<ul><li>রিডিংয়ের জন্য দুই শ্যাফট একসাথে ঘূর্ণনের দিকে ঘোরান।</li><li>ঘোরানোর জন্য কাপলিং স্পাইডারকে লিভার হিসেবে ব্যবহার করবেন না।</li><li>আগে থেকে কাটা স্টেইনলেস শিম, প্রতি ফুটে ৪টির বেশি নয়। পুরুত্ব লিখে রাখুন।</li><li>ভবিষ্যৎ সংশোধনের জন্য মুভেবল মেশিনের প্রতিটি ফুটে কিছু শিম (0.5–1 mm) রেখে দিন।</li><li>নতুন ইনস্টলেশনে প্রথম 24–48 ঘণ্টা চলার পর আবার অ্যালাইনমেন্ট চেক করুন।</li></ul>
+<div class="pager"><a href="oil-analysis.html"><span>আগের</span>তেল বিশ্লেষণ</a><a class="nx" href="dial-alignment.html"><span>পরের</span>ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

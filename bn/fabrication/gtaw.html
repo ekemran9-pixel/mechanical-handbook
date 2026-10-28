@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GTAW (TIG ওয়েল্ডিং) · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="টাংস্টেনের ধরন, গ্যাস, কাপ সাইজ, পার্জিং, ফিলার রড এবং TIG রুট ও স্টেইনলেস পাইপের কৌশল।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../fabrication/gtaw.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../fabrication/gtaw.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html" aria-current="page">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="ওয়েল্ডিং ও ফেব্রিকেশন"><div class="grp">ওয়েল্ডিং প্রসেস</div><a href="welding-processes.html">ওয়েল্ডিং প্রসেসের তুলনা</a><a href="smaw.html">SMAW (স্টিক ওয়েল্ডিং)</a><a href="gtaw.html" aria-current="page">GTAW (TIG ওয়েল্ডিং)</a><a href="gmaw-fcaw.html">GMAW ও FCAW (MIG ও ফ্লাক্স কোর)</a><a href="saw.html">SAW (সাবমার্জড আর্ক)</a><div class="grp">উপাদান</div><a href="filler-metals.html">ফিলার মেটাল গাইড</a><a href="metallurgy.html">ওয়েল্ডারের জন্য স্টিলের ধাতুবিদ্যা</a><div class="grp">জয়েন্ট ডিজাইন</div><a href="joint-design.html">জয়েন্ট ডিজাইন ও ফিট-আপ</a><a href="weld-symbols.html">ওয়েল্ড সিম্বল (AWS A2.4 / ISO 2553)</a><a href="positions.html">ওয়েল্ডিং পজিশন ও যোগ্যতা</a><div class="grp">গুণমান</div><a href="weld-defects.html">ওয়েল্ডের ত্রুটি ও মেরামত</a><a href="wps-pqr.html">WPS, PQR ও WPQ</a><a href="preheat-pwht.html">প্রিহিট, ইন্টারপাস ও PWHT</a><a href="distortion.html">ডিস্টরশন নিয়ন্ত্রণ</a><div class="grp">বিশেষ উপাদান</div><a href="stainless-welding.html">স্টেইনলেস ও ডুপ্লেক্স ওয়েল্ডিং</a><a href="alloy-welding.html">Cr-Mo, P91 ও ভিন্ন ধাতুর ওয়েল্ড</a><a href="aluminium-welding.html">অ্যালুমিনিয়াম ওয়েল্ডিং</a><div class="grp">কাটিং ও ফর্মিং</div><a href="cutting-gouging.html">কাটিং ও গাউজিং</a><a href="plate-forming.html">রোলিং, বেন্ডিং ও ফর্মিং</a><a href="layout-development.html">লেআউট ও প্যাটার্ন ডেভেলপমেন্ট</a><a href="welding-safety.html">ওয়েল্ডিং ও কাটিংয়ের নিরাপত্তা</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">ওয়েল্ডিং ও ফেব্রিকেশন</a> › ওয়েল্ডিং প্রসেস</div>
+<h1>GTAW (TIG ওয়েল্ডিং)</h1>
+<p class="summary">টাংস্টেনের ধরন, গ্যাস, কাপ সাইজ, পার্জিং, ফিলার রড এবং TIG রুট ও স্টেইনলেস পাইপের কৌশল।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">টাংস্টেন ইলেকট্রোড</a></li><li><a href="#s2">গ্যাস</a></li><li><a href="#s3">ব্যাক পার্জিং</a></li><li><a href="#s4">ফিলার রড (AWS A5.18, A5.9)</a></li><li><a href="#s5">রুট পাসের কৌশল (পাইপ)</a></li></ol></details>
+
+<h3 id="s1">টাংস্টেন ইলেকট্রোড</h3>
+<div class="tbl"><table><tr><th>ধরন</th><th>রং (ISO 6848)</th><th>ব্যবহার</th></tr>
+<tr><td>পিওর (WP)</td><td>সবুজ</td><td>AC অ্যালুমিনিয়াম (গোল ডগা)</td></tr>
+<tr><td>2% থোরিয়েটেড (WT20)</td><td>লাল</td><td>DC স্টিল। গ্রাইন্ড করলে হালকা তেজস্ক্রিয় ধুলা: এক্সট্র্যাকশন ব্যবহার করুন বা ল্যান্থানেটেডে যান</td></tr>
+<tr><td>2% সিরিয়েটেড (WC20)</td><td>ধূসর</td><td>DC কম কারেন্ট, ভালো স্টার্ট</td></tr>
+<tr><td>1.5% ল্যান্থানেটেড (WL15)</td><td>সোনালি</td><td>DC ও AC, ভালো সর্বজনীন, থোরিয়েটেডের বিকল্প</td></tr>
+<tr><td>2% ল্যান্থানেটেড (WL20)</td><td>নীল</td><td>DC ও AC</td></tr>
+<tr><td>জিরকোনিয়েটেড (WZ8)</td><td>সাদা</td><td>AC অ্যালুমিনিয়াম</td></tr>
+<tr><td>রেয়ার আর্থ মিশ্রণ (E3)</td><td>বেগুনি</td><td>সাধারণ DC/AC</td></tr></table></div>
+<p>DC টাংস্টেন লম্বালম্বি গ্রাইন্ড করে সুচালো করুন, ব্যাসের প্রায় 2–2.5 গুণ লম্বা, ডগায় ছোট সমতল (ভোঁতা)। গ্রাইন্ডিংয়ের দাগ ইলেকট্রোড বরাবর হবে।</p>
+<h3 id="s2">গ্যাস</h3>
+<ul><li>আর্গন স্ট্যান্ডার্ড। #6–#8 কাপে ফ্লো সাধারণত 8–12 L/min; গ্যাস লেন্সে বেশি স্টিকআউট সম্ভব।</li><li>মোটা অ্যালুমিনিয়াম ও কপারে আর্গন/হিলিয়াম মিশ্রণ (বেশি গরম আর্ক)।</li><li>কিছু অস্টেনিটিক স্টেইনলেসে আর্গন + 1–5% হাইড্রোজেন (দ্রুত, পরিষ্কার)। কার্বন, ফেরিটিক, মার্টেনসিটিক বা ডুপ্লেক্স স্টিলে নয়।</li><li>প্রি-ফ্লো ও পোস্ট-ফ্লো: প্রতি 10 A এ প্রায় 1 সেকেন্ড পোস্ট-ফ্লো টাংস্টেন ও ক্রেটার রক্ষা করে।</li></ul>
+<h3 id="s3">ব্যাক পার্জিং</h3>
+<p>স্টেইনলেস, ডুপ্লেক্স, নিকেল অ্যালয় ও টাইটানিয়ামে রুট ওয়েল্ডের সময় পাইপের ভেতরে নিষ্ক্রিয় গ্যাস লাগে, নইলে ভেতরে অক্সিডাইজ হয় (সুগারিং)।</p>
+<ol class="steps"><li>জয়েন্টের দুই পাশে বাঁধ তৈরি করুন (পানিতে গলে যায় এমন কাগজ, ফোলানো ব্লাডার)।</li><li>জয়েন্টের ফাঁক টেপ দিয়ে ঢাকুন, ছোট ভেন্ট রেখে।</li><li>আর্গন দিয়ে পার্জ করুন। পার্জের পরিমাণ বাঁধা আয়তনের 5–10 গুণ।</li><li>অক্সিজেন মিটার দিয়ে ভেন্টে অক্সিজেন মাপুন। সাধারণ লক্ষ্য: সাধারণ স্টেইনলেসে &lt; 0.1% (1,000 ppm), ডুপ্লেক্সে &lt; 50–100 ppm, টাইটানিয়ামে &lt; 20–50 ppm।</li><li>রুট ও হট পাস (কমপক্ষে 2 স্তর বা 6 mm ওয়েল্ড) পর্যন্ত পার্জ চালু রাখুন।</li></ol>
+<p>স্টেইনলেসে হিট টিন্টের রং (AWS D18.1/18.2 চার্ট): খড় থেকে হালকা সোনালি সাধারণত গ্রহণযোগ্য; নীল, বেগুনি, ধূসর ও কালো নয়।</p>
+<h3 id="s4">ফিলার রড (AWS A5.18, A5.9)</h3>
+<ul><li><b>ER70S-2</b>: ট্রিপল ডিঅক্সিডাইজড। সামান্য ময়লা পাইপে রুটের জন্য ভালো।</li><li><b>ER70S-6</b>: বেশি Mn ও Si। প্রচলিত সাধারণ ফিলার।</li><li>304/304L এ <b>ER308L</b>, 316/316L এ <b>ER316L</b>, 321/347 এ <b>ER347</b>।</li><li><b>ER309L</b>: কার্বন স্টিল থেকে স্টেইনলেস।</li><li><b>ER2209</b>: ডুপ্লেক্স 2205।</li><li><b>ERNiCr-3</b> (Inconel 82): নিকেল অ্যালয় ও উচ্চ তাপমাত্রায় ভিন্ন ধাতুর জয়েন্ট।</li><li><b>ER4043, ER5356</b>: অ্যালুমিনিয়াম।</li></ul>
+<h3 id="s5">রুট পাসের কৌশল (পাইপ)</h3>
+<ul><li>ফাঁক প্রায় 2.5–3.2 mm, 1–1.6 mm ল্যান্ডসহ, বা WPS অনুযায়ী।</li><li>মাঠে "ওয়াকিং দ্য কাপ" সমান বিড দেয়। ছোট বোরে হাতে (ফ্রিহ্যান্ড)।</li><li>পুলের সামনের কিনারায় ফিলার দিন, রড গ্যাস শিল্ডের ভেতরে রাখুন।</li><li>পুরো পেনিট্রেশনের জন্য কিহোল ছোট ও স্থির রাখুন।</li><li>ভেতরের রিইনফোর্সমেন্ট সাধারণত ≤ 1.6–3 mm, পাইপের পৃষ্ঠের নিচে কনকেভিটি নয় (কোড দেখুন)।</li><li>রুট ফাটা রোধে রুটের পরপরই হট পাস।</li></ul>
+<div class="pager"><a href="smaw.html"><span>আগের</span>SMAW (স্টিক ওয়েল্ডিং)</a><a class="nx" href="gmaw-fcaw.html"><span>পরের</span>GMAW ও FCAW (MIG ও ফ্লাক্স কোর)</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

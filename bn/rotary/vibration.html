@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ভাইব্রেশন বিশ্লেষণ · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="একক, মাপার জায়গা, ISO 10816/20816 সীমা, প্রধান ত্রুটির লক্ষণ, ফেজ বিশ্লেষণ ও রুট পরিকল্পনা।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rotary/vibration.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rotary/vibration.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html" aria-current="page">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রোটারি যন্ত্রপাতি"><div class="grp">পাম্প</div><a href="centrifugal-pumps.html">সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a href="pump-curves.html">পাম্প কার্ভ ও সিস্টেম কার্ভ</a><a href="pump-types.html">পাম্পের ধরন ও API 610 কোড</a><a href="pump-overhaul.html">পাম্প ওভারহল পদ্ধতি</a><a href="pd-pumps.html">পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a href="pump-troubleshooting.html">পাম্পের সমস্যা সমাধান</a><div class="grp">সিল ও প্যাকিং</div><a href="mechanical-seals.html">মেকানিক্যাল সিল</a><a href="seal-plans.html">সিল ফ্লাশ প্ল্যান (API 682)</a><a href="gland-packing.html">গ্ল্যান্ড প্যাকিং</a><div class="grp">বিয়ারিং ও লুব্রিকেশন</div><a href="rolling-bearings.html">রোলিং এলিমেন্ট বিয়ারিং</a><a href="bearing-mounting.html">বিয়ারিং লাগানো ও খোলা</a><a href="plain-bearings.html">প্লেইন ও টিল্টিং-প্যাড বিয়ারিং</a><a href="lubrication.html">লুব্রিকেশন</a><a href="oil-analysis.html">তেল বিশ্লেষণ</a><div class="grp">অ্যালাইনমেন্ট ও ভাইব্রেশন</div><a href="alignment.html">শ্যাফট অ্যালাইনমেন্ট</a><a href="dial-alignment.html">ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a href="vibration.html" aria-current="page">ভাইব্রেশন বিশ্লেষণ</a><a href="balancing.html">ব্যালান্সিং</a><a href="condition-monitoring.html">কন্ডিশন মনিটরিং</a><div class="grp">ড্রাইভ ও ট্রান্সমিশন</div><a href="couplings.html">কাপলিং</a><a href="gearboxes.html">গিয়ারবক্স</a><a href="belts-chains.html">বেল্ট ও চেইন ড্রাইভ</a><a href="electric-motors.html">ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</a><div class="grp">ফ্লুইড পাওয়ার</div><a href="hydraulics.html">হাইড্রলিক সিস্টেম</a><a href="pneumatics.html">কম্প্রেসড এয়ার ও নিউমেটিক্স</a><div class="grp">কম্প্রেসর ও টারবাইন</div><a href="recip-compressors.html">রেসিপ্রোকেটিং কম্প্রেসর</a><a href="centrifugal-compressors.html">সেন্ট্রিফিউগাল কম্প্রেসর</a><a href="screw-compressors.html">স্ক্রু ও এয়ার কম্প্রেসর</a><a href="steam-turbines.html">স্টিম টারবাইন</a><a href="gas-turbines.html">গ্যাস টারবাইন (সংক্ষেপে)</a><div class="grp">অন্যান্য যন্ত্র</div><a href="fans-blowers.html">ফ্যান ও ব্লোয়ার</a><a href="agitators.html">অ্যাজিটেটর ও মিক্সার</a><a href="conveyors.html">বেল্ট কনভেয়র</a><a href="cranes-hoists.html">ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><div class="grp">রিলায়েবিলিটি</div><a href="rca.html">রুট কজ অ্যানালাইসিস</a><a href="maintenance-strategy.html">রক্ষণাবেক্ষণ কৌশল ও KPI</a><a href="preservation.html">সংরক্ষণ ও প্রিজারভেশন</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রোটারি যন্ত্রপাতি</a> › অ্যালাইনমেন্ট ও ভাইব্রেশন</div>
+<h1>ভাইব্রেশন বিশ্লেষণ</h1>
+<p class="summary">একক, মাপার জায়গা, ISO 10816/20816 সীমা, প্রধান ত্রুটির লক্ষণ, ফেজ বিশ্লেষণ ও রুট পরিকল্পনা।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">একক</a></li><li><a href="#s2">মাপার জায়গা</a></li><li><a href="#s3">ISO 10816-3 / 20816-3 জোন</a></li><li><a href="#s4">সীমার চেয়ে ট্রেন্ড বেশি কাজের</a></li><li><a href="#s5">স্পেকট্রামের মূল কথা</a></li><li><a href="#s6">ত্রুটির লক্ষণ</a></li><li><a href="#s7">বিয়ারিং ত্রুটির ফ্রিকোয়েন্সি</a></li><li><a href="#s8">ফেজ বিশ্লেষণ</a></li><li><a href="#s9">বাম্প টেস্ট</a></li><li><a href="#s10">দ্রুত পাওয়ার-অফ টেস্ট</a></li></ol></details>
+
+<h3 id="s1">একক</h3>
+<div class="tbl"><table><tr><th>রাশি</th><th>একক</th><th>উপযোগী</th></tr>
+<tr><td>ডিসপ্লেসমেন্ট</td><td>µm pk-pk (mils)</td><td>কম গতি, স্লিভ বিয়ারিংয়ে শ্যাফটের নড়াচড়া (প্রক্সিমিটি প্রোব)</td></tr>
+<tr><td>ভেলোসিটি</td><td>mm/s RMS (in/s pk)</td><td>10–1000 Hz এ যন্ত্রের সামগ্রিক অবস্থা। বেশিরভাগ প্ল্যান্ট মেশিনের স্ট্যান্ডার্ড</td></tr>
+<tr><td>অ্যাক্সিলারেশন</td><td>g (m/s²)</td><td>উচ্চ ফ্রিকোয়েন্সি: বিয়ারিং ত্রুটি, গিয়ার মেশ</td></tr></table></div>
+<p>রূপান্তর: in/s pk × 25.4 ÷ 1.414 = mm/s RMS। 0.3 in/s pk ≈ 5.4 mm/s RMS।</p>
+<h3 id="s2">মাপার জায়গা</h3>
+<ul><li>প্রতিটি বিয়ারিং হাউজিংয়ে: হরাইজন্টাল (H), ভার্টিক্যাল (V) ও অ্যাক্সিয়াল (A)।</li><li>বিয়ারিংয়ের লোড জোনের যত কাছে সম্ভব, শক্ত ধাতুতে, কভার বা ফিনে নয়।</li><li>প্রতিবার একই জায়গায়। দাগ দিন বা স্টাড লাগান।</li><li>ম্যাগনেট মাউন্টিং প্রায় 2 kHz পর্যন্ত ভালো (সমতল রেয়ার-আর্থ ম্যাগনেটে বেশি)। হাতে ধরা প্রোব শুধু দ্রুত চেকের জন্য।</li><li>যন্ত্র স্বাভাবিক লোড ও তাপমাত্রায়।</li></ul>
+<h3 id="s3">ISO 10816-3 / 20816-3 জোন</h3>
+<div class="tbl"><table><tr><th>মেশিন</th><th>ফাউন্ডেশন</th><th>A/B</th><th>B/C</th><th>C/D</th></tr>
+<tr><td>গ্রুপ 2: 15–300 kW</td><td>রিজিড</td><td>1.4</td><td>2.8</td><td>4.5</td></tr>
+<tr><td>গ্রুপ 2</td><td>ফ্লেক্সিবল</td><td>2.3</td><td>4.5</td><td>7.1</td></tr>
+<tr><td>গ্রুপ 1: 300 kW–50 MW</td><td>রিজিড</td><td>2.3</td><td>4.5</td><td>7.1</td></tr>
+<tr><td>গ্রুপ 1</td><td>ফ্লেক্সিবল</td><td>3.5</td><td>7.1</td><td>11.0</td></tr></table></div>
+<p>বিয়ারিং হাউজিংয়ে mm/s RMS, 10–1000 Hz। A = নতুন। B = দীর্ঘমেয়াদে চালানো যায়। C = সীমিত সময়, মেরামতের পরিকল্পনা। D = ক্ষতির সম্ভাবনা। মেশিনের সর্বনিম্ন প্রাকৃতিক ফ্রিকোয়েন্সি রানিং স্পিডের চেয়ে কমপক্ষে 25% বেশি হলে ফাউন্ডেশন "রিজিড"।</p>
+<p>API 610 পাম্প: টেস্টে নতুন পাম্পের সামগ্রিক সীমা সাধারণত 3.0 mm/s RMS (বিয়ারিং হাউজিং), প্রেফার্ড অপারেটিং রেঞ্জে।</p>
+<h3 id="s4">সীমার চেয়ে ট্রেন্ড বেশি কাজের</h3>
+<p>স্থিরভাবে 4 mm/s এ চলা মেশিন ঠিক থাকতে পারে। যেটি এক মাসে 1.5 থেকে 3 mm/s এ উঠেছে, তাতে সমস্যা তৈরি হচ্ছে। বেসলাইন থেকে দ্বিগুণ হওয়া একটি সাধারণ সতর্কতা লেভেল।</p>
+<h3 id="s5">স্পেকট্রামের মূল কথা</h3>
+<p>FFT স্পেকট্রাম সিগন্যালকে ফ্রিকোয়েন্সিতে ভাগ করে। সবকিছু রানিং স্পিডের সাথে সম্পর্কিত: <b>1X</b> = রানিং স্পিড। 2960 rpm মোটরে 1X = 49.3 Hz।</p>
+<h3 id="s6">ত্রুটির লক্ষণ</h3>
+<div class="tbl"><table><tr><th>ত্রুটি</th><th>স্পেকট্রাম</th><th>অন্যান্য সূত্র</th></tr>
+<tr><td>স্ট্যাটিক আনব্যালান্স</td><td>বেশি 1X রেডিয়াল, কম হারমোনিক</td><td>H ও V ফেজের পার্থক্য ~90°; দুই বিয়ারিংয়ে ফেজ একই</td></tr>
+<tr><td>কাপল আনব্যালান্স</td><td>বেশি 1X রেডিয়াল</td><td>দুই বিয়ারিংয়ের মাঝে ফেজ ~180°</td></tr>
+<tr><td>ওভারহাং রোটর আনব্যালান্স</td><td>1X রেডিয়াল ও বেশি 1X অ্যাক্সিয়াল</td><td>অ্যাক্সিয়াল ফেজ একই</td></tr>
+<tr><td>অ্যাঙ্গুলার মিসঅ্যালাইনমেন্ট</td><td>বেশি 1X অ্যাক্সিয়াল, প্রায়ই 2X, 3X</td><td>কাপলিং জুড়ে অ্যাক্সিয়াল ফেজ ~180°</td></tr>
+<tr><td>প্যারালাল মিসঅ্যালাইনমেন্ট</td><td>বেশি 2X রেডিয়াল, 1X</td><td>কাপলিং জুড়ে রেডিয়াল ফেজ ~180°</td></tr>
+<tr><td>বাঁকা শ্যাফট</td><td>1X অ্যাক্সিয়াল প্রধান, কিছু 2X</td><td>একই শ্যাফটের দুই প্রান্তে অ্যাক্সিয়াল ফেজ 180°</td></tr>
+<tr><td>যান্ত্রিক ঢিলা (স্ট্রাকচারাল)</td><td>এক দিকে বেশি 1X</td><td>ফুট ও বেসের ফেজ ভিন্ন</td></tr>
+<tr><td>ঢিলা (রোটেটিং / বিয়ারিং ফিট)</td><td>অনেক হারমোনিক 1X–10X, প্রায়ই ½X গুণিতক</td><td>অস্থির ফেজ, কাটা ওয়েভফর্ম</td></tr>
+<tr><td>ঘষা (রাব)</td><td>সাব-হারমোনিক (½X, ⅓X) ও হারমোনিক, নয়েজ ফ্লোর ওঠে</td><td>কাটা ওয়েভফর্ম, ক্ষণস্থায়ী হতে পারে</td></tr>
+<tr><td>রোলিং বিয়ারিং ত্রুটি</td><td>নন-সিনক্রোনাস পিক ও হারমোনিক, সাইডব্যান্ডসহ</td><td>এনভেলপ/ডিমড স্পেকট্রাম, উচ্চ ফ্রিকোয়েন্সির কার্পেট</td></tr>
+<tr><td>গিয়ার সমস্যা</td><td>গিয়ার মেশ ফ্রিকোয়েন্সি (GMF = দাঁত × rpm), খারাপ গিয়ারের শ্যাফট স্পিডে সাইডব্যান্ড</td><td>ক্ষয়ের সাথে 2× GMF বাড়ে</td></tr>
+<tr><td>বেল্ট সমস্যা</td><td>1X এর নিচে বেল্ট ফ্রিকোয়েন্সি ও হারমোনিক</td><td>বেল্টে স্ট্রোব দিন</td></tr>
+<tr><td>ভেন / ব্লেড পাস</td><td>ভেন সংখ্যা × 1X</td><td>BEP থেকে দূরে বেশি, কাটওয়াটার গ্যাপ ছোট</td></tr>
+<tr><td>ক্যাভিটেশন</td><td>এলোমেলো ব্রডব্যান্ড উচ্চ ফ্রিকোয়েন্সি</td><td>শব্দ, সাকশন চাপ কম</td></tr>
+<tr><td>ইলেকট্রিক্যাল (স্টেটর)</td><td>2× লাইন ফ্রিকোয়েন্সি (100 Hz / 120 Hz)</td><td>পাওয়ার কাটলেই সাথে সাথে চলে যায়</td></tr>
+<tr><td>ভাঙা রোটর বার</td><td>পোল পাস ফ্রিকোয়েন্সিতে সাইডব্যান্ডসহ 1X</td><td>মোটর কারেন্ট বিশ্লেষণে নিশ্চিত</td></tr>
+<tr><td>অয়েল হুইর্ল</td><td>0.42–0.48X</td><td>স্লিভ বিয়ারিং, হালকা লোড</td></tr>
+<tr><td>অয়েল হুইপ</td><td>প্রথম ক্রিটিক্যাল স্পিডে আটকে যায়</td><td>বিপজ্জনক, বিয়ারিং ধ্বংস করতে পারে</td></tr>
+<tr><td>রেজোন্যান্স</td><td>প্রাকৃতিক ফ্রিকোয়েন্সিতে বড় পিক</td><td>গতির সাথে তীব্রভাবে বদলায়, বাম্প টেস্টে নিশ্চিত</td></tr></table></div>
+<h3 id="s7">বিয়ারিং ত্রুটির ফ্রিকোয়েন্সি</h3>
+<ul><li><b>BPFO</b> (বল পাস আউটার রেস): প্রায় 0.4 × বলের সংখ্যা × rpm।</li><li><b>BPFI</b> (ইনার রেস): প্রায় 0.6 × বলের সংখ্যা × rpm, 1X সাইডব্যান্ডসহ।</li><li><b>BSF</b> (বল স্পিন), <b>FTF</b> (কেজ, প্রায় 0.4X)।</li><li>সফটওয়্যার বিয়ারিং নম্বর থেকে হিসাব করে। ইনার রেসের ত্রুটি লোড জোনে ঢোকে-বের হয় বলে 1X এ সাইডব্যান্ড দেখায়।</li></ul>
+<p><b>বিয়ারিং নষ্ট হওয়ার ধাপ:</b> ১) শুধু আল্ট্রাসনিক (স্ট্রেস ওয়েভ, &gt; 20 kHz), ২) ত্রুটির ফ্রিকোয়েন্সিতে এনভেলপ/ডিমড পিক, ৩) ভেলোসিটি স্পেকট্রামে হারমোনিকসহ ত্রুটির ফ্রিকোয়েন্সি দেখা যায়, ৪) নয়েজ ফ্লোর ওঠে, 1X বাড়ে, আলাদা পিকগুলো "হেস্ট্যাক" এ হারিয়ে যায়। সর্বশেষ ধাপ ৩ এ বদলান।</p>
+<h3 id="s8">ফেজ বিশ্লেষণ</h3>
+<p>ফেজ দুই পয়েন্টে কম্পনের সময়ের তুলনা করে, ট্যাকোমিটার রেফারেন্স বা দুই চ্যানেল দিয়ে। স্পেকট্রা একই দেখালেও এটি আনব্যালান্স, মিসঅ্যালাইনমেন্ট ও বাঁকা শ্যাফট আলাদা করে। প্রতিটি বিয়ারিংয়ে H, V ও A তে ফেজ নিন।</p>
+<h3 id="s9">বাম্প টেস্ট</h3>
+<p>মেশিন বন্ধ রেখে নরম মাথার হাতুড়ি দিয়ে কাঠামোয় আঘাত করে কম্পন থেমে যাওয়ার স্পেকট্রাম নিন। পিকগুলো প্রাকৃতিক ফ্রিকোয়েন্সি দেখায়। 1X বা অন্য ফোর্সিং ফ্রিকোয়েন্সির ±20% এর মধ্যে প্রাকৃতিক ফ্রিকোয়েন্সি থাকলে রেজোন্যান্সের ঝুঁকি।</p>
+<h3 id="s10">দ্রুত পাওয়ার-অফ টেস্ট</h3>
+<p>লাইভ রিডিং দেখতে দেখতে পাওয়ার কাটুন। ভাইব্রেশন সাথে সাথে কমে গেলে কারণ ইলেকট্রিক্যাল। গতির সাথে ধীরে কমলে মেকানিক্যাল।</p>
+<div class="pager"><a href="dial-alignment.html"><span>আগের</span>ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a class="nx" href="balancing.html"><span>পরের</span>ব্যালান্সিং</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

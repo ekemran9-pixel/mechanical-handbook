@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>থ্রেড ও চেনার উপায় · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="মেট্রিক, UNC/UNF, BSW, BSP, NPT ও অন্যান্য থ্রেড: কীভাবে চিনবেন এবং থ্রেড গেজের ব্যবহার।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../workshop/threads.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../workshop/threads.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html" aria-current="page">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="ওয়ার্কশপ, মেশিনিং ও ফাস্টেনার"><div class="grp">পরিমাপ</div><a href="measuring-tools.html">মাপার যন্ত্র</a><a href="limits-fits.html">লিমিটস, ফিটস ও টলারেন্স</a><div class="grp">মেশিনিং</div><a href="lathe.html">লেদের কাজ</a><a href="milling-drilling.html">মিলিং, ড্রিলিং ও ট্যাপিং</a><div class="grp">ফাস্টেনার</div><a href="threads.html" aria-current="page">থ্রেড ও চেনার উপায়</a><a href="fasteners.html">বোল্ট, নাট ও ওয়াশার</a><a href="torque.html">টর্ক ও প্রিলোড</a><a href="keys-shafts.html">কি, স্প্লাইন ও শ্যাফট লকিং</a><div class="grp">যন্ত্র</div><a href="hand-power-tools.html">হ্যান্ড টুল ও পাওয়ার টুল</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">ওয়ার্কশপ, মেশিনিং ও ফাস্টেনার</a> › ফাস্টেনার</div>
+<h1>থ্রেড ও চেনার উপায়</h1>
+<p class="summary">মেট্রিক, UNC/UNF, BSW, BSP, NPT ও অন্যান্য থ্রেড: কীভাবে চিনবেন এবং থ্রেড গেজের ব্যবহার।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">থ্রেড চেনা</a></li><li><a href="#s2">প্রচলিত থ্রেড সিস্টেম</a></li><li><a href="#s3">সাবধান</a></li></ol></details>
+
+<h3 id="s1">থ্রেড চেনা</h3>
+<ol class="steps"><li>ক্যালিপার দিয়ে মেজর ব্যাস মাপুন (বোল্টের বাইরে, বা ছিদ্রের ট্যাপ সাইজ)।</li><li>থ্রেড পিচ গেজ (mm) দিয়ে পিচ মাপুন বা প্রতি ইঞ্চিতে থ্রেড (TPI) গুনুন।</li><li>থ্রেডের কোণ দেখুন: 60° (মেট্রিক, UN, NPT) বা 55° (হুইটওয়ার্থ, BSP)। সঠিকটিতে গেজ ঠিক বসে।</li><li>টেপার দেখুন (NPT, BSPT): দৈর্ঘ্য বরাবর ব্যাস বদলায়।</li></ol>
+<h3 id="s2">প্রচলিত থ্রেড সিস্টেম</h3>
+<div class="tbl"><table><tr><th>সিস্টেম</th><th>কোণ</th><th>উদাহরণ</th><th>ব্যবহার</th></tr>
+<tr><td>ISO মেট্রিক কোর্স</td><td>60°</td><td>M12 × 1.75 (লেখা হয় M12)</td><td>বিশ্বজুড়ে সাধারণ ফাস্টেনার</td></tr>
+<tr><td>ISO মেট্রিক ফাইন</td><td>60°</td><td>M12 × 1.25</td><td>অ্যাডজাস্টার, পাতলা দেয়াল, হাইড্রলিক</td></tr>
+<tr><td>UNC</td><td>60°</td><td>1/2"-13 UNC</td><td>US সাধারণ ফাস্টেনার</td></tr>
+<tr><td>UNF</td><td>60°</td><td>1/2"-20 UNF</td><td>সূক্ষ্ম অ্যাডজাস্টমেন্ট, অটোমোটিভ</td></tr>
+<tr><td>8UN</td><td>60°</td><td>1-1/2"-8 UN</td><td>1" ও বড় ফ্ল্যাঞ্জ স্টাড (ASME B16.5)</td></tr>
+<tr><td>BSW / BSF</td><td>55°</td><td>1/2" BSW (12 TPI)</td><td>পুরনো ব্রিটিশ যন্ত্র</td></tr>
+<tr><td>BSP (G প্যারালাল / R টেপার)</td><td>55°</td><td>G 1/2 (14 TPI)</td><td>পাইপ ফিটিং (UK, ইউরোপ, এশিয়া)</td></tr>
+<tr><td>NPT</td><td>60°</td><td>1/2" NPT (14 TPI)</td><td>পাইপ ফিটিং (US)</td></tr>
+<tr><td>ট্রাপিজয়ডাল (Tr), ACME</td><td>30°, 29°</td><td>Tr 40×7</td><td>লিড স্ক্রু, ভাল্ভ স্টেম, জ্যাক</td></tr>
+<tr><td>বাট্রেস</td><td>7°/45°</td><td></td><td>এক দিকে ভারী লোড</td></tr></table></div>
+<h3 id="s3">সাবধান</h3>
+<ul><li>1/2" BSP ও 1/2" NPT দুটোতেই 14 TPI কিন্তু কোণ ভিন্ন। মনে হয় মেলে কিন্তু লিক করে।</li><li>মেট্রিক M10 × 1.5 বনাম 3/8"-16 UNC: কাছাকাছি কিন্তু এক নয়। কখনো জোর করবেন না।</li><li>বাম-হাতি থ্রেড: LH লেখা, নাটের ফ্ল্যাটে খাঁজ, বা খাঁজকাটা চিহ্ন। ইমপেলার নাট, গ্যাস ফিটিং (ফুয়েল গ্যাস রেগুলেটর), সাইকেলের প্যাডেলে পাওয়া যায়।</li><li>গ্যাস সিলিন্ডার ভাল্ভে প্রায়ই বিশেষ থ্রেড থাকে (যেমন UK তে অ্যাসিটিলিনে 5/8" BSP LH)।</li></ul>
+<div class="pager"><a href="milling-drilling.html"><span>আগের</span>মিলিং, ড্রিলিং ও ট্যাপিং</a><a class="nx" href="fasteners.html"><span>পরের</span>বোল্ট, নাট ও ওয়াশার</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

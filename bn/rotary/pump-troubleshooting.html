@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>পাম্পের সমস্যা সমাধান · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="সেন্ট্রিফিউগাল পাম্পের লক্ষণ ধরে ধরে ত্রুটি খোঁজা, ফ্লো না থাকা থেকে সিলের অল্প আয়ু পর্যন্ত।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rotary/pump-troubleshooting.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rotary/pump-troubleshooting.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html" aria-current="page">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রোটারি যন্ত্রপাতি"><div class="grp">পাম্প</div><a href="centrifugal-pumps.html">সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a href="pump-curves.html">পাম্প কার্ভ ও সিস্টেম কার্ভ</a><a href="pump-types.html">পাম্পের ধরন ও API 610 কোড</a><a href="pump-overhaul.html">পাম্প ওভারহল পদ্ধতি</a><a href="pd-pumps.html">পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a href="pump-troubleshooting.html" aria-current="page">পাম্পের সমস্যা সমাধান</a><div class="grp">সিল ও প্যাকিং</div><a href="mechanical-seals.html">মেকানিক্যাল সিল</a><a href="seal-plans.html">সিল ফ্লাশ প্ল্যান (API 682)</a><a href="gland-packing.html">গ্ল্যান্ড প্যাকিং</a><div class="grp">বিয়ারিং ও লুব্রিকেশন</div><a href="rolling-bearings.html">রোলিং এলিমেন্ট বিয়ারিং</a><a href="bearing-mounting.html">বিয়ারিং লাগানো ও খোলা</a><a href="plain-bearings.html">প্লেইন ও টিল্টিং-প্যাড বিয়ারিং</a><a href="lubrication.html">লুব্রিকেশন</a><a href="oil-analysis.html">তেল বিশ্লেষণ</a><div class="grp">অ্যালাইনমেন্ট ও ভাইব্রেশন</div><a href="alignment.html">শ্যাফট অ্যালাইনমেন্ট</a><a href="dial-alignment.html">ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a href="vibration.html">ভাইব্রেশন বিশ্লেষণ</a><a href="balancing.html">ব্যালান্সিং</a><a href="condition-monitoring.html">কন্ডিশন মনিটরিং</a><div class="grp">ড্রাইভ ও ট্রান্সমিশন</div><a href="couplings.html">কাপলিং</a><a href="gearboxes.html">গিয়ারবক্স</a><a href="belts-chains.html">বেল্ট ও চেইন ড্রাইভ</a><a href="electric-motors.html">ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</a><div class="grp">ফ্লুইড পাওয়ার</div><a href="hydraulics.html">হাইড্রলিক সিস্টেম</a><a href="pneumatics.html">কম্প্রেসড এয়ার ও নিউমেটিক্স</a><div class="grp">কম্প্রেসর ও টারবাইন</div><a href="recip-compressors.html">রেসিপ্রোকেটিং কম্প্রেসর</a><a href="centrifugal-compressors.html">সেন্ট্রিফিউগাল কম্প্রেসর</a><a href="screw-compressors.html">স্ক্রু ও এয়ার কম্প্রেসর</a><a href="steam-turbines.html">স্টিম টারবাইন</a><a href="gas-turbines.html">গ্যাস টারবাইন (সংক্ষেপে)</a><div class="grp">অন্যান্য যন্ত্র</div><a href="fans-blowers.html">ফ্যান ও ব্লোয়ার</a><a href="agitators.html">অ্যাজিটেটর ও মিক্সার</a><a href="conveyors.html">বেল্ট কনভেয়র</a><a href="cranes-hoists.html">ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><div class="grp">রিলায়েবিলিটি</div><a href="rca.html">রুট কজ অ্যানালাইসিস</a><a href="maintenance-strategy.html">রক্ষণাবেক্ষণ কৌশল ও KPI</a><a href="preservation.html">সংরক্ষণ ও প্রিজারভেশন</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রোটারি যন্ত্রপাতি</a> › পাম্প</div>
+<h1>পাম্পের সমস্যা সমাধান</h1>
+<p class="summary">সেন্ট্রিফিউগাল পাম্পের লক্ষণ ধরে ধরে ত্রুটি খোঁজা, ফ্লো না থাকা থেকে সিলের অল্প আয়ু পর্যন্ত।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">ফ্লো নেই বা খুব কম</a></li><li><a href="#s2">ফ্লো বা হেড ডিজাইনের চেয়ে কম</a></li><li><a href="#s3">মোটর ওভারলোড</a></li><li><a href="#s4">ভাইব্রেশন ও শব্দ</a></li><li><a href="#s5">বিয়ারিং গরম হচ্ছে</a></li><li><a href="#s6">সিল তাড়াতাড়ি নষ্ট হয়</a></li><li><a href="#s7">চলার পর প্রাইম হারায়</a></li><li><a href="#s8">অপারেটরকে যে প্রশ্নগুলো করবেন</a></li></ol></details>
+
+<p>বাইরে থেকে ভেতরে কাজ করুন। পাম্প খোলার আগে সিস্টেম চেক করুন। বেশিরভাগ পাম্প সমস্যা আসলে সাকশন সমস্যা।</p>
+<h3 id="s1">ফ্লো নেই বা খুব কম</h3>
+<ul><li>পাম্প প্রাইম হয়নি, বা সাকশন লাইনে এয়ার লক (উঁচু জায়গা)।</li><li>সাকশন ভাল্ভ বন্ধ, স্ট্রেইনার বন্ধ, ফুট ভাল্ভ আটকে।</li><li>উল্টো রোটেশন। মোটর বাম্প করে দেখুন। ৩-ফেজ মোটরে দুই ফেজ অদলবদল হলে উল্টো ঘোরে।</li><li>গতি কম (VFD সেটপয়েন্ট, বেল্ট স্লিপ)।</li><li>ডিসচার্জ হেড শাট-অফের চেয়ে বেশি (লাইন বন্ধ, ডাউনস্ট্রিম ভাল্ভ বন্ধ, ভুল ভাল্ভ লাইন-আপ)।</li><li>ইমপেলার বন্ধ বা শ্যাফটে ঢিলা (কি কেটে গেছে)।</li><li>সাকশনে বাতাস ঢুকছে: প্যাকিং, ফ্ল্যাঞ্জ গ্যাসকেট, ফাটল। ট্যাংক লেভেল কম হলে ঘূর্ণি (ভর্টেক্স) থেকে বাতাস।</li></ul>
+<h3 id="s2">ফ্লো বা হেড ডিজাইনের চেয়ে কম</h3>
+<ul><li>ওয়্যার রিং বা ইমপেলার ক্ষয়। একই ফ্লোতে কার্ভের সাথে মেলান।</li><li>তরলে গ্যাস, ফুটন্তের কাছাকাছি তরল।</li><li>ডিজাইনের চেয়ে বেশি ভিসকোসিটি।</li><li>ইমপেলার ট্রিম করা বা ভুল ইমপেলার লাগানো।</li><li>সেমি-ওপেন ইমপেলারের সামনের ক্লিয়ারেন্স বেশি।</li></ul>
+<h3 id="s3">মোটর ওভারলোড</h3>
+<ul><li>কার্ভের অনেক ডানে চলছে: সিস্টেম রেজিস্ট্যান্স কম (লাইন ফেটেছে, বাইপাস খোলা)।</li><li>ডিজাইনের চেয়ে বেশি SG বা ভিসকোসিটি।</li><li>যান্ত্রিক ঘষা: ওয়্যার রিং, ইমপেলার থেকে কেসিং, বাঁকা শ্যাফট।</li><li>প্যাকিং বেশি টাইট।</li><li>ইলেকট্রিক্যাল: কম ভোল্টেজ, সিঙ্গেল ফেজিং।</li></ul>
+<h3 id="s4">ভাইব্রেশন ও শব্দ</h3>
+<div class="tbl"><table><tr><th>লক্ষণ</th><th>সম্ভাব্য কারণ</th></tr>
+<tr><td>নুড়ির শব্দ, গেজ অস্থির</td><td>ক্যাভিটেশন (কম NPSHa) বা বাতাস ঢোকা</td></tr>
+<tr><td>কম ফ্লোতে গুমগুম শব্দ</td><td>রিসার্কুলেশন</td></tr>
+<tr><td>বেশি 1X</td><td>ইমপেলার আনব্যালান্স (ক্ষতি, ময়লা জমা), বাঁকা শ্যাফট</td></tr>
+<tr><td>বেশি 1X/2X অ্যাক্সিয়াল</td><td>মিসঅ্যালাইনমেন্ট, পাইপ স্ট্রেইন</td></tr>
+<tr><td>ভেন পাস ফ্রিকোয়েন্সি বেশি</td><td>ইমপেলার কাটওয়াটারের খুব কাছে, BEP থেকে দূরে চলছে</td></tr>
+<tr><td>বিয়ারিং ফ্রিকোয়েন্সি</td><td>বিয়ারিং ক্ষতি</td></tr>
+<tr><td>বোল্ট ঢিলা করলে পরিবর্তন হয়</td><td>সফট ফুট, বেস রেজোন্যান্স, ঢিলা ভাব</td></tr></table></div>
+<h3 id="s5">বিয়ারিং গরম হচ্ছে</h3>
+<ul><li>গ্রিজ বেশি, বা অয়েল লেভেল বেশি (ঘোলানো)।</li><li>অয়েল লেভেল কম, অয়েলার খালি বা ভুল পাশে।</li><li>ভুল তেলের ভিসকোসিটি, তেলে পানি।</li><li>মিসঅ্যালাইনমেন্ট, বেশি টাইট ফিট, C3 বিয়ারিং দরকার কিন্তু CN লাগানো।</li><li>ক্ষয়ে যাওয়া ওয়্যার রিং বা বন্ধ ব্যালান্স হোল থেকে বেশি থ্রাস্ট।</li><li>কুলড হাউজিংয়ে কুলিং ওয়াটার বন্ধ।</li></ul>
+<h3 id="s6">সিল তাড়াতাড়ি নষ্ট হয়</h3>
+<ul><li>স্টার্ট-আপে শুকনো চলা বা সিল চেম্বারে বাষ্প। ঠিকমতো ভেন্ট করুন।</li><li>ফ্লাশ অরিফিস বন্ধ, কুলার ময়লা।</li><li>BEP থেকে দূরে চালানো: শ্যাফট বেঁকে যায়।</li><li>মিসঅ্যালাইনমেন্ট, পাইপ স্ট্রেইন, বাঁকা শ্যাফট, ক্ষয়ে যাওয়া বিয়ারিং।</li><li>সেটিং ক্লিপ রয়ে গেছে, বা কম্পোনেন্ট সিলে ভুল সেটিং লেংথ।</li><li>ইলাস্টোমার প্রোডাক্ট বা ফ্লাশের সাথে মানানসই নয়।</li><li>সিল চেম্বারে কঠিন কণা।</li></ul>
+<h3 id="s7">চলার পর প্রাইম হারায়</h3>
+<ul><li>সাকশনে বাতাস ঢুকছে।</li><li>তরলের লেভেল ভর্টেক্স সীমার নিচে নামছে।</li><li>তরল থেকে গ্যাস বের হচ্ছে (দ্রবীভূত গ্যাস, তাপমাত্রা বৃদ্ধি)।</li></ul>
+<h3 id="s8">অপারেটরকে যে প্রশ্নগুলো করবেন</h3>
+<ol><li>কখন শুরু হয়েছে? মেইনটেন্যান্সের পর, প্রসেস পরিবর্তনের পর, ধীরে নাকি হঠাৎ?</li><li>ফ্লো ও চাপ কি আগের মতো আছে?</li><li>প্রোডাক্ট কি বদলেছে (তাপমাত্রা, গ্রেড, ঘনত্ব)?</li><li>স্পেয়ার পাম্পও কি একই করছে?</li><li>সিস্টেমে কোনো ভাল্ভ বদলানো হয়েছে?</li></ol>
+<div class="pager"><a href="pd-pumps.html"><span>আগের</span>পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a class="nx" href="mechanical-seals.html"><span>পরের</span>মেকানিক্যাল সিল</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

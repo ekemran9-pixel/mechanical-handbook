@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>স্টিম টারবাইন · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="ধরন, ওয়ার্ম-আপ, ওভারস্পিড সুরক্ষা, গভর্নিং, গ্ল্যান্ড সিলিং, ট্রিপ ও ওভারহল চেক।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rotary/steam-turbines.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rotary/steam-turbines.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html" aria-current="page">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রোটারি যন্ত্রপাতি"><div class="grp">পাম্প</div><a href="centrifugal-pumps.html">সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a href="pump-curves.html">পাম্প কার্ভ ও সিস্টেম কার্ভ</a><a href="pump-types.html">পাম্পের ধরন ও API 610 কোড</a><a href="pump-overhaul.html">পাম্প ওভারহল পদ্ধতি</a><a href="pd-pumps.html">পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a href="pump-troubleshooting.html">পাম্পের সমস্যা সমাধান</a><div class="grp">সিল ও প্যাকিং</div><a href="mechanical-seals.html">মেকানিক্যাল সিল</a><a href="seal-plans.html">সিল ফ্লাশ প্ল্যান (API 682)</a><a href="gland-packing.html">গ্ল্যান্ড প্যাকিং</a><div class="grp">বিয়ারিং ও লুব্রিকেশন</div><a href="rolling-bearings.html">রোলিং এলিমেন্ট বিয়ারিং</a><a href="bearing-mounting.html">বিয়ারিং লাগানো ও খোলা</a><a href="plain-bearings.html">প্লেইন ও টিল্টিং-প্যাড বিয়ারিং</a><a href="lubrication.html">লুব্রিকেশন</a><a href="oil-analysis.html">তেল বিশ্লেষণ</a><div class="grp">অ্যালাইনমেন্ট ও ভাইব্রেশন</div><a href="alignment.html">শ্যাফট অ্যালাইনমেন্ট</a><a href="dial-alignment.html">ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a href="vibration.html">ভাইব্রেশন বিশ্লেষণ</a><a href="balancing.html">ব্যালান্সিং</a><a href="condition-monitoring.html">কন্ডিশন মনিটরিং</a><div class="grp">ড্রাইভ ও ট্রান্সমিশন</div><a href="couplings.html">কাপলিং</a><a href="gearboxes.html">গিয়ারবক্স</a><a href="belts-chains.html">বেল্ট ও চেইন ড্রাইভ</a><a href="electric-motors.html">ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</a><div class="grp">ফ্লুইড পাওয়ার</div><a href="hydraulics.html">হাইড্রলিক সিস্টেম</a><a href="pneumatics.html">কম্প্রেসড এয়ার ও নিউমেটিক্স</a><div class="grp">কম্প্রেসর ও টারবাইন</div><a href="recip-compressors.html">রেসিপ্রোকেটিং কম্প্রেসর</a><a href="centrifugal-compressors.html">সেন্ট্রিফিউগাল কম্প্রেসর</a><a href="screw-compressors.html">স্ক্রু ও এয়ার কম্প্রেসর</a><a href="steam-turbines.html" aria-current="page">স্টিম টারবাইন</a><a href="gas-turbines.html">গ্যাস টারবাইন (সংক্ষেপে)</a><div class="grp">অন্যান্য যন্ত্র</div><a href="fans-blowers.html">ফ্যান ও ব্লোয়ার</a><a href="agitators.html">অ্যাজিটেটর ও মিক্সার</a><a href="conveyors.html">বেল্ট কনভেয়র</a><a href="cranes-hoists.html">ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><div class="grp">রিলায়েবিলিটি</div><a href="rca.html">রুট কজ অ্যানালাইসিস</a><a href="maintenance-strategy.html">রক্ষণাবেক্ষণ কৌশল ও KPI</a><a href="preservation.html">সংরক্ষণ ও প্রিজারভেশন</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রোটারি যন্ত্রপাতি</a> › কম্প্রেসর ও টারবাইন</div>
+<h1>স্টিম টারবাইন</h1>
+<p class="summary">ধরন, ওয়ার্ম-আপ, ওভারস্পিড সুরক্ষা, গভর্নিং, গ্ল্যান্ড সিলিং, ট্রিপ ও ওভারহল চেক।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">ধরন</a></li><li><a href="#s2">সুরক্ষা</a></li><li><a href="#s3">ওভারস্পিড ট্রিপ টেস্ট</a></li><li><a href="#s4">ওয়ার্ম-আপ ও চালু</a></li><li><a href="#s5">গভর্নর</a></li><li><a href="#s6">ওভারহলে চেক</a></li></ol></details>
+
+<h3 id="s1">ধরন</h3>
+<ul><li><b>ব্যাক প্রেশার</b>: কম চাপের স্টিম হেডারে এক্সজস্ট করে। পাম্প ও ফ্যান চালাতে সাধারণ।</li><li><b>কনডেন্সিং</b>: ভ্যাকুয়াম কনডেনসারে এক্সজস্ট করে। স্টিম থেকে সবচেয়ে বেশি শক্তি।</li><li><b>এক্সট্র্যাকশন</b>: প্রসেসের জন্য মাঝের স্টেজ থেকে স্টিম নেওয়া হয়।</li><li><b>ইমপালস</b> (নজলে স্টিম প্রসারিত হয়ে ব্লেডে ধাক্কা দেয়) বনাম <b>রিঅ্যাকশন</b> (স্থির ও চলমান দুই ব্লেডেই প্রসারিত হয়)। বেশিরভাগ ছোট টারবাইন ইমপালস (Curtis বা Rateau স্টেজ)।</li></ul>
+<h3 id="s2">সুরক্ষা</h3>
+<ul><li><b>ওভারস্পিড ট্রিপ</b>: মেকানিক্যাল বোল্ট বা ইলেকট্রনিক। সাধারণত সর্বোচ্চ অবিরাম গতির (MCS) 110% এ ট্রিপ। API 611/612।</li><li><b>ট্রিপ অ্যান্ড থ্রটল ভাল্ভ (T&amp;T)</b>: ট্রিপে বন্ধ হয়। মুক্তভাবে নড়ে কিনা প্রমাণ করতে নিয়মিত নাড়াতে হবে।</li><li>অন্যান্য ট্রিপ: লুব অয়েল চাপ কম, ভাইব্রেশন বেশি, অ্যাক্সিয়াল ডিসপ্লেসমেন্ট বেশি, এক্সজস্ট চাপ বেশি, ভ্যাকুয়াম কম।</li></ul>
+<h3 id="s3">ওভারস্পিড ট্রিপ টেস্ট</h3>
+<ol class="steps"><li>অপারেশনসের সাথে এবং প্রসিডিউর মেনে করা হয়। ওভারহলের পর প্রথম টেস্টে দরকার হলে আনকাপলড (একা)।</li><li>গতির রিডিং নির্ভুল কিনা নিশ্চিত করুন (ক্যালিব্রেটেড ট্যাকোমিটার)।</li><li>গভর্নর ওভাররাইড বা টেস্ট ডিভাইস দিয়ে ধীরে গতি বাড়ান।</li><li>ট্রিপের গতি রেকর্ড করুন। নিশ্চিত হতে পুনরাবৃত্তি করুন (প্রায়ই ±1% এর মধ্যে ৩ বার)।</li><li>সীমার বাইরে হলে OEM অনুযায়ী মেকানিক্যাল ট্রিপ স্প্রিং অ্যাডজাস্ট করুন।</li><li>টারবাইন চালাতে কখনো ট্রিপ বাইপাস বা আটকে রাখবেন না।</li></ol>
+<h3 id="s4">ওয়ার্ম-আপ ও চালু</h3>
+<ol class="steps"><li>লুব অয়েল চালু, তাপমাত্রা কমপক্ষে 25–30 °C।</li><li>কেসিং ও স্টিম লাইনের সব ড্রেন খুলুন। T&amp;T ভাল্ভ পর্যন্ত ইনলেট লাইন গরম করুন।</li><li>গ্ল্যান্ড সিল স্টিম চালু করুন (কনডেন্সিং) তারপর ভ্যাকুয়াম টানুন।</li><li>T&amp;T ভাল্ভ সামান্য খুলে রোটর ধীরে ঘোরান (প্রায়ই 300–500 rpm) এবং ওয়ার্ম-আপ সময় ধরে রাখুন।</li><li>ঘষার শব্দ শুনুন। ভাইব্রেশন ও কেসিং প্রসারণ দেখুন।</li><li>ক্রিটিক্যাল গতিগুলো দ্রুত পার করে গভর্নর রেঞ্জে নিন।</li><li>শুকনো স্টিম এলে ড্রেন বন্ধ করুন।</li></ol>
+<div class="warn"><b>পানি ঢোকা</b> ড্রেন না করা লাইন থেকে রোটর বাঁকাতে, ব্লেড ফাটাতে ও থ্রাস্ট বিয়ারিং ভাঙতে পারে। ঠিকমতো ড্রেন করুন এবং ঠান্ডা অবস্থায় কখনো তাড়াহুড়ো করবেন না।</div>
+<h3 id="s5">গভর্নর</h3>
+<p>ছোট টারবাইনে মেকানিক্যাল-হাইড্রলিক গভর্নর (যেমন Woodward TG, PG) বা ইলেকট্রনিক থাকে। গভর্নর অয়েলের লেভেল ও গ্রেড, লিংকেজের ফাঁকা নড়াচড়া এবং ড্রুপ সেটিং (প্রায়ই 4%) চেক করুন। গতি দোলা (হান্টিং): লিংকেজ ক্ষয়, ভুল কম্পেনসেশন নিডল সেটিং, আটকানো গভর্নর ভাল্ভ।</p>
+<h3 id="s6">ওভারহলে চেক</h3>
+<ul><li>জার্নাল ও থ্রাস্ট বিয়ারিং ক্লিয়ারেন্স, থ্রাস্ট ফ্লোট।</li><li>রোটর রানআউট, ব্লেডের ডগা ও শ্রাউডের অবস্থা, ফাটল (ব্লেডের গোড়া ও ডিস্কে ডাই পেনিট্রেন্ট)।</li><li>শেষ স্টেজের ব্লেড (ভেজা স্টিম) ও নজলের ক্ষয়।</li><li>লেবিরিন্থ ও কার্বন রিং গ্ল্যান্ড সিল: কার্বন রিং বদলান, ক্লিয়ারেন্স সেট করুন।</li><li>গভর্নর ভাল্ভ ও T&amp;T ভাল্ভ: স্টেম সোজা কিনা, সিটের অবস্থা, প্যাকিং।</li><li>কেসিংয়ের অনুভূমিক জয়েন্ট: পরিষ্কার, সমতল চেক, সঠিক কম্পাউন্ড অল্প, যেখানে বলা আছে সেখানে গরম অবস্থায় বা প্রসারণ মেপে বোল্ট টর্ক।</li><li>ইনলেটের স্টিম স্ট্রেইনার: পরিষ্কার করুন ও কোনো অংশ হারিয়েছে কিনা দেখুন।</li></ul>
+<div class="pager"><a href="screw-compressors.html"><span>আগের</span>স্ক্রু ও এয়ার কম্প্রেসর</a><a class="nx" href="gas-turbines.html"><span>পরের</span>গ্যাস টারবাইন (সংক্ষেপে)</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

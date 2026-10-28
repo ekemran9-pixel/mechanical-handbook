@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sling loads &amp; centre of gravity · Mechanical Foreman Handbook</title>
+<meta name="description" content="Working out sling tensions at angles, unequal legs, three and four leg slings, and finding the centre of gravity.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/rigging/sling-loads.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/rigging/sling-loads.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html">Inspection</a><a href="../rigging/index.html" aria-current="page">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Structural Steel, Rigging &amp; Lifting"><div class="grp">Structural steel</div><a href="steel-sections.html">Steel sections &amp; grades</a><a href="steel-erection.html">Steel erection</a><a href="bolted-connections.html">Structural bolting</a><div class="grp">Rigging</div><a href="rigging-gear.html">Rigging hardware</a><a href="sling-loads.html" aria-current="page">Sling loads &amp; centre of gravity</a><div class="grp">Cranes &amp; lifting</div><a href="cranes.html">Mobile cranes</a><a href="lift-planning.html">Lift planning</a><a href="hand-signals.html">Crane hand signals</a><a href="hoists-jacking.html">Chain blocks, jacking &amp; skidding</a><div class="grp">Access</div><a href="scaffolding.html">Scaffolding &amp; access</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Structural Steel, Rigging &amp; Lifting</a> › Rigging</div>
+<h1>Sling loads &amp; centre of gravity</h1>
+<p class="summary">Working out sling tensions at angles, unequal legs, three and four leg slings, and finding the centre of gravity.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Sling angle</a></li><li><a href="#s2">Multi-leg slings</a></li><li><a href="#s3">Unequal legs (CoG off centre)</a></li><li><a href="#s4">Finding the centre of gravity</a></li><li><a href="#s5">D/d ratio (wire rope over a pin or shackle)</a></li></ol></details>
+
+<h3 id="s1">Sling angle</h3>
+<div class="formula">Tension per leg = (Load ÷ Number of legs) ÷ sin(angle from horizontal)</div>
+<div class="tbl"><table><tr><th>Angle from horizontal</th><th>Factor (1/sin)</th><th>Each leg of 2-leg, 10 t load</th></tr>
+<tr><td>90°</td><td>1.000</td><td>5.0 t</td></tr><tr><td>75°</td><td>1.035</td><td>5.2 t</td></tr><tr><td>60°</td><td>1.155</td><td>5.8 t</td></tr><tr><td>50°</td><td>1.305</td><td>6.5 t</td></tr><tr><td>45°</td><td>1.414</td><td>7.1 t</td></tr><tr><td>30°</td><td>2.000</td><td>10.0 t</td></tr></table></div>
+<p>Quick field method: sling angle factor = sling length ÷ height (vertical distance from hook to load attachment point).</p>
+<h3 id="s2">Multi-leg slings</h3>
+<ul><li>Two-leg: share the load if symmetric.</li><li><b>Three and four-leg slings</b>: assume only <b>two legs</b> carry the load unless the rigging is designed to equalise (spreaders, equaliser beams). Standards (e.g. EN 13414, ASME) rate 3 and 4-leg bridles on that basis or with reduced factors.</li></ul>
+<h3 id="s3">Unequal legs (CoG off centre)</h3>
+<p>For a load with its centre of gravity closer to one lifting point, the leg nearest the CoG carries more.</p>
+<div class="formula">Vertical load on leg A = W × (distance from CoG to B) ÷ (distance A to B)</div>
+<p>Then tension in A = vertical load on A × (sling length A ÷ height).</p>
+<p>Example: 10 t load, lifting points 4 m apart, CoG 1 m from A. Vertical at A = 10 × 3 ÷ 4 = 7.5 t; at B = 2.5 t. The hook must be directly above the CoG, so leg A is shorter or steeper.</p>
+<h3 id="s4">Finding the centre of gravity</h3>
+<ul><li>Check the drawing or vendor data (CoG often marked on equipment).</li><li>For combined items: CoG = Σ(weight × distance) ÷ Σ weight from a reference point.</li><li>Trial lift: lift a few cm. The load tilts toward the CoG side. Land, adjust and retry.</li><li>Keep the CoG below the lifting points for stability. Loads lifted from below the CoG can flip.</li></ul>
+<h3 id="s5">D/d ratio (wire rope over a pin or shackle)</h3>
+<p>Bending a wire rope around a small diameter cuts its strength. D/d = diameter of the pin ÷ rope diameter. At D/d = 1 the eye efficiency drops to about 50%; at D/d 5 about 75%; at D/d 25 about 93%. Use large pins or protective thimbles.</p>
+<div class="pager"><a href="rigging-gear.html"><span>Previous</span>Rigging hardware</a><a class="nx" href="cranes.html"><span>Next</span>Mobile cranes</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

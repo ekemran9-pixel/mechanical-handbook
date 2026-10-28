@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hardness testing &amp; PMI · Mechanical Foreman Handbook</title>
+<meta name="description" content="Portable hardness testing, scales and conversions, hardness limits for sour service, and positive material identification.">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="bn" href="../bn/inspection/hardness-pmi.html">
+<link rel="icon" href="../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="en">
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>Foreman Handbook</strong><small>Mechanical · Rotary · Fabrication</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="Search 1,000+ facts: NPSH, soft foot, E7018…" autocomplete="off" aria-label="Search the handbook">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="Tools"><a href="../today.html">Today</a><a href="../tools.html">Calcs</a><a href="../quiz.html">Quiz</a><a href="../glossary.html">Glossary</a></nav>
+    <a class="lang" href="../bn/inspection/hardness-pmi.html" hreflang="bn" lang="bn" title="বাংলায় পড়ুন (Read in Bangla)">বাংলা</a>
+    <button class="theme" id="theme" type="button" aria-label="Switch light or dark"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="Handbook sections"><div class="wrap"><a href="../rotary/index.html">Rotary</a><a href="../static/index.html">Static</a><a href="../fabrication/index.html">Fabrication</a><a href="../piping/index.html">Piping</a><a href="../workshop/index.html">Workshop</a><a href="../inspection/index.html" aria-current="page">Inspection</a><a href="../rigging/index.html">Rigging</a><a href="../safety/index.html">Safety</a><a href="../leadership/index.html">Leadership</a><a href="../reference/index.html">Tables</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="Inspection, QA &amp; Coatings"><div class="grp">NDT</div><a href="ndt-overview.html">NDT methods overview</a><a href="visual-inspection.html">Visual inspection of welds</a><a href="pt-mt.html">Dye penetrant &amp; magnetic particle testing</a><a href="ut-rt.html">Ultrasonic &amp; radiographic testing</a><a href="hardness-pmi.html" aria-current="page">Hardness testing &amp; PMI</a><div class="grp">Quality management</div><a href="itp-qa.html">ITP, hold points &amp; QA records</a><div class="grp">Coatings &amp; corrosion</div><a href="corrosion.html">Corrosion types</a><a href="painting.html">Surface preparation &amp; painting</a><a href="insulation.html">Insulation &amp; heat tracing</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">Inspection, QA &amp; Coatings</a> › NDT</div>
+<h1>Hardness testing &amp; PMI</h1>
+<p class="summary">Portable hardness testing, scales and conversions, hardness limits for sour service, and positive material identification.</p>
+<details class="toc" open><summary>On this page</summary><ol><li><a href="#s1">Scales</a></li><li><a href="#s2">Rough conversions (steel)</a></li><li><a href="#s3">Typical limits</a></li><li><a href="#s4">PMI (positive material identification)</a></li></ol></details>
+
+<h3 id="s1">Scales</h3>
+<div class="tbl"><table><tr><th>Scale</th><th>Method</th><th>Use</th></tr>
+<tr><td>Brinell (HB)</td><td>Ball indent, measure diameter</td><td>Base metal, castings, forgings</td></tr>
+<tr><td>Vickers (HV)</td><td>Diamond pyramid, small indent</td><td>Weld and HAZ surveys (HV10 lab)</td></tr>
+<tr><td>Rockwell C (HRC)</td><td>Diamond cone depth</td><td>Hardened steel, bolts</td></tr>
+<tr><td>Leeb (HL)</td><td>Rebound of an impact body</td><td>Portable, needs mass and thickness, converts to HB/HV</td></tr>
+<tr><td>UCI (ultrasonic contact impedance)</td><td>Vickers diamond, frequency change</td><td>Portable, small areas: weld caps and HAZ</td></tr></table></div>
+<h3 id="s2">Rough conversions (steel)</h3>
+<div class="tbl"><table><tr><th>HB</th><th>HV</th><th>HRC</th><th>UTS (MPa approx)</th></tr>
+<tr><td>150</td><td>157</td><td>–</td><td>500</td></tr>
+<tr><td>200</td><td>210</td><td>–</td><td>670</td></tr>
+<tr><td>225</td><td>238</td><td>~20</td><td>760</td></tr>
+<tr><td>237</td><td>248</td><td>22</td><td>800</td></tr>
+<tr><td>300</td><td>316</td><td>32</td><td>1,010</td></tr>
+<tr><td>400</td><td>423</td><td>43</td><td>1,370</td></tr></table></div>
+<p style="font-size:.85rem;color:var(--muted)">From ASTM E140 style tables. Conversions are approximate; specs say which scale counts.</p>
+<h3 id="s3">Typical limits</h3>
+<ul><li>Sour service (NACE MR0175/ISO 15156): carbon steel weld and HAZ ≤ 22 HRC (≈ 248 HV10, ≈ 237 HB).</li><li>NACE SP0472 for refinery wet H₂S: weld metal ≤ 200 HB.</li><li>P4/P5 after PWHT: often ≤ 225–241 HB.</li><li>Take readings on weld metal, HAZ both sides and base metal. Prepare surface by grinding to bright metal (remove decarburised layer, ~0.5 mm).</li></ul>
+<h3 id="s4">PMI (positive material identification)</h3>
+<ul><li><b>XRF</b> (handheld X-ray fluorescence): quick, non-destructive. Identifies alloying elements (Cr, Ni, Mo, Mn, Cu…). Cannot measure carbon.</li><li><b>OES</b> (optical emission spectroscopy, spark): measures carbon too (L grades, carbon steel carbon content). Leaves a small burn mark.</li><li>Test every alloy component (pipe, fitting, flange, bolt, weld) per API RP 578 or project spec.</li><li>Mark tested items with a paint dot or sticker. Log results with item and heat numbers.</li><li>XRF uses X-rays: operator trained, don't point at people.</li></ul>
+<div class="pager"><a href="ut-rt.html"><span>Previous</span>Ultrasonic &amp; radiographic testing</a><a class="nx" href="itp-qa.html"><span>Next</span>ITP, hold points &amp; QA records</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>Field guide figures are typical values for training. The equipment maker's manual, your site standard and the governing code (ASME, API, AWS, ISO, AISC) always take priority.</p>
+<p class="mono">Mechanical Foreman Handbook · built 2026-10-26</p>
+</div></footer>
+<script src="../assets/search.js" defer></script>
+
+</body>
+</html>

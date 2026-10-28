@@ -1,0 +1,10 @@
+# Mechanical Foreman Handbook · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক
+
+Static site (English + বাংলা), live at https://foreman-handbook.netlify.app
+
+## আপডেট করার নিয়ম
+
+- যেকোনো HTML/CSS/JS ফাইল বদলে `main` ব্রাঞ্চে push করুন, Netlify নিজে থেকে সাইট আপডেট করবে। কোনো build লাগে না।
+- ইংরেজি পাতা রুটে, বাংলা পাতা `bn/` ফোল্ডারে।
+- ক্যালকুলেটর: হিসাব `assets/tools.js` (EN) ও `assets/tools-bn.js` (BN); ছবি/অ্যানিমেশন ও পাতার UI `assets/tools-ui.js` (দুই ভাষাতেই একই); স্টাইল `assets/style.css`।
+- নতুন ক্যালকুলেটরে ছবি দিতে `tools-ui.js` এর `VIZ` এ ক্যালকুলেটরের `id` নামে একটা ফাংশন যোগ করুন।

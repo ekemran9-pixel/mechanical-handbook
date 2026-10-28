@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>লেআউট ও প্যাটার্ন ডেভেলপমেন্ট · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="মার্কিং, বৃত্ত ও কোণের জ্যামিতি, কোন ও রিডিউসার লেআউট, লবস্টার-ব্যাক বেন্ড এবং পাইপ ব্রাঞ্চ টেমপ্লেট।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../fabrication/layout-development.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../fabrication/layout-development.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html" aria-current="page">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="ওয়েল্ডিং ও ফেব্রিকেশন"><div class="grp">ওয়েল্ডিং প্রসেস</div><a href="welding-processes.html">ওয়েল্ডিং প্রসেসের তুলনা</a><a href="smaw.html">SMAW (স্টিক ওয়েল্ডিং)</a><a href="gtaw.html">GTAW (TIG ওয়েল্ডিং)</a><a href="gmaw-fcaw.html">GMAW ও FCAW (MIG ও ফ্লাক্স কোর)</a><a href="saw.html">SAW (সাবমার্জড আর্ক)</a><div class="grp">উপাদান</div><a href="filler-metals.html">ফিলার মেটাল গাইড</a><a href="metallurgy.html">ওয়েল্ডারের জন্য স্টিলের ধাতুবিদ্যা</a><div class="grp">জয়েন্ট ডিজাইন</div><a href="joint-design.html">জয়েন্ট ডিজাইন ও ফিট-আপ</a><a href="weld-symbols.html">ওয়েল্ড সিম্বল (AWS A2.4 / ISO 2553)</a><a href="positions.html">ওয়েল্ডিং পজিশন ও যোগ্যতা</a><div class="grp">গুণমান</div><a href="weld-defects.html">ওয়েল্ডের ত্রুটি ও মেরামত</a><a href="wps-pqr.html">WPS, PQR ও WPQ</a><a href="preheat-pwht.html">প্রিহিট, ইন্টারপাস ও PWHT</a><a href="distortion.html">ডিস্টরশন নিয়ন্ত্রণ</a><div class="grp">বিশেষ উপাদান</div><a href="stainless-welding.html">স্টেইনলেস ও ডুপ্লেক্স ওয়েল্ডিং</a><a href="alloy-welding.html">Cr-Mo, P91 ও ভিন্ন ধাতুর ওয়েল্ড</a><a href="aluminium-welding.html">অ্যালুমিনিয়াম ওয়েল্ডিং</a><div class="grp">কাটিং ও ফর্মিং</div><a href="cutting-gouging.html">কাটিং ও গাউজিং</a><a href="plate-forming.html">রোলিং, বেন্ডিং ও ফর্মিং</a><a href="layout-development.html" aria-current="page">লেআউট ও প্যাটার্ন ডেভেলপমেন্ট</a><a href="welding-safety.html">ওয়েল্ডিং ও কাটিংয়ের নিরাপত্তা</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">ওয়েল্ডিং ও ফেব্রিকেশন</a> › কাটিং ও ফর্মিং</div>
+<h1>লেআউট ও প্যাটার্ন ডেভেলপমেন্ট</h1>
+<p class="summary">মার্কিং, বৃত্ত ও কোণের জ্যামিতি, কোন ও রিডিউসার লেআউট, লবস্টার-ব্যাক বেন্ড এবং পাইপ ব্রাঞ্চ টেমপ্লেট।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">মৌলিক জ্যামিতি</a></li><li><a href="#s2">র‍্যাপ-অ্যারাউন্ডের দৈর্ঘ্য</a></li><li><a href="#s3">কনসেন্ট্রিক কোন (রিডিউসার) লেআউট</a></li><li><a href="#s4">সেগমেন্টেড (লবস্টার-ব্যাক / মাইটার) বেন্ড</a></li><li><a href="#s5">পাইপ ব্রাঞ্চ (স্যাডল) টেমপ্লেট</a></li><li><a href="#s6">মার্কিংয়ের যন্ত্র</a></li></ol></details>
+
+<h3 id="s1">মৌলিক জ্যামিতি</h3>
+<div class="formula">Circumference = π × D     Chord = 2 × R × sin(θ/2)     Arc = R × θ (rad)</div>
+<ul><li>প্যাটার্নের কাজে বৃত্তকে 12 বা 16 সমান ভাগে ভাগ করুন। 12 ভাগে জ্যা = R (ব্যাসার্ধ ঘুরিয়ে ঘুরিয়ে)।</li><li>স্কয়ার করতে 3-4-5 ত্রিভুজ: 3 m, 4 m, 5 m (বা গুণিতক)।</li><li>কর্ণ দিয়ে আয়তক্ষেত্র চেক করুন: সমান কর্ণ = স্কয়ার কোণা।</li></ul>
+<h3 id="s2">র‍্যাপ-অ্যারাউন্ডের দৈর্ঘ্য</h3>
+<p>র‍্যাপ-অ্যারাউন্ড (টেমপ্লেট) দৈর্ঘ্য = π × OD। প্রোফাইল চিহ্নিত করতে অর্ডিনেটে ভাগ করুন (যেমন 16টি সমান ফালি)।</p>
+<h3 id="s3">কনসেন্ট্রিক কোন (রিডিউসার) লেআউট</h3>
+<ol class="steps"><li>বড় ব্যাস D, ছোট ব্যাস d, উচ্চতা H (মোটা প্লেটে গড় ব্যাস ব্যবহার করুন)।</li><li>পূর্ণ কোনের উচ্চতা (শীর্ষ পর্যন্ত): H' = H × D ÷ (D − d)। পূর্ণ কোনের তির্যক উচ্চতা: L = √(H'² + (D/2)²)।</li><li>ভেতরের চাপের ব্যাসার্ধ: l = L × d ÷ D।</li><li>ডেভেলপড কোণ: θ = 360° × (D/2) ÷ L।</li><li>একই কেন্দ্র থেকে L ও l ব্যাসার্ধের দুটি চাপ আঁকুন, θ কোণ চিহ্নিত করুন। এটাই ফ্ল্যাট প্যাটার্ন।</li></ol>
+<p>উদাহরণ: D = 1000, d = 500, H = 400। H' = 400 × 1000 ÷ 500 = 800। L = √(800² + 500²) = 943। l = 471.5। θ = 360 × 500 ÷ 943 = 190.9°।</p>
+<h3 id="s4">সেগমেন্টেড (লবস্টার-ব্যাক / মাইটার) বেন্ড</h3>
+<ul><li>n সেগমেন্টের 90° বেন্ডে 2টি প্রান্ত অর্ধ-সেগমেন্ট ও (n − 2)টি পূর্ণ সেগমেন্ট, (n − 1)টি ওয়েল্ড।</li><li>প্রতিটি সেগমেন্ট প্রান্তের কাট কোণ = বেন্ড কোণ ÷ (2 × ওয়েল্ডের সংখ্যা)। 3টি ওয়েল্ডসহ 90° (4 টুকরো): 90 ÷ 6 = প্রতি কাট ফেসে 15°, প্রতিটি পূর্ণ সেগমেন্ট মোট 30°।</li><li>সেগমেন্টের পিঠের দৈর্ঘ্য (বাইরে) = (R + OD/2) × 2 × tan(কাট কোণ); গলা (ভেতরে) = (R − OD/2) × 2 × tan(কাট কোণ)।</li><li>B31.3 মাইটার বেন্ড সীমিত করে: প্রতি ওয়েল্ডে 22.5° এর বেশি কোণ পরিবর্তন শুধু কম চাপের সার্ভিসে।</li></ul>
+<h3 id="s5">পাইপ ব্রাঞ্চ (স্যাডল) টেমপ্লেট</h3>
+<p>R ব্যাসার্ধের হেডারে 90° এ r ব্যাসার্ধের ব্রাঞ্চের জন্য:</p>
+<div class="formula">Ordinate height h(θ) = R − √(R² − (r × sin θ)²)</div>
+<ol class="steps"><li>ব্রাঞ্চের পরিধি 16 সমান ভাগে ভাগ করুন (θ = 0°, 22.5°, 45° … 360°)।</li><li>প্রতিটি θ এর জন্য h হিসাব করুন। ব্রাঞ্চে কাটার রেখা একটি সোজা রেফারেন্স রেখার h নিচে।</li><li>π × OD (ব্রাঞ্চ) দৈর্ঘ্যের কাগজে বসান, বিন্দুগুলো মসৃণভাবে যুক্ত করুন, পেঁচিয়ে চিহ্নিত করুন।</li><li>হেডারের ছিদ্র: হেডারের অক্ষ বরাবর প্রস্থ = 2r, এবং হেডারেও একই পদ্ধতি।</li></ol>
+<p>উদাহরণ: 8" হেডারে (R = 109.55) 4" ব্রাঞ্চ (r = 57.15): θ = 90° এ h = 109.55 − √(109.55² − 57.15²) = 16.1 mm। 0° ও 180° এ h = 0।</p>
+<h3 id="s6">মার্কিংয়ের যন্ত্র</h3>
+<ul><li>গরম বা খসখসে কাজে সোপস্টোন বা সিলভার পেন্সিল; নির্ভুল রেখায় স্ক্রাইবার ও সেন্টার পাঞ্চ।</li><li>পেইন্ট মার্কার (স্টেইনলেসে কম ক্লোরাইড)।</li><li>পাইপে স্কয়ার কাটের জন্য র‍্যাপ-অ্যারাউন্ড (নমনীয় স্টিল বা ফাইবারগ্লাস ব্যান্ড)।</li><li>ব্রাঞ্চের কেন্দ্র চিহ্নিত করতে সেন্টার হেড ও পাইপ সেন্টারিং টুল।</li><li>সাইট লেআউটে লেজার লেভেল ও প্লাম্ব লাইন।</li></ul>
+<div class="pager"><a href="plate-forming.html"><span>আগের</span>রোলিং, বেন্ডিং ও ফর্মিং</a><a class="nx" href="welding-safety.html"><span>পরের</span>ওয়েল্ডিং ও কাটিংয়ের নিরাপত্তা</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>

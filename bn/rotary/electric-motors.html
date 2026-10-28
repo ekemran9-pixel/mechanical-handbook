@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ইলেকট্রিক মোটর (মেকানিক্যাল দিক) · মেকানিক্যাল ফোরম্যান হ্যান্ডবুক</title>
+<meta name="description" content="ইন্ডাকশন মোটরে মেকানিক্যাল ফোরম্যান যা চেক করেন: ফ্রেম, বিয়ারিং, কুলিং, ইনসুলেশনের মূল কথা, VFD এর প্রভাব ও সংরক্ষণ।">
+<meta name="theme-color" content="#18222c">
+<link rel="alternate" hreflang="en" href="../../rotary/electric-motors.html">
+<link rel="icon" href="../../assets/icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Hind+Siliguri:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>try{var t=localStorage.getItem("fh-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-root="../" data-lang="bn">
+<a class="skip" href="#main">মূল লেখায় যান</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="plate" href="../index.html">
+      <svg class="mark" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3" class="ring"/><circle cx="22" cy="22" r="7" class="hub"/><g class="spokes" stroke-width="3" stroke-linecap="round"><line x1="22" y1="4" x2="22" y2="10"/><line x1="22" y1="34" x2="22" y2="40"/><line x1="4" y1="22" x2="10" y2="22"/><line x1="34" y1="22" x2="40" y2="22"/></g></svg>
+      <span><strong>ফোরম্যান হ্যান্ডবুক</strong><small>মেকানিক্যাল · রোটারি · ফেব্রিকেশন</small></span>
+    </a>
+    <div class="search">
+      <input id="q" type="search" placeholder="খুঁজুন: NPSH, সফট ফুট, E7018, পাম্প…" autocomplete="off" aria-label="হ্যান্ডবুকে খুঁজুন">
+      <div class="results" id="results" hidden></div>
+    </div>
+    <nav class="applinks" aria-label="টুলস"><a href="../today.html">আজ</a><a href="../tools.html">ক্যালকুলেটর</a><a href="../quiz.html">কুইজ</a><a href="../glossary.html">শব্দকোষ</a></nav>
+    <a class="lang" href="../../rotary/electric-motors.html" hreflang="en" lang="en" title="Read in English">English</a>
+    <button class="theme" id="theme" type="button" aria-label="লাইট বা ডার্ক মোড"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+<nav class="tabs" aria-label="হ্যান্ডবুকের অংশ"><div class="wrap"><a href="../rotary/index.html" aria-current="page">রোটারি</a><a href="../static/index.html">স্ট্যাটিক</a><a href="../fabrication/index.html">ফেব্রিকেশন</a><a href="../piping/index.html">পাইপিং</a><a href="../workshop/index.html">ওয়ার্কশপ</a><a href="../inspection/index.html">ইন্সপেকশন</a><a href="../rigging/index.html">রিগিং</a><a href="../safety/index.html">সেফটি</a><a href="../leadership/index.html">নেতৃত্ব</a><a href="../reference/index.html">টেবিল</a></div></nav>
+<main id="main" class="wrap">
+<div class="split">
+<nav class="rail" aria-label="রোটারি যন্ত্রপাতি"><div class="grp">পাম্প</div><a href="centrifugal-pumps.html">সেন্ট্রিফিউগাল পাম্পের মূল কথা</a><a href="pump-curves.html">পাম্প কার্ভ ও সিস্টেম কার্ভ</a><a href="pump-types.html">পাম্পের ধরন ও API 610 কোড</a><a href="pump-overhaul.html">পাম্প ওভারহল পদ্ধতি</a><a href="pd-pumps.html">পজিটিভ ডিসপ্লেসমেন্ট পাম্প</a><a href="pump-troubleshooting.html">পাম্পের সমস্যা সমাধান</a><div class="grp">সিল ও প্যাকিং</div><a href="mechanical-seals.html">মেকানিক্যাল সিল</a><a href="seal-plans.html">সিল ফ্লাশ প্ল্যান (API 682)</a><a href="gland-packing.html">গ্ল্যান্ড প্যাকিং</a><div class="grp">বিয়ারিং ও লুব্রিকেশন</div><a href="rolling-bearings.html">রোলিং এলিমেন্ট বিয়ারিং</a><a href="bearing-mounting.html">বিয়ারিং লাগানো ও খোলা</a><a href="plain-bearings.html">প্লেইন ও টিল্টিং-প্যাড বিয়ারিং</a><a href="lubrication.html">লুব্রিকেশন</a><a href="oil-analysis.html">তেল বিশ্লেষণ</a><div class="grp">অ্যালাইনমেন্ট ও ভাইব্রেশন</div><a href="alignment.html">শ্যাফট অ্যালাইনমেন্ট</a><a href="dial-alignment.html">ডায়াল ইন্ডিকেটর দিয়ে অ্যালাইনমেন্ট</a><a href="vibration.html">ভাইব্রেশন বিশ্লেষণ</a><a href="balancing.html">ব্যালান্সিং</a><a href="condition-monitoring.html">কন্ডিশন মনিটরিং</a><div class="grp">ড্রাইভ ও ট্রান্সমিশন</div><a href="couplings.html">কাপলিং</a><a href="gearboxes.html">গিয়ারবক্স</a><a href="belts-chains.html">বেল্ট ও চেইন ড্রাইভ</a><a href="electric-motors.html" aria-current="page">ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</a><div class="grp">ফ্লুইড পাওয়ার</div><a href="hydraulics.html">হাইড্রলিক সিস্টেম</a><a href="pneumatics.html">কম্প্রেসড এয়ার ও নিউমেটিক্স</a><div class="grp">কম্প্রেসর ও টারবাইন</div><a href="recip-compressors.html">রেসিপ্রোকেটিং কম্প্রেসর</a><a href="centrifugal-compressors.html">সেন্ট্রিফিউগাল কম্প্রেসর</a><a href="screw-compressors.html">স্ক্রু ও এয়ার কম্প্রেসর</a><a href="steam-turbines.html">স্টিম টারবাইন</a><a href="gas-turbines.html">গ্যাস টারবাইন (সংক্ষেপে)</a><div class="grp">অন্যান্য যন্ত্র</div><a href="fans-blowers.html">ফ্যান ও ব্লোয়ার</a><a href="agitators.html">অ্যাজিটেটর ও মিক্সার</a><a href="conveyors.html">বেল্ট কনভেয়র</a><a href="cranes-hoists.html">ক্রেন ও হয়েস্ট (রক্ষণাবেক্ষণ)</a><div class="grp">রিলায়েবিলিটি</div><a href="rca.html">রুট কজ অ্যানালাইসিস</a><a href="maintenance-strategy.html">রক্ষণাবেক্ষণ কৌশল ও KPI</a><a href="preservation.html">সংরক্ষণ ও প্রিজারভেশন</a></nav>
+<article>
+<div class="crumbs"><a href="index.html">রোটারি যন্ত্রপাতি</a> › ড্রাইভ ও ট্রান্সমিশন</div>
+<h1>ইলেকট্রিক মোটর (মেকানিক্যাল দিক)</h1>
+<p class="summary">ইন্ডাকশন মোটরে মেকানিক্যাল ফোরম্যান যা চেক করেন: ফ্রেম, বিয়ারিং, কুলিং, ইনসুলেশনের মূল কথা, VFD এর প্রভাব ও সংরক্ষণ।</p>
+<details class="toc" open><summary>এই পাতায়</summary><ol><li><a href="#s1">নেমপ্লেট</a></li><li><a href="#s2">গতি</a></li><li><a href="#s3">বিয়ারিং</a></li><li><a href="#s4">শ্যাফট কারেন্ট ও VFD</a></li><li><a href="#s5">কুলিং</a></li><li><a href="#s6">ইনসুলেশন রেজিস্ট্যান্স (জানার জন্য)</a></li><li><a href="#s7">মেকানিক্যাল চেক</a></li><li><a href="#s8">স্পেয়ার মোটর সংরক্ষণ</a></li></ol></details>
+
+<p>ইলেকট্রিক্যাল আইসোলেশন, টার্মিনালের কাজ ও টেস্টিং ইলেকট্রিশিয়ানদের কাজ। মেকানিক্যাল টিম সাধারণত বিয়ারিং, কাপলিং, অ্যালাইনমেন্ট, মাউন্টিং, কুলিং ও লুব্রিকেশন দেখে।</p>
+<h3 id="s1">নেমপ্লেট</h3>
+<ul><li>পাওয়ার (kW বা HP), ভোল্টেজ, কারেন্ট, ফ্রিকোয়েন্সি, গতি (ফুল লোডে rpm), পাওয়ার ফ্যাক্টর, দক্ষতা ক্লাস (IE2, IE3, IE4)।</li><li>ফ্রেম সাইজ (IEC: mm এ শ্যাফটের উচ্চতা, যেমন 160M; NEMA: যেমন 254T)।</li><li>DE (ড্রাইভ এন্ড) ও NDE (নন-ড্রাইভ এন্ড) এর বিয়ারিং নম্বর, গ্রিজের ধরন ও ব্যবধান।</li><li>ইনসুলেশন ক্লাস (F = 155 °C, H = 180 °C), IP রেটিং, ডিউটি টাইপ (S1 অবিরাম)।</li><li>বিপজ্জনক এলাকার জন্য Ex মার্কিং: সার্টিফায়েড মেরামত ছাড়া এসব মোটরে পরিবর্তন করবেন না।</li></ul>
+<h3 id="s2">গতি</h3>
+<div class="formula">Synchronous speed = 120 × f ÷ poles</div>
+<p>50 Hz এ: 2-পোল 3000 rpm, 4-পোল 1500, 6-পোল 1000, 8-পোল 750। প্রকৃত গতি স্লিপ (1–5%) পরিমাণ কম, যেমন 2960 rpm।</p>
+<h3 id="s3">বিয়ারিং</h3>
+<ul><li>সাধারণত ডিপ গ্রুভ বল বিয়ারিং, C3 ক্লিয়ারেন্স। বড় মোটরে: DE তে সিলিন্ড্রিক্যাল রোলার (বেল্ট লোডের জন্য) ও NDE তে বল (লোকেটিং)।</li><li>সামান্য রেডিয়াল লোডের <b>সরাসরি কাপলড মোটরে DE তে রোলার বিয়ারিং</b> পিছলে নষ্ট হতে পারে। ড্রাইভের ধরনের সাথে বিয়ারিং মানানসই কিনা দেখুন।</li><li>গ্রিজ: প্রায়ই পলিইউরিয়া বা লিথিয়াম কমপ্লেক্স NLGI 2–3। মেশাবেন না। নেমপ্লেটের ব্যবধান মানুন।</li><li>NDE তে লক করা, DE তে ভাসমান (বা নির্মাতা যেভাবে বলে)।</li></ul>
+<h3 id="s4">শ্যাফট কারেন্ট ও VFD</h3>
+<p>ভেরিয়েবল ফ্রিকোয়েন্সি ড্রাইভ কমন-মোড ভোল্টেজ তৈরি করে যা বিয়ারিংয়ের মধ্য দিয়ে ডিসচার্জ হয়ে ফ্লুটিং ঘটায়। লক্ষণ: ঘোলা রেসওয়ে, ওয়াশবোর্ড প্যাটার্ন, VFD মোটরে তাড়াতাড়ি নষ্ট।</p>
+<ul><li>NDE তে ইনসুলেটেড বিয়ারিং (সিরামিক-কোটেড আউটার রিং) বা হাইব্রিড সিরামিক বল লাগান।</li><li>DE তে শ্যাফট গ্রাউন্ডিং রিং বা ব্রাশ লাগান।</li><li>সিমেট্রিক্যাল আর্থসহ সঠিক VFD কেবল এবং 360° গ্ল্যান্ড আর্থিং ব্যবহার করুন।</li></ul>
+<h3 id="s5">কুলিং</h3>
+<ul><li>TEFC মোটর (সম্পূর্ণ আবদ্ধ, ফ্যান কুলড): ফিন পরিষ্কার রাখুন। রেটিংয়ের উপরে প্রতি 10 °C এ ইনসুলেশনের আয়ু অর্ধেক হয়।</li><li>ফ্যান কাউল বন্ধ বা ফ্যানের উপর টোল খাওয়া নয় তা দেখুন।</li><li>বড় মোটর: এয়ার ফিল্টার, হিট এক্সচেঞ্জার (এয়ার-টু-এয়ার বা এয়ার-টু-ওয়াটার) এবং স্পেস হিটার (বন্ধ থাকলে চালু, ঘনীভবন রোধে) চেক করুন।</li></ul>
+<h3 id="s6">ইনসুলেশন রেজিস্ট্যান্স (জানার জন্য)</h3>
+<p>অনেকদিন বন্ধ বা ভেজা মোটর চালুর আগে ইলেকট্রিশিয়ান ওয়াইন্ডিং মেগার করেন। সাধারণ সর্বনিম্ন 1 MΩ সাথে রেটিংয়ের প্রতি kV এ 1 MΩ; অনেক সাইটে LV মোটরে 100 MΩ কে সুস্থ ধরা হয়। পোলারাইজেশন ইনডেক্স (PI = 10 মিনিট/1 মিনিট রিডিং) 2 এর বেশি হলে ভালো।</p>
+<h3 id="s7">মেকানিক্যাল চেক</h3>
+<ul><li>পাম্পের মতোই সফট ফুট ও অ্যালাইনমেন্ট।</li><li>শ্যাফট রানআউট ও এন্ড ফ্লোট (স্লিভ বিয়ারিং মোটরে শ্যাফটে ম্যাগনেটিক সেন্টার দাগ দেওয়া থাকে; কাপলিং এমনভাবে সেট করুন যাতে রোটর ফ্লোট সীমার মধ্যে ম্যাগনেটিক সেন্টারে চলে)।</li><li>ফুট ও বেস বোল্ট টাইট।</li><li>ফ্রেমের নিচের ড্রেন হোল খোলা (ঘনীভবন)।</li><li>রোটেশন: দিক-সংবেদনশীল মেশিনে কাপলিংয়ের আগে খুলে ইলেকট্রিশিয়ানের সাথে বাম্প টেস্ট করুন।</li></ul>
+<h3 id="s8">স্পেয়ার মোটর সংরক্ষণ</h3>
+<ul><li>শুকনো, গরম রাখা স্টোর। স্পেস হিটার থাকলে চালু।</li><li>গ্রিজ ছড়াতে ও ফলস ব্রিনেলিং রোধে প্রতি মাসে শ্যাফট কয়েক পাক ঘোরান।</li><li>রোলার বিয়ারিং মোটরে পরিবহনের জন্য রোটর লক করুন (ট্রান্সপোর্ট লক)।</li><li>বসানোর আগে মেগার করুন।</li></ul>
+<div class="pager"><a href="belts-chains.html"><span>আগের</span>বেল্ট ও চেইন ড্রাইভ</a><a class="nx" href="hydraulics.html"><span>পরের</span>হাইড্রলিক সিস্টেম</a></div>
+</article></div>
+</main>
+<footer class="foot"><div class="wrap">
+<p>এখানে দেওয়া মানগুলো প্রশিক্ষণের জন্য সাধারণ মাঠ পর্যায়ের মান। যন্ত্রপাতির নির্মাতার ম্যানুয়াল, আপনার সাইটের স্ট্যান্ডার্ড এবং প্রযোজ্য কোড (ASME, API, AWS, ISO, AISC) সবসময় অগ্রাধিকার পাবে।</p>
+<p class="mono">মেকানিক্যাল ফোরম্যান হ্যান্ডবুক · তৈরি 2026-10-26</p>
+</div></footer>
+<script src="../../assets/search.js" defer></script>
+
+</body>
+</html>
