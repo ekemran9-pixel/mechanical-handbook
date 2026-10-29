@@ -81,7 +81,7 @@ def build(name, conf):
     # handbook bar above the guide's own header
     others = " · ".join('<a href="../%s/">%s</a>' % (k, t) for k, t in OTHERS if k != name)
     bar = ('<div class="hbbar"><a href="%sindex.html">← মেকানিক্যাল হ্যান্ডবুক</a><span>›</span><b>%s</b>'
-           '<span class="oth" style="margin-left:auto">অন্য গাইড: %s</span></div>\n') % (HB, conf["title"], others)
+           '<a href="%sstart.html">নতুন? এখান থেকে শুরু</a><span class="oth" style="margin-left:auto">অন্য গাইড: %s</span></div>\n') % (HB, conf["title"], HB, others)
     shell = bar + shell
     # drop nav links of removed modules; list them under "now in the handbook"
     for mid in moved:

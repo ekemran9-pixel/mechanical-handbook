@@ -14,6 +14,8 @@
   const bar = document.getElementById("quizbar"), box = document.getElementById("quiz");
   document.getElementById("qcount").textContent = T.qs(bank.length);
   let cat = "All", st = null;
+  const want = new URLSearchParams(location.search).get("s");  // links from the start page pick a subject
+  if (want && cats.includes(want)) cat = want;
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const pill = (c, t) => '<span class="pill ' + c + '">' + t + "</span>";
 
