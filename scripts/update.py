@@ -22,6 +22,13 @@ for js in ("assets/tools.js", "assets/tools-bn.js"):
     f = ROOT / js
     f.write_text(re.sub(r'UI_VER = "\d+"', 'UI_VER = "%d"' % ver, f.read_text()))
 
+# read counts (assets/stats.js) on every page, just before </body>
+for p in pages:
+    s = p.read_text()
+    if "assets/stats.js" not in s:
+        src = "/assets/stats.js" if rel(p) == "404.html" else "../" * (len(p.relative_to(ROOT).parts) - 1) + "assets/stats.js"
+        p.write_text(s.replace("</body>", '<script src="%s?v=%d" defer></script>\n</body>' % (src, ver), 1))
+
 # 404.html is served for missing pages at any depth, so its links must be absolute;
 # prefix them with the site's folder (/mechanical-handbook on GitHub Pages, nothing on a custom domain)
 from urllib.parse import urlparse

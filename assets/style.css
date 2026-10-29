@@ -538,3 +538,6 @@ pre.report{white-space:pre-wrap;font-family:var(--mono);font-size:.8rem;backgrou
 .pcap{margin:8px 2px 4px;font-size:1rem;min-height:3em;max-width:none}
 .pcap b{font-family:var(--mono);color:var(--accent);margin-right:6px}
 @media (prefers-reduced-motion:reduce){.player [data-s]{transition:none}.player [data-s].now{animation:none}}
+/* read counts in the footer */
+.foot .reads{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:8px;font-size:.8rem;color:var(--muted)}
+.foot .reads b{color:var(--ink);font-family:var(--mono);font-weight:600}
